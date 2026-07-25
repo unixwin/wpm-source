@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "name": "official",
-  "version": "builtin-2026.07.25",
-  "updated": "2026-07-25",
+  "version": "official-2026.07.26",
+  "updated": "2026-07-26",
   "sources": [
     {
       "name": "official-github-raw",
@@ -46,7 +46,7 @@
   "packages": [
     {
       "name": "winuxcmd",
-      "version": "0.12.5",
+      "version": "0.13.0",
       "description": "WinuxCmd core command set",
       "kind": "core",
       "license": "MIT",
@@ -78,18 +78,32 @@
     },
     {
       "name": "awk",
-      "version": "",
-      "description": "AWK-compatible text processing interpreter slot; prefer a permissive-license native Windows build.",
+      "version": "1.31.0",
+      "description": "POSIX AWK interpreter provided by GoAWK.",
       "kind": "external",
       "category": "text",
-      "license": "varies",
+      "license": "MIT",
       "commands": ["awk"],
-      "artifacts": {}
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "8c59523cf56d47621a9b84124a9fc15f580048103195caacf4f8964dfe632e78",
+          "urls": [
+            "https://github.com/benhoyt/goawk/releases/download/v1.31.0/goawk_v1.31.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "goawk.exe",
+              "to": "awk.exe"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "gawk",
       "version": "",
-      "description": "GNU awk sidecar slot for users who need GNU awk compatibility.",
+      "description": "GNU awk sidecar slot for users who need GNU awk compatibility; not the default awk provider.",
       "kind": "external",
       "category": "text",
       "license": "GPL-3.0-or-later",
