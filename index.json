@@ -1,0 +1,710 @@
+{
+  "schema": 1,
+  "name": "official",
+  "version": "builtin-2026.07.25",
+  "updated": "2026-07-25",
+  "sources": [
+    {
+      "name": "official-github-raw",
+      "region": "global",
+      "priority": 10,
+      "description": "Canonical raw GitHub index for the official WinuxCmd WPM source.",
+      "homepage": "https://github.com/unixwin/wpm-source",
+      "index_urls": [
+        "https://raw.githubusercontent.com/unixwin/wpm-source/main/index.json"
+      ]
+    },
+    {
+      "name": "official-jsdelivr",
+      "region": "global",
+      "priority": 15,
+      "description": "CDN mirror of the canonical WPM index.",
+      "homepage": "https://cdn.jsdelivr.net/gh/unixwin/wpm-source@main/index.json",
+      "index_urls": [
+        "https://cdn.jsdelivr.net/gh/unixwin/wpm-source@main/index.json"
+      ]
+    },
+    {
+      "name": "official-github-release",
+      "region": "global",
+      "priority": 20,
+      "description": "Release-pinned WPM index for stable WinuxCmd packages.",
+      "homepage": "https://github.com/unixwin/wpm-source/releases",
+      "index_urls": [
+        "https://github.com/unixwin/wpm-source/releases/latest/download/wpm-index.json"
+      ]
+    },
+    {
+      "name": "official-cn",
+      "region": "cn",
+      "priority": 30,
+      "description": "Reserved China-friendly WPM index mirror.",
+      "homepage": "",
+      "index_urls": []
+    }
+  ],
+  "packages": [
+    {
+      "name": "winuxcmd",
+      "version": "0.12.5",
+      "description": "WinuxCmd core command set",
+      "kind": "core",
+      "license": "MIT",
+      "commands": ["winuxcmd", "wpm"],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "",
+          "urls": [],
+          "files": [
+            {
+              "from": "winuxcmd.exe",
+              "to": "winuxcmd.exe"
+            }
+          ]
+        },
+        "windows-arm64": {
+          "type": "zip",
+          "sha256": "",
+          "urls": [],
+          "files": [
+            {
+              "from": "winuxcmd.exe",
+              "to": "winuxcmd.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "awk",
+      "version": "",
+      "description": "AWK-compatible text processing interpreter slot; prefer a permissive-license native Windows build.",
+      "kind": "external",
+      "category": "text",
+      "license": "varies",
+      "commands": ["awk"],
+      "artifacts": {}
+    },
+    {
+      "name": "gawk",
+      "version": "",
+      "description": "GNU awk sidecar slot for users who need GNU awk compatibility.",
+      "kind": "external",
+      "category": "text",
+      "license": "GPL-3.0-or-later",
+      "commands": ["gawk", "awk"],
+      "artifacts": {}
+    },
+    {
+      "name": "jq",
+      "version": "",
+      "description": "Command-line JSON processor.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": ["jq"],
+      "artifacts": {}
+    },
+    {
+      "name": "yq",
+      "version": "",
+      "description": "Command-line YAML, JSON, XML, CSV, TOML and properties processor.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": ["yq"],
+      "artifacts": {}
+    },
+    {
+      "name": "ncat",
+      "version": "",
+      "description": "Nmap netcat-compatible networking utility.",
+      "kind": "external",
+      "category": "network",
+      "license": "Nmap",
+      "commands": ["ncat"],
+      "artifacts": {}
+    },
+    {
+      "name": "7zip",
+      "version": "",
+      "description": "7-Zip archive utility.",
+      "kind": "external",
+      "category": "archive",
+      "license": "LGPL-2.1-or-later",
+      "commands": ["7z", "7zz"],
+      "artifacts": {}
+    },
+    {
+      "name": "zstd",
+      "version": "",
+      "description": "Zstandard compression tools.",
+      "kind": "external",
+      "category": "archive",
+      "license": "BSD-3-Clause OR GPL-2.0-only",
+      "commands": ["zstd", "unzstd", "zstdcat"],
+      "artifacts": {}
+    },
+    {
+      "name": "ripgrep",
+      "version": "",
+      "description": "Fast recursive search tool.",
+      "kind": "external",
+      "category": "search",
+      "license": "MIT OR Unlicense",
+      "commands": ["rg"],
+      "artifacts": {}
+    },
+    {
+      "name": "fd",
+      "version": "",
+      "description": "Fast user-friendly file finder.",
+      "kind": "external",
+      "category": "search",
+      "license": "MIT OR Apache-2.0",
+      "commands": ["fd"],
+      "artifacts": {}
+    },
+    {
+      "name": "fzf",
+      "version": "",
+      "description": "Command-line fuzzy finder.",
+      "kind": "external",
+      "category": "interactive",
+      "license": "MIT",
+      "commands": ["fzf"],
+      "artifacts": {}
+    },
+    {
+      "name": "bat",
+      "version": "",
+      "description": "Cat-like file viewer with syntax highlighting.",
+      "kind": "external",
+      "category": "viewer",
+      "license": "MIT OR Apache-2.0",
+      "commands": ["bat"],
+      "artifacts": {}
+    },
+    {
+      "name": "delta",
+      "version": "",
+      "description": "Syntax-highlighting pager for git, diff and grep output.",
+      "kind": "external",
+      "category": "viewer",
+      "license": "MIT",
+      "commands": ["delta"],
+      "artifacts": {}
+    },
+    {
+      "name": "sd",
+      "version": "",
+      "description": "Intuitive find-and-replace command.",
+      "kind": "external",
+      "category": "text",
+      "license": "MIT",
+      "commands": ["sd"],
+      "artifacts": {}
+    },
+    {
+      "name": "hyperfine",
+      "version": "",
+      "description": "Command-line benchmarking tool.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT OR Apache-2.0",
+      "commands": ["hyperfine"],
+      "artifacts": {}
+    },
+    {
+      "name": "just",
+      "version": "",
+      "description": "Command runner for project recipes.",
+      "kind": "external",
+      "category": "developer",
+      "license": "CC0-1.0",
+      "commands": ["just"],
+      "artifacts": {}
+    },
+    {
+      "name": "dust",
+      "version": "",
+      "description": "Disk usage analyzer with a terminal tree view.",
+      "kind": "external",
+      "category": "system",
+      "license": "Apache-2.0",
+      "commands": ["dust"],
+      "artifacts": {}
+    },
+    {
+      "name": "duf",
+      "version": "",
+      "description": "Disk usage and free space viewer.",
+      "kind": "external",
+      "category": "system",
+      "license": "MIT",
+      "commands": ["duf"],
+      "artifacts": {}
+    },
+    {
+      "name": "procs",
+      "version": "",
+      "description": "Modern process viewer.",
+      "kind": "external",
+      "category": "system",
+      "license": "MIT",
+      "commands": ["procs"],
+      "artifacts": {}
+    },
+    {
+      "name": "bottom",
+      "version": "",
+      "description": "Graphical terminal system monitor.",
+      "kind": "external",
+      "category": "system",
+      "license": "MIT",
+      "commands": ["btm"],
+      "artifacts": {}
+    },
+    {
+      "name": "wget",
+      "version": "",
+      "description": "Non-interactive network downloader.",
+      "kind": "external",
+      "category": "network",
+      "license": "GPL-3.0-or-later",
+      "commands": ["wget"],
+      "artifacts": {}
+    },
+    {
+      "name": "aria2",
+      "version": "",
+      "description": "Multi-protocol command-line downloader.",
+      "kind": "external",
+      "category": "network",
+      "license": "GPL-2.0-or-later",
+      "commands": ["aria2c"],
+      "artifacts": {}
+    },
+    {
+      "name": "rclone",
+      "version": "",
+      "description": "Cloud storage sync tool.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": ["rclone"],
+      "artifacts": {}
+    },
+    {
+      "name": "eza",
+      "version": "",
+      "description": "Modern ls replacement.",
+      "kind": "external",
+      "category": "filesystem",
+      "license": "MIT",
+      "commands": ["eza"],
+      "artifacts": {}
+    },
+    {
+      "name": "lsd",
+      "version": "",
+      "description": "Colorful ls replacement.",
+      "kind": "external",
+      "category": "filesystem",
+      "license": "Apache-2.0",
+      "commands": ["lsd"],
+      "artifacts": {}
+    },
+    {
+      "name": "zoxide",
+      "version": "",
+      "description": "Smarter cd command.",
+      "kind": "external",
+      "category": "navigation",
+      "license": "MIT",
+      "commands": ["zoxide"],
+      "artifacts": {}
+    },
+    {
+      "name": "starship",
+      "version": "",
+      "description": "Cross-shell prompt renderer.",
+      "kind": "external",
+      "category": "shell",
+      "license": "ISC",
+      "commands": ["starship"],
+      "artifacts": {}
+    },
+    {
+      "name": "chezmoi",
+      "version": "",
+      "description": "Dotfile manager.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": ["chezmoi"],
+      "artifacts": {}
+    },
+    {
+      "name": "gh",
+      "version": "",
+      "description": "GitHub command-line client.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": ["gh"],
+      "artifacts": {}
+    },
+    {
+      "name": "glab",
+      "version": "",
+      "description": "GitLab command-line client.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": ["glab"],
+      "artifacts": {}
+    },
+    {
+      "name": "lazygit",
+      "version": "",
+      "description": "Terminal UI for git.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": ["lazygit"],
+      "artifacts": {}
+    },
+    {
+      "name": "lazydocker",
+      "version": "",
+      "description": "Terminal UI for Docker.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": ["lazydocker"],
+      "artifacts": {}
+    },
+    {
+      "name": "kubectl",
+      "version": "",
+      "description": "Kubernetes command-line tool.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": ["kubectl"],
+      "artifacts": {}
+    },
+    {
+      "name": "helm",
+      "version": "",
+      "description": "Kubernetes package manager.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": ["helm"],
+      "artifacts": {}
+    },
+    {
+      "name": "k9s",
+      "version": "",
+      "description": "Terminal UI for Kubernetes.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": ["k9s"],
+      "artifacts": {}
+    },
+    {
+      "name": "opentofu",
+      "version": "",
+      "description": "Infrastructure-as-code CLI.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "MPL-2.0",
+      "commands": ["tofu"],
+      "artifacts": {}
+    },
+    {
+      "name": "sqlite",
+      "version": "",
+      "description": "SQLite command-line shell.",
+      "kind": "external",
+      "category": "data",
+      "license": "blessing",
+      "commands": ["sqlite3"],
+      "artifacts": {}
+    },
+    {
+      "name": "duckdb",
+      "version": "",
+      "description": "DuckDB analytical database CLI.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": ["duckdb"],
+      "artifacts": {}
+    },
+    {
+      "name": "pandoc",
+      "version": "",
+      "description": "Universal document converter.",
+      "kind": "external",
+      "category": "document",
+      "license": "GPL-2.0-or-later",
+      "commands": ["pandoc"],
+      "artifacts": {}
+    },
+    {
+      "name": "shellcheck",
+      "version": "",
+      "description": "Shell script static analyzer.",
+      "kind": "external",
+      "category": "developer",
+      "license": "GPL-3.0-or-later",
+      "commands": ["shellcheck"],
+      "artifacts": {}
+    },
+    {
+      "name": "shfmt",
+      "version": "",
+      "description": "Shell parser and formatter.",
+      "kind": "external",
+      "category": "developer",
+      "license": "BSD-3-Clause",
+      "commands": ["shfmt"],
+      "artifacts": {}
+    },
+    {
+      "name": "hadolint",
+      "version": "",
+      "description": "Dockerfile linter.",
+      "kind": "external",
+      "category": "developer",
+      "license": "GPL-3.0-or-later",
+      "commands": ["hadolint"],
+      "artifacts": {}
+    },
+    {
+      "name": "tokei",
+      "version": "",
+      "description": "Code statistics counter.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT OR Apache-2.0",
+      "commands": ["tokei"],
+      "artifacts": {}
+    },
+    {
+      "name": "scc",
+      "version": "",
+      "description": "Fast source code counter.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": ["scc"],
+      "artifacts": {}
+    },
+    {
+      "name": "watchexec",
+      "version": "",
+      "description": "Run commands when files change.",
+      "kind": "external",
+      "category": "developer",
+      "license": "Apache-2.0",
+      "commands": ["watchexec"],
+      "artifacts": {}
+    },
+    {
+      "name": "miniserve",
+      "version": "",
+      "description": "Small static file server.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": ["miniserve"],
+      "artifacts": {}
+    },
+    {
+      "name": "xh",
+      "version": "",
+      "description": "Friendly HTTP client.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT OR Apache-2.0",
+      "commands": ["xh"],
+      "artifacts": {}
+    },
+    {
+      "name": "grpcurl",
+      "version": "",
+      "description": "Command-line gRPC client.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": ["grpcurl"],
+      "artifacts": {}
+    },
+    {
+      "name": "age",
+      "version": "",
+      "description": "Simple modern file encryption tool.",
+      "kind": "external",
+      "category": "security",
+      "license": "BSD-3-Clause",
+      "commands": ["age", "age-keygen"],
+      "artifacts": {}
+    },
+    {
+      "name": "sops",
+      "version": "",
+      "description": "Encrypted secrets editor.",
+      "kind": "external",
+      "category": "security",
+      "license": "MPL-2.0",
+      "commands": ["sops"],
+      "artifacts": {}
+    },
+    {
+      "name": "cosign",
+      "version": "",
+      "description": "Container signing and verification tool.",
+      "kind": "external",
+      "category": "security",
+      "license": "Apache-2.0",
+      "commands": ["cosign"],
+      "artifacts": {}
+    },
+    {
+      "name": "trivy",
+      "version": "",
+      "description": "Security scanner for containers and filesystems.",
+      "kind": "external",
+      "category": "security",
+      "license": "Apache-2.0",
+      "commands": ["trivy"],
+      "artifacts": {}
+    },
+    {
+      "name": "syft",
+      "version": "",
+      "description": "SBOM generator.",
+      "kind": "external",
+      "category": "security",
+      "license": "Apache-2.0",
+      "commands": ["syft"],
+      "artifacts": {}
+    },
+    {
+      "name": "grype",
+      "version": "",
+      "description": "Vulnerability scanner for container images and filesystems.",
+      "kind": "external",
+      "category": "security",
+      "license": "Apache-2.0",
+      "commands": ["grype"],
+      "artifacts": {}
+    },
+    {
+      "name": "oras",
+      "version": "",
+      "description": "OCI registry client.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": ["oras"],
+      "artifacts": {}
+    },
+    {
+      "name": "crane",
+      "version": "",
+      "description": "Container registry CLI.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": ["crane"],
+      "artifacts": {}
+    },
+    {
+      "name": "restic",
+      "version": "",
+      "description": "Fast encrypted backup tool.",
+      "kind": "external",
+      "category": "backup",
+      "license": "BSD-2-Clause",
+      "commands": ["restic"],
+      "artifacts": {}
+    },
+    {
+      "name": "yazi",
+      "version": "",
+      "description": "Terminal file manager.",
+      "kind": "external",
+      "category": "filesystem",
+      "license": "MIT",
+      "commands": ["yazi"],
+      "artifacts": {}
+    },
+    {
+      "name": "ouch",
+      "version": "",
+      "description": "Compression and decompression utility.",
+      "kind": "external",
+      "category": "archive",
+      "license": "MIT",
+      "commands": ["ouch"],
+      "artifacts": {}
+    },
+    {
+      "name": "erdtree",
+      "version": "",
+      "description": "Modern tree and disk usage tool.",
+      "kind": "external",
+      "category": "filesystem",
+      "license": "MIT",
+      "commands": ["erd"],
+      "artifacts": {}
+    },
+    {
+      "name": "micro",
+      "version": "",
+      "description": "Terminal text editor.",
+      "kind": "external",
+      "category": "editor",
+      "license": "MIT",
+      "commands": ["micro"],
+      "artifacts": {}
+    },
+    {
+      "name": "helix",
+      "version": "",
+      "description": "Modal terminal text editor.",
+      "kind": "external",
+      "category": "editor",
+      "license": "MPL-2.0",
+      "commands": ["hx"],
+      "artifacts": {}
+    },
+    {
+      "name": "busybox",
+      "version": "",
+      "description": "Single-binary Unix utilities collection.",
+      "kind": "external",
+      "category": "compat",
+      "license": "GPL-2.0-only",
+      "commands": ["busybox"],
+      "artifacts": {}
+    },
+    {
+      "name": "ffmpeg",
+      "version": "",
+      "description": "Audio and video conversion tools.",
+      "kind": "external",
+      "category": "media",
+      "license": "LGPL-2.1-or-later OR GPL-2.0-or-later",
+      "commands": ["ffmpeg", "ffprobe"],
+      "artifacts": {}
+    }
+  ]
+}
