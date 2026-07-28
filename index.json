@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "name": "official",
-  "version": "official-2026.07.26",
-  "updated": "2026-07-26",
+  "version": "official-2026.07.29",
+  "updated": "2026-07-29",
   "sources": [
     {
       "name": "official-github-raw",
@@ -46,16 +46,21 @@
   "packages": [
     {
       "name": "winuxcmd",
-      "version": "0.13.0",
+      "version": "0.13.2",
       "description": "WinuxCmd core command set",
-      "kind": "core",
+      "kind": "external",
       "license": "MIT",
-      "commands": ["winuxcmd", "wpm"],
+      "commands": [
+        "winuxcmd",
+        "wpm"
+      ],
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "",
-          "urls": [],
+          "sha256": "9593df3fdf179b7b05b10a34628f70168356c1a948cfd28b0633a98017ffaad7",
+          "urls": [
+            "https://github.com/unixwin/WinuxCmd/releases/download/v0.13.2/WinuxCmd-0.13.2-win-x64.zip"
+          ],
           "files": [
             {
               "from": "winuxcmd.exe",
@@ -65,8 +70,10 @@
         },
         "windows-arm64": {
           "type": "zip",
-          "sha256": "",
-          "urls": [],
+          "sha256": "32cc1364d028c1367e7bda0ccf054f748e3794a7db23994e46a630ecf78df1f7",
+          "urls": [
+            "https://github.com/unixwin/WinuxCmd/releases/download/v0.13.2/WinuxCmd-0.13.2-win-arm64.zip"
+          ],
           "files": [
             {
               "from": "winuxcmd.exe",
@@ -83,7 +90,9 @@
       "kind": "external",
       "category": "text",
       "license": "MIT",
-      "commands": ["awk"],
+      "commands": [
+        "awk"
+      ],
       "artifacts": {
         "windows-x64": {
           "type": "zip",
@@ -107,18 +116,37 @@
       "kind": "external",
       "category": "text",
       "license": "GPL-3.0-or-later",
-      "commands": ["gawk", "awk"],
+      "commands": [
+        "gawk",
+        "awk"
+      ],
       "artifacts": {}
     },
     {
       "name": "jq",
-      "version": "",
+      "version": "1.8.2",
       "description": "Command-line JSON processor.",
       "kind": "external",
       "category": "data",
       "license": "MIT",
-      "commands": ["jq"],
-      "artifacts": {}
+      "commands": [
+        "jq"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "a6fc67fedaf9128a3309a1e2ebb8b986aeccf70122ee46d2cb4849e423f0c627",
+          "urls": [
+            "https://github.com/jqlang/jq/releases/download/jq-1.8.2/jq-windows-amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "jq.exe",
+              "to": "jq.exe"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "yq",
@@ -127,7 +155,9 @@
       "kind": "external",
       "category": "data",
       "license": "MIT",
-      "commands": ["yq"],
+      "commands": [
+        "yq"
+      ],
       "artifacts": {}
     },
     {
@@ -137,7 +167,9 @@
       "kind": "external",
       "category": "network",
       "license": "Nmap",
-      "commands": ["ncat"],
+      "commands": [
+        "ncat"
+      ],
       "artifacts": {}
     },
     {
@@ -147,7 +179,10 @@
       "kind": "external",
       "category": "archive",
       "license": "LGPL-2.1-or-later",
-      "commands": ["7z", "7zz"],
+      "commands": [
+        "7z",
+        "7zz"
+      ],
       "artifacts": {}
     },
     {
@@ -157,28 +192,64 @@
       "kind": "external",
       "category": "archive",
       "license": "BSD-3-Clause OR GPL-2.0-only",
-      "commands": ["zstd", "unzstd", "zstdcat"],
+      "commands": [
+        "zstd",
+        "unzstd",
+        "zstdcat"
+      ],
       "artifacts": {}
     },
     {
       "name": "ripgrep",
-      "version": "",
+      "version": "15.2.0",
       "description": "Fast recursive search tool.",
       "kind": "external",
       "category": "search",
       "license": "MIT OR Unlicense",
-      "commands": ["rg"],
-      "artifacts": {}
+      "commands": [
+        "rg"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "71b2fef860abe467217a538ff31de02f5258807c0129f771846f87bd029aafc5",
+          "urls": [
+            "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "rg.exe",
+              "to": "rg.exe"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "fd",
-      "version": "",
+      "version": "10.4.2",
       "description": "Fast user-friendly file finder.",
       "kind": "external",
       "category": "search",
       "license": "MIT OR Apache-2.0",
-      "commands": ["fd"],
-      "artifacts": {}
+      "commands": [
+        "fd"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "b2816e506390a89941c63c9187d58a3cc10e9a55f2ef0685f9ea0eccaf7c98c8",
+          "urls": [
+            "https://github.com/sharkdp/fd/releases/download/v10.4.2/fd-v10.4.2-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "fd.exe",
+              "to": "fd.exe"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "fzf",
@@ -187,7 +258,9 @@
       "kind": "external",
       "category": "interactive",
       "license": "MIT",
-      "commands": ["fzf"],
+      "commands": [
+        "fzf"
+      ],
       "artifacts": {}
     },
     {
@@ -197,7 +270,9 @@
       "kind": "external",
       "category": "viewer",
       "license": "MIT OR Apache-2.0",
-      "commands": ["bat"],
+      "commands": [
+        "bat"
+      ],
       "artifacts": {}
     },
     {
@@ -207,18 +282,36 @@
       "kind": "external",
       "category": "viewer",
       "license": "MIT",
-      "commands": ["delta"],
+      "commands": [
+        "delta"
+      ],
       "artifacts": {}
     },
     {
       "name": "sd",
-      "version": "",
+      "version": "1.1.0",
       "description": "Intuitive find-and-replace command.",
       "kind": "external",
       "category": "text",
       "license": "MIT",
-      "commands": ["sd"],
-      "artifacts": {}
+      "commands": [
+        "sd"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "59837c2e7c911099aca1cc46b663bcdc5a949fd3e9fbbaf34fc73e5d5d71007c",
+          "urls": [
+            "https://github.com/chmln/sd/releases/download/v1.1.0/sd-v1.1.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "sd.exe",
+              "to": "sd.exe"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "hyperfine",
@@ -227,7 +320,9 @@
       "kind": "external",
       "category": "developer",
       "license": "MIT OR Apache-2.0",
-      "commands": ["hyperfine"],
+      "commands": [
+        "hyperfine"
+      ],
       "artifacts": {}
     },
     {
@@ -237,7 +332,9 @@
       "kind": "external",
       "category": "developer",
       "license": "CC0-1.0",
-      "commands": ["just"],
+      "commands": [
+        "just"
+      ],
       "artifacts": {}
     },
     {
@@ -247,7 +344,9 @@
       "kind": "external",
       "category": "system",
       "license": "Apache-2.0",
-      "commands": ["dust"],
+      "commands": [
+        "dust"
+      ],
       "artifacts": {}
     },
     {
@@ -257,7 +356,9 @@
       "kind": "external",
       "category": "system",
       "license": "MIT",
-      "commands": ["duf"],
+      "commands": [
+        "duf"
+      ],
       "artifacts": {}
     },
     {
@@ -267,7 +368,9 @@
       "kind": "external",
       "category": "system",
       "license": "MIT",
-      "commands": ["procs"],
+      "commands": [
+        "procs"
+      ],
       "artifacts": {}
     },
     {
@@ -277,7 +380,9 @@
       "kind": "external",
       "category": "system",
       "license": "MIT",
-      "commands": ["btm"],
+      "commands": [
+        "btm"
+      ],
       "artifacts": {}
     },
     {
@@ -287,28 +392,62 @@
       "kind": "external",
       "category": "network",
       "license": "GPL-3.0-or-later",
-      "commands": ["wget"],
+      "commands": [
+        "wget"
+      ],
       "artifacts": {}
     },
     {
       "name": "aria2",
-      "version": "",
+      "version": "1.37.0",
       "description": "Multi-protocol command-line downloader.",
       "kind": "external",
       "category": "network",
       "license": "GPL-2.0-or-later",
-      "commands": ["aria2c"],
-      "artifacts": {}
+      "commands": [
+        "aria2c"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "67d015301eef0b612191212d564c5bb0a14b5b9c4796b76454276a4d28d9b288",
+          "urls": [
+            "https://github.com/aria2/aria2/releases/download/release-1.37.0/aria2-1.37.0-win-64bit-build1.zip"
+          ],
+          "files": [
+            {
+              "from": "aria2-1.37.0-win-64bit-build1/aria2c.exe",
+              "to": "aria2c.exe"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "rclone",
-      "version": "",
+      "version": "1.74.4",
       "description": "Cloud storage sync tool.",
       "kind": "external",
       "category": "network",
       "license": "MIT",
-      "commands": ["rclone"],
-      "artifacts": {}
+      "commands": [
+        "rclone"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "ef097ef9de37a57feb7d9f9c7afb34148ad3c65be8025f1d8f7f521554a701ea",
+          "urls": [
+            "https://github.com/rclone/rclone/releases/download/v1.74.4/rclone-v1.74.4-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "rclone-v1.74.4-windows-amd64/rclone.exe",
+              "to": "rclone.exe"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "eza",
@@ -317,7 +456,9 @@
       "kind": "external",
       "category": "filesystem",
       "license": "MIT",
-      "commands": ["eza"],
+      "commands": [
+        "eza"
+      ],
       "artifacts": {}
     },
     {
@@ -327,7 +468,9 @@
       "kind": "external",
       "category": "filesystem",
       "license": "Apache-2.0",
-      "commands": ["lsd"],
+      "commands": [
+        "lsd"
+      ],
       "artifacts": {}
     },
     {
@@ -337,7 +480,9 @@
       "kind": "external",
       "category": "navigation",
       "license": "MIT",
-      "commands": ["zoxide"],
+      "commands": [
+        "zoxide"
+      ],
       "artifacts": {}
     },
     {
@@ -347,7 +492,9 @@
       "kind": "external",
       "category": "shell",
       "license": "ISC",
-      "commands": ["starship"],
+      "commands": [
+        "starship"
+      ],
       "artifacts": {}
     },
     {
@@ -357,7 +504,9 @@
       "kind": "external",
       "category": "developer",
       "license": "MIT",
-      "commands": ["chezmoi"],
+      "commands": [
+        "chezmoi"
+      ],
       "artifacts": {}
     },
     {
@@ -367,7 +516,9 @@
       "kind": "external",
       "category": "developer",
       "license": "MIT",
-      "commands": ["gh"],
+      "commands": [
+        "gh"
+      ],
       "artifacts": {}
     },
     {
@@ -377,7 +528,9 @@
       "kind": "external",
       "category": "developer",
       "license": "MIT",
-      "commands": ["glab"],
+      "commands": [
+        "glab"
+      ],
       "artifacts": {}
     },
     {
@@ -387,7 +540,9 @@
       "kind": "external",
       "category": "developer",
       "license": "MIT",
-      "commands": ["lazygit"],
+      "commands": [
+        "lazygit"
+      ],
       "artifacts": {}
     },
     {
@@ -397,7 +552,9 @@
       "kind": "external",
       "category": "developer",
       "license": "MIT",
-      "commands": ["lazydocker"],
+      "commands": [
+        "lazydocker"
+      ],
       "artifacts": {}
     },
     {
@@ -407,7 +564,9 @@
       "kind": "external",
       "category": "cloud",
       "license": "Apache-2.0",
-      "commands": ["kubectl"],
+      "commands": [
+        "kubectl"
+      ],
       "artifacts": {}
     },
     {
@@ -417,7 +576,9 @@
       "kind": "external",
       "category": "cloud",
       "license": "Apache-2.0",
-      "commands": ["helm"],
+      "commands": [
+        "helm"
+      ],
       "artifacts": {}
     },
     {
@@ -427,7 +588,9 @@
       "kind": "external",
       "category": "cloud",
       "license": "Apache-2.0",
-      "commands": ["k9s"],
+      "commands": [
+        "k9s"
+      ],
       "artifacts": {}
     },
     {
@@ -437,7 +600,9 @@
       "kind": "external",
       "category": "cloud",
       "license": "MPL-2.0",
-      "commands": ["tofu"],
+      "commands": [
+        "tofu"
+      ],
       "artifacts": {}
     },
     {
@@ -447,7 +612,9 @@
       "kind": "external",
       "category": "data",
       "license": "blessing",
-      "commands": ["sqlite3"],
+      "commands": [
+        "sqlite3"
+      ],
       "artifacts": {}
     },
     {
@@ -457,7 +624,9 @@
       "kind": "external",
       "category": "data",
       "license": "MIT",
-      "commands": ["duckdb"],
+      "commands": [
+        "duckdb"
+      ],
       "artifacts": {}
     },
     {
@@ -467,7 +636,9 @@
       "kind": "external",
       "category": "document",
       "license": "GPL-2.0-or-later",
-      "commands": ["pandoc"],
+      "commands": [
+        "pandoc"
+      ],
       "artifacts": {}
     },
     {
@@ -477,7 +648,9 @@
       "kind": "external",
       "category": "developer",
       "license": "GPL-3.0-or-later",
-      "commands": ["shellcheck"],
+      "commands": [
+        "shellcheck"
+      ],
       "artifacts": {}
     },
     {
@@ -487,7 +660,9 @@
       "kind": "external",
       "category": "developer",
       "license": "BSD-3-Clause",
-      "commands": ["shfmt"],
+      "commands": [
+        "shfmt"
+      ],
       "artifacts": {}
     },
     {
@@ -497,7 +672,9 @@
       "kind": "external",
       "category": "developer",
       "license": "GPL-3.0-or-later",
-      "commands": ["hadolint"],
+      "commands": [
+        "hadolint"
+      ],
       "artifacts": {}
     },
     {
@@ -507,7 +684,9 @@
       "kind": "external",
       "category": "developer",
       "license": "MIT OR Apache-2.0",
-      "commands": ["tokei"],
+      "commands": [
+        "tokei"
+      ],
       "artifacts": {}
     },
     {
@@ -517,7 +696,9 @@
       "kind": "external",
       "category": "developer",
       "license": "MIT",
-      "commands": ["scc"],
+      "commands": [
+        "scc"
+      ],
       "artifacts": {}
     },
     {
@@ -527,38 +708,88 @@
       "kind": "external",
       "category": "developer",
       "license": "Apache-2.0",
-      "commands": ["watchexec"],
+      "commands": [
+        "watchexec"
+      ],
       "artifacts": {}
     },
     {
       "name": "miniserve",
-      "version": "",
+      "version": "0.35.0",
       "description": "Small static file server.",
       "kind": "external",
       "category": "network",
       "license": "MIT",
-      "commands": ["miniserve"],
-      "artifacts": {}
+      "commands": [
+        "miniserve"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "3229e75b40b3870382d23c9a0ecec880b9bd5f6e49160ce602bb15d00f275b6a",
+          "urls": [
+            "https://github.com/svenstaro/miniserve/releases/download/v0.35.0/miniserve-0.35.0-x86_64-pc-windows-msvc.exe"
+          ],
+          "files": [
+            {
+              "from": "miniserve.exe",
+              "to": "miniserve.exe"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "xh",
-      "version": "",
+      "version": "0.26.2",
       "description": "Friendly HTTP client.",
       "kind": "external",
       "category": "network",
       "license": "MIT OR Apache-2.0",
-      "commands": ["xh"],
-      "artifacts": {}
+      "commands": [
+        "xh"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "7907c1ef225382fb5955c8274aa23e31b70622c4d39dbc76cf945dc8ce15a78d",
+          "urls": [
+            "https://github.com/ducaale/xh/releases/download/v0.26.2/xh-v0.26.2-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "xh-v0.26.2-x86_64-pc-windows-msvc/xh.exe",
+              "to": "xh.exe"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "grpcurl",
-      "version": "",
+      "version": "1.9.3",
       "description": "Command-line gRPC client.",
       "kind": "external",
       "category": "network",
       "license": "MIT",
-      "commands": ["grpcurl"],
-      "artifacts": {}
+      "commands": [
+        "grpcurl"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "895335dfa7be74803eeb5acf3ec5d3b06c1e9483fdda3c7622bdef9ad388f32a",
+          "urls": [
+            "https://github.com/fullstorydev/grpcurl/releases/download/v1.9.3/grpcurl_1.9.3_windows_x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "grpcurl.exe",
+              "to": "grpcurl.exe"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "age",
@@ -567,7 +798,10 @@
       "kind": "external",
       "category": "security",
       "license": "BSD-3-Clause",
-      "commands": ["age", "age-keygen"],
+      "commands": [
+        "age",
+        "age-keygen"
+      ],
       "artifacts": {}
     },
     {
@@ -577,7 +811,9 @@
       "kind": "external",
       "category": "security",
       "license": "MPL-2.0",
-      "commands": ["sops"],
+      "commands": [
+        "sops"
+      ],
       "artifacts": {}
     },
     {
@@ -587,7 +823,9 @@
       "kind": "external",
       "category": "security",
       "license": "Apache-2.0",
-      "commands": ["cosign"],
+      "commands": [
+        "cosign"
+      ],
       "artifacts": {}
     },
     {
@@ -597,7 +835,9 @@
       "kind": "external",
       "category": "security",
       "license": "Apache-2.0",
-      "commands": ["trivy"],
+      "commands": [
+        "trivy"
+      ],
       "artifacts": {}
     },
     {
@@ -607,7 +847,9 @@
       "kind": "external",
       "category": "security",
       "license": "Apache-2.0",
-      "commands": ["syft"],
+      "commands": [
+        "syft"
+      ],
       "artifacts": {}
     },
     {
@@ -617,7 +859,9 @@
       "kind": "external",
       "category": "security",
       "license": "Apache-2.0",
-      "commands": ["grype"],
+      "commands": [
+        "grype"
+      ],
       "artifacts": {}
     },
     {
@@ -627,7 +871,9 @@
       "kind": "external",
       "category": "cloud",
       "license": "Apache-2.0",
-      "commands": ["oras"],
+      "commands": [
+        "oras"
+      ],
       "artifacts": {}
     },
     {
@@ -637,7 +883,9 @@
       "kind": "external",
       "category": "cloud",
       "license": "Apache-2.0",
-      "commands": ["crane"],
+      "commands": [
+        "crane"
+      ],
       "artifacts": {}
     },
     {
@@ -647,7 +895,9 @@
       "kind": "external",
       "category": "backup",
       "license": "BSD-2-Clause",
-      "commands": ["restic"],
+      "commands": [
+        "restic"
+      ],
       "artifacts": {}
     },
     {
@@ -657,7 +907,9 @@
       "kind": "external",
       "category": "filesystem",
       "license": "MIT",
-      "commands": ["yazi"],
+      "commands": [
+        "yazi"
+      ],
       "artifacts": {}
     },
     {
@@ -667,7 +919,9 @@
       "kind": "external",
       "category": "archive",
       "license": "MIT",
-      "commands": ["ouch"],
+      "commands": [
+        "ouch"
+      ],
       "artifacts": {}
     },
     {
@@ -677,7 +931,9 @@
       "kind": "external",
       "category": "filesystem",
       "license": "MIT",
-      "commands": ["erd"],
+      "commands": [
+        "erd"
+      ],
       "artifacts": {}
     },
     {
@@ -687,7 +943,9 @@
       "kind": "external",
       "category": "editor",
       "license": "MIT",
-      "commands": ["micro"],
+      "commands": [
+        "micro"
+      ],
       "artifacts": {}
     },
     {
@@ -697,7 +955,9 @@
       "kind": "external",
       "category": "editor",
       "license": "MPL-2.0",
-      "commands": ["hx"],
+      "commands": [
+        "hx"
+      ],
       "artifacts": {}
     },
     {
@@ -707,7 +967,9 @@
       "kind": "external",
       "category": "compat",
       "license": "GPL-2.0-only",
-      "commands": ["busybox"],
+      "commands": [
+        "busybox"
+      ],
       "artifacts": {}
     },
     {
@@ -717,7 +979,10 @@
       "kind": "external",
       "category": "media",
       "license": "LGPL-2.1-or-later OR GPL-2.0-or-later",
-      "commands": ["ffmpeg", "ffprobe"],
+      "commands": [
+        "ffmpeg",
+        "ffprobe"
+      ],
       "artifacts": {}
     }
   ]

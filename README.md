@@ -47,8 +47,65 @@ https://cdn.jsdelivr.net/gh/unixwin/wpm-source@main/index.json
 https://github.com/unixwin/wpm-source/releases/latest/download/wpm-index.json
 ```
 
-The WinuxCmd bundled index may still keep an in-repo fallback, but this
-repository is the canonical external WPM source.
+WinuxCmd should only bundle source URLs for bootstrap behavior. Package
+metadata and artifact updates belong in this repository.
+
+## Updating Packages
+
+Use `scripts/update-package.ps1` instead of hand-editing `index.json`. The
+script downloads the artifact, computes SHA-256, updates the package artifact,
+and refreshes the top-level `updated` date.
+
+Preview first:
+
+```powershell
+pwsh ./scripts/update-package.ps1 `
+  -Package jq `
+  -Version 1.8.2 `
+  -Platform windows-x64 `
+  -Type exe `
+  -Url https://github.com/jqlang/jq/releases/download/jq-1.8.2/jq-windows-amd64.exe `
+  -From jq.exe `
+  -To jq.exe `
+  -DryRun
+```
+
+Apply the update by removing `-DryRun`, then validate:
+
+```powershell
+pwsh ./scripts/validate-index.ps1
+```
+
+For zip packages, map the executable inside the archive:
+
+```powershell
+pwsh ./scripts/update-package.ps1 `
+  -Package fd `
+  -Version 10.4.2 `
+  -Platform windows-x64 `
+  -Type zip `
+  -Url https://github.com/sharkdp/fd/releases/download/v10.4.2/fd-v10.4.2-x86_64-pc-windows-msvc.zip `
+  -From fd.exe `
+  -To fd.exe
+```
+
+For a new package, also provide metadata:
+
+```powershell
+pwsh ./scripts/update-package.ps1 `
+  -Package tool `
+  -Version 1.2.3 `
+  -Platform windows-x64 `
+  -Type zip `
+  -Url https://example.invalid/tool-1.2.3-windows-x64.zip `
+  -From tool.exe `
+  -To tool.exe `
+  -Description "Useful standalone command-line tool." `
+  -Kind external `
+  -Category developer `
+  -License MIT `
+  -Commands tool
+```
 
 ## Package Requirements
 
