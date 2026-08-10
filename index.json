@@ -740,36 +740,8 @@
                                        }
                      },
                      {
-                         "name":  "gh",
-                         "version":  "",
-                         "description":  "GitHub command-line client.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "gh"
-                                      ],
-                         "artifacts":  {
-
-                                       }
-                     },
-                     {
-                         "name":  "glab",
-                         "version":  "",
-                         "description":  "GitLab command-line client.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "glab"
-                                      ],
-                         "artifacts":  {
-
-                                       }
-                     },
-                     {
                          "name":  "lazygit",
-                         "version":  "",
+                         "version":  "0.64.0",
                          "description":  "Terminal UI for git.",
                          "kind":  "external",
                          "category":  "developer",
@@ -778,91 +750,19 @@
                                           "lazygit"
                                       ],
                          "artifacts":  {
-
-                                       }
-                     },
-                     {
-                         "name":  "lazydocker",
-                         "version":  "",
-                         "description":  "Terminal UI for Docker.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "lazydocker"
-                                      ],
-                         "artifacts":  {
-
-                                       }
-                     },
-                     {
-                         "name":  "kubectl",
-                         "version":  "",
-                         "description":  "Kubernetes command-line tool.",
-                         "kind":  "external",
-                         "category":  "cloud",
-                         "license":  "Apache-2.0",
-                         "commands":  [
-                                          "kubectl"
-                                      ],
-                         "artifacts":  {
-
-                                       }
-                     },
-                     {
-                         "name":  "helm",
-                         "version":  "",
-                         "description":  "Kubernetes package manager.",
-                         "kind":  "external",
-                         "category":  "cloud",
-                         "license":  "Apache-2.0",
-                         "commands":  [
-                                          "helm"
-                                      ],
-                         "artifacts":  {
-
-                                       }
-                     },
-                     {
-                         "name":  "k9s",
-                         "version":  "",
-                         "description":  "Terminal UI for Kubernetes.",
-                         "kind":  "external",
-                         "category":  "cloud",
-                         "license":  "Apache-2.0",
-                         "commands":  [
-                                          "k9s"
-                                      ],
-                         "artifacts":  {
-
-                                       }
-                     },
-                     {
-                         "name":  "opentofu",
-                         "version":  "",
-                         "description":  "Infrastructure-as-code CLI.",
-                         "kind":  "external",
-                         "category":  "cloud",
-                         "license":  "MPL-2.0",
-                         "commands":  [
-                                          "tofu"
-                                      ],
-                         "artifacts":  {
-
-                                       }
-                     },
-                     {
-                         "name":  "sqlite",
-                         "version":  "",
-                         "description":  "SQLite command-line shell.",
-                         "kind":  "external",
-                         "category":  "data",
-                         "license":  "blessing",
-                         "commands":  [
-                                          "sqlite3"
-                                      ],
-                         "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "d8b723dd25e098c4a229e7d9a87ff1c3a5779902ebea242b8678f4ac195c1d90",
+                                                               "urls":  [
+                                                                            "https://github.com/jesseduffield/lazygit/releases/download/v0.64.0/lazygit_0.64.0_windows_x86_64.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "lazygit.exe",
+                                                                                 "to":  "lazygit.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
@@ -893,7 +793,7 @@
                      },
                      {
                          "name":  "pandoc",
-                         "version":  "",
+                         "version":  "3.10.1",
                          "description":  "Universal document converter.",
                          "kind":  "external",
                          "category":  "document",
@@ -902,7 +802,19 @@
                                           "pandoc"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "4725a1883e2171c2e181e6fd45003acb59ca4e9cbe031fdd3b79ef0d697d36aa",
+                                                               "urls":  [
+                                                                            "https://github.com/jgm/pandoc/releases/download/3.10.1/pandoc-3.10.1-windows-x86_64.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "pandoc-3.10.1/pandoc.exe",
+                                                                                 "to":  "pandoc.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
@@ -1317,20 +1229,6 @@
                                                                              }
                                                                          ]
                                                            }
-                                       }
-                     },
-                     {
-                         "name":  "crane",
-                         "version":  "",
-                         "description":  "Container registry CLI.",
-                         "kind":  "external",
-                         "category":  "cloud",
-                         "license":  "Apache-2.0",
-                         "commands":  [
-                                          "crane"
-                                      ],
-                         "artifacts":  {
-
                                        }
                      },
                      {
