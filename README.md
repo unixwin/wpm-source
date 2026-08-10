@@ -28,6 +28,12 @@ Out of scope:
 - Services, drivers, background agents, or tools that require global setup.
 - Language runtimes and SDKs that are better installed by winget, Visual Studio,
   or the vendor installer.
+- Ecosystem package managers or runtime launchers such as Python, Node.js,
+  npm/pnpm/yarn, Bun, Deno, Go, Rust/rustup/cargo, Java/JDK, .NET SDK, LLVM, or
+  Visual Studio toolchains.
+
+This scope is intentional: WPM is for portable shell-side command tools, not for
+owning a full developer runtime stack.
 
 ## Source Layout
 

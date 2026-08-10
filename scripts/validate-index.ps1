@@ -12,6 +12,15 @@ function Test-ArrayLike {
   return $null -ne $Value -and $Value -is [System.Collections.IEnumerable] -and $Value -isnot [string]
 }
 
+function Get-OptionalStringProperty {
+  param([object]$Object, [string]$Name)
+
+  if ($Object -and $Object.PSObject.Properties.Name -contains $Name) {
+    return [string]$Object.$Name
+  }
+  return ""
+}
+
 function Test-ArtifactReady {
   param([object]$Artifact)
 
@@ -30,6 +39,36 @@ function Test-ArtifactReady {
   }
 
   return $true
+}
+
+$outOfScopeCommands = @(
+  "python", "python3", "pip", "pip3", "uv",
+  "node", "nodejs", "npm", "npx", "pnpm", "yarn",
+  "bun", "deno",
+  "go", "gofmt", "golang",
+  "rust", "rustup", "cargo", "rustc",
+  "java", "javac", "jdk", "openjdk",
+  "dotnet",
+  "llvm", "clang", "clang++", "cl",
+  "winget", "scoop", "choco", "chocolatey"
+)
+
+function Test-OutOfScopePackage {
+  param([object]$Package)
+
+  $packageName = ([string]$Package.name).ToLowerInvariant()
+  if ($outOfScopeCommands -contains $packageName) { return $true }
+
+  if (Test-ArrayLike $Package.commands) {
+    foreach ($command in @($Package.commands)) {
+      if ($outOfScopeCommands -contains ([string]$command).ToLowerInvariant()) {
+        return $true
+      }
+    }
+  }
+
+  $category = (Get-OptionalStringProperty -Object $Package -Name "category").ToLowerInvariant()
+  return @("runtime", "sdk", "toolchain", "package-manager") -contains $category
 }
 
 $resolvedIndexPath = (Resolve-Path -LiteralPath $IndexPath).Path
@@ -58,6 +97,10 @@ foreach ($pkg in $packages) {
     $errors.Add("Duplicate package name: $name")
   }
   $names[$name] = $true
+
+  if (Test-OutOfScopePackage -Package $pkg) {
+    $errors.Add("$name is out of scope for WPM; use winget, Visual Studio, or the vendor installer for runtimes, SDKs, toolchains, and ecosystem package managers.")
+  }
 
   foreach ($field in @("description", "kind", "license")) {
     if (-not $pkg.$field) {
