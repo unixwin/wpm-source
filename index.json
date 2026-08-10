@@ -551,7 +551,7 @@
                      },
                      {
                          "name":  "eza",
-                         "version":  "",
+                         "version":  "0.23.5",
                          "description":  "Modern ls replacement.",
                          "kind":  "external",
                          "category":  "filesystem",
@@ -560,12 +560,24 @@
                                           "eza"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "c830638c844a5b89d39ba662b5549903a71fa539018e813880f5b8afa77bac2e",
+                                                               "urls":  [
+                                                                            "https://github.com/eza-community/eza/releases/download/v0.23.5/eza.exe_x86_64-pc-windows-gnu.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "eza.exe",
+                                                                                 "to":  "eza.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
                          "name":  "lsd",
-                         "version":  "",
+                         "version":  "1.2.0",
                          "description":  "Colorful ls replacement.",
                          "kind":  "external",
                          "category":  "filesystem",
@@ -574,12 +586,24 @@
                                           "lsd"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "a65b9f457153934a7ce1f7e0fe1c4922a95bb2822222126e4fbaa6ee9c0d78e5",
+                                                               "urls":  [
+                                                                            "https://github.com/lsd-rs/lsd/releases/download/v1.2.0/lsd-v1.2.0-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "lsd.exe",
+                                                                                 "to":  "lsd.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
                          "name":  "zoxide",
-                         "version":  "",
+                         "version":  "0.10.0",
                          "description":  "Smarter cd command.",
                          "kind":  "external",
                          "category":  "navigation",
@@ -588,12 +612,24 @@
                                           "zoxide"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "f465ae548f8754c8e7edbc60b45fbf58c92bfe123db83d790252d6810fa5daf1",
+                                                               "urls":  [
+                                                                            "https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "zoxide.exe",
+                                                                                 "to":  "zoxide.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
                          "name":  "starship",
-                         "version":  "",
+                         "version":  "1.26.0",
                          "description":  "Cross-shell prompt renderer.",
                          "kind":  "external",
                          "category":  "shell",
@@ -602,7 +638,19 @@
                                           "starship"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "690021e22f2bf2c57d5867dc0fababe5e55e714c26942bd909ffddb6c5df42f2",
+                                                               "urls":  [
+                                                                            "https://github.com/starship/starship/releases/download/v1.26.0/starship-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "starship.exe",
+                                                                                 "to":  "starship.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
@@ -747,7 +795,7 @@
                      },
                      {
                          "name":  "duckdb",
-                         "version":  "",
+                         "version":  "1.5.5",
                          "description":  "DuckDB analytical database CLI.",
                          "kind":  "external",
                          "category":  "data",
@@ -756,7 +804,19 @@
                                           "duckdb"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "e1428b7114a841626b5054723731cbf45c6df91b42ae1a6c355f88fad1f6dc4c",
+                                                               "urls":  [
+                                                                            "https://github.com/duckdb/duckdb/releases/download/v1.5.5/duckdb_cli-windows-amd64.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "duckdb.exe",
+                                                                                 "to":  "duckdb.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
@@ -789,7 +849,7 @@
                      },
                      {
                          "name":  "shfmt",
-                         "version":  "",
+                         "version":  "3.13.1",
                          "description":  "Shell parser and formatter.",
                          "kind":  "external",
                          "category":  "developer",
@@ -798,7 +858,19 @@
                                           "shfmt"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "exe",
+                                                               "sha256":  "60cd368533d0ad73fa86d93d5bbf95ef40587245ce684ed138c1b31557b5fe97",
+                                                               "urls":  [
+                                                                            "https://github.com/mvdan/sh/releases/download/v3.13.1/shfmt_v3.13.1_windows_amd64.exe"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "shfmt.exe",
+                                                                                 "to":  "shfmt.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
