@@ -401,7 +401,7 @@
                      },
                      {
                          "name":  "hyperfine",
-                         "version":  "",
+                         "version":  "1.20.0",
                          "description":  "Command-line benchmarking tool.",
                          "kind":  "external",
                          "category":  "developer",
@@ -410,12 +410,24 @@
                                           "hyperfine"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "2508c549b049b1d4342d08edc1cb42bfac169082b6e3069431b5bab9822dbb32",
+                                                               "urls":  [
+                                                                            "https://github.com/sharkdp/hyperfine/releases/download/v1.20.0/hyperfine-v1.20.0-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "hyperfine-v1.20.0-x86_64-pc-windows-msvc/hyperfine.exe",
+                                                                                 "to":  "hyperfine.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
                          "name":  "just",
-                         "version":  "",
+                         "version":  "1.58.0",
                          "description":  "Command runner for project recipes.",
                          "kind":  "external",
                          "category":  "developer",
@@ -424,12 +436,24 @@
                                           "just"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "759f16fb7aa17c5c8b9594b6d4a8c1a6630dfd042cf2b3ff84841454d3d188dc",
+                                                               "urls":  [
+                                                                            "https://github.com/casey/just/releases/download/1.58.0/just-1.58.0-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "just.exe",
+                                                                                 "to":  "just.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
                          "name":  "dust",
-                         "version":  "",
+                         "version":  "1.2.4",
                          "description":  "Disk usage analyzer with a terminal tree view.",
                          "kind":  "external",
                          "category":  "system",
@@ -438,12 +462,24 @@
                                           "dust"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "eb08d642f016787bb9fc918a4dc5f34665463657fddf83a40f2441cbf020fb4c",
+                                                               "urls":  [
+                                                                            "https://github.com/bootandy/dust/releases/download/v1.2.4/dust-v1.2.4-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "dust-v1.2.4-x86_64-pc-windows-msvc/dust.exe",
+                                                                                 "to":  "dust.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
                          "name":  "duf",
-                         "version":  "",
+                         "version":  "0.9.1",
                          "description":  "Disk usage and free space viewer.",
                          "kind":  "external",
                          "category":  "system",
@@ -452,12 +488,24 @@
                                           "duf"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "503934be81f847d9ddb1b739834217480633435ad16515dd199e372c0b2e1afc",
+                                                               "urls":  [
+                                                                            "https://github.com/muesli/duf/releases/download/v0.9.1/duf_0.9.1_windows_x86_64.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "duf.exe",
+                                                                                 "to":  "duf.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
                          "name":  "procs",
-                         "version":  "",
+                         "version":  "0.14.12",
                          "description":  "Modern process viewer.",
                          "kind":  "external",
                          "category":  "system",
@@ -466,12 +514,24 @@
                                           "procs"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "4928c399ae78ee82f99139a5629077b8d90a58599d834584dd4e613cb60c83d0",
+                                                               "urls":  [
+                                                                            "https://github.com/dalance/procs/releases/download/v0.14.12/procs-v0.14.12-x86_64-windows.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "procs.exe",
+                                                                                 "to":  "procs.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
                          "name":  "bottom",
-                         "version":  "",
+                         "version":  "0.14.7",
                          "description":  "Graphical terminal system monitor.",
                          "kind":  "external",
                          "category":  "system",
@@ -480,7 +540,19 @@
                                           "btm"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "e63a9b05983c467fa67ec82a29c0f2a38f911bf901c74416a7fe65c141d18db4",
+                                                               "urls":  [
+                                                                            "https://github.com/ClementTsang/bottom/releases/download/0.14.7/bottom_x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "btm.exe",
+                                                                                 "to":  "btm.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
@@ -903,7 +975,7 @@
                      },
                      {
                          "name":  "scc",
-                         "version":  "",
+                         "version":  "3.7.0",
                          "description":  "Fast source code counter.",
                          "kind":  "external",
                          "category":  "developer",
@@ -912,12 +984,24 @@
                                           "scc"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "97abf9d55d4b79d3310536d576ccbdf5017aeb425780e850336120b6e67622e1",
+                                                               "urls":  [
+                                                                            "https://github.com/boyter/scc/releases/download/v3.7.0/scc_Windows_x86_64.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "scc.exe",
+                                                                                 "to":  "scc.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
                          "name":  "watchexec",
-                         "version":  "",
+                         "version":  "2.5.1",
                          "description":  "Run commands when files change.",
                          "kind":  "external",
                          "category":  "developer",
@@ -926,7 +1010,19 @@
                                           "watchexec"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "aa448c2704ca1a37ce0f1fc75381d9a411946dd293cf6236293f549426a577f7",
+                                                               "urls":  [
+                                                                            "https://github.com/watchexec/watchexec/releases/download/v2.5.1/watchexec-2.5.1-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "watchexec-2.5.1-x86_64-pc-windows-msvc/watchexec.exe",
+                                                                                 "to":  "watchexec.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
@@ -1009,17 +1105,38 @@
                      },
                      {
                          "name":  "age",
-                         "version":  "",
+                         "version":  "1.3.1",
                          "description":  "Simple modern file encryption tool.",
                          "kind":  "external",
                          "category":  "security",
                          "license":  "BSD-3-Clause",
                          "commands":  [
                                           "age",
-                                          "age-keygen"
+                                          "age-keygen",
+                                          "age-inspect"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "c56e8ce22f7e80cb85ad946cc82d198767b056366201d3e1a2b93d865be38154",
+                                                               "urls":  [
+                                                                            "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-windows-amd64.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "age/age.exe",
+                                                                                 "to":  "age.exe"
+                                                                             },
+                                                                             {
+                                                                                 "from":  "age/age-keygen.exe",
+                                                                                 "to":  "age-keygen.exe"
+                                                                             },
+                                                                             {
+                                                                                 "from":  "age/age-inspect.exe",
+                                                                                 "to":  "age-inspect.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
@@ -1150,7 +1267,7 @@
                      },
                      {
                          "name":  "ouch",
-                         "version":  "",
+                         "version":  "0.8.1",
                          "description":  "Compression and decompression utility.",
                          "kind":  "external",
                          "category":  "archive",
@@ -1159,7 +1276,19 @@
                                           "ouch"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "a958d9db34bbefd9d7f7288ea4989a78085bc48ab2d92d92a1e5b9776f19e0d5",
+                                                               "urls":  [
+                                                                            "https://github.com/ouch-org/ouch/releases/download/0.8.1/ouch-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "ouch-x86_64-pc-windows-msvc/ouch.exe",
+                                                                                 "to":  "ouch.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
