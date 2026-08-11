@@ -210,6 +210,33 @@
                                        }
                      },
                      {
+                         "name":  "jsongrep",
+                         "version":  "0.9.0",
+                         "description":  "Path query language for JSON, YAML, TOML and other structured data.",
+                         "kind":  "external",
+                         "category":  "data",
+                         "license":  "MIT",
+                         "commands":  [
+                                          "jg"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "size":  719851,
+                                                               "sha256":  "28ee98d22b78fecc7abea7d2bd4c6bba3934f34628b259d75edc4b7c865b073a",
+                                                               "urls":  [
+                                                                            "https://github.com/micahkepe/jsongrep/releases/download/v0.9.0/jsongrep-0.9.0-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "jsongrep-0.9.0-x86_64-pc-windows-msvc/jg.exe",
+                                                                                 "to":  "jg.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
                          "name":  "ncat",
                          "version":  "",
                          "description":  "Nmap netcat-compatible networking utility.",
@@ -295,6 +322,33 @@
                                                                              {
                                                                                  "from":  "rg.exe",
                                                                                  "to":  "rg.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
+                         "name":  "sig",
+                         "version":  "0.3.0",
+                         "description":  "Interactive grep for streaming output.",
+                         "kind":  "external",
+                         "category":  "search",
+                         "license":  "MIT",
+                         "commands":  [
+                                          "sig"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "size":  1511963,
+                                                               "sha256":  "7c9d78723cdb2013b7cf6a7a578e7ca1cf613ff852a6a7473dd32337209cd1f3",
+                                                               "urls":  [
+                                                                            "https://github.com/ynqa/sig/releases/download/v0.3.0/sigrs-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "sig.exe",
+                                                                                 "to":  "sig.exe"
                                                                              }
                                                                          ]
                                                            }
@@ -731,6 +785,60 @@
                                        }
                      },
                      {
+                         "name":  "portal",
+                         "version":  "1.2.3",
+                         "description":  "Quick command-line file transfer utility.",
+                         "kind":  "external",
+                         "category":  "network",
+                         "license":  "MIT",
+                         "commands":  [
+                                          "portal"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "size":  6336029,
+                                                               "sha256":  "f775a4a9362da02d9ad19436deb18b01a371ad9ab5ba337c4815a2d00dcfef04",
+                                                               "urls":  [
+                                                                            "https://github.com/SpatiumPortae/portal/releases/download/v1.2.3/portal_1.2.3_Windows_x86_64.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "portal.exe",
+                                                                                 "to":  "portal.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
+                         "name":  "termscp",
+                         "version":  "1.1.1",
+                         "description":  "Terminal file transfer and explorer for SCP, SFTP, FTP, S3, SMB and WebDAV.",
+                         "kind":  "external",
+                         "category":  "network",
+                         "license":  "MIT",
+                         "commands":  [
+                                          "termscp"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "size":  12432939,
+                                                               "sha256":  "15fafc77e5cecb3a8b3217832272de663368e3a4b315b0a34ffa6e3e702a2ccf",
+                                                               "urls":  [
+                                                                            "https://github.com/veeso/termscp/releases/download/v1.1.1/termscp-v1.1.1-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "termscp.exe",
+                                                                                 "to":  "termscp.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
                          "name":  "eza",
                          "version":  "0.23.5",
                          "description":  "Modern ls replacement.",
@@ -861,6 +969,33 @@
                                        }
                      },
                      {
+                         "name":  "zellij",
+                         "version":  "0.44.3",
+                         "description":  "Terminal workspace and multiplexer.",
+                         "kind":  "external",
+                         "category":  "terminal",
+                         "license":  "MIT",
+                         "commands":  [
+                                          "zellij"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "size":  12836227,
+                                                               "sha256":  "2a192ead623d326458b058f235a5c9ca6f955cece8b3787ce744c07ba9f11e34",
+                                                               "urls":  [
+                                                                            "https://github.com/zellij-org/zellij/releases/download/v0.44.3/zellij-no-web-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "zellij.exe",
+                                                                                 "to":  "zellij.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
                          "name":  "chezmoi",
                          "version":  "2.72.0",
                          "description":  "Dotfile manager.",
@@ -907,6 +1042,60 @@
                                                                              {
                                                                                  "from":  "lazygit.exe",
                                                                                  "to":  "lazygit.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
+                         "name":  "gitui",
+                         "version":  "0.28.1",
+                         "description":  "Fast terminal UI for git.",
+                         "kind":  "external",
+                         "category":  "developer",
+                         "license":  "MIT",
+                         "commands":  [
+                                          "gitui"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "tar.gz",
+                                                               "size":  4757777,
+                                                               "sha256":  "fab116ccdf9ae4e17378db912d76cc26e60aefd2226f44e665120dea166867e4",
+                                                               "urls":  [
+                                                                            "https://github.com/gitui-org/gitui/releases/download/v0.28.1/gitui-win.tar.gz"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "gitui.exe",
+                                                                                 "to":  "gitui.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
+                         "name":  "gh-dash",
+                         "version":  "4.25.2",
+                         "description":  "Terminal dashboard for GitHub pull requests and issues.",
+                         "kind":  "external",
+                         "category":  "developer",
+                         "license":  "MIT",
+                         "commands":  [
+                                          "gh-dash"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "exe",
+                                                               "size":  24685568,
+                                                               "sha256":  "5936981bd98d671a00de9e872c5fc5be126106e5f06b1a962fbd198e7502a8db",
+                                                               "urls":  [
+                                                                            "https://github.com/dlvhdr/gh-dash/releases/download/v4.25.2/gh-dash_v4.25.2_windows-amd64.exe"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "gh-dash.exe",
+                                                                                 "to":  "gh-dash.exe"
                                                                              }
                                                                          ]
                                                            }
@@ -1488,6 +1677,33 @@
                                        }
                      },
                      {
+                         "name":  "f2",
+                         "version":  "2.2.2",
+                         "description":  "Fast batch file and directory renamer.",
+                         "kind":  "external",
+                         "category":  "filesystem",
+                         "license":  "MIT",
+                         "commands":  [
+                                          "f2"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "size":  5711184,
+                                                               "sha256":  "64eba7ddbadeca9cd5657b344058311f3c42d342c5e88f93a68d8f07fb8d0a53",
+                                                               "urls":  [
+                                                                            "https://github.com/ayoisaiah/f2/releases/download/v2.2.2/f2_2.2.2_windows_amd64.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "f2.exe",
+                                                                                 "to":  "f2.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
                          "name":  "ouch",
                          "version":  "0.8.1",
                          "description":  "Compression and decompression utility.",
@@ -1540,6 +1756,33 @@
                                        }
                      },
                      {
+                         "name":  "tre",
+                         "version":  "0.4.0",
+                         "description":  "Improved tree command.",
+                         "kind":  "external",
+                         "category":  "filesystem",
+                         "license":  "MIT",
+                         "commands":  [
+                                          "tre"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "size":  683523,
+                                                               "sha256":  "9dfbf8c33038e6b31fb359d7f8e7661e46f015067f5cc2f378c93d8bbd1a432a",
+                                                               "urls":  [
+                                                                            "https://github.com/dduan/tre/releases/download/v0.4.0/tre-v0.4.0-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "tre.exe",
+                                                                                 "to":  "tre.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
                          "name":  "micro",
                          "version":  "2.0.15",
                          "description":  "Terminal text editor.",
@@ -1567,7 +1810,7 @@
                      },
                      {
                          "name":  "helix",
-                         "version":  "",
+                         "version":  "25.07.1",
                          "description":  "Modal terminal text editor.",
                          "kind":  "external",
                          "category":  "editor",
@@ -1576,7 +1819,25 @@
                                           "hx"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "size":  28550028,
+                                                               "sha256":  "5c8325ced8bacd8418d62706f669e96d9c3578a9237526e34d546900cbc049b6",
+                                                               "urls":  [
+                                                                            "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-x86_64-windows.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "helix-25.07.1-x86_64-windows/hx.exe",
+                                                                                 "to":  "hx.exe"
+                                                                             },
+                                                                             {
+                                                                                 "from":  "helix-25.07.1-x86_64-windows/runtime",
+                                                                                 "to":  "runtime",
+                                                                                 "kind":  "dir"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {

@@ -25,10 +25,18 @@ function Test-ArtifactReady {
   param([object]$Artifact)
 
   if (-not $Artifact) { return $false }
-  if (-not $Artifact.type -or @("exe", "zip") -notcontains $Artifact.type) { return $false }
+  if (-not $Artifact.type -or @("exe", "zip", "tar.gz", "tgz", "tar.xz") -notcontains $Artifact.type) { return $false }
   if (-not $Artifact.sha256 -or $Artifact.sha256 -notmatch "^[0-9a-f]{64}$") { return $false }
   if (-not (Test-ArrayLike $Artifact.urls) -or @($Artifact.urls).Count -eq 0) { return $false }
   if (-not (Test-ArrayLike $Artifact.files) -or @($Artifact.files).Count -eq 0) { return $false }
+  if ($Artifact.PSObject.Properties.Name -contains "size") {
+    $sizeText = [string]$Artifact.size
+    if ($sizeText -notmatch "^\d+$") { return $false }
+  }
+  if ($Artifact.PSObject.Properties.Name -contains "size_bytes") {
+    $sizeText = [string]$Artifact.size_bytes
+    if ($sizeText -notmatch "^\d+$") { return $false }
+  }
 
   foreach ($url in @($Artifact.urls)) {
     if ($url -notmatch "^https://") { return $false }
