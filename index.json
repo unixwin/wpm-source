@@ -1,1886 +1,1871 @@
-﻿{
-    "schema":  1,
-    "name":  "official",
-    "version":  "official-2026.08.11",
-    "updated":  "2026-08-11",
-    "sources":  [
-                    {
-                        "name":  "official-github-raw",
-                        "region":  "global",
-                        "priority":  10,
-                        "description":  "Canonical raw GitHub index for the official WinuxCmd WPM source.",
-                        "homepage":  "https://github.com/unixwin/wpm-source",
-                        "index_urls":  [
-                                           "https://raw.githubusercontent.com/unixwin/wpm-source/main/index.json"
-                                       ]
-                    },
-                    {
-                        "name":  "official-jsdelivr",
-                        "region":  "global",
-                        "priority":  15,
-                        "description":  "CDN mirror of the canonical WPM index.",
-                        "homepage":  "https://cdn.jsdelivr.net/gh/unixwin/wpm-source@main/index.json",
-                        "index_urls":  [
-                                           "https://cdn.jsdelivr.net/gh/unixwin/wpm-source@main/index.json"
-                                       ]
-                    },
-                    {
-                        "name":  "official-github-release",
-                        "region":  "global",
-                        "priority":  20,
-                        "description":  "Release-pinned WPM index for stable WinuxCmd packages.",
-                        "homepage":  "https://github.com/unixwin/wpm-source/releases",
-                        "index_urls":  [
-                                           "https://github.com/unixwin/wpm-source/releases/latest/download/wpm-index.json"
-                                       ]
-                    },
-                    {
-                        "name":  "official-cn",
-                        "region":  "cn",
-                        "priority":  30,
-                        "description":  "Reserved China-friendly WPM index mirror.",
-                        "homepage":  "",
-                        "index_urls":  [
-
-                                       ]
-                    }
-                ],
-    "packages":  [
-                     {
-                         "name":  "winuxcmd",
-                         "version":  "0.14.4",
-                         "description":  "WinuxCmd core command set",
-                         "kind":  "external",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "winuxcmd",
-                                          "wpm"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "8009040a6bd709c685d0a31b99576b8aeeb531ce07c2a5662021ae45edeba361",
-                                                               "urls":  [
-                                                                            "https://github.com/unixwin/WinuxCmd/releases/download/v0.14.4/WinuxCmd-0.14.4-win-x64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "winuxcmd.exe",
-                                                                                 "to":  "winuxcmd.exe"
-                                                                             }
-                                                                         ]
-                                                           },
-                                           "windows-arm64":  {
-                                                                 "type":  "zip",
-                                                                 "sha256":  "3109c15120416bb8920429b948d2f319f66fcf967f589e52f73132ff94704e8f",
-                                                                 "urls":  [
-                                                                              "https://github.com/unixwin/WinuxCmd/releases/download/v0.14.4/WinuxCmd-0.14.4-win-arm64.zip"
-                                                                          ],
-                                                                 "files":  [
-                                                                               {
-                                                                                   "from":  "winuxcmd.exe",
-                                                                                   "to":  "winuxcmd.exe"
-                                                                               }
-                                                                           ]
-                                                             }
-                                       }
-                     },
-                     {
-                         "name":  "awk",
-                         "version":  "1.31.0",
-                         "description":  "POSIX AWK interpreter provided by GoAWK.",
-                         "kind":  "external",
-                         "category":  "text",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "awk"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "8c59523cf56d47621a9b84124a9fc15f580048103195caacf4f8964dfe632e78",
-                                                               "urls":  [
-                                                                            "https://github.com/benhoyt/goawk/releases/download/v1.31.0/goawk_v1.31.0_windows_amd64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "goawk.exe",
-                                                                                 "to":  "awk.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "gawk",
-                         "version":  "",
-                         "description":  "GNU awk sidecar slot for users who need GNU awk compatibility; not the default awk provider.",
-                         "kind":  "external",
-                         "category":  "text",
-                         "license":  "GPL-3.0-or-later",
-                         "commands":  [
-                                          "gawk",
-                                          "awk"
-                                      ],
-                         "artifacts":  {
-
-                                       }
-                     },
-                     {
-                         "name":  "jq",
-                         "version":  "1.8.2",
-                         "description":  "Command-line JSON processor.",
-                         "kind":  "external",
-                         "category":  "data",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "jq"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "exe",
-                                                               "sha256":  "a6fc67fedaf9128a3309a1e2ebb8b986aeccf70122ee46d2cb4849e423f0c627",
-                                                               "urls":  [
-                                                                            "https://github.com/jqlang/jq/releases/download/jq-1.8.2/jq-windows-amd64.exe"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "jq.exe",
-                                                                                 "to":  "jq.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "yq",
-                         "version":  "4.53.3",
-                         "description":  "Command-line YAML, JSON, XML, CSV, TOML and properties processor.",
-                         "kind":  "external",
-                         "category":  "data",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "yq"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "exe",
-                                                               "sha256":  "e279bc506a452eeafcdf364f91a025455e402a8001169083caf01f4b64a544e2",
-                                                               "urls":  [
-                                                                            "https://github.com/mikefarah/yq/releases/download/v4.53.3/yq_windows_amd64.exe"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "yq.exe",
-                                                                                 "to":  "yq.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "qsv",
-                         "version":  "22.0.1",
-                         "description":  "Blazing-fast data-wrangling toolkit for CSV and tabular data.",
-                         "kind":  "external",
-                         "category":  "data",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "qsv",
-                                          "qsvlite"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "9d95f7ae939b96124215ba9e34e18f067c5743f5961ce4caad32c164153290d7",
-                                                               "urls":  [
-                                                                            "https://github.com/dathere/qsv/releases/download/22.0.1/qsv-22.0.1-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "qsv.exe",
-                                                                                 "to":  "qsv.exe"
-                                                                             },
-                                                                             {
-                                                                                 "from":  "qsvlite.exe",
-                                                                                 "to":  "qsvlite.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "jsongrep",
-                         "version":  "0.9.0",
-                         "description":  "Path query language for JSON, YAML, TOML and other structured data.",
-                         "kind":  "external",
-                         "category":  "data",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "jg"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "size":  719851,
-                                                               "sha256":  "28ee98d22b78fecc7abea7d2bd4c6bba3934f34628b259d75edc4b7c865b073a",
-                                                               "urls":  [
-                                                                            "https://github.com/micahkepe/jsongrep/releases/download/v0.9.0/jsongrep-0.9.0-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "jsongrep-0.9.0-x86_64-pc-windows-msvc/jg.exe",
-                                                                                 "to":  "jg.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "ncat",
-                         "version":  "",
-                         "description":  "Nmap netcat-compatible networking utility.",
-                         "kind":  "external",
-                         "category":  "network",
-                         "license":  "Nmap",
-                         "commands":  [
-                                          "ncat"
-                                      ],
-                         "artifacts":  {
-
-                                       }
-                     },
-                     {
-                         "name":  "7zip",
-                         "version":  "",
-                         "description":  "7-Zip archive utility.",
-                         "kind":  "external",
-                         "category":  "archive",
-                         "license":  "LGPL-2.1-or-later",
-                         "commands":  [
-                                          "7z",
-                                          "7zz"
-                                      ],
-                         "artifacts":  {
-
-                                       }
-                     },
-                     {
-                         "name":  "zstd",
-                         "version":  "1.5.7",
-                         "description":  "Zstandard compression tools.",
-                         "kind":  "external",
-                         "category":  "archive",
-                         "license":  "BSD-3-Clause OR GPL-2.0-only",
-                         "commands":  [
-                                          "zstd",
-                                          "unzstd",
-                                          "zstdcat"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "acb4e8111511749dc7a3ebedca9b04190e37a17afeb73f55d4425dbf0b90fad9",
-                                                               "urls":  [
-                                                                            "https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-v1.5.7-win64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "zstd.exe",
-                                                                                 "to":  "zstd.exe"
-                                                                             },
-                                                                             {
-                                                                                 "from":  "zstd.exe",
-                                                                                 "to":  "unzstd.exe"
-                                                                             },
-                                                                             {
-                                                                                 "from":  "zstd.exe",
-                                                                                 "to":  "zstdcat.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "ripgrep",
-                         "version":  "15.2.0",
-                         "description":  "Fast recursive search tool.",
-                         "kind":  "external",
-                         "category":  "search",
-                         "license":  "MIT OR Unlicense",
-                         "commands":  [
-                                          "rg"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "71b2fef860abe467217a538ff31de02f5258807c0129f771846f87bd029aafc5",
-                                                               "urls":  [
-                                                                            "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "rg.exe",
-                                                                                 "to":  "rg.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "sig",
-                         "version":  "0.3.0",
-                         "description":  "Interactive grep for streaming output.",
-                         "kind":  "external",
-                         "category":  "search",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "sig"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "size":  1511963,
-                                                               "sha256":  "7c9d78723cdb2013b7cf6a7a578e7ca1cf613ff852a6a7473dd32337209cd1f3",
-                                                               "urls":  [
-                                                                            "https://github.com/ynqa/sig/releases/download/v0.3.0/sigrs-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "sig.exe",
-                                                                                 "to":  "sig.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "fd",
-                         "version":  "10.4.2",
-                         "description":  "Fast user-friendly file finder.",
-                         "kind":  "external",
-                         "category":  "search",
-                         "license":  "MIT OR Apache-2.0",
-                         "commands":  [
-                                          "fd"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "b2816e506390a89941c63c9187d58a3cc10e9a55f2ef0685f9ea0eccaf7c98c8",
-                                                               "urls":  [
-                                                                            "https://github.com/sharkdp/fd/releases/download/v10.4.2/fd-v10.4.2-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "fd.exe",
-                                                                                 "to":  "fd.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "fzf",
-                         "version":  "0.74.2",
-                         "description":  "Command-line fuzzy finder.",
-                         "kind":  "external",
-                         "category":  "interactive",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "fzf"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "a5a3b27dd203469139d10669721952335b9b46f19346e3d1abc102a67ea60804",
-                                                               "urls":  [
-                                                                            "https://github.com/junegunn/fzf/releases/download/v0.74.2/fzf-0.74.2-windows_amd64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "fzf.exe",
-                                                                                 "to":  "fzf.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "bat",
-                         "version":  "0.26.1",
-                         "description":  "Cat-like file viewer with syntax highlighting.",
-                         "kind":  "external",
-                         "category":  "viewer",
-                         "license":  "MIT OR Apache-2.0",
-                         "commands":  [
-                                          "bat"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "0f729b4b6f5f28d395c641eacc2e9ff68d0096b85aa0eec344aa62425144b69b",
-                                                               "urls":  [
-                                                                            "https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "bat.exe",
-                                                                                 "to":  "bat.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "glow",
-                         "version":  "2.1.2",
-                         "description":  "Terminal Markdown renderer.",
-                         "kind":  "external",
-                         "category":  "viewer",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "glow"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "9bc12fce6061b0dd45325401b0d11ec2e45981b76eef2b7fa3c0f941ba5c0b39",
-                                                               "urls":  [
-                                                                            "https://github.com/charmbracelet/glow/releases/download/v2.1.2/glow_2.1.2_Windows_x86_64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "glow_2.1.2_Windows_x86_64/glow.exe",
-                                                                                 "to":  "glow.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "hexyl",
-                         "version":  "0.17.0",
-                         "description":  "Command-line hex viewer.",
-                         "kind":  "external",
-                         "category":  "viewer",
-                         "license":  "MIT OR Apache-2.0",
-                         "commands":  [
-                                          "hexyl"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "ab5c3442cff63f585553d4fce330eaa1ef1bd2584643f1a0e29ab7c13fc9566d",
-                                                               "urls":  [
-                                                                            "https://github.com/sharkdp/hexyl/releases/download/v0.17.0/hexyl-v0.17.0-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "hexyl-v0.17.0-x86_64-pc-windows-msvc/hexyl.exe",
-                                                                                 "to":  "hexyl.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "delta",
-                         "version":  "0.19.2",
-                         "description":  "Syntax-highlighting pager for git, diff and grep output.",
-                         "kind":  "external",
-                         "category":  "viewer",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "delta"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "ac8ebb4a9f1cbee8b9ea897ba119808a244181adae6f3bed1f3b6b923c50b557",
-                                                               "urls":  [
-                                                                            "https://github.com/dandavison/delta/releases/download/0.19.2/delta-0.19.2-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "delta.exe",
-                                                                                 "to":  "delta.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "difftastic",
-                         "version":  "0.70.0",
-                         "description":  "Structural diff tool that compares files based on syntax.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "difft"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "b563ae76e22ce28c7080a8b628cfabf6fa86f9ee114a0f5697bc2ca26f9ce1d7",
-                                                               "urls":  [
-                                                                            "https://github.com/Wilfred/difftastic/releases/download/0.70.0/difft-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "difft.exe",
-                                                                                 "to":  "difft.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "sd",
-                         "version":  "1.1.0",
-                         "description":  "Intuitive find-and-replace command.",
-                         "kind":  "external",
-                         "category":  "text",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "sd"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "59837c2e7c911099aca1cc46b663bcdc5a949fd3e9fbbaf34fc73e5d5d71007c",
-                                                               "urls":  [
-                                                                            "https://github.com/chmln/sd/releases/download/v1.1.0/sd-v1.1.0-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "sd.exe",
-                                                                                 "to":  "sd.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "hyperfine",
-                         "version":  "1.20.0",
-                         "description":  "Command-line benchmarking tool.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "MIT OR Apache-2.0",
-                         "commands":  [
-                                          "hyperfine"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "2508c549b049b1d4342d08edc1cb42bfac169082b6e3069431b5bab9822dbb32",
-                                                               "urls":  [
-                                                                            "https://github.com/sharkdp/hyperfine/releases/download/v1.20.0/hyperfine-v1.20.0-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "hyperfine-v1.20.0-x86_64-pc-windows-msvc/hyperfine.exe",
-                                                                                 "to":  "hyperfine.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "just",
-                         "version":  "1.58.0",
-                         "description":  "Command runner for project recipes.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "CC0-1.0",
-                         "commands":  [
-                                          "just"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "759f16fb7aa17c5c8b9594b6d4a8c1a6630dfd042cf2b3ff84841454d3d188dc",
-                                                               "urls":  [
-                                                                            "https://github.com/casey/just/releases/download/1.58.0/just-1.58.0-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "just.exe",
-                                                                                 "to":  "just.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "dust",
-                         "version":  "1.2.4",
-                         "description":  "Disk usage analyzer with a terminal tree view.",
-                         "kind":  "external",
-                         "category":  "system",
-                         "license":  "Apache-2.0",
-                         "commands":  [
-                                          "dust"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "eb08d642f016787bb9fc918a4dc5f34665463657fddf83a40f2441cbf020fb4c",
-                                                               "urls":  [
-                                                                            "https://github.com/bootandy/dust/releases/download/v1.2.4/dust-v1.2.4-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "dust-v1.2.4-x86_64-pc-windows-msvc/dust.exe",
-                                                                                 "to":  "dust.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "duf",
-                         "version":  "0.9.1",
-                         "description":  "Disk usage and free space viewer.",
-                         "kind":  "external",
-                         "category":  "system",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "duf"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "503934be81f847d9ddb1b739834217480633435ad16515dd199e372c0b2e1afc",
-                                                               "urls":  [
-                                                                            "https://github.com/muesli/duf/releases/download/v0.9.1/duf_0.9.1_windows_x86_64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "duf.exe",
-                                                                                 "to":  "duf.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "procs",
-                         "version":  "0.14.12",
-                         "description":  "Modern process viewer.",
-                         "kind":  "external",
-                         "category":  "system",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "procs"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "4928c399ae78ee82f99139a5629077b8d90a58599d834584dd4e613cb60c83d0",
-                                                               "urls":  [
-                                                                            "https://github.com/dalance/procs/releases/download/v0.14.12/procs-v0.14.12-x86_64-windows.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "procs.exe",
-                                                                                 "to":  "procs.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "bottom",
-                         "version":  "0.14.7",
-                         "description":  "Graphical terminal system monitor.",
-                         "kind":  "external",
-                         "category":  "system",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "btm"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "e63a9b05983c467fa67ec82a29c0f2a38f911bf901c74416a7fe65c141d18db4",
-                                                               "urls":  [
-                                                                            "https://github.com/ClementTsang/bottom/releases/download/0.14.7/bottom_x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "btm.exe",
-                                                                                 "to":  "btm.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "wget",
-                         "version":  "",
-                         "description":  "Non-interactive network downloader.",
-                         "kind":  "external",
-                         "category":  "network",
-                         "license":  "GPL-3.0-or-later",
-                         "commands":  [
-                                          "wget"
-                                      ],
-                         "artifacts":  {
-
-                                       }
-                     },
-                     {
-                         "name":  "aria2",
-                         "version":  "1.37.0",
-                         "description":  "Multi-protocol command-line downloader.",
-                         "kind":  "external",
-                         "category":  "network",
-                         "license":  "GPL-2.0-or-later",
-                         "commands":  [
-                                          "aria2c"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "67d015301eef0b612191212d564c5bb0a14b5b9c4796b76454276a4d28d9b288",
-                                                               "urls":  [
-                                                                            "https://github.com/aria2/aria2/releases/download/release-1.37.0/aria2-1.37.0-win-64bit-build1.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "aria2-1.37.0-win-64bit-build1/aria2c.exe",
-                                                                                 "to":  "aria2c.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "rclone",
-                         "version":  "1.74.4",
-                         "description":  "Cloud storage sync tool.",
-                         "kind":  "external",
-                         "category":  "network",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "rclone"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "ef097ef9de37a57feb7d9f9c7afb34148ad3c65be8025f1d8f7f521554a701ea",
-                                                               "urls":  [
-                                                                            "https://github.com/rclone/rclone/releases/download/v1.74.4/rclone-v1.74.4-windows-amd64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "rclone-v1.74.4-windows-amd64/rclone.exe",
-                                                                                 "to":  "rclone.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "portal",
-                         "version":  "1.2.3",
-                         "description":  "Quick command-line file transfer utility.",
-                         "kind":  "external",
-                         "category":  "network",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "portal"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "size":  6336029,
-                                                               "sha256":  "f775a4a9362da02d9ad19436deb18b01a371ad9ab5ba337c4815a2d00dcfef04",
-                                                               "urls":  [
-                                                                            "https://github.com/SpatiumPortae/portal/releases/download/v1.2.3/portal_1.2.3_Windows_x86_64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "portal.exe",
-                                                                                 "to":  "portal.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "termscp",
-                         "version":  "1.1.1",
-                         "description":  "Terminal file transfer and explorer for SCP, SFTP, FTP, S3, SMB and WebDAV.",
-                         "kind":  "external",
-                         "category":  "network",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "termscp"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "size":  12432939,
-                                                               "sha256":  "15fafc77e5cecb3a8b3217832272de663368e3a4b315b0a34ffa6e3e702a2ccf",
-                                                               "urls":  [
-                                                                            "https://github.com/veeso/termscp/releases/download/v1.1.1/termscp-v1.1.1-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "termscp.exe",
-                                                                                 "to":  "termscp.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "eza",
-                         "version":  "0.23.5",
-                         "description":  "Modern ls replacement.",
-                         "kind":  "external",
-                         "category":  "filesystem",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "eza"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "c830638c844a5b89d39ba662b5549903a71fa539018e813880f5b8afa77bac2e",
-                                                               "urls":  [
-                                                                            "https://github.com/eza-community/eza/releases/download/v0.23.5/eza.exe_x86_64-pc-windows-gnu.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "eza.exe",
-                                                                                 "to":  "eza.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "lsd",
-                         "version":  "1.2.0",
-                         "description":  "Colorful ls replacement.",
-                         "kind":  "external",
-                         "category":  "filesystem",
-                         "license":  "Apache-2.0",
-                         "commands":  [
-                                          "lsd"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "a65b9f457153934a7ce1f7e0fe1c4922a95bb2822222126e4fbaa6ee9c0d78e5",
-                                                               "urls":  [
-                                                                            "https://github.com/lsd-rs/lsd/releases/download/v1.2.0/lsd-v1.2.0-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "lsd.exe",
-                                                                                 "to":  "lsd.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "zoxide",
-                         "version":  "0.10.0",
-                         "description":  "Smarter cd command.",
-                         "kind":  "external",
-                         "category":  "navigation",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "zoxide"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "f465ae548f8754c8e7edbc60b45fbf58c92bfe123db83d790252d6810fa5daf1",
-                                                               "urls":  [
-                                                                            "https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "zoxide.exe",
-                                                                                 "to":  "zoxide.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "starship",
-                         "version":  "1.26.0",
-                         "description":  "Cross-shell prompt renderer.",
-                         "kind":  "external",
-                         "category":  "shell",
-                         "license":  "ISC",
-                         "commands":  [
-                                          "starship"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "690021e22f2bf2c57d5867dc0fababe5e55e714c26942bd909ffddb6c5df42f2",
-                                                               "urls":  [
-                                                                            "https://github.com/starship/starship/releases/download/v1.26.0/starship-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "starship.exe",
-                                                                                 "to":  "starship.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "gum",
-                         "version":  "0.17.0",
-                         "description":  "Composable shell-script UI components.",
-                         "kind":  "external",
-                         "category":  "shell",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "gum"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "b2be80531c6babc8d4e0e6ca95773d58118a2e1582ae006aace08dbc55503072",
-                                                               "urls":  [
-                                                                            "https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Windows_x86_64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "gum_0.17.0_Windows_x86_64/gum.exe",
-                                                                                 "to":  "gum.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "zellij",
-                         "version":  "0.44.3",
-                         "description":  "Terminal workspace and multiplexer.",
-                         "kind":  "external",
-                         "category":  "terminal",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "zellij"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "size":  12836227,
-                                                               "sha256":  "2a192ead623d326458b058f235a5c9ca6f955cece8b3787ce744c07ba9f11e34",
-                                                               "urls":  [
-                                                                            "https://github.com/zellij-org/zellij/releases/download/v0.44.3/zellij-no-web-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "zellij.exe",
-                                                                                 "to":  "zellij.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "chezmoi",
-                         "version":  "2.72.0",
-                         "description":  "Dotfile manager.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "chezmoi"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "b01b6d449db1e4ca62694482d53ab8395c891cade237c404defc1701ebd2bf66",
-                                                               "urls":  [
-                                                                            "https://github.com/twpayne/chezmoi/releases/download/v2.72.0/chezmoi_2.72.0_windows_amd64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "chezmoi.exe",
-                                                                                 "to":  "chezmoi.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "lazygit",
-                         "version":  "0.64.0",
-                         "description":  "Terminal UI for git.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "lazygit"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "d8b723dd25e098c4a229e7d9a87ff1c3a5779902ebea242b8678f4ac195c1d90",
-                                                               "urls":  [
-                                                                            "https://github.com/jesseduffield/lazygit/releases/download/v0.64.0/lazygit_0.64.0_windows_x86_64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "lazygit.exe",
-                                                                                 "to":  "lazygit.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "gitui",
-                         "version":  "0.28.1",
-                         "description":  "Fast terminal UI for git.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "gitui"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "tar.gz",
-                                                               "size":  4757777,
-                                                               "sha256":  "fab116ccdf9ae4e17378db912d76cc26e60aefd2226f44e665120dea166867e4",
-                                                               "urls":  [
-                                                                            "https://github.com/gitui-org/gitui/releases/download/v0.28.1/gitui-win.tar.gz"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "gitui.exe",
-                                                                                 "to":  "gitui.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "gh-dash",
-                         "version":  "4.25.2",
-                         "description":  "Terminal dashboard for GitHub pull requests and issues.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "gh-dash"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "exe",
-                                                               "size":  24685568,
-                                                               "sha256":  "5936981bd98d671a00de9e872c5fc5be126106e5f06b1a962fbd198e7502a8db",
-                                                               "urls":  [
-                                                                            "https://github.com/dlvhdr/gh-dash/releases/download/v4.25.2/gh-dash_v4.25.2_windows-amd64.exe"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "gh-dash.exe",
-                                                                                 "to":  "gh-dash.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "duckdb",
-                         "version":  "1.5.5",
-                         "description":  "DuckDB analytical database CLI.",
-                         "kind":  "external",
-                         "category":  "data",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "duckdb"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "e1428b7114a841626b5054723731cbf45c6df91b42ae1a6c355f88fad1f6dc4c",
-                                                               "urls":  [
-                                                                            "https://github.com/duckdb/duckdb/releases/download/v1.5.5/duckdb_cli-windows-amd64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "duckdb.exe",
-                                                                                 "to":  "duckdb.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "pandoc",
-                         "version":  "3.10.1",
-                         "description":  "Universal document converter.",
-                         "kind":  "external",
-                         "category":  "document",
-                         "license":  "GPL-2.0-or-later",
-                         "commands":  [
-                                          "pandoc"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "4725a1883e2171c2e181e6fd45003acb59ca4e9cbe031fdd3b79ef0d697d36aa",
-                                                               "urls":  [
-                                                                            "https://github.com/jgm/pandoc/releases/download/3.10.1/pandoc-3.10.1-windows-x86_64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "pandoc-3.10.1/pandoc.exe",
-                                                                                 "to":  "pandoc.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "tealdeer",
-                         "version":  "1.8.1",
-                         "description":  "Fast tldr client with offline caching.",
-                         "kind":  "external",
-                         "category":  "document",
-                         "license":  "MIT OR Apache-2.0",
-                         "commands":  [
-                                          "tldr"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "exe",
-                                                               "sha256":  "0fafa28d6503ec2a96efd71c5f1a57c8c547efd72706fd26fc53015415da7eb9",
-                                                               "urls":  [
-                                                                            "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.8.1/tealdeer-windows-x86_64-msvc.exe"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "tldr.exe",
-                                                                                 "to":  "tldr.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "shellcheck",
-                         "version":  "0.11.0",
-                         "description":  "Shell script static analyzer.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "GPL-3.0-or-later",
-                         "commands":  [
-                                          "shellcheck"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "8a4e35ab0b331c85d73567b12f2a444df187f483e5079ceffa6bda1faa2e740e",
-                                                               "urls":  [
-                                                                            "https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "shellcheck.exe",
-                                                                                 "to":  "shellcheck.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "shfmt",
-                         "version":  "3.13.1",
-                         "description":  "Shell parser and formatter.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "BSD-3-Clause",
-                         "commands":  [
-                                          "shfmt"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "exe",
-                                                               "sha256":  "60cd368533d0ad73fa86d93d5bbf95ef40587245ce684ed138c1b31557b5fe97",
-                                                               "urls":  [
-                                                                            "https://github.com/mvdan/sh/releases/download/v3.13.1/shfmt_v3.13.1_windows_amd64.exe"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "shfmt.exe",
-                                                                                 "to":  "shfmt.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "hadolint",
-                         "version":  "2.15.1",
-                         "description":  "Dockerfile linter.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "GPL-3.0-or-later",
-                         "commands":  [
-                                          "hadolint"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "exe",
-                                                               "sha256":  "01d927294962b5387f9ead4f18679158452be4f17c765ad0bdffe5264b9c7b0a",
-                                                               "urls":  [
-                                                                            "https://github.com/hadolint/hadolint/releases/download/v2.15.1/hadolint-windows-x86_64.exe"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "hadolint.exe",
-                                                                                 "to":  "hadolint.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "tokei",
-                         "version":  "",
-                         "description":  "Code statistics counter.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "MIT OR Apache-2.0",
-                         "commands":  [
-                                          "tokei"
-                                      ],
-                         "artifacts":  {
-
-                                       }
-                     },
-                     {
-                         "name":  "scc",
-                         "version":  "3.7.0",
-                         "description":  "Fast source code counter.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "scc"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "97abf9d55d4b79d3310536d576ccbdf5017aeb425780e850336120b6e67622e1",
-                                                               "urls":  [
-                                                                            "https://github.com/boyter/scc/releases/download/v3.7.0/scc_Windows_x86_64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "scc.exe",
-                                                                                 "to":  "scc.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "watchexec",
-                         "version":  "2.5.1",
-                         "description":  "Run commands when files change.",
-                         "kind":  "external",
-                         "category":  "developer",
-                         "license":  "Apache-2.0",
-                         "commands":  [
-                                          "watchexec"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "aa448c2704ca1a37ce0f1fc75381d9a411946dd293cf6236293f549426a577f7",
-                                                               "urls":  [
-                                                                            "https://github.com/watchexec/watchexec/releases/download/v2.5.1/watchexec-2.5.1-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "watchexec-2.5.1-x86_64-pc-windows-msvc/watchexec.exe",
-                                                                                 "to":  "watchexec.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "miniserve",
-                         "version":  "0.35.0",
-                         "description":  "Small static file server.",
-                         "kind":  "external",
-                         "category":  "network",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "miniserve"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "exe",
-                                                               "sha256":  "3229e75b40b3870382d23c9a0ecec880b9bd5f6e49160ce602bb15d00f275b6a",
-                                                               "urls":  [
-                                                                            "https://github.com/svenstaro/miniserve/releases/download/v0.35.0/miniserve-0.35.0-x86_64-pc-windows-msvc.exe"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "miniserve.exe",
-                                                                                 "to":  "miniserve.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "xh",
-                         "version":  "0.26.2",
-                         "description":  "Friendly HTTP client.",
-                         "kind":  "external",
-                         "category":  "network",
-                         "license":  "MIT OR Apache-2.0",
-                         "commands":  [
-                                          "xh"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "7907c1ef225382fb5955c8274aa23e31b70622c4d39dbc76cf945dc8ce15a78d",
-                                                               "urls":  [
-                                                                            "https://github.com/ducaale/xh/releases/download/v0.26.2/xh-v0.26.2-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "xh-v0.26.2-x86_64-pc-windows-msvc/xh.exe",
-                                                                                 "to":  "xh.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "doggo",
-                         "version":  "1.3.0",
-                         "description":  "Human-friendly command-line DNS client.",
-                         "kind":  "external",
-                         "category":  "network",
-                         "license":  "GPL-3.0",
-                         "commands":  [
-                                          "doggo"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "5668bbc6a627930ce0c9262724cb21c180ac15e4f6d2ad841a1eaa2144f9a093",
-                                                               "urls":  [
-                                                                            "https://github.com/mr-karan/doggo/releases/download/v1.3.0/doggo-windows-x86_64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "doggo.exe",
-                                                                                 "to":  "doggo.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "grpcurl",
-                         "version":  "1.9.3",
-                         "description":  "Command-line gRPC client.",
-                         "kind":  "external",
-                         "category":  "network",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "grpcurl"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "895335dfa7be74803eeb5acf3ec5d3b06c1e9483fdda3c7622bdef9ad388f32a",
-                                                               "urls":  [
-                                                                            "https://github.com/fullstorydev/grpcurl/releases/download/v1.9.3/grpcurl_1.9.3_windows_x86_64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "grpcurl.exe",
-                                                                                 "to":  "grpcurl.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "age",
-                         "version":  "1.3.1",
-                         "description":  "Simple modern file encryption tool.",
-                         "kind":  "external",
-                         "category":  "security",
-                         "license":  "BSD-3-Clause",
-                         "commands":  [
-                                          "age",
-                                          "age-keygen",
-                                          "age-inspect"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "c56e8ce22f7e80cb85ad946cc82d198767b056366201d3e1a2b93d865be38154",
-                                                               "urls":  [
-                                                                            "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-windows-amd64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "age/age.exe",
-                                                                                 "to":  "age.exe"
-                                                                             },
-                                                                             {
-                                                                                 "from":  "age/age-keygen.exe",
-                                                                                 "to":  "age-keygen.exe"
-                                                                             },
-                                                                             {
-                                                                                 "from":  "age/age-inspect.exe",
-                                                                                 "to":  "age-inspect.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "sops",
-                         "version":  "3.13.3",
-                         "description":  "Encrypted secrets editor.",
-                         "kind":  "external",
-                         "category":  "security",
-                         "license":  "MPL-2.0",
-                         "commands":  [
-                                          "sops"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "exe",
-                                                               "sha256":  "a4a9a398858fe8b2ef72d9686d930bf7c5cece9be74ad83ac3b53cfdd70e6b1c",
-                                                               "urls":  [
-                                                                            "https://github.com/getsops/sops/releases/download/v3.13.3/sops-v3.13.3.amd64.exe"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "sops.exe",
-                                                                                 "to":  "sops.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "cosign",
-                         "version":  "3.1.3",
-                         "description":  "Container signing and verification tool.",
-                         "kind":  "external",
-                         "category":  "security",
-                         "license":  "Apache-2.0",
-                         "commands":  [
-                                          "cosign"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "exe",
-                                                               "sha256":  "9fe59be0eca1271873ce019061335eb1ac419b7059202e797828467ddabe33be",
-                                                               "urls":  [
-                                                                            "https://github.com/sigstore/cosign/releases/download/v3.1.3/cosign-windows-amd64.exe"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "cosign.exe",
-                                                                                 "to":  "cosign.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "trivy",
-                         "version":  "0.73.0",
-                         "description":  "Security scanner for containers and filesystems.",
-                         "kind":  "external",
-                         "category":  "security",
-                         "license":  "Apache-2.0",
-                         "commands":  [
-                                          "trivy"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "d2d3ad5292aae470a03eb6506db86fce81b1894592b8451cadaf60eaa22f2025",
-                                                               "urls":  [
-                                                                            "https://github.com/aquasecurity/trivy/releases/download/v0.73.0/trivy_0.73.0_windows-64bit.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "trivy.exe",
-                                                                                 "to":  "trivy.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "syft",
-                         "version":  "1.50.0",
-                         "description":  "SBOM generator.",
-                         "kind":  "external",
-                         "category":  "security",
-                         "license":  "Apache-2.0",
-                         "commands":  [
-                                          "syft"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "815ee6973ec5dff6a671d7f41b0e78835a8c45b91d5a39f4743ea1cee833d3be",
-                                                               "urls":  [
-                                                                            "https://github.com/anchore/syft/releases/download/v1.50.0/syft_1.50.0_windows_amd64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "syft.exe",
-                                                                                 "to":  "syft.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "grype",
-                         "version":  "0.116.1",
-                         "description":  "Vulnerability scanner for container images and filesystems.",
-                         "kind":  "external",
-                         "category":  "security",
-                         "license":  "Apache-2.0",
-                         "commands":  [
-                                          "grype"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "a8ad864f2f06c9afcc90d417f46f5587adeaba4e1e46cc4e32a6a076dae2fda7",
-                                                               "urls":  [
-                                                                            "https://github.com/anchore/grype/releases/download/v0.116.1/grype_0.116.1_windows_amd64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "grype.exe",
-                                                                                 "to":  "grype.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "oras",
-                         "version":  "1.3.3",
-                         "description":  "OCI registry client.",
-                         "kind":  "external",
-                         "category":  "cloud",
-                         "license":  "Apache-2.0",
-                         "commands":  [
-                                          "oras"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "30ca213a565a450de33001dae83053db53c221e6674c5233dc3406b686657969",
-                                                               "urls":  [
-                                                                            "https://github.com/oras-project/oras/releases/download/v1.3.3/oras_1.3.3_windows_amd64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "oras.exe",
-                                                                                 "to":  "oras.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "restic",
-                         "version":  "0.19.1",
-                         "description":  "Fast encrypted backup tool.",
-                         "kind":  "external",
-                         "category":  "backup",
-                         "license":  "BSD-2-Clause",
-                         "commands":  [
-                                          "restic"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "da948ad707ed690426473aaba2046cd61f8f90f6f0e7dab6be0d5796531de67d",
-                                                               "urls":  [
-                                                                            "https://github.com/restic/restic/releases/download/v0.19.1/restic_0.19.1_windows_amd64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "restic_0.19.1_windows_amd64.exe",
-                                                                                 "to":  "restic.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "yazi",
-                         "version":  "26.5.6",
-                         "description":  "Terminal file manager.",
-                         "kind":  "external",
-                         "category":  "filesystem",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "yazi",
-                                          "ya"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "6c6c52a4b2648e179f917bdaa7c57e793d18561b380a8bfa025f10cd1b9b2ad1",
-                                                               "urls":  [
-                                                                            "https://github.com/sxyazi/yazi/releases/download/v26.5.6/yazi-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "yazi-x86_64-pc-windows-msvc/yazi.exe",
-                                                                                 "to":  "yazi.exe"
-                                                                             },
-                                                                             {
-                                                                                 "from":  "yazi-x86_64-pc-windows-msvc/ya.exe",
-                                                                                 "to":  "ya.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "f2",
-                         "version":  "2.2.2",
-                         "description":  "Fast batch file and directory renamer.",
-                         "kind":  "external",
-                         "category":  "filesystem",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "f2"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "size":  5711184,
-                                                               "sha256":  "64eba7ddbadeca9cd5657b344058311f3c42d342c5e88f93a68d8f07fb8d0a53",
-                                                               "urls":  [
-                                                                            "https://github.com/ayoisaiah/f2/releases/download/v2.2.2/f2_2.2.2_windows_amd64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "f2.exe",
-                                                                                 "to":  "f2.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "ouch",
-                         "version":  "0.8.1",
-                         "description":  "Compression and decompression utility.",
-                         "kind":  "external",
-                         "category":  "archive",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "ouch"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "a958d9db34bbefd9d7f7288ea4989a78085bc48ab2d92d92a1e5b9776f19e0d5",
-                                                               "urls":  [
-                                                                            "https://github.com/ouch-org/ouch/releases/download/0.8.1/ouch-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "ouch-x86_64-pc-windows-msvc/ouch.exe",
-                                                                                 "to":  "ouch.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "erdtree",
-                         "version":  "3.1.2",
-                         "description":  "Modern tree and disk usage tool.",
-                         "kind":  "external",
-                         "category":  "filesystem",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "erd"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "exe",
-                                                               "sha256":  "df359e20e5a38384c27b98667d780c5bd5ab1ce4bac739a5fa9c5ed25511a0a1",
-                                                               "urls":  [
-                                                                            "https://github.com/solidiquis/erdtree/releases/download/v3.1.2/erd-v3.1.2-x86_64-pc-windows-msvc.exe"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "erdtree.exe",
-                                                                                 "to":  "erd.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "tre",
-                         "version":  "0.4.0",
-                         "description":  "Improved tree command.",
-                         "kind":  "external",
-                         "category":  "filesystem",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "tre"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "size":  683523,
-                                                               "sha256":  "9dfbf8c33038e6b31fb359d7f8e7661e46f015067f5cc2f378c93d8bbd1a432a",
-                                                               "urls":  [
-                                                                            "https://github.com/dduan/tre/releases/download/v0.4.0/tre-v0.4.0-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "tre.exe",
-                                                                                 "to":  "tre.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "micro",
-                         "version":  "2.0.15",
-                         "description":  "Terminal text editor.",
-                         "kind":  "external",
-                         "category":  "editor",
-                         "license":  "MIT",
-                         "commands":  [
-                                          "micro"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "90635c53c11aa2a0d997f5e3ed43528877740725500207640b29551cef18479b",
-                                                               "urls":  [
-                                                                            "https://github.com/zyedidia/micro/releases/download/v2.0.15/micro-2.0.15-win64.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "micro-2.0.15/micro.exe",
-                                                                                 "to":  "micro.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "helix",
-                         "version":  "25.07.1",
-                         "description":  "Modal terminal text editor.",
-                         "kind":  "external",
-                         "category":  "editor",
-                         "license":  "MPL-2.0",
-                         "commands":  [
-                                          "hx"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "size":  28550028,
-                                                               "sha256":  "5c8325ced8bacd8418d62706f669e96d9c3578a9237526e34d546900cbc049b6",
-                                                               "urls":  [
-                                                                            "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-x86_64-windows.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "helix-25.07.1-x86_64-windows/hx.exe",
-                                                                                 "to":  "hx.exe"
-                                                                             },
-                                                                             {
-                                                                                 "from":  "helix-25.07.1-x86_64-windows/runtime",
-                                                                                 "to":  "runtime",
-                                                                                 "kind":  "dir"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "pastel",
-                         "version":  "0.12.0",
-                         "description":  "Command-line color utility.",
-                         "kind":  "external",
-                         "category":  "media",
-                         "license":  "MIT OR Apache-2.0",
-                         "commands":  [
-                                          "pastel"
-                                      ],
-                         "artifacts":  {
-                                           "windows-x64":  {
-                                                               "type":  "zip",
-                                                               "sha256":  "51e914b0308b089f032c481e786d67a9f11d8857f4ffe99405f3452e77582393",
-                                                               "urls":  [
-                                                                            "https://github.com/sharkdp/pastel/releases/download/v0.12.0/pastel-v0.12.0-x86_64-pc-windows-msvc.zip"
-                                                                        ],
-                                                               "files":  [
-                                                                             {
-                                                                                 "from":  "pastel-v0.12.0-x86_64-pc-windows-msvc/pastel.exe",
-                                                                                 "to":  "pastel.exe"
-                                                                             }
-                                                                         ]
-                                                           }
-                                       }
-                     },
-                     {
-                         "name":  "ffmpeg",
-                         "version":  "",
-                         "description":  "Audio and video conversion tools.",
-                         "kind":  "external",
-                         "category":  "media",
-                         "license":  "LGPL-2.1-or-later OR GPL-2.0-or-later",
-                         "commands":  [
-                                          "ffmpeg",
-                                          "ffprobe"
-                                      ],
-                         "artifacts":  {
-
-                                       }
-                     }
-                 ]
+{
+  "schema": 1,
+  "name": "official",
+  "version": "official-2026.08.11",
+  "updated": "2026-08-11",
+  "sources": [
+    {
+      "name": "official-github-raw",
+      "region": "global",
+      "priority": 10,
+      "description": "Canonical raw GitHub index for the official WinuxCmd WPM source.",
+      "homepage": "https://github.com/unixwin/wpm-source",
+      "index_urls": [
+        "https://raw.githubusercontent.com/unixwin/wpm-source/main/index.json"
+      ]
+    },
+    {
+      "name": "official-jsdelivr",
+      "region": "global",
+      "priority": 15,
+      "description": "CDN mirror of the canonical WPM index.",
+      "homepage": "https://cdn.jsdelivr.net/gh/unixwin/wpm-source@main/index.json",
+      "index_urls": [
+        "https://cdn.jsdelivr.net/gh/unixwin/wpm-source@main/index.json"
+      ]
+    },
+    {
+      "name": "official-github-release",
+      "region": "global",
+      "priority": 20,
+      "description": "Release-pinned WPM index for stable WinuxCmd packages.",
+      "homepage": "https://github.com/unixwin/wpm-source/releases",
+      "index_urls": [
+        "https://github.com/unixwin/wpm-source/releases/latest/download/wpm-index.json"
+      ]
+    },
+    {
+      "name": "official-cn",
+      "region": "cn",
+      "priority": 30,
+      "description": "Reserved China-friendly WPM index mirror.",
+      "homepage": "",
+      "index_urls": []
+    }
+  ],
+  "packages": [
+    {
+      "name": "winuxcmd",
+      "version": "0.14.5",
+      "description": "WinuxCmd core command set",
+      "kind": "external",
+      "license": "MIT",
+      "commands": [
+        "winuxcmd",
+        "wpm"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "c5d0b85099259ab7fceae7def037b083dd40611a04635fb28b764ee474712165",
+          "urls": [
+            "https://github.com/unixwin/WinuxCmd/releases/download/v0.14.5/WinuxCmd-0.14.5-win-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "winuxcmd.exe",
+              "to": "winuxcmd.exe"
+            }
+          ]
+        },
+        "windows-arm64": {
+          "type": "zip",
+          "sha256": "1b5f638c862d0089774476e231b647bde2fbedae951193c2fdf8b75cceca96a9",
+          "urls": [
+            "https://github.com/unixwin/WinuxCmd/releases/download/v0.14.5/WinuxCmd-0.14.5-win-arm64.zip"
+          ],
+          "files": [
+            {
+              "from": "winuxcmd.exe",
+              "to": "winuxcmd.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "awk",
+      "version": "1.31.0",
+      "description": "POSIX AWK interpreter provided by GoAWK.",
+      "kind": "external",
+      "category": "text",
+      "license": "MIT",
+      "commands": [
+        "awk"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "8c59523cf56d47621a9b84124a9fc15f580048103195caacf4f8964dfe632e78",
+          "urls": [
+            "https://github.com/benhoyt/goawk/releases/download/v1.31.0/goawk_v1.31.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "goawk.exe",
+              "to": "awk.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "gawk",
+      "version": "",
+      "description": "GNU awk sidecar slot for users who need GNU awk compatibility; not the default awk provider.",
+      "kind": "external",
+      "category": "text",
+      "license": "GPL-3.0-or-later",
+      "commands": [
+        "gawk",
+        "awk"
+      ],
+      "artifacts": {}
+    },
+    {
+      "name": "jq",
+      "version": "1.8.2",
+      "description": "Command-line JSON processor.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "jq"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "a6fc67fedaf9128a3309a1e2ebb8b986aeccf70122ee46d2cb4849e423f0c627",
+          "urls": [
+            "https://github.com/jqlang/jq/releases/download/jq-1.8.2/jq-windows-amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "jq.exe",
+              "to": "jq.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "yq",
+      "version": "4.53.3",
+      "description": "Command-line YAML, JSON, XML, CSV, TOML and properties processor.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "yq"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "e279bc506a452eeafcdf364f91a025455e402a8001169083caf01f4b64a544e2",
+          "urls": [
+            "https://github.com/mikefarah/yq/releases/download/v4.53.3/yq_windows_amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "yq.exe",
+              "to": "yq.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "qsv",
+      "version": "22.0.1",
+      "description": "Blazing-fast data-wrangling toolkit for CSV and tabular data.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "qsv",
+        "qsvlite"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "9d95f7ae939b96124215ba9e34e18f067c5743f5961ce4caad32c164153290d7",
+          "urls": [
+            "https://github.com/dathere/qsv/releases/download/22.0.1/qsv-22.0.1-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "qsv.exe",
+              "to": "qsv.exe"
+            },
+            {
+              "from": "qsvlite.exe",
+              "to": "qsvlite.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "jsongrep",
+      "version": "0.9.0",
+      "description": "Path query language for JSON, YAML, TOML and other structured data.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "jg"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 719851,
+          "sha256": "28ee98d22b78fecc7abea7d2bd4c6bba3934f34628b259d75edc4b7c865b073a",
+          "urls": [
+            "https://github.com/micahkepe/jsongrep/releases/download/v0.9.0/jsongrep-0.9.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "jsongrep-0.9.0-x86_64-pc-windows-msvc/jg.exe",
+              "to": "jg.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ncat",
+      "version": "",
+      "description": "Nmap netcat-compatible networking utility.",
+      "kind": "external",
+      "category": "network",
+      "license": "Nmap",
+      "commands": [
+        "ncat"
+      ],
+      "artifacts": {}
+    },
+    {
+      "name": "7zip",
+      "version": "",
+      "description": "7-Zip archive utility.",
+      "kind": "external",
+      "category": "archive",
+      "license": "LGPL-2.1-or-later",
+      "commands": [
+        "7z",
+        "7zz"
+      ],
+      "artifacts": {}
+    },
+    {
+      "name": "zstd",
+      "version": "1.5.7",
+      "description": "Zstandard compression tools.",
+      "kind": "external",
+      "category": "archive",
+      "license": "BSD-3-Clause OR GPL-2.0-only",
+      "commands": [
+        "zstd",
+        "unzstd",
+        "zstdcat"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "acb4e8111511749dc7a3ebedca9b04190e37a17afeb73f55d4425dbf0b90fad9",
+          "urls": [
+            "https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-v1.5.7-win64.zip"
+          ],
+          "files": [
+            {
+              "from": "zstd.exe",
+              "to": "zstd.exe"
+            },
+            {
+              "from": "zstd.exe",
+              "to": "unzstd.exe"
+            },
+            {
+              "from": "zstd.exe",
+              "to": "zstdcat.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ripgrep",
+      "version": "15.2.0",
+      "description": "Fast recursive search tool.",
+      "kind": "external",
+      "category": "search",
+      "license": "MIT OR Unlicense",
+      "commands": [
+        "rg"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "71b2fef860abe467217a538ff31de02f5258807c0129f771846f87bd029aafc5",
+          "urls": [
+            "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "rg.exe",
+              "to": "rg.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "sig",
+      "version": "0.3.0",
+      "description": "Interactive grep for streaming output.",
+      "kind": "external",
+      "category": "search",
+      "license": "MIT",
+      "commands": [
+        "sig"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 1511963,
+          "sha256": "7c9d78723cdb2013b7cf6a7a578e7ca1cf613ff852a6a7473dd32337209cd1f3",
+          "urls": [
+            "https://github.com/ynqa/sig/releases/download/v0.3.0/sigrs-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "sig.exe",
+              "to": "sig.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "fd",
+      "version": "10.4.2",
+      "description": "Fast user-friendly file finder.",
+      "kind": "external",
+      "category": "search",
+      "license": "MIT OR Apache-2.0",
+      "commands": [
+        "fd"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "b2816e506390a89941c63c9187d58a3cc10e9a55f2ef0685f9ea0eccaf7c98c8",
+          "urls": [
+            "https://github.com/sharkdp/fd/releases/download/v10.4.2/fd-v10.4.2-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "fd.exe",
+              "to": "fd.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "fzf",
+      "version": "0.74.2",
+      "description": "Command-line fuzzy finder.",
+      "kind": "external",
+      "category": "interactive",
+      "license": "MIT",
+      "commands": [
+        "fzf"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "a5a3b27dd203469139d10669721952335b9b46f19346e3d1abc102a67ea60804",
+          "urls": [
+            "https://github.com/junegunn/fzf/releases/download/v0.74.2/fzf-0.74.2-windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "fzf.exe",
+              "to": "fzf.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "bat",
+      "version": "0.26.1",
+      "description": "Cat-like file viewer with syntax highlighting.",
+      "kind": "external",
+      "category": "viewer",
+      "license": "MIT OR Apache-2.0",
+      "commands": [
+        "bat"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "0f729b4b6f5f28d395c641eacc2e9ff68d0096b85aa0eec344aa62425144b69b",
+          "urls": [
+            "https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "bat.exe",
+              "to": "bat.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "glow",
+      "version": "2.1.2",
+      "description": "Terminal Markdown renderer.",
+      "kind": "external",
+      "category": "viewer",
+      "license": "MIT",
+      "commands": [
+        "glow"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "9bc12fce6061b0dd45325401b0d11ec2e45981b76eef2b7fa3c0f941ba5c0b39",
+          "urls": [
+            "https://github.com/charmbracelet/glow/releases/download/v2.1.2/glow_2.1.2_Windows_x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "glow_2.1.2_Windows_x86_64/glow.exe",
+              "to": "glow.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "hexyl",
+      "version": "0.17.0",
+      "description": "Command-line hex viewer.",
+      "kind": "external",
+      "category": "viewer",
+      "license": "MIT OR Apache-2.0",
+      "commands": [
+        "hexyl"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "ab5c3442cff63f585553d4fce330eaa1ef1bd2584643f1a0e29ab7c13fc9566d",
+          "urls": [
+            "https://github.com/sharkdp/hexyl/releases/download/v0.17.0/hexyl-v0.17.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "hexyl-v0.17.0-x86_64-pc-windows-msvc/hexyl.exe",
+              "to": "hexyl.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "delta",
+      "version": "0.19.2",
+      "description": "Syntax-highlighting pager for git, diff and grep output.",
+      "kind": "external",
+      "category": "viewer",
+      "license": "MIT",
+      "commands": [
+        "delta"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "ac8ebb4a9f1cbee8b9ea897ba119808a244181adae6f3bed1f3b6b923c50b557",
+          "urls": [
+            "https://github.com/dandavison/delta/releases/download/0.19.2/delta-0.19.2-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "delta.exe",
+              "to": "delta.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "difftastic",
+      "version": "0.70.0",
+      "description": "Structural diff tool that compares files based on syntax.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "difft"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "b563ae76e22ce28c7080a8b628cfabf6fa86f9ee114a0f5697bc2ca26f9ce1d7",
+          "urls": [
+            "https://github.com/Wilfred/difftastic/releases/download/0.70.0/difft-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "difft.exe",
+              "to": "difft.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "sd",
+      "version": "1.1.0",
+      "description": "Intuitive find-and-replace command.",
+      "kind": "external",
+      "category": "text",
+      "license": "MIT",
+      "commands": [
+        "sd"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "59837c2e7c911099aca1cc46b663bcdc5a949fd3e9fbbaf34fc73e5d5d71007c",
+          "urls": [
+            "https://github.com/chmln/sd/releases/download/v1.1.0/sd-v1.1.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "sd.exe",
+              "to": "sd.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "hyperfine",
+      "version": "1.20.0",
+      "description": "Command-line benchmarking tool.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT OR Apache-2.0",
+      "commands": [
+        "hyperfine"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "2508c549b049b1d4342d08edc1cb42bfac169082b6e3069431b5bab9822dbb32",
+          "urls": [
+            "https://github.com/sharkdp/hyperfine/releases/download/v1.20.0/hyperfine-v1.20.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "hyperfine-v1.20.0-x86_64-pc-windows-msvc/hyperfine.exe",
+              "to": "hyperfine.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "just",
+      "version": "1.58.0",
+      "description": "Command runner for project recipes.",
+      "kind": "external",
+      "category": "developer",
+      "license": "CC0-1.0",
+      "commands": [
+        "just"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "759f16fb7aa17c5c8b9594b6d4a8c1a6630dfd042cf2b3ff84841454d3d188dc",
+          "urls": [
+            "https://github.com/casey/just/releases/download/1.58.0/just-1.58.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "just.exe",
+              "to": "just.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "dust",
+      "version": "1.2.4",
+      "description": "Disk usage analyzer with a terminal tree view.",
+      "kind": "external",
+      "category": "system",
+      "license": "Apache-2.0",
+      "commands": [
+        "dust"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "eb08d642f016787bb9fc918a4dc5f34665463657fddf83a40f2441cbf020fb4c",
+          "urls": [
+            "https://github.com/bootandy/dust/releases/download/v1.2.4/dust-v1.2.4-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "dust-v1.2.4-x86_64-pc-windows-msvc/dust.exe",
+              "to": "dust.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "duf",
+      "version": "0.9.1",
+      "description": "Disk usage and free space viewer.",
+      "kind": "external",
+      "category": "system",
+      "license": "MIT",
+      "commands": [
+        "duf"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "503934be81f847d9ddb1b739834217480633435ad16515dd199e372c0b2e1afc",
+          "urls": [
+            "https://github.com/muesli/duf/releases/download/v0.9.1/duf_0.9.1_windows_x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "duf.exe",
+              "to": "duf.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "procs",
+      "version": "0.14.12",
+      "description": "Modern process viewer.",
+      "kind": "external",
+      "category": "system",
+      "license": "MIT",
+      "commands": [
+        "procs"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "4928c399ae78ee82f99139a5629077b8d90a58599d834584dd4e613cb60c83d0",
+          "urls": [
+            "https://github.com/dalance/procs/releases/download/v0.14.12/procs-v0.14.12-x86_64-windows.zip"
+          ],
+          "files": [
+            {
+              "from": "procs.exe",
+              "to": "procs.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "bottom",
+      "version": "0.14.7",
+      "description": "Graphical terminal system monitor.",
+      "kind": "external",
+      "category": "system",
+      "license": "MIT",
+      "commands": [
+        "btm"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "e63a9b05983c467fa67ec82a29c0f2a38f911bf901c74416a7fe65c141d18db4",
+          "urls": [
+            "https://github.com/ClementTsang/bottom/releases/download/0.14.7/bottom_x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "btm.exe",
+              "to": "btm.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "wget",
+      "version": "",
+      "description": "Non-interactive network downloader.",
+      "kind": "external",
+      "category": "network",
+      "license": "GPL-3.0-or-later",
+      "commands": [
+        "wget"
+      ],
+      "artifacts": {}
+    },
+    {
+      "name": "aria2",
+      "version": "1.37.0",
+      "description": "Multi-protocol command-line downloader.",
+      "kind": "external",
+      "category": "network",
+      "license": "GPL-2.0-or-later",
+      "commands": [
+        "aria2c"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "67d015301eef0b612191212d564c5bb0a14b5b9c4796b76454276a4d28d9b288",
+          "urls": [
+            "https://github.com/aria2/aria2/releases/download/release-1.37.0/aria2-1.37.0-win-64bit-build1.zip"
+          ],
+          "files": [
+            {
+              "from": "aria2-1.37.0-win-64bit-build1/aria2c.exe",
+              "to": "aria2c.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "rclone",
+      "version": "1.74.4",
+      "description": "Cloud storage sync tool.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "rclone"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "ef097ef9de37a57feb7d9f9c7afb34148ad3c65be8025f1d8f7f521554a701ea",
+          "urls": [
+            "https://github.com/rclone/rclone/releases/download/v1.74.4/rclone-v1.74.4-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "rclone-v1.74.4-windows-amd64/rclone.exe",
+              "to": "rclone.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "portal",
+      "version": "1.2.3",
+      "description": "Quick command-line file transfer utility.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "portal"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 6336029,
+          "sha256": "f775a4a9362da02d9ad19436deb18b01a371ad9ab5ba337c4815a2d00dcfef04",
+          "urls": [
+            "https://github.com/SpatiumPortae/portal/releases/download/v1.2.3/portal_1.2.3_Windows_x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "portal.exe",
+              "to": "portal.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "termscp",
+      "version": "1.1.1",
+      "description": "Terminal file transfer and explorer for SCP, SFTP, FTP, S3, SMB and WebDAV.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "termscp"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 12432939,
+          "sha256": "15fafc77e5cecb3a8b3217832272de663368e3a4b315b0a34ffa6e3e702a2ccf",
+          "urls": [
+            "https://github.com/veeso/termscp/releases/download/v1.1.1/termscp-v1.1.1-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "termscp.exe",
+              "to": "termscp.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "eza",
+      "version": "0.23.5",
+      "description": "Modern ls replacement.",
+      "kind": "external",
+      "category": "filesystem",
+      "license": "MIT",
+      "commands": [
+        "eza"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "c830638c844a5b89d39ba662b5549903a71fa539018e813880f5b8afa77bac2e",
+          "urls": [
+            "https://github.com/eza-community/eza/releases/download/v0.23.5/eza.exe_x86_64-pc-windows-gnu.zip"
+          ],
+          "files": [
+            {
+              "from": "eza.exe",
+              "to": "eza.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "lsd",
+      "version": "1.2.0",
+      "description": "Colorful ls replacement.",
+      "kind": "external",
+      "category": "filesystem",
+      "license": "Apache-2.0",
+      "commands": [
+        "lsd"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "a65b9f457153934a7ce1f7e0fe1c4922a95bb2822222126e4fbaa6ee9c0d78e5",
+          "urls": [
+            "https://github.com/lsd-rs/lsd/releases/download/v1.2.0/lsd-v1.2.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "lsd.exe",
+              "to": "lsd.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "zoxide",
+      "version": "0.10.0",
+      "description": "Smarter cd command.",
+      "kind": "external",
+      "category": "navigation",
+      "license": "MIT",
+      "commands": [
+        "zoxide"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "f465ae548f8754c8e7edbc60b45fbf58c92bfe123db83d790252d6810fa5daf1",
+          "urls": [
+            "https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "zoxide.exe",
+              "to": "zoxide.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "starship",
+      "version": "1.26.0",
+      "description": "Cross-shell prompt renderer.",
+      "kind": "external",
+      "category": "shell",
+      "license": "ISC",
+      "commands": [
+        "starship"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "690021e22f2bf2c57d5867dc0fababe5e55e714c26942bd909ffddb6c5df42f2",
+          "urls": [
+            "https://github.com/starship/starship/releases/download/v1.26.0/starship-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "starship.exe",
+              "to": "starship.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "gum",
+      "version": "0.17.0",
+      "description": "Composable shell-script UI components.",
+      "kind": "external",
+      "category": "shell",
+      "license": "MIT",
+      "commands": [
+        "gum"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "b2be80531c6babc8d4e0e6ca95773d58118a2e1582ae006aace08dbc55503072",
+          "urls": [
+            "https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Windows_x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "gum_0.17.0_Windows_x86_64/gum.exe",
+              "to": "gum.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "zellij",
+      "version": "0.44.3",
+      "description": "Terminal workspace and multiplexer.",
+      "kind": "external",
+      "category": "terminal",
+      "license": "MIT",
+      "commands": [
+        "zellij"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 12836227,
+          "sha256": "2a192ead623d326458b058f235a5c9ca6f955cece8b3787ce744c07ba9f11e34",
+          "urls": [
+            "https://github.com/zellij-org/zellij/releases/download/v0.44.3/zellij-no-web-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "zellij.exe",
+              "to": "zellij.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "chezmoi",
+      "version": "2.72.0",
+      "description": "Dotfile manager.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "chezmoi"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "b01b6d449db1e4ca62694482d53ab8395c891cade237c404defc1701ebd2bf66",
+          "urls": [
+            "https://github.com/twpayne/chezmoi/releases/download/v2.72.0/chezmoi_2.72.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "chezmoi.exe",
+              "to": "chezmoi.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "lazygit",
+      "version": "0.64.0",
+      "description": "Terminal UI for git.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "lazygit"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "d8b723dd25e098c4a229e7d9a87ff1c3a5779902ebea242b8678f4ac195c1d90",
+          "urls": [
+            "https://github.com/jesseduffield/lazygit/releases/download/v0.64.0/lazygit_0.64.0_windows_x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "lazygit.exe",
+              "to": "lazygit.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "gitui",
+      "version": "0.28.1",
+      "description": "Fast terminal UI for git.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "gitui"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "tar.gz",
+          "size": 4757777,
+          "sha256": "fab116ccdf9ae4e17378db912d76cc26e60aefd2226f44e665120dea166867e4",
+          "urls": [
+            "https://github.com/gitui-org/gitui/releases/download/v0.28.1/gitui-win.tar.gz"
+          ],
+          "files": [
+            {
+              "from": "gitui.exe",
+              "to": "gitui.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "gh-dash",
+      "version": "4.25.2",
+      "description": "Terminal dashboard for GitHub pull requests and issues.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "gh-dash"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "size": 24685568,
+          "sha256": "5936981bd98d671a00de9e872c5fc5be126106e5f06b1a962fbd198e7502a8db",
+          "urls": [
+            "https://github.com/dlvhdr/gh-dash/releases/download/v4.25.2/gh-dash_v4.25.2_windows-amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "gh-dash.exe",
+              "to": "gh-dash.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "duckdb",
+      "version": "1.5.5",
+      "description": "DuckDB analytical database CLI.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "duckdb"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "e1428b7114a841626b5054723731cbf45c6df91b42ae1a6c355f88fad1f6dc4c",
+          "urls": [
+            "https://github.com/duckdb/duckdb/releases/download/v1.5.5/duckdb_cli-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "duckdb.exe",
+              "to": "duckdb.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "pandoc",
+      "version": "3.10.1",
+      "description": "Universal document converter.",
+      "kind": "external",
+      "category": "document",
+      "license": "GPL-2.0-or-later",
+      "commands": [
+        "pandoc"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "4725a1883e2171c2e181e6fd45003acb59ca4e9cbe031fdd3b79ef0d697d36aa",
+          "urls": [
+            "https://github.com/jgm/pandoc/releases/download/3.10.1/pandoc-3.10.1-windows-x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "pandoc-3.10.1/pandoc.exe",
+              "to": "pandoc.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "tealdeer",
+      "version": "1.8.1",
+      "description": "Fast tldr client with offline caching.",
+      "kind": "external",
+      "category": "document",
+      "license": "MIT OR Apache-2.0",
+      "commands": [
+        "tldr"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "0fafa28d6503ec2a96efd71c5f1a57c8c547efd72706fd26fc53015415da7eb9",
+          "urls": [
+            "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.8.1/tealdeer-windows-x86_64-msvc.exe"
+          ],
+          "files": [
+            {
+              "from": "tldr.exe",
+              "to": "tldr.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "shellcheck",
+      "version": "0.11.0",
+      "description": "Shell script static analyzer.",
+      "kind": "external",
+      "category": "developer",
+      "license": "GPL-3.0-or-later",
+      "commands": [
+        "shellcheck"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "8a4e35ab0b331c85d73567b12f2a444df187f483e5079ceffa6bda1faa2e740e",
+          "urls": [
+            "https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.zip"
+          ],
+          "files": [
+            {
+              "from": "shellcheck.exe",
+              "to": "shellcheck.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "shfmt",
+      "version": "3.13.1",
+      "description": "Shell parser and formatter.",
+      "kind": "external",
+      "category": "developer",
+      "license": "BSD-3-Clause",
+      "commands": [
+        "shfmt"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "60cd368533d0ad73fa86d93d5bbf95ef40587245ce684ed138c1b31557b5fe97",
+          "urls": [
+            "https://github.com/mvdan/sh/releases/download/v3.13.1/shfmt_v3.13.1_windows_amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "shfmt.exe",
+              "to": "shfmt.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "hadolint",
+      "version": "2.15.1",
+      "description": "Dockerfile linter.",
+      "kind": "external",
+      "category": "developer",
+      "license": "GPL-3.0-or-later",
+      "commands": [
+        "hadolint"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "01d927294962b5387f9ead4f18679158452be4f17c765ad0bdffe5264b9c7b0a",
+          "urls": [
+            "https://github.com/hadolint/hadolint/releases/download/v2.15.1/hadolint-windows-x86_64.exe"
+          ],
+          "files": [
+            {
+              "from": "hadolint.exe",
+              "to": "hadolint.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "tokei",
+      "version": "",
+      "description": "Code statistics counter.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT OR Apache-2.0",
+      "commands": [
+        "tokei"
+      ],
+      "artifacts": {}
+    },
+    {
+      "name": "scc",
+      "version": "3.7.0",
+      "description": "Fast source code counter.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "scc"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "97abf9d55d4b79d3310536d576ccbdf5017aeb425780e850336120b6e67622e1",
+          "urls": [
+            "https://github.com/boyter/scc/releases/download/v3.7.0/scc_Windows_x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "scc.exe",
+              "to": "scc.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "watchexec",
+      "version": "2.5.1",
+      "description": "Run commands when files change.",
+      "kind": "external",
+      "category": "developer",
+      "license": "Apache-2.0",
+      "commands": [
+        "watchexec"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "aa448c2704ca1a37ce0f1fc75381d9a411946dd293cf6236293f549426a577f7",
+          "urls": [
+            "https://github.com/watchexec/watchexec/releases/download/v2.5.1/watchexec-2.5.1-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "watchexec-2.5.1-x86_64-pc-windows-msvc/watchexec.exe",
+              "to": "watchexec.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "miniserve",
+      "version": "0.35.0",
+      "description": "Small static file server.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "miniserve"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "3229e75b40b3870382d23c9a0ecec880b9bd5f6e49160ce602bb15d00f275b6a",
+          "urls": [
+            "https://github.com/svenstaro/miniserve/releases/download/v0.35.0/miniserve-0.35.0-x86_64-pc-windows-msvc.exe"
+          ],
+          "files": [
+            {
+              "from": "miniserve.exe",
+              "to": "miniserve.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "xh",
+      "version": "0.26.2",
+      "description": "Friendly HTTP client.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT OR Apache-2.0",
+      "commands": [
+        "xh"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "7907c1ef225382fb5955c8274aa23e31b70622c4d39dbc76cf945dc8ce15a78d",
+          "urls": [
+            "https://github.com/ducaale/xh/releases/download/v0.26.2/xh-v0.26.2-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "xh-v0.26.2-x86_64-pc-windows-msvc/xh.exe",
+              "to": "xh.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "doggo",
+      "version": "1.3.0",
+      "description": "Human-friendly command-line DNS client.",
+      "kind": "external",
+      "category": "network",
+      "license": "GPL-3.0",
+      "commands": [
+        "doggo"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "5668bbc6a627930ce0c9262724cb21c180ac15e4f6d2ad841a1eaa2144f9a093",
+          "urls": [
+            "https://github.com/mr-karan/doggo/releases/download/v1.3.0/doggo-windows-x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "doggo.exe",
+              "to": "doggo.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "grpcurl",
+      "version": "1.9.3",
+      "description": "Command-line gRPC client.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "grpcurl"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "895335dfa7be74803eeb5acf3ec5d3b06c1e9483fdda3c7622bdef9ad388f32a",
+          "urls": [
+            "https://github.com/fullstorydev/grpcurl/releases/download/v1.9.3/grpcurl_1.9.3_windows_x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "grpcurl.exe",
+              "to": "grpcurl.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "age",
+      "version": "1.3.1",
+      "description": "Simple modern file encryption tool.",
+      "kind": "external",
+      "category": "security",
+      "license": "BSD-3-Clause",
+      "commands": [
+        "age",
+        "age-keygen",
+        "age-inspect"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "c56e8ce22f7e80cb85ad946cc82d198767b056366201d3e1a2b93d865be38154",
+          "urls": [
+            "https://github.com/FiloSottile/age/releases/download/v1.3.1/age-v1.3.1-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "age/age.exe",
+              "to": "age.exe"
+            },
+            {
+              "from": "age/age-keygen.exe",
+              "to": "age-keygen.exe"
+            },
+            {
+              "from": "age/age-inspect.exe",
+              "to": "age-inspect.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "sops",
+      "version": "3.13.3",
+      "description": "Encrypted secrets editor.",
+      "kind": "external",
+      "category": "security",
+      "license": "MPL-2.0",
+      "commands": [
+        "sops"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "a4a9a398858fe8b2ef72d9686d930bf7c5cece9be74ad83ac3b53cfdd70e6b1c",
+          "urls": [
+            "https://github.com/getsops/sops/releases/download/v3.13.3/sops-v3.13.3.amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "sops.exe",
+              "to": "sops.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "cosign",
+      "version": "3.1.3",
+      "description": "Container signing and verification tool.",
+      "kind": "external",
+      "category": "security",
+      "license": "Apache-2.0",
+      "commands": [
+        "cosign"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "9fe59be0eca1271873ce019061335eb1ac419b7059202e797828467ddabe33be",
+          "urls": [
+            "https://github.com/sigstore/cosign/releases/download/v3.1.3/cosign-windows-amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "cosign.exe",
+              "to": "cosign.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "trivy",
+      "version": "0.73.0",
+      "description": "Security scanner for containers and filesystems.",
+      "kind": "external",
+      "category": "security",
+      "license": "Apache-2.0",
+      "commands": [
+        "trivy"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "d2d3ad5292aae470a03eb6506db86fce81b1894592b8451cadaf60eaa22f2025",
+          "urls": [
+            "https://github.com/aquasecurity/trivy/releases/download/v0.73.0/trivy_0.73.0_windows-64bit.zip"
+          ],
+          "files": [
+            {
+              "from": "trivy.exe",
+              "to": "trivy.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "syft",
+      "version": "1.50.0",
+      "description": "SBOM generator.",
+      "kind": "external",
+      "category": "security",
+      "license": "Apache-2.0",
+      "commands": [
+        "syft"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "815ee6973ec5dff6a671d7f41b0e78835a8c45b91d5a39f4743ea1cee833d3be",
+          "urls": [
+            "https://github.com/anchore/syft/releases/download/v1.50.0/syft_1.50.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "syft.exe",
+              "to": "syft.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "grype",
+      "version": "0.116.1",
+      "description": "Vulnerability scanner for container images and filesystems.",
+      "kind": "external",
+      "category": "security",
+      "license": "Apache-2.0",
+      "commands": [
+        "grype"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "a8ad864f2f06c9afcc90d417f46f5587adeaba4e1e46cc4e32a6a076dae2fda7",
+          "urls": [
+            "https://github.com/anchore/grype/releases/download/v0.116.1/grype_0.116.1_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "grype.exe",
+              "to": "grype.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "oras",
+      "version": "1.3.3",
+      "description": "OCI registry client.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "oras"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "30ca213a565a450de33001dae83053db53c221e6674c5233dc3406b686657969",
+          "urls": [
+            "https://github.com/oras-project/oras/releases/download/v1.3.3/oras_1.3.3_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "oras.exe",
+              "to": "oras.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "restic",
+      "version": "0.19.1",
+      "description": "Fast encrypted backup tool.",
+      "kind": "external",
+      "category": "backup",
+      "license": "BSD-2-Clause",
+      "commands": [
+        "restic"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "da948ad707ed690426473aaba2046cd61f8f90f6f0e7dab6be0d5796531de67d",
+          "urls": [
+            "https://github.com/restic/restic/releases/download/v0.19.1/restic_0.19.1_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "restic_0.19.1_windows_amd64.exe",
+              "to": "restic.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "yazi",
+      "version": "26.5.6",
+      "description": "Terminal file manager.",
+      "kind": "external",
+      "category": "filesystem",
+      "license": "MIT",
+      "commands": [
+        "yazi",
+        "ya"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "6c6c52a4b2648e179f917bdaa7c57e793d18561b380a8bfa025f10cd1b9b2ad1",
+          "urls": [
+            "https://github.com/sxyazi/yazi/releases/download/v26.5.6/yazi-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "yazi-x86_64-pc-windows-msvc/yazi.exe",
+              "to": "yazi.exe"
+            },
+            {
+              "from": "yazi-x86_64-pc-windows-msvc/ya.exe",
+              "to": "ya.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "f2",
+      "version": "2.2.2",
+      "description": "Fast batch file and directory renamer.",
+      "kind": "external",
+      "category": "filesystem",
+      "license": "MIT",
+      "commands": [
+        "f2"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 5711184,
+          "sha256": "64eba7ddbadeca9cd5657b344058311f3c42d342c5e88f93a68d8f07fb8d0a53",
+          "urls": [
+            "https://github.com/ayoisaiah/f2/releases/download/v2.2.2/f2_2.2.2_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "f2.exe",
+              "to": "f2.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ouch",
+      "version": "0.8.1",
+      "description": "Compression and decompression utility.",
+      "kind": "external",
+      "category": "archive",
+      "license": "MIT",
+      "commands": [
+        "ouch"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "a958d9db34bbefd9d7f7288ea4989a78085bc48ab2d92d92a1e5b9776f19e0d5",
+          "urls": [
+            "https://github.com/ouch-org/ouch/releases/download/0.8.1/ouch-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "ouch-x86_64-pc-windows-msvc/ouch.exe",
+              "to": "ouch.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "erdtree",
+      "version": "3.1.2",
+      "description": "Modern tree and disk usage tool.",
+      "kind": "external",
+      "category": "filesystem",
+      "license": "MIT",
+      "commands": [
+        "erd"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "df359e20e5a38384c27b98667d780c5bd5ab1ce4bac739a5fa9c5ed25511a0a1",
+          "urls": [
+            "https://github.com/solidiquis/erdtree/releases/download/v3.1.2/erd-v3.1.2-x86_64-pc-windows-msvc.exe"
+          ],
+          "files": [
+            {
+              "from": "erdtree.exe",
+              "to": "erd.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "tre",
+      "version": "0.4.0",
+      "description": "Improved tree command.",
+      "kind": "external",
+      "category": "filesystem",
+      "license": "MIT",
+      "commands": [
+        "tre"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 683523,
+          "sha256": "9dfbf8c33038e6b31fb359d7f8e7661e46f015067f5cc2f378c93d8bbd1a432a",
+          "urls": [
+            "https://github.com/dduan/tre/releases/download/v0.4.0/tre-v0.4.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "tre.exe",
+              "to": "tre.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "micro",
+      "version": "2.0.15",
+      "description": "Terminal text editor.",
+      "kind": "external",
+      "category": "editor",
+      "license": "MIT",
+      "commands": [
+        "micro"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "90635c53c11aa2a0d997f5e3ed43528877740725500207640b29551cef18479b",
+          "urls": [
+            "https://github.com/zyedidia/micro/releases/download/v2.0.15/micro-2.0.15-win64.zip"
+          ],
+          "files": [
+            {
+              "from": "micro-2.0.15/micro.exe",
+              "to": "micro.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "helix",
+      "version": "25.07.1",
+      "description": "Modal terminal text editor.",
+      "kind": "external",
+      "category": "editor",
+      "license": "MPL-2.0",
+      "commands": [
+        "hx"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 28550028,
+          "sha256": "5c8325ced8bacd8418d62706f669e96d9c3578a9237526e34d546900cbc049b6",
+          "urls": [
+            "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-x86_64-windows.zip"
+          ],
+          "files": [
+            {
+              "from": "helix-25.07.1-x86_64-windows/hx.exe",
+              "to": "hx.exe"
+            },
+            {
+              "from": "helix-25.07.1-x86_64-windows/runtime",
+              "to": "runtime",
+              "kind": "dir"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "pastel",
+      "version": "0.12.0",
+      "description": "Command-line color utility.",
+      "kind": "external",
+      "category": "media",
+      "license": "MIT OR Apache-2.0",
+      "commands": [
+        "pastel"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "51e914b0308b089f032c481e786d67a9f11d8857f4ffe99405f3452e77582393",
+          "urls": [
+            "https://github.com/sharkdp/pastel/releases/download/v0.12.0/pastel-v0.12.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "pastel-v0.12.0-x86_64-pc-windows-msvc/pastel.exe",
+              "to": "pastel.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ffmpeg",
+      "version": "",
+      "description": "Audio and video conversion tools.",
+      "kind": "external",
+      "category": "media",
+      "license": "LGPL-2.1-or-later OR GPL-2.0-or-later",
+      "commands": [
+        "ffmpeg",
+        "ffprobe"
+      ],
+      "artifacts": {}
+    }
+  ]
 }
-
