@@ -1,8 +1,8 @@
 ﻿{
     "schema":  1,
     "name":  "official",
-    "version":  "official-2026.08.10",
-    "updated":  "2026-08-10",
+    "version":  "official-2026.08.11",
+    "updated":  "2026-08-11",
     "sources":  [
                     {
                         "name":  "official-github-raw",
@@ -179,6 +179,37 @@
                                        }
                      },
                      {
+                         "name":  "qsv",
+                         "version":  "22.0.1",
+                         "description":  "Blazing-fast data-wrangling toolkit for CSV and tabular data.",
+                         "kind":  "external",
+                         "category":  "data",
+                         "license":  "MIT",
+                         "commands":  [
+                                          "qsv",
+                                          "qsvlite"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "9d95f7ae939b96124215ba9e34e18f067c5743f5961ce4caad32c164153290d7",
+                                                               "urls":  [
+                                                                            "https://github.com/dathere/qsv/releases/download/22.0.1/qsv-22.0.1-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "qsv.exe",
+                                                                                 "to":  "qsv.exe"
+                                                                             },
+                                                                             {
+                                                                                 "from":  "qsvlite.exe",
+                                                                                 "to":  "qsvlite.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
                          "name":  "ncat",
                          "version":  "",
                          "description":  "Nmap netcat-compatible networking utility.",
@@ -348,6 +379,58 @@
                                        }
                      },
                      {
+                         "name":  "glow",
+                         "version":  "2.1.2",
+                         "description":  "Terminal Markdown renderer.",
+                         "kind":  "external",
+                         "category":  "viewer",
+                         "license":  "MIT",
+                         "commands":  [
+                                          "glow"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "9bc12fce6061b0dd45325401b0d11ec2e45981b76eef2b7fa3c0f941ba5c0b39",
+                                                               "urls":  [
+                                                                            "https://github.com/charmbracelet/glow/releases/download/v2.1.2/glow_2.1.2_Windows_x86_64.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "glow_2.1.2_Windows_x86_64/glow.exe",
+                                                                                 "to":  "glow.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
+                         "name":  "hexyl",
+                         "version":  "0.17.0",
+                         "description":  "Command-line hex viewer.",
+                         "kind":  "external",
+                         "category":  "viewer",
+                         "license":  "MIT OR Apache-2.0",
+                         "commands":  [
+                                          "hexyl"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "ab5c3442cff63f585553d4fce330eaa1ef1bd2584643f1a0e29ab7c13fc9566d",
+                                                               "urls":  [
+                                                                            "https://github.com/sharkdp/hexyl/releases/download/v0.17.0/hexyl-v0.17.0-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "hexyl-v0.17.0-x86_64-pc-windows-msvc/hexyl.exe",
+                                                                                 "to":  "hexyl.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
                          "name":  "delta",
                          "version":  "0.19.2",
                          "description":  "Syntax-highlighting pager for git, diff and grep output.",
@@ -368,6 +451,32 @@
                                                                              {
                                                                                  "from":  "delta.exe",
                                                                                  "to":  "delta.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
+                         "name":  "difftastic",
+                         "version":  "0.70.0",
+                         "description":  "Structural diff tool that compares files based on syntax.",
+                         "kind":  "external",
+                         "category":  "developer",
+                         "license":  "MIT",
+                         "commands":  [
+                                          "difft"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "b563ae76e22ce28c7080a8b628cfabf6fa86f9ee114a0f5697bc2ca26f9ce1d7",
+                                                               "urls":  [
+                                                                            "https://github.com/Wilfred/difftastic/releases/download/0.70.0/difft-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "difft.exe",
+                                                                                 "to":  "difft.exe"
                                                                              }
                                                                          ]
                                                            }
@@ -726,8 +835,34 @@
                                        }
                      },
                      {
+                         "name":  "gum",
+                         "version":  "0.17.0",
+                         "description":  "Composable shell-script UI components.",
+                         "kind":  "external",
+                         "category":  "shell",
+                         "license":  "MIT",
+                         "commands":  [
+                                          "gum"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "b2be80531c6babc8d4e0e6ca95773d58118a2e1582ae006aace08dbc55503072",
+                                                               "urls":  [
+                                                                            "https://github.com/charmbracelet/gum/releases/download/v0.17.0/gum_0.17.0_Windows_x86_64.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "gum_0.17.0_Windows_x86_64/gum.exe",
+                                                                                 "to":  "gum.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
                          "name":  "chezmoi",
-                         "version":  "",
+                         "version":  "2.72.0",
                          "description":  "Dotfile manager.",
                          "kind":  "external",
                          "category":  "developer",
@@ -736,7 +871,19 @@
                                           "chezmoi"
                                       ],
                          "artifacts":  {
-
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "b01b6d449db1e4ca62694482d53ab8395c891cade237c404defc1701ebd2bf66",
+                                                               "urls":  [
+                                                                            "https://github.com/twpayne/chezmoi/releases/download/v2.72.0/chezmoi_2.72.0_windows_amd64.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "chezmoi.exe",
+                                                                                 "to":  "chezmoi.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
@@ -812,6 +959,32 @@
                                                                              {
                                                                                  "from":  "pandoc-3.10.1/pandoc.exe",
                                                                                  "to":  "pandoc.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
+                         "name":  "tealdeer",
+                         "version":  "1.8.1",
+                         "description":  "Fast tldr client with offline caching.",
+                         "kind":  "external",
+                         "category":  "document",
+                         "license":  "MIT OR Apache-2.0",
+                         "commands":  [
+                                          "tldr"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "exe",
+                                                               "sha256":  "0fafa28d6503ec2a96efd71c5f1a57c8c547efd72706fd26fc53015415da7eb9",
+                                                               "urls":  [
+                                                                            "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.8.1/tealdeer-windows-x86_64-msvc.exe"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "tldr.exe",
+                                                                                 "to":  "tldr.exe"
                                                                              }
                                                                          ]
                                                            }
@@ -1008,6 +1181,32 @@
                                                                              {
                                                                                  "from":  "xh-v0.26.2-x86_64-pc-windows-msvc/xh.exe",
                                                                                  "to":  "xh.exe"
+                                                                             }
+                                                                         ]
+                                                           }
+                                       }
+                     },
+                     {
+                         "name":  "doggo",
+                         "version":  "1.3.0",
+                         "description":  "Human-friendly command-line DNS client.",
+                         "kind":  "external",
+                         "category":  "network",
+                         "license":  "GPL-3.0",
+                         "commands":  [
+                                          "doggo"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "5668bbc6a627930ce0c9262724cb21c180ac15e4f6d2ad841a1eaa2144f9a093",
+                                                               "urls":  [
+                                                                            "https://github.com/mr-karan/doggo/releases/download/v1.3.0/doggo-windows-x86_64.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "doggo.exe",
+                                                                                 "to":  "doggo.exe"
                                                                              }
                                                                          ]
                                                            }
@@ -1378,6 +1577,32 @@
                                       ],
                          "artifacts":  {
 
+                                       }
+                     },
+                     {
+                         "name":  "pastel",
+                         "version":  "0.12.0",
+                         "description":  "Command-line color utility.",
+                         "kind":  "external",
+                         "category":  "media",
+                         "license":  "MIT OR Apache-2.0",
+                         "commands":  [
+                                          "pastel"
+                                      ],
+                         "artifacts":  {
+                                           "windows-x64":  {
+                                                               "type":  "zip",
+                                                               "sha256":  "51e914b0308b089f032c481e786d67a9f11d8857f4ffe99405f3452e77582393",
+                                                               "urls":  [
+                                                                            "https://github.com/sharkdp/pastel/releases/download/v0.12.0/pastel-v0.12.0-x86_64-pc-windows-msvc.zip"
+                                                                        ],
+                                                               "files":  [
+                                                                             {
+                                                                                 "from":  "pastel-v0.12.0-x86_64-pc-windows-msvc/pastel.exe",
+                                                                                 "to":  "pastel.exe"
+                                                                             }
+                                                                         ]
+                                                           }
                                        }
                      },
                      {
