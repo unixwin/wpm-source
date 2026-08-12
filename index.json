@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "name": "official",
-  "version": "official-2026.08.11",
-  "updated": "2026-08-11",
+  "version": "official-2026.08.12",
+  "updated": "2026-08-12",
   "sources": [
     {
       "name": "official-github-raw",
@@ -46,7 +46,7 @@
   "packages": [
     {
       "name": "winuxcmd",
-      "version": "0.14.8",
+      "version": "0.14.9",
       "description": "WinuxCmd core command set",
       "kind": "external",
       "license": "MIT",
@@ -57,9 +57,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "e1c76f7e4e97d2017dafab2c9e4b4ff36241eb551c9f141dcc39585d3a799398",
+          "sha256": "ed482eaaec11a9363e92412f381dbad95be8aa58445e251981bedbf699197f26",
           "urls": [
-            "https://github.com/unixwin/WinuxCmd/releases/download/v0.14.8/WinuxCmd-0.14.8-win-x64.zip"
+            "https://github.com/unixwin/WinuxCmd/releases/download/v0.14.9/WinuxCmd-0.14.9-win-x64.zip"
           ],
           "files": [
             {
@@ -70,9 +70,9 @@
         },
         "windows-arm64": {
           "type": "zip",
-          "sha256": "716cdad516e34ca71816a7a0545974a3b2eccae8f28c2caadb7b5162fbf4cfea",
+          "sha256": "723685e4c88940028dd9e4900789c11552124555247f209ef79c960056e9a5d2",
           "urls": [
-            "https://github.com/unixwin/WinuxCmd/releases/download/v0.14.8/WinuxCmd-0.14.8-win-arm64.zip"
+            "https://github.com/unixwin/WinuxCmd/releases/download/v0.14.9/WinuxCmd-0.14.9-win-arm64.zip"
           ],
           "files": [
             {
