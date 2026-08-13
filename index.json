@@ -96,7 +96,7 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "size": 140000,
+          "size": 36896,
           "sha256": "5eb6415aec7c302d18131ca0b87969dbc80e843c201fae8d8c34ac83c576cf05",
           "urls": [
             "https://github.com/unixwin/winuxcmd-i18n/releases/download/v0.2.0/winuxcmd-i18n-zh-cn.zip"
