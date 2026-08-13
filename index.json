@@ -96,14 +96,14 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "size": 37814,
-          "sha256": "04cc2541e0079382756f9c6093764977378fef469e25e46228fba1b865af6620",
+          "size": 69364,
+          "sha256": "2ed1db1904937901eeef0dd97840d5652c6ccb8c065bd1d4e8001be2c66cce1c",
           "urls": [
             "https://github.com/unixwin/winuxcmd-i18n/releases/download/v0.3.0/winuxcmd-i18n-zh-cn.zip"
           ],
           "files": [
             {
-              "from": "catalogs/zh-CN/catalog.json",
+              "from": "zh-CN/catalog.json",
               "to": ".wpm/i18n/zh-CN/catalog.json"
             }
           ]
@@ -1896,3 +1896,4 @@
     }
   ]
 }
+
