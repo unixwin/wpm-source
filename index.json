@@ -46,7 +46,7 @@
   "packages": [
     {
       "name": "winuxcmd",
-      "version": "0.15.2",
+      "version": "0.15.4",
       "description": "WinuxCmd core command set",
       "kind": "external",
       "license": "MIT",
@@ -57,9 +57,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "0cf9e634a177544c89565e195101448724788460f4cc1f0958062fa087016508",
+          "sha256": "44695b21782b14746b2e41756598ca3e01c3f6bac9ca15c50a6c472d07c32fb6",
           "urls": [
-            "https://github.com/unixwin/WinuxCmd/releases/download/v0.15.2/WinuxCmd-0.15.2-win-x64.zip"
+            "https://github.com/unixwin/WinuxCmd/releases/download/v0.15.4/WinuxCmd-0.15.4-win-x64.zip"
           ],
           "files": [
             {
@@ -70,9 +70,9 @@
         },
         "windows-arm64": {
           "type": "zip",
-          "sha256": "e67ce8d8d91601820aa7dd50ea2d3c30f9f5abc3f473f3404fca8aff9a6dc286",
+          "sha256": "7ece87b66debe82677cbf1d62de90c5d6d81e1a5771fa33b529b6da5882a4b8d",
           "urls": [
-            "https://github.com/unixwin/WinuxCmd/releases/download/v0.15.2/WinuxCmd-0.15.2-win-arm64.zip"
+            "https://github.com/unixwin/WinuxCmd/releases/download/v0.15.4/WinuxCmd-0.15.4-win-arm64.zip"
           ],
           "files": [
             {
