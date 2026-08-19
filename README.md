@@ -117,7 +117,7 @@ pwsh ./scripts/update-package.ps1 `
 
 Every installable artifact should include:
 
-- `type`: `exe` or `zip`
+- `type`: `exe`, `zip`, `tar.gz`, `tgz`, or `tar.xz`
 - `sha256`: required for remote downloads
 - `urls`: one or more HTTPS download URLs
 - `files`: explicit `from` to `to` mappings
@@ -148,3 +148,17 @@ Example:
 
 Metadata-only packages are allowed as placeholders, but WPM should display them
 as `index-only` until URLs, SHA-256 hashes, and file mappings are present.
+
+## GNU and POSIX-Style Tools
+
+Prefer installable artifacts only when upstream publishes a Windows-native or
+portable archive that WPM can verify with SHA-256 and explicit file mappings.
+
+Keep packages metadata-only when the name is important for discovery but the
+artifact is not safe to install directly. Examples:
+
+- `gawk`: real GNU awk belongs in the index, but only as installable after a
+  reviewed Windows portable artifact and SHA-256 are available.
+- `parallel`: GNU Parallel depends on a Perl/Unix-style runtime model, so WPM
+  should not claim it as installable until that dependency strategy is explicit.
+  Native alternatives such as `rush` or `xargs -P` can be installable today.

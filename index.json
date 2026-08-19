@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "name": "official",
-  "version": "official-2026.08.13",
-  "updated": "2026-08-13",
+  "version": "official-2026.08.18",
+  "updated": "2026-08-18",
   "sources": [
     {
       "name": "official-github-raw",
@@ -138,8 +138,8 @@
     },
     {
       "name": "gawk",
-      "version": "",
-      "description": "GNU awk sidecar slot for users who need GNU awk compatibility; not the default awk provider.",
+      "version": "5.4.1",
+      "description": "GNU awk sidecar slot for users who need GNU awk compatibility; kept index-only until a reviewed Windows portable artifact with SHA-256 is published.",
       "kind": "external",
       "category": "text",
       "license": "GPL-3.0-or-later",
@@ -148,6 +148,112 @@
         "awk"
       ],
       "artifacts": {}
+    },
+    {
+      "name": "grex",
+      "version": "1.4.6",
+      "description": "Generate regular expressions from user-provided examples.",
+      "kind": "external",
+      "category": "text",
+      "license": "Apache-2.0",
+      "commands": [
+        "grex"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 1029901,
+          "sha256": "7691dbb8e46339a15d8362b79b2456f508266cf00a55fe685ed69a6259577485",
+          "urls": [
+            "https://github.com/pemistahl/grex/releases/download/v1.4.6/grex-v1.4.6-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "grex.exe",
+              "to": "grex.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "choose",
+      "version": "1.3.7",
+      "description": "Human-friendly cut/awk-style field selector for shell pipelines.",
+      "kind": "external",
+      "category": "text",
+      "license": "GPL-3.0-or-later",
+      "commands": [
+        "choose"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "size": 4837025,
+          "sha256": "9233beade020c3e74854911a15aa973f7dc9f4253abe8856b8c273579a555903",
+          "urls": [
+            "https://github.com/theryangeary/choose/releases/download/v1.3.7/choose-x86_64-pc-windows-gnu.exe"
+          ],
+          "files": [
+            {
+              "from": "choose.exe",
+              "to": "choose.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "parallel",
+      "version": "0.9.0",
+      "description": "Native parallel command runner for Winuxsh workflows, installed from rush as a practical parallel.exe provider; not a full GNU Parallel compatibility package.",
+      "kind": "external",
+      "category": "shell",
+      "license": "MIT",
+      "commands": [
+        "parallel"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "tar.gz",
+          "sha256": "4ed40a085fa19ccdb02af418d639f9ef3dba11289454695aef7609a6431ef07e",
+          "urls": [
+            "https://github.com/shenwei356/rush/releases/download/v0.9.0/rush_windows_amd64.exe.tar.gz"
+          ],
+          "files": [
+            {
+              "from": "rush.exe",
+              "to": "parallel.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "rush",
+      "version": "0.9.0",
+      "description": "Cross-platform command-line tool for executing jobs in parallel.",
+      "kind": "external",
+      "category": "shell",
+      "license": "MIT",
+      "commands": [
+        "rush"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "tar.gz",
+          "sha256": "4ed40a085fa19ccdb02af418d639f9ef3dba11289454695aef7609a6431ef07e",
+          "urls": [
+            "https://github.com/shenwei356/rush/releases/download/v0.9.0/rush_windows_amd64.exe.tar.gz"
+          ],
+          "files": [
+            {
+              "from": "rush.exe",
+              "to": "rush.exe"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "jq",
@@ -202,6 +308,32 @@
       }
     },
     {
+      "name": "dasel",
+      "version": "3.11.2",
+      "description": "Selector-driven processor for JSON, YAML, TOML, XML and CSV data.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "dasel"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "7f37a5aba88c702884edca3bcf2ad0a67b3f2533cbfbf1f6bc414e25e2fe1d24",
+          "urls": [
+            "https://github.com/TomWright/dasel/releases/download/v3.11.2/dasel_windows_amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "dasel.exe",
+              "to": "dasel.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
       "name": "qsv",
       "version": "22.0.1",
       "description": "Blazing-fast data-wrangling toolkit for CSV and tabular data.",
@@ -227,6 +359,59 @@
             {
               "from": "qsvlite.exe",
               "to": "qsvlite.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "miller",
+      "version": "6.21.0",
+      "description": "Name-indexed data processing tool for CSV, TSV, JSON and structured records.",
+      "kind": "external",
+      "category": "data",
+      "license": "BSD-2-Clause",
+      "commands": [
+        "mlr"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "e4730fafce659db22c619c0fde51eba050edc584a0804fd2c8b2883c8f8d8250",
+          "urls": [
+            "https://github.com/johnkerl/miller/releases/download/v6.21.0/miller-6.21.0-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "mlr.exe",
+              "to": "mlr.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "csvlens",
+      "version": "0.15.1",
+      "description": "Terminal CSV viewer for exploring large delimited files.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "csvlens"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 2482539,
+          "sha256": "2b7cf7818288b98571382f0b65b8d03139ab2a1d71d2505ecdeb06a33186bf7d",
+          "urls": [
+            "https://github.com/YS-L/csvlens/releases/download/v0.15.1/csvlens-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "csvlens.exe",
+              "to": "csvlens.exe"
             }
           ]
         }
@@ -273,16 +458,35 @@
     },
     {
       "name": "7zip",
-      "version": "",
-      "description": "7-Zip archive utility.",
+      "version": "9.20",
+      "description": "Official standalone 7-Zip command-line utility package using 7za.exe.",
       "kind": "external",
       "category": "archive",
       "license": "LGPL-2.1-or-later",
       "commands": [
         "7z",
-        "7zz"
+        "7za"
       ],
-      "artifacts": {}
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 384846,
+          "sha256": "2a3afe19c180f8373fa02ff00254d5394fec0349f5804e0ad2f6067854ff28ac",
+          "urls": [
+            "https://www.7-zip.org/a/7za920.zip"
+          ],
+          "files": [
+            {
+              "from": "7za.exe",
+              "to": "7za.exe"
+            },
+            {
+              "from": "7za.exe",
+              "to": "7z.exe"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "zstd",
@@ -660,6 +864,60 @@
       }
     },
     {
+      "name": "dua",
+      "version": "2.42.1",
+      "description": "Interactive disk usage analyzer.",
+      "kind": "external",
+      "category": "filesystem",
+      "license": "MIT",
+      "commands": [
+        "dua"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 1647713,
+          "sha256": "6e81d82dee23e45fb7e93b61c94ad827e5805cd4e6169882298eab4d07b0330d",
+          "urls": [
+            "https://github.com/Byron/dua-cli/releases/download/v2.42.1/dua-v2.42.1-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "dua.exe",
+              "to": "dua.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "gdu",
+      "version": "5.37.0",
+      "description": "Fast disk usage analyzer with interactive and non-interactive modes.",
+      "kind": "external",
+      "category": "filesystem",
+      "license": "MIT",
+      "commands": [
+        "gdu"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 8680872,
+          "sha256": "c8eebbad26799d5d0bd55b740e1acf0353c8889be4dccd98bc3aeac73660eee3",
+          "urls": [
+            "https://github.com/dundee/gdu/releases/download/v5.37.0/gdu_windows_amd64.exe.zip"
+          ],
+          "files": [
+            {
+              "from": "gdu.exe",
+              "to": "gdu.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
       "name": "duf",
       "version": "0.9.1",
       "description": "Disk usage and free space viewer.",
@@ -739,15 +997,29 @@
     },
     {
       "name": "wget",
-      "version": "",
-      "description": "Non-interactive network downloader.",
+      "version": "1.21.4",
+      "description": "GNU Wget non-interactive network downloader for Windows.",
       "kind": "external",
       "category": "network",
       "license": "GPL-3.0-or-later",
       "commands": [
         "wget"
       ],
-      "artifacts": {}
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "7b0addf04edd370307aa6005f0c08a171a319cccd4403663daca5478860b3056",
+          "urls": [
+            "https://eternallybored.org/misc/wget/releases/wget-1.21.4-win64.zip"
+          ],
+          "files": [
+            {
+              "from": "wget.exe",
+              "to": "wget.exe"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "aria2",
@@ -960,6 +1232,33 @@
       }
     },
     {
+      "name": "vivid",
+      "version": "0.11.1",
+      "description": "Themeable LS_COLORS generator for shell file-color configuration.",
+      "kind": "external",
+      "category": "shell",
+      "license": "Apache-2.0",
+      "commands": [
+        "vivid"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 374838,
+          "sha256": "2bc2700c9cae57c43c6abbb1063e755977972b81e8eb34f266750aabd02a9cf1",
+          "urls": [
+            "https://github.com/sharkdp/vivid/releases/download/v0.11.1/vivid-v0.11.1-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "vivid.exe",
+              "to": "vivid.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
       "name": "gum",
       "version": "0.17.0",
       "description": "Composable shell-script UI components.",
@@ -1119,6 +1418,221 @@
       }
     },
     {
+      "name": "gh",
+      "version": "2.97.0",
+      "description": "GitHub command-line interface.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "gh"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 14938517,
+          "sha256": "35d7fe05c4dd1411ffda1e73dfc7c6f44b75c936ca51fa6595c657fdc0350cec",
+          "urls": [
+            "https://github.com/cli/cli/releases/download/v2.97.0/gh_2.97.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "gh.exe",
+              "to": "gh.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "kubectl",
+      "version": "1.36.3",
+      "description": "Kubernetes command-line control tool.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "kubectl"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "size": 61980672,
+          "sha256": "ba76657b79d0ebcc3c029c171fc83c96351ba5ce0e71d185f1e5b8b873360a5f",
+          "urls": [
+            "https://dl.k8s.io/release/v1.36.3/bin/windows/amd64/kubectl.exe"
+          ],
+          "files": [
+            {
+              "from": "kubectl.exe",
+              "to": "kubectl.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "helm",
+      "version": "4.2.4",
+      "description": "Kubernetes package manager CLI.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "helm"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "e94d83a4706fd82078c98dade2079fa9d9680c1c2bfb93bfc304ee6bc2412a32",
+          "urls": [
+            "https://get.helm.sh/helm-v4.2.4-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "helm.exe",
+              "to": "helm.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "k9s",
+      "version": "0.51.0",
+      "description": "Terminal UI for Kubernetes clusters.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "k9s"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 42330705,
+          "sha256": "bba299f1877913979831543a008f2e104995d2ea4ac8f23d7f49c0444857d973",
+          "urls": [
+            "https://github.com/derailed/k9s/releases/download/v0.51.0/k9s_Windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "k9s.exe",
+              "to": "k9s.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "stern",
+      "version": "1.34.0",
+      "description": "Multi-pod Kubernetes log tailer.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "stern"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 14575823,
+          "sha256": "a7a1a06e16d98ec2b99deb7578bd2c8b95f4e6ba75cc580a30ece98d8a639c32",
+          "urls": [
+            "https://github.com/stern/stern/releases/download/v1.34.0/stern_1.34.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "stern.exe",
+              "to": "stern.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "kind",
+      "version": "0.32.0",
+      "description": "Run local Kubernetes clusters using Docker containers.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "kind"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "size": 10833920,
+          "sha256": "0bcb2d1cfedc1912d664014db716937e8a0e843e91c6807b4db2025dbc8989fa",
+          "urls": [
+            "https://github.com/kubernetes-sigs/kind/releases/download/v0.32.0/kind-windows-amd64"
+          ],
+          "files": [
+            {
+              "from": "kind.exe",
+              "to": "kind.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "opentofu",
+      "version": "1.12.5",
+      "description": "Open-source infrastructure-as-code CLI compatible with Terraform workflows.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "MPL-2.0",
+      "commands": [
+        "tofu"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 35446533,
+          "sha256": "465adc4bdf4aa80c650387b7ada2cf750f7908bf1fae7f35b05402c384e79928",
+          "urls": [
+            "https://github.com/opentofu/opentofu/releases/download/v1.12.5/tofu_1.12.5_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "tofu.exe",
+              "to": "tofu.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "lazydocker",
+      "version": "0.25.2",
+      "description": "Terminal UI for Docker and Docker Compose.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "MIT",
+      "commands": [
+        "lazydocker"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 5057965,
+          "sha256": "facae8869c1bf144468191c563002162273a2c2761f052659170530cae3fa8a9",
+          "urls": [
+            "https://github.com/jesseduffield/lazydocker/releases/download/v0.25.2/lazydocker_0.25.2_Windows_x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "lazydocker.exe",
+              "to": "lazydocker.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
       "name": "duckdb",
       "version": "1.5.5",
       "description": "DuckDB analytical database CLI.",
@@ -1165,6 +1679,60 @@
             {
               "from": "pandoc-3.10.1/pandoc.exe",
               "to": "pandoc.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "mdbook",
+      "version": "0.5.4",
+      "description": "Build books and documentation from Markdown.",
+      "kind": "external",
+      "category": "document",
+      "license": "MPL-2.0",
+      "commands": [
+        "mdbook"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 4407719,
+          "sha256": "8a6b2421aa522de06d746871d2b8fff9c8d71773467e310a4516d2566e7f2de4",
+          "urls": [
+            "https://github.com/rust-lang/mdBook/releases/download/v0.5.4/mdbook-v0.5.4-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "mdbook.exe",
+              "to": "mdbook.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "mdsf",
+      "version": "0.12.1",
+      "description": "Format Markdown code blocks using language-specific formatters.",
+      "kind": "external",
+      "category": "document",
+      "license": "MIT",
+      "commands": [
+        "mdsf"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "tar.gz",
+          "size": 2089883,
+          "sha256": "d35c0fa327df59cb4b9089bee933742eef2c7abaf650742f120759409334e8f3",
+          "urls": [
+            "https://github.com/hougesen/mdsf/releases/download/v0.12.1/mdsf-x86_64-pc-windows-msvc.tar.gz"
+          ],
+          "files": [
+            {
+              "from": "mdsf.exe",
+              "to": "mdsf.exe"
             }
           ]
         }
@@ -1275,16 +1843,256 @@
       }
     },
     {
-      "name": "tokei",
-      "version": "",
-      "description": "Code statistics counter.",
+      "name": "actionlint",
+      "version": "1.7.12",
+      "description": "Static checker for GitHub Actions workflow files.",
       "kind": "external",
       "category": "developer",
-      "license": "MIT OR Apache-2.0",
+      "license": "MIT",
+      "commands": [
+        "actionlint"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 2479065,
+          "sha256": "6e7241b51e6817ea6a047693d8e6fed13b31819c9a0dd6c5a726e1592d22f6e9",
+          "urls": [
+            "https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "actionlint.exe",
+              "to": "actionlint.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "typos",
+      "version": "1.49.0",
+      "description": "Fast source-code spell checker.",
+      "kind": "external",
+      "category": "developer",
+      "license": "Apache-2.0",
+      "commands": [
+        "typos"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 3217350,
+          "sha256": "06d3a1b71c282e021671070696a72696d5c60ea485b47dc4f8f1fbcf90144d02",
+          "urls": [
+            "https://github.com/crate-ci/typos/releases/download/v1.49.0/typos-v1.49.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "typos.exe",
+              "to": "typos.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "lychee",
+      "version": "0.24.2",
+      "description": "Fast link checker for Markdown, HTML, reStructuredText and websites.",
+      "kind": "external",
+      "category": "developer",
+      "license": "Apache-2.0",
+      "commands": [
+        "lychee"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 6868524,
+          "sha256": "32975d1493ee1a975d6bb41e4fb56fe419cb442ded628bb772ba2e614acfacad",
+          "urls": [
+            "https://github.com/lycheeverse/lychee/releases/download/lychee-v0.24.2/lychee-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "lychee.exe",
+              "to": "lychee.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ast-grep",
+      "version": "0.45.1",
+      "description": "Structural code search and rewrite tool for large codebases.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "sg"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 15016756,
+          "sha256": "b816b375df6a30f8e5d91d706dccae6127346e68970788cf8c2decee54bcaa31",
+          "urls": [
+            "https://github.com/ast-grep/ast-grep/releases/download/0.45.1/app-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "sg.exe",
+              "to": "sg.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "dprint",
+      "version": "0.55.2",
+      "description": "Pluggable code formatter for TypeScript, JavaScript, JSON, Markdown and more.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "dprint"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 8769657,
+          "sha256": "12e8c26abc8c436223e70f5a30a2864001c92fa356a859eb93e06b97ab7dbd12",
+          "urls": [
+            "https://github.com/dprint/dprint/releases/download/0.55.2/dprint-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "dprint.exe",
+              "to": "dprint.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ruff",
+      "version": "0.16.3",
+      "description": "Fast Python linter and formatter distributed as a standalone binary.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "ruff"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 10562234,
+          "sha256": "f10c709755b393fd9821506b21070bcca969b9966504edd1e490efd08e3662ba",
+          "urls": [
+            "https://github.com/astral-sh/ruff/releases/download/0.16.3/ruff-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "ruff.exe",
+              "to": "ruff.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "cmake",
+      "version": "4.4.2",
+      "description": "Portable CMake build-system command-line tools without compilers or global setup.",
+      "kind": "external",
+      "category": "developer",
+      "license": "BSD-3-Clause",
+      "commands": [
+        "cmake",
+        "ctest",
+        "cpack"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 54405968,
+          "sha256": "e8139d85b3813bc38833142ae1940472e9a587e9b5d2718ac1804c60f4e57a64",
+          "urls": [
+            "https://cmake.org/files/v4.4/cmake-4.4.2-windows-x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "cmake.exe",
+              "to": "cmake.exe"
+            },
+            {
+              "from": "ctest.exe",
+              "to": "ctest.exe"
+            },
+            {
+              "from": "cpack.exe",
+              "to": "cpack.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "zizmor",
+      "version": "1.29.0",
+      "description": "Static analysis for GitHub Actions security issues.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "zizmor"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 8149893,
+          "sha256": "68a6bc6888f10bf0d53658c75885e7c1b7a0588d4c1fbc3f0ca280ad7324bf06",
+          "urls": [
+            "https://github.com/zizmorcore/zizmor/releases/download/v1.29.0/zizmor-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "zizmor.exe",
+              "to": "zizmor.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "tokei",
+      "version": "12.1.2",
+      "description": "Fast code statistics counter.",
+      "kind": "external",
+      "category": "developer",
+      "license": "Apache-2.0 OR MIT",
       "commands": [
         "tokei"
       ],
-      "artifacts": {}
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "b1d6c4b18f5fa238bd2c6e47caa65a7a3e4a1bd0de6df0b7c19c8083c941f57b",
+          "urls": [
+            "https://github.com/XAMPPRocky/tokei/releases/download/v12.1.2/tokei-x86_64-pc-windows-msvc.exe"
+          ],
+          "files": [
+            {
+              "from": "tokei.exe",
+              "to": "tokei.exe"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "scc",
@@ -1391,6 +2199,92 @@
       }
     },
     {
+      "name": "hurl",
+      "version": "8.0.1",
+      "description": "Run and test HTTP requests with plain text files.",
+      "kind": "external",
+      "category": "network",
+      "license": "Apache-2.0",
+      "commands": [
+        "hurl",
+        "hurlfmt"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 4728872,
+          "sha256": "2bb8c64ea3dbde464b92432cedd48aaa0fafdff4a39cb9c05c271c306bc8f124",
+          "urls": [
+            "https://github.com/Orange-OpenSource/hurl/releases/download/8.0.1/hurl-8.0.1-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "hurl.exe",
+              "to": "hurl.exe"
+            },
+            {
+              "from": "hurlfmt.exe",
+              "to": "hurlfmt.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "oha",
+      "version": "1.15.0",
+      "description": "HTTP load generator for benchmarking web services from the shell.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "oha"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "size": 8384512,
+          "sha256": "cfd51293ba621eea0616848a78caf360855859364d2ea8e23df515d791c91383",
+          "urls": [
+            "https://github.com/hatoo/oha/releases/download/v1.15.0/oha-windows-amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "oha.exe",
+              "to": "oha.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "websocat",
+      "version": "1.14.1",
+      "description": "Command-line WebSocket client and relay for shell pipelines.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "websocat"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "size": 1929728,
+          "sha256": "284339b5b86f2b11496137d97b6705bb2ef27e64f21527c1ba240bdb6177ba3b",
+          "urls": [
+            "https://github.com/vi/websocat/releases/download/v1.14.1/websocat.x86_64-pc-windows-gnu.exe"
+          ],
+          "files": [
+            {
+              "from": "websocat.exe",
+              "to": "websocat.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
       "name": "doggo",
       "version": "1.3.0",
       "description": "Human-friendly command-line DNS client.",
@@ -1437,6 +2331,59 @@
             {
               "from": "grpcurl.exe",
               "to": "grpcurl.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "b3sum",
+      "version": "1.8.6",
+      "description": "BLAKE3 cryptographic hash command-line tool.",
+      "kind": "external",
+      "category": "security",
+      "license": "Apache-2.0",
+      "commands": [
+        "b3sum"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "6e6c583cfa52a0f11b885f4dfcf29ecb9a668acf3ec43558be19af1ec7b3c602",
+          "urls": [
+            "https://github.com/BLAKE3-team/BLAKE3/releases/download/1.8.6/b3sum_windows_x64_bin.exe"
+          ],
+          "files": [
+            {
+              "from": "b3sum.exe",
+              "to": "b3sum.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "gitleaks",
+      "version": "8.30.1",
+      "description": "Detect hardcoded secrets in Git repositories and files.",
+      "kind": "external",
+      "category": "security",
+      "license": "MIT",
+      "commands": [
+        "gitleaks"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 8438883,
+          "sha256": "d29144deff3a68aa93ced33dddf84b7fdc26070add4aa0f4513094c8332afc4e",
+          "urls": [
+            "https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_windows_x64.zip"
+          ],
+          "files": [
+            {
+              "from": "gitleaks.exe",
+              "to": "gitleaks.exe"
             }
           ]
         }
@@ -1883,17 +2830,39 @@
     },
     {
       "name": "ffmpeg",
-      "version": "",
-      "description": "Audio and video conversion tools.",
+      "version": "8.1.2",
+      "description": "Pinned Gyan.dev FFmpeg essentials build with audio and video conversion tools.",
       "kind": "external",
       "category": "media",
       "license": "LGPL-2.1-or-later OR GPL-2.0-or-later",
       "commands": [
         "ffmpeg",
-        "ffprobe"
+        "ffprobe",
+        "ffplay"
       ],
-      "artifacts": {}
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "db580001caa24ac104c8cb856cd113a87b0a443f7bdf47d8c12b1d740584a2ec",
+          "urls": [
+            "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-8.1.2-essentials_build.zip"
+          ],
+          "files": [
+            {
+              "from": "ffmpeg.exe",
+              "to": "ffmpeg.exe"
+            },
+            {
+              "from": "ffprobe.exe",
+              "to": "ffprobe.exe"
+            },
+            {
+              "from": "ffplay.exe",
+              "to": "ffplay.exe"
+            }
+          ]
+        }
+      }
     }
   ]
 }
-
