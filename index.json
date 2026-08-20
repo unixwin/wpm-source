@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "name": "official",
-  "version": "official-2026.08.19",
-  "updated": "2026-08-19",
+  "version": "official-2026.08.20",
+  "updated": "2026-08-20",
   "sources": [
     {
       "name": "official-github-raw",
@@ -455,6 +455,41 @@
         "ncat"
       ],
       "artifacts": {}
+    },
+    {
+      "name": "curl",
+      "version": "8.21.0_7",
+      "description": "Official curl for Windows command-line client for transferring data with URLs.",
+      "kind": "external",
+      "category": "network",
+      "license": "curl",
+      "commands": [
+        "curl"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "size": 8629814,
+          "sha256": "e469dcdb219d0eca9236b01c7e4bb34fe04af3d4036d350829178dc60f241ae4",
+          "urls": [
+            "https://curl.se/windows/dl-8.21.0_7/curl-8.21.0_7-win64-mingw.zip"
+          ],
+          "files": [
+            {
+              "from": "curl-8.21.0_7-win64-mingw/bin/curl.exe",
+              "to": "curl.exe"
+            },
+            {
+              "from": "curl-8.21.0_7-win64-mingw/bin/libcurl-x64.dll",
+              "to": "libcurl-x64.dll"
+            },
+            {
+              "from": "curl-8.21.0_7-win64-mingw/bin/curl-ca-bundle.crt",
+              "to": "curl-ca-bundle.crt"
+            }
+          ]
+        }
+      }
     },
     {
       "name": "7zip",
