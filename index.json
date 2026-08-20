@@ -66,7 +66,8 @@
               "from": "winuxcmd.exe",
               "to": "winuxcmd.exe"
             }
-          ]
+          ],
+          "size": 2812564
         },
         "windows-arm64": {
           "type": "zip",
@@ -132,7 +133,8 @@
               "from": "goawk.exe",
               "to": "awk.exe"
             }
-          ]
+          ],
+          "size": 1557117
         }
       }
     },
@@ -225,7 +227,8 @@
               "from": "rush.exe",
               "to": "parallel.exe"
             }
-          ]
+          ],
+          "size": 3692608
         }
       }
     },
@@ -251,7 +254,8 @@
               "from": "rush.exe",
               "to": "rush.exe"
             }
-          ]
+          ],
+          "size": 3692608
         }
       }
     },
@@ -277,7 +281,8 @@
               "from": "jq.exe",
               "to": "jq.exe"
             }
-          ]
+          ],
+          "size": 1035264
         }
       }
     },
@@ -303,7 +308,8 @@
               "from": "yq.exe",
               "to": "yq.exe"
             }
-          ]
+          ],
+          "size": 14235136
         }
       }
     },
@@ -329,7 +335,8 @@
               "from": "dasel.exe",
               "to": "dasel.exe"
             }
-          ]
+          ],
+          "size": 10756608
         }
       }
     },
@@ -360,7 +367,8 @@
               "from": "qsvlite.exe",
               "to": "qsvlite.exe"
             }
-          ]
+          ],
+          "size": 319028376
         }
       }
     },
@@ -386,7 +394,8 @@
               "from": "mlr.exe",
               "to": "mlr.exe"
             }
-          ]
+          ],
+          "size": 6109224
         }
       }
     },
@@ -555,7 +564,8 @@
               "from": "zstd.exe",
               "to": "zstdcat.exe"
             }
-          ]
+          ],
+          "size": 1747181
         }
       }
     },
@@ -581,7 +591,8 @@
               "from": "rg.exe",
               "to": "rg.exe"
             }
-          ]
+          ],
+          "size": 1789611
         }
       }
     },
@@ -634,7 +645,8 @@
               "from": "fd.exe",
               "to": "fd.exe"
             }
-          ]
+          ],
+          "size": 1525898
         }
       }
     },
@@ -660,7 +672,8 @@
               "from": "fzf.exe",
               "to": "fzf.exe"
             }
-          ]
+          ],
+          "size": 2195038
         }
       }
     },
@@ -686,7 +699,8 @@
               "from": "bat.exe",
               "to": "bat.exe"
             }
-          ]
+          ],
+          "size": 3613318
         }
       }
     },
@@ -712,7 +726,8 @@
               "from": "glow_2.1.2_Windows_x86_64/glow.exe",
               "to": "glow.exe"
             }
-          ]
+          ],
+          "size": 6787071
         }
       }
     },
@@ -738,7 +753,8 @@
               "from": "hexyl-v0.17.0-x86_64-pc-windows-msvc/hexyl.exe",
               "to": "hexyl.exe"
             }
-          ]
+          ],
+          "size": 430403
         }
       }
     },
@@ -764,7 +780,8 @@
               "from": "delta.exe",
               "to": "delta.exe"
             }
-          ]
+          ],
+          "size": 3427675
         }
       }
     },
@@ -790,7 +807,8 @@
               "from": "difft.exe",
               "to": "difft.exe"
             }
-          ]
+          ],
+          "size": 10591054
         }
       }
     },
@@ -816,7 +834,8 @@
               "from": "sd.exe",
               "to": "sd.exe"
             }
-          ]
+          ],
+          "size": 888027
         }
       }
     },
@@ -842,7 +861,8 @@
               "from": "hyperfine-v1.20.0-x86_64-pc-windows-msvc/hyperfine.exe",
               "to": "hyperfine.exe"
             }
-          ]
+          ],
+          "size": 589310
         }
       }
     },
@@ -868,7 +888,8 @@
               "from": "just.exe",
               "to": "just.exe"
             }
-          ]
+          ],
+          "size": 2252404
         }
       }
     },
@@ -894,7 +915,8 @@
               "from": "dust-v1.2.4-x86_64-pc-windows-msvc/dust.exe",
               "to": "dust.exe"
             }
-          ]
+          ],
+          "size": 1118124
         }
       }
     },
@@ -974,7 +996,8 @@
               "from": "duf.exe",
               "to": "duf.exe"
             }
-          ]
+          ],
+          "size": 1362804
         }
       }
     },
@@ -1000,7 +1023,8 @@
               "from": "procs.exe",
               "to": "procs.exe"
             }
-          ]
+          ],
+          "size": 1571894
         }
       }
     },
@@ -1026,7 +1050,8 @@
               "from": "btm.exe",
               "to": "btm.exe"
             }
-          ]
+          ],
+          "size": 1916970
         }
       }
     },
@@ -1052,7 +1077,8 @@
               "from": "wget.exe",
               "to": "wget.exe"
             }
-          ]
+          ],
+          "size": 5328286
         }
       }
     },
@@ -1078,7 +1104,8 @@
               "from": "aria2-1.37.0-win-64bit-build1/aria2c.exe",
               "to": "aria2c.exe"
             }
-          ]
+          ],
+          "size": 2475379
         }
       }
     },
@@ -1104,7 +1131,8 @@
               "from": "rclone-v1.74.4-windows-amd64/rclone.exe",
               "to": "rclone.exe"
             }
-          ]
+          ],
+          "size": 29347029
         }
       }
     },
@@ -1184,7 +1212,8 @@
               "from": "eza.exe",
               "to": "eza.exe"
             }
-          ]
+          ],
+          "size": 1491797
         }
       }
     },
@@ -1210,7 +1239,8 @@
               "from": "lsd.exe",
               "to": "lsd.exe"
             }
-          ]
+          ],
+          "size": 1779179
         }
       }
     },
@@ -1236,7 +1266,8 @@
               "from": "zoxide.exe",
               "to": "zoxide.exe"
             }
-          ]
+          ],
+          "size": 545663
         }
       }
     },
@@ -1262,7 +1293,8 @@
               "from": "starship.exe",
               "to": "starship.exe"
             }
-          ]
+          ],
+          "size": 4758038
         }
       }
     },
@@ -1315,7 +1347,8 @@
               "from": "gum_0.17.0_Windows_x86_64/gum.exe",
               "to": "gum.exe"
             }
-          ]
+          ],
+          "size": 4836357
         }
       }
     },
@@ -1368,7 +1401,8 @@
               "from": "chezmoi.exe",
               "to": "chezmoi.exe"
             }
-          ]
+          ],
+          "size": 15958350
         }
       }
     },
@@ -1394,7 +1428,8 @@
               "from": "lazygit.exe",
               "to": "lazygit.exe"
             }
-          ]
+          ],
+          "size": 7172612
         }
       }
     },
@@ -1528,7 +1563,8 @@
               "from": "helm.exe",
               "to": "helm.exe"
             }
-          ]
+          ],
+          "size": 20307361
         }
       }
     },
@@ -1689,7 +1725,8 @@
               "from": "duckdb.exe",
               "to": "duckdb.exe"
             }
-          ]
+          ],
+          "size": 12921759
         }
       }
     },
@@ -1715,7 +1752,8 @@
               "from": "pandoc-3.10.1/pandoc.exe",
               "to": "pandoc.exe"
             }
-          ]
+          ],
+          "size": 41675076
         }
       }
     },
@@ -1795,7 +1833,8 @@
               "from": "tldr.exe",
               "to": "tldr.exe"
             }
-          ]
+          ],
+          "size": 3482112
         }
       }
     },
@@ -1821,7 +1860,8 @@
               "from": "shellcheck.exe",
               "to": "shellcheck.exe"
             }
-          ]
+          ],
+          "size": 8068167
         }
       }
     },
@@ -1847,7 +1887,8 @@
               "from": "shfmt.exe",
               "to": "shfmt.exe"
             }
-          ]
+          ],
+          "size": 3323904
         }
       }
     },
@@ -1873,7 +1914,8 @@
               "from": "hadolint.exe",
               "to": "hadolint.exe"
             }
-          ]
+          ],
+          "size": 85316096
         }
       }
     },
@@ -2125,7 +2167,8 @@
               "from": "tokei.exe",
               "to": "tokei.exe"
             }
-          ]
+          ],
+          "size": 3282944
         }
       }
     },
@@ -2151,7 +2194,8 @@
               "from": "scc.exe",
               "to": "scc.exe"
             }
-          ]
+          ],
+          "size": 1897074
         }
       }
     },
@@ -2177,7 +2221,8 @@
               "from": "watchexec-2.5.1-x86_64-pc-windows-msvc/watchexec.exe",
               "to": "watchexec.exe"
             }
-          ]
+          ],
+          "size": 3336586
         }
       }
     },
@@ -2203,7 +2248,8 @@
               "from": "miniserve.exe",
               "to": "miniserve.exe"
             }
-          ]
+          ],
+          "size": 2191360
         }
       }
     },
@@ -2229,7 +2275,8 @@
               "from": "xh-v0.26.2-x86_64-pc-windows-msvc/xh.exe",
               "to": "xh.exe"
             }
-          ]
+          ],
+          "size": 4304140
         }
       }
     },
@@ -2341,7 +2388,8 @@
               "from": "doggo.exe",
               "to": "doggo.exe"
             }
-          ]
+          ],
+          "size": 5899574
         }
       }
     },
@@ -2367,7 +2415,8 @@
               "from": "grpcurl.exe",
               "to": "grpcurl.exe"
             }
-          ]
+          ],
+          "size": 8147832
         }
       }
     },
@@ -2393,7 +2442,8 @@
               "from": "b3sum.exe",
               "to": "b3sum.exe"
             }
-          ]
+          ],
+          "size": 1021952
         }
       }
     },
@@ -2456,7 +2506,8 @@
               "from": "age/age-inspect.exe",
               "to": "age-inspect.exe"
             }
-          ]
+          ],
+          "size": 10741348
         }
       }
     },
@@ -2482,7 +2533,8 @@
               "from": "sops.exe",
               "to": "sops.exe"
             }
-          ]
+          ],
+          "size": 53497856
         }
       }
     },
@@ -2508,7 +2560,8 @@
               "from": "cosign.exe",
               "to": "cosign.exe"
             }
-          ]
+          ],
+          "size": 198819314
         }
       }
     },
@@ -2534,7 +2587,8 @@
               "from": "trivy.exe",
               "to": "trivy.exe"
             }
-          ]
+          ],
+          "size": 51108725
         }
       }
     },
@@ -2560,7 +2614,8 @@
               "from": "syft.exe",
               "to": "syft.exe"
             }
-          ]
+          ],
+          "size": 29409316
         }
       }
     },
@@ -2586,7 +2641,8 @@
               "from": "grype.exe",
               "to": "grype.exe"
             }
-          ]
+          ],
+          "size": 30634272
         }
       }
     },
@@ -2612,7 +2668,8 @@
               "from": "oras.exe",
               "to": "oras.exe"
             }
-          ]
+          ],
+          "size": 4817885
         }
       }
     },
@@ -2638,7 +2695,8 @@
               "from": "restic_0.19.1_windows_amd64.exe",
               "to": "restic.exe"
             }
-          ]
+          ],
+          "size": 11237567
         }
       }
     },
@@ -2669,7 +2727,8 @@
               "from": "yazi-x86_64-pc-windows-msvc/ya.exe",
               "to": "ya.exe"
             }
-          ]
+          ],
+          "size": 13493257
         }
       }
     },
@@ -2722,7 +2781,8 @@
               "from": "ouch-x86_64-pc-windows-msvc/ouch.exe",
               "to": "ouch.exe"
             }
-          ]
+          ],
+          "size": 2689498
         }
       }
     },
@@ -2748,7 +2808,8 @@
               "from": "erdtree.exe",
               "to": "erd.exe"
             }
-          ]
+          ],
+          "size": 3181056
         }
       }
     },
@@ -2801,7 +2862,8 @@
               "from": "micro-2.0.15/micro.exe",
               "to": "micro.exe"
             }
-          ]
+          ],
+          "size": 5148356
         }
       }
     },
@@ -2859,7 +2921,8 @@
               "from": "pastel-v0.12.0-x86_64-pc-windows-msvc/pastel.exe",
               "to": "pastel.exe"
             }
-          ]
+          ],
+          "size": 519163
         }
       }
     },
@@ -2895,7 +2958,1456 @@
               "from": "ffplay.exe",
               "to": "ffplay.exe"
             }
-          ]
+          ],
+          "size": 109728040
+        }
+      }
+    },
+    {
+      "name": "gsudo",
+      "version": "2.6.1",
+      "description": "Elevated command execution for Windows, similar to Unix sudo.",
+      "kind": "external",
+      "category": "system",
+      "license": "MIT",
+      "commands": [
+        "gsudo"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "21130bf178d7b9891207f00bff56f05b6b363ce9cec7b2d084e45fb12ee51f44",
+          "urls": [
+            "https://github.com/gerardog/gsudo/releases/download/v2.6.1/gsudo.portable.zip"
+          ],
+          "files": [
+            {
+              "from": "x64/gsudo.exe",
+              "to": "gsudo.exe"
+            }
+          ],
+          "size": 5998522
+        }
+      }
+    },
+    {
+      "name": "sysinternals-suite",
+      "version": "2026.08.19",
+      "description": "Complete set of Sysinternals utilities for system management, diagnostics and troubleshooting.",
+      "kind": "external",
+      "category": "system",
+      "license": "MIT",
+      "commands": [
+        "accesschk",
+        "accesschk64",
+        "accessenum",
+        "adexplorer",
+        "adinsight",
+        "adrestore",
+        "autologon",
+        "autoruns",
+        "autorunsc",
+        "bginfo",
+        "bginfo64",
+        "cacheset",
+        "clockres",
+        "contig",
+        "coreinfo",
+        "cpustres",
+        "dbgview",
+        "desktops",
+        "disk2vhd",
+        "diskext",
+        "diskmon",
+        "diskview",
+        "du",
+        "efsdump",
+        "findlinks",
+        "handle",
+        "hex2dec",
+        "junction",
+        "ldmdump",
+        "listdlls",
+        "livekd",
+        "loadord",
+        "logonsessions",
+        "movefile",
+        "ntfsinfo",
+        "pendmoves",
+        "pipelist",
+        "portmon",
+        "procdump",
+        "procexp",
+        "procmon",
+        "psexec",
+        "psfile",
+        "psgetsid",
+        "psinfo",
+        "pskill",
+        "pslist",
+        "psloggedon",
+        "psloglist",
+        "pspasswd",
+        "psping",
+        "psservice",
+        "psshutdown",
+        "pssuspend",
+        "rammap",
+        "rdcman",
+        "regdelnull",
+        "regjump",
+        "ru",
+        "sdelete",
+        "shareenum",
+        "shellrunas",
+        "sigcheck",
+        "streams",
+        "strings",
+        "sync",
+        "sysmon",
+        "tcpvcon",
+        "tcpview",
+        "testlimit",
+        "vmmap",
+        "volumeid",
+        "whois",
+        "winobj",
+        "zoomit"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "ec1c22581518e5a8661ec26886bc2eaefe9e59cf2ad7fba41926c19d356de169",
+          "urls": [
+            "https://download.sysinternals.com/files/SysinternalsSuite.zip"
+          ],
+          "files": [
+            {
+              "from": "accesschk.exe",
+              "to": "accesschk.exe"
+            },
+            {
+              "from": "accesschk64.exe",
+              "to": "accesschk64.exe"
+            },
+            {
+              "from": "AccessEnum.exe",
+              "to": "AccessEnum.exe"
+            },
+            {
+              "from": "ADExplorer.exe",
+              "to": "ADExplorer.exe"
+            },
+            {
+              "from": "ADExplorer64.exe",
+              "to": "ADExplorer64.exe"
+            },
+            {
+              "from": "ADInsight.exe",
+              "to": "ADInsight.exe"
+            },
+            {
+              "from": "ADInsight64.exe",
+              "to": "ADInsight64.exe"
+            },
+            {
+              "from": "adrestore.exe",
+              "to": "adrestore.exe"
+            },
+            {
+              "from": "adrestore64.exe",
+              "to": "adrestore64.exe"
+            },
+            {
+              "from": "Autologon.exe",
+              "to": "Autologon.exe"
+            },
+            {
+              "from": "Autologon64.exe",
+              "to": "Autologon64.exe"
+            },
+            {
+              "from": "Autoruns.exe",
+              "to": "Autoruns.exe"
+            },
+            {
+              "from": "Autoruns64.exe",
+              "to": "Autoruns64.exe"
+            },
+            {
+              "from": "autorunsc.exe",
+              "to": "autorunsc.exe"
+            },
+            {
+              "from": "autorunsc64.exe",
+              "to": "autorunsc64.exe"
+            },
+            {
+              "from": "Bginfo.exe",
+              "to": "Bginfo.exe"
+            },
+            {
+              "from": "Bginfo64.exe",
+              "to": "Bginfo64.exe"
+            },
+            {
+              "from": "Cacheset.exe",
+              "to": "Cacheset.exe"
+            },
+            {
+              "from": "Cacheset64.exe",
+              "to": "Cacheset64.exe"
+            },
+            {
+              "from": "Clockres.exe",
+              "to": "Clockres.exe"
+            },
+            {
+              "from": "Clockres64.exe",
+              "to": "Clockres64.exe"
+            },
+            {
+              "from": "Contig.exe",
+              "to": "Contig.exe"
+            },
+            {
+              "from": "Contig64.exe",
+              "to": "Contig64.exe"
+            },
+            {
+              "from": "Coreinfo.exe",
+              "to": "Coreinfo.exe"
+            },
+            {
+              "from": "Coreinfo64.exe",
+              "to": "Coreinfo64.exe"
+            },
+            {
+              "from": "CoreinfoEx.exe",
+              "to": "CoreinfoEx.exe"
+            },
+            {
+              "from": "CoreinfoEx64.exe",
+              "to": "CoreinfoEx64.exe"
+            },
+            {
+              "from": "CPUSTRES.EXE",
+              "to": "CPUSTRES.EXE"
+            },
+            {
+              "from": "CPUSTRES64.EXE",
+              "to": "CPUSTRES64.EXE"
+            },
+            {
+              "from": "ctrl2cap.exe",
+              "to": "ctrl2cap.exe"
+            },
+            {
+              "from": "Dbgview.exe",
+              "to": "Dbgview.exe"
+            },
+            {
+              "from": "dbgview64.exe",
+              "to": "dbgview64.exe"
+            },
+            {
+              "from": "dbgviewcli.exe",
+              "to": "dbgviewcli.exe"
+            },
+            {
+              "from": "dbgviewcli64.exe",
+              "to": "dbgviewcli64.exe"
+            },
+            {
+              "from": "Desktops.exe",
+              "to": "Desktops.exe"
+            },
+            {
+              "from": "Desktops64.exe",
+              "to": "Desktops64.exe"
+            },
+            {
+              "from": "disk2vhd.exe",
+              "to": "disk2vhd.exe"
+            },
+            {
+              "from": "disk2vhd64.exe",
+              "to": "disk2vhd64.exe"
+            },
+            {
+              "from": "diskext.exe",
+              "to": "diskext.exe"
+            },
+            {
+              "from": "diskext64.exe",
+              "to": "diskext64.exe"
+            },
+            {
+              "from": "Diskmon.exe",
+              "to": "Diskmon.exe"
+            },
+            {
+              "from": "Diskmon64.exe",
+              "to": "Diskmon64.exe"
+            },
+            {
+              "from": "DiskView.exe",
+              "to": "DiskView.exe"
+            },
+            {
+              "from": "DiskView64.exe",
+              "to": "DiskView64.exe"
+            },
+            {
+              "from": "du.exe",
+              "to": "du.exe"
+            },
+            {
+              "from": "du64.exe",
+              "to": "du64.exe"
+            },
+            {
+              "from": "efsdump.exe",
+              "to": "efsdump.exe"
+            },
+            {
+              "from": "FindLinks.exe",
+              "to": "FindLinks.exe"
+            },
+            {
+              "from": "FindLinks64.exe",
+              "to": "FindLinks64.exe"
+            },
+            {
+              "from": "handle.exe",
+              "to": "handle.exe"
+            },
+            {
+              "from": "handle64.exe",
+              "to": "handle64.exe"
+            },
+            {
+              "from": "hex2dec.exe",
+              "to": "hex2dec.exe"
+            },
+            {
+              "from": "hex2dec64.exe",
+              "to": "hex2dec64.exe"
+            },
+            {
+              "from": "junction.exe",
+              "to": "junction.exe"
+            },
+            {
+              "from": "junction64.exe",
+              "to": "junction64.exe"
+            },
+            {
+              "from": "ldmdump.exe",
+              "to": "ldmdump.exe"
+            },
+            {
+              "from": "Listdlls.exe",
+              "to": "Listdlls.exe"
+            },
+            {
+              "from": "Listdlls64.exe",
+              "to": "Listdlls64.exe"
+            },
+            {
+              "from": "livekd.exe",
+              "to": "livekd.exe"
+            },
+            {
+              "from": "livekd64.exe",
+              "to": "livekd64.exe"
+            },
+            {
+              "from": "LoadOrd.exe",
+              "to": "LoadOrd.exe"
+            },
+            {
+              "from": "LoadOrd64.exe",
+              "to": "LoadOrd64.exe"
+            },
+            {
+              "from": "LoadOrdC.exe",
+              "to": "LoadOrdC.exe"
+            },
+            {
+              "from": "LoadOrdC64.exe",
+              "to": "LoadOrdC64.exe"
+            },
+            {
+              "from": "logonsessions.exe",
+              "to": "logonsessions.exe"
+            },
+            {
+              "from": "logonsessions64.exe",
+              "to": "logonsessions64.exe"
+            },
+            {
+              "from": "movefile.exe",
+              "to": "movefile.exe"
+            },
+            {
+              "from": "movefile64.exe",
+              "to": "movefile64.exe"
+            },
+            {
+              "from": "notmyfault.exe",
+              "to": "notmyfault.exe"
+            },
+            {
+              "from": "notmyfault64.exe",
+              "to": "notmyfault64.exe"
+            },
+            {
+              "from": "notmyfaultc.exe",
+              "to": "notmyfaultc.exe"
+            },
+            {
+              "from": "notmyfaultc64.exe",
+              "to": "notmyfaultc64.exe"
+            },
+            {
+              "from": "ntfsinfo.exe",
+              "to": "ntfsinfo.exe"
+            },
+            {
+              "from": "ntfsinfo64.exe",
+              "to": "ntfsinfo64.exe"
+            },
+            {
+              "from": "pendmoves.exe",
+              "to": "pendmoves.exe"
+            },
+            {
+              "from": "pendmoves64.exe",
+              "to": "pendmoves64.exe"
+            },
+            {
+              "from": "pipelist.exe",
+              "to": "pipelist.exe"
+            },
+            {
+              "from": "pipelist64.exe",
+              "to": "pipelist64.exe"
+            },
+            {
+              "from": "portmon.exe",
+              "to": "portmon.exe"
+            },
+            {
+              "from": "procdump.exe",
+              "to": "procdump.exe"
+            },
+            {
+              "from": "procdump64.exe",
+              "to": "procdump64.exe"
+            },
+            {
+              "from": "procexp.exe",
+              "to": "procexp.exe"
+            },
+            {
+              "from": "procexp64.exe",
+              "to": "procexp64.exe"
+            },
+            {
+              "from": "Procmon.exe",
+              "to": "Procmon.exe"
+            },
+            {
+              "from": "Procmon64.exe",
+              "to": "Procmon64.exe"
+            },
+            {
+              "from": "PsExec.exe",
+              "to": "PsExec.exe"
+            },
+            {
+              "from": "PsExec64.exe",
+              "to": "PsExec64.exe"
+            },
+            {
+              "from": "psfile.exe",
+              "to": "psfile.exe"
+            },
+            {
+              "from": "psfile64.exe",
+              "to": "psfile64.exe"
+            },
+            {
+              "from": "PsGetsid.exe",
+              "to": "PsGetsid.exe"
+            },
+            {
+              "from": "PsGetsid64.exe",
+              "to": "PsGetsid64.exe"
+            },
+            {
+              "from": "PsInfo.exe",
+              "to": "PsInfo.exe"
+            },
+            {
+              "from": "PsInfo64.exe",
+              "to": "PsInfo64.exe"
+            },
+            {
+              "from": "pskill.exe",
+              "to": "pskill.exe"
+            },
+            {
+              "from": "pskill64.exe",
+              "to": "pskill64.exe"
+            },
+            {
+              "from": "pslist.exe",
+              "to": "pslist.exe"
+            },
+            {
+              "from": "pslist64.exe",
+              "to": "pslist64.exe"
+            },
+            {
+              "from": "PsLoggedon.exe",
+              "to": "PsLoggedon.exe"
+            },
+            {
+              "from": "PsLoggedon64.exe",
+              "to": "PsLoggedon64.exe"
+            },
+            {
+              "from": "psloglist.exe",
+              "to": "psloglist.exe"
+            },
+            {
+              "from": "psloglist64.exe",
+              "to": "psloglist64.exe"
+            },
+            {
+              "from": "pspasswd.exe",
+              "to": "pspasswd.exe"
+            },
+            {
+              "from": "pspasswd64.exe",
+              "to": "pspasswd64.exe"
+            },
+            {
+              "from": "psping.exe",
+              "to": "psping.exe"
+            },
+            {
+              "from": "psping64.exe",
+              "to": "psping64.exe"
+            },
+            {
+              "from": "PsService.exe",
+              "to": "PsService.exe"
+            },
+            {
+              "from": "PsService64.exe",
+              "to": "PsService64.exe"
+            },
+            {
+              "from": "psshutdown.exe",
+              "to": "psshutdown.exe"
+            },
+            {
+              "from": "psshutdown64.exe",
+              "to": "psshutdown64.exe"
+            },
+            {
+              "from": "pssuspend.exe",
+              "to": "pssuspend.exe"
+            },
+            {
+              "from": "pssuspend64.exe",
+              "to": "pssuspend64.exe"
+            },
+            {
+              "from": "RAMMap.exe",
+              "to": "RAMMap.exe"
+            },
+            {
+              "from": "RAMMap64.exe",
+              "to": "RAMMap64.exe"
+            },
+            {
+              "from": "RDCMan-x86.exe",
+              "to": "RDCMan-x86.exe"
+            },
+            {
+              "from": "RDCMan.exe",
+              "to": "RDCMan.exe"
+            },
+            {
+              "from": "RegDelNull.exe",
+              "to": "RegDelNull.exe"
+            },
+            {
+              "from": "RegDelNull64.exe",
+              "to": "RegDelNull64.exe"
+            },
+            {
+              "from": "regjump.exe",
+              "to": "regjump.exe"
+            },
+            {
+              "from": "ru.exe",
+              "to": "ru.exe"
+            },
+            {
+              "from": "ru64.exe",
+              "to": "ru64.exe"
+            },
+            {
+              "from": "sdelete.exe",
+              "to": "sdelete.exe"
+            },
+            {
+              "from": "sdelete64.exe",
+              "to": "sdelete64.exe"
+            },
+            {
+              "from": "ShareEnum.exe",
+              "to": "ShareEnum.exe"
+            },
+            {
+              "from": "ShareEnum64.exe",
+              "to": "ShareEnum64.exe"
+            },
+            {
+              "from": "ShellRunas.exe",
+              "to": "ShellRunas.exe"
+            },
+            {
+              "from": "sigcheck.exe",
+              "to": "sigcheck.exe"
+            },
+            {
+              "from": "sigcheck64.exe",
+              "to": "sigcheck64.exe"
+            },
+            {
+              "from": "streams.exe",
+              "to": "streams.exe"
+            },
+            {
+              "from": "streams64.exe",
+              "to": "streams64.exe"
+            },
+            {
+              "from": "strings.exe",
+              "to": "strings.exe"
+            },
+            {
+              "from": "strings64.exe",
+              "to": "strings64.exe"
+            },
+            {
+              "from": "sync.exe",
+              "to": "sync.exe"
+            },
+            {
+              "from": "sync64.exe",
+              "to": "sync64.exe"
+            },
+            {
+              "from": "Sysmon.exe",
+              "to": "Sysmon.exe"
+            },
+            {
+              "from": "Sysmon64.exe",
+              "to": "Sysmon64.exe"
+            },
+            {
+              "from": "tcpvcon.exe",
+              "to": "tcpvcon.exe"
+            },
+            {
+              "from": "tcpvcon64.exe",
+              "to": "tcpvcon64.exe"
+            },
+            {
+              "from": "tcpview.exe",
+              "to": "tcpview.exe"
+            },
+            {
+              "from": "tcpview64.exe",
+              "to": "tcpview64.exe"
+            },
+            {
+              "from": "Testlimit.exe",
+              "to": "Testlimit.exe"
+            },
+            {
+              "from": "Testlimit64.exe",
+              "to": "Testlimit64.exe"
+            },
+            {
+              "from": "vmmap.exe",
+              "to": "vmmap.exe"
+            },
+            {
+              "from": "vmmap64.exe",
+              "to": "vmmap64.exe"
+            },
+            {
+              "from": "Volumeid.exe",
+              "to": "Volumeid.exe"
+            },
+            {
+              "from": "Volumeid64.exe",
+              "to": "Volumeid64.exe"
+            },
+            {
+              "from": "whois.exe",
+              "to": "whois.exe"
+            },
+            {
+              "from": "whois64.exe",
+              "to": "whois64.exe"
+            },
+            {
+              "from": "Winobj.exe",
+              "to": "Winobj.exe"
+            },
+            {
+              "from": "Winobj64.exe",
+              "to": "Winobj64.exe"
+            },
+            {
+              "from": "ZoomIt.exe",
+              "to": "ZoomIt.exe"
+            },
+            {
+              "from": "ZoomIt64.exe",
+              "to": "ZoomIt64.exe"
+            }
+          ],
+          "size": 201674596
+        }
+      }
+    },
+    {
+      "name": "edit",
+      "version": "2.0.0",
+      "description": "Microsoft official portable command-line text editor.",
+      "kind": "external",
+      "category": "text",
+      "license": "MIT",
+      "commands": [
+        "edit"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "97b8f2c667faea8f211af5f9c879602949164911d74d16f540bbe31ad46c14cb",
+          "urls": [
+            "https://github.com/microsoft/edit/releases/download/v2.0.0/edit-2.0.0-x86_64-windows.zip"
+          ],
+          "files": [
+            {
+              "from": "edit.exe",
+              "to": "edit.exe"
+            }
+          ],
+          "size": 1152332
+        }
+      }
+    },
+    {
+      "name": "clink",
+      "version": "1.9.31",
+      "description": "Enhanced command-line interface for cmd.exe with readline-style editing.",
+      "kind": "external",
+      "category": "shell",
+      "license": "MIT",
+      "commands": [
+        "clink",
+        "clink_x64"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "4e5f4f6cf30c57d6d734e2b0f99fadb62c5ed7119c2727f3a57ba7f31b0b0232",
+          "urls": [
+            "https://github.com/chrisant996/clink/releases/download/v1.9.31/clink.1.9.31.8c8e92.zip"
+          ],
+          "files": [
+            {
+              "from": "clink_x64.exe",
+              "to": "clink_x64.exe"
+            },
+            {
+              "from": "clink_x64.exe",
+              "to": "clink.exe"
+            }
+          ],
+          "size": 3962946
+        }
+      }
+    },
+    {
+      "name": "itmux",
+      "version": "1.1.1",
+      "description": "Lightweight portable terminal multiplexer bundling Tmux, Mintty and OpenSSH.",
+      "kind": "external",
+      "category": "terminal",
+      "license": "MIT",
+      "commands": [
+        "itmux"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "02abdc3fa7890ade388a7848d1b7dc222def71e591e659508b8aac3609283f06",
+          "urls": [
+            "https://itefix.net/sites/default/files/2026-07/itmux_1.1.1_x64_free.zip"
+          ],
+          "files": [
+            {
+              "from": "itmux.exe",
+              "to": "itmux.exe"
+            }
+          ],
+          "size": 12356706
+        }
+      }
+    },
+    {
+      "name": "yt-dlp",
+      "version": "2026.08.19",
+      "description": "Feature-rich media downloader for YouTube and many other sites.",
+      "kind": "external",
+      "category": "media",
+      "license": "Unlicense",
+      "commands": [
+        "yt-dlp"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "66674953fe251b89f4d08c5f0e35e0728679bd67ab3d7d05c0562af101dd3e7a",
+          "urls": [
+            "https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp.exe"
+          ],
+          "files": [
+            {
+              "from": "yt-dlp.exe",
+              "to": "yt-dlp.exe"
+            }
+          ],
+          "size": 17840399
+        }
+      }
+    },
+    {
+      "name": "speedtest",
+      "version": "1.2.0",
+      "description": "Official Ookla Speedtest CLI for measuring Internet connection bandwidth.",
+      "kind": "external",
+      "category": "network",
+      "license": "Proprietary",
+      "commands": [
+        "speedtest"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "13e3d888b845d301a556419e31f14ab9bff57e3f06089ef2fd3bdc9ba6841efa",
+          "urls": [
+            "https://install.speedtest.net/app/cli/ookla-speedtest-1.2.0-win64.zip"
+          ],
+          "files": [
+            {
+              "from": "speedtest.exe",
+              "to": "speedtest.exe"
+            }
+          ],
+          "size": 974003
+        }
+      }
+    },
+    {
+      "name": "gopass",
+      "version": "1.16.1",
+      "description": "Password manager for teams and individuals, compatible with pass.",
+      "kind": "external",
+      "category": "system",
+      "license": "MIT",
+      "commands": [
+        "gopass"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "b4a164d3ab89ae732831f3d5cdd2d39fc967c54ad963d281a575b147d8fb20b6",
+          "urls": [
+            "https://github.com/gopasspw/gopass/releases/download/v1.16.1/gopass-1.16.1-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "gopass.exe",
+              "to": "gopass.exe"
+            }
+          ],
+          "size": 7721417
+        }
+      }
+    },
+    {
+      "name": "xz",
+      "version": "5.8.3",
+      "description": "XZ and LZMA compression and decompression tools.",
+      "kind": "external",
+      "license": "0BSD",
+      "commands": [
+        "xz",
+        "xzdec"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "8d0048ee51177b11ef1613959c2a268c951f4e7f6fb3706e681e00e34bb6d5e3",
+          "urls": [
+            "https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3-windows.zip"
+          ],
+          "files": [
+            {
+              "from": "bin_x86-64/xz.exe",
+              "to": "xz.exe"
+            },
+            {
+              "from": "bin_x86-64/xzdec.exe",
+              "to": "xzdec.exe"
+            },
+            {
+              "from": "bin_x86-64/lzmadec.exe",
+              "to": "lzmadec.exe"
+            },
+            {
+              "from": "bin_x86-64/lzmainfo.exe",
+              "to": "lzmainfo.exe"
+            },
+            {
+              "from": "bin_x86-64/liblzma.dll",
+              "to": "liblzma.dll"
+            }
+          ],
+          "size": 1090907
+        }
+      },
+      "category": "archive"
+    },
+    {
+      "name": "lz4",
+      "version": "1.10.0",
+      "description": "Extremely fast lossless compression tool.",
+      "kind": "external",
+      "license": "GPL-2.0-or-later",
+      "commands": [
+        "lz4"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "8cb562a53189dfc8a53ec12469b91f1b51a5075036061a86b55738183bf4ab74",
+          "urls": [
+            "https://github.com/lz4/lz4/releases/download/v1.10.0/lz4_win64_v1_10_0.zip"
+          ],
+          "files": [
+            {
+              "from": "lz4.exe",
+              "to": "lz4.exe"
+            }
+          ],
+          "size": 470693
+        }
+      },
+      "category": "archive"
+    },
+    {
+      "name": "brotli",
+      "version": "1.2.0",
+      "description": "Brotli general-purpose lossless compression tool.",
+      "kind": "external",
+      "license": "MIT",
+      "commands": [
+        "brotli"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "3208ab82d4f08e062a25660cf38092db4e8415792aa1e579956d37740f8d8924",
+          "urls": [
+            "https://github.com/google/brotli/releases/download/v1.2.0/brotli-x64-windows-static.zip"
+          ],
+          "files": [
+            {
+              "from": "brotli.exe",
+              "to": "brotli.exe"
+            }
+          ],
+          "size": 367340
+        }
+      },
+      "category": "archive"
+    },
+    {
+      "name": "bzip2",
+      "version": "1.0.8.0",
+      "description": ".bz2 block-sorting file compressor with bunzip2-compatible decompression.",
+      "kind": "external",
+      "license": "bzip2-1.0.6",
+      "commands": [
+        "bzip2",
+        "bzip2recover"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "f931dc91fb02dc8aa8739a3c0a0c8ec78789fe87cb6611a4c78ca2937d197708",
+          "urls": [
+            "https://github.com/philr/bzip2-windows/releases/download/v1.0.8.0/bzip2-1.0.8.0-win-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "bzip2.exe",
+              "to": "bzip2.exe"
+            },
+            {
+              "from": "bzip2recover.exe",
+              "to": "bzip2recover.exe"
+            },
+            {
+              "from": "libbz2.dll",
+              "to": "libbz2.dll"
+            }
+          ],
+          "size": 57970
+        }
+      },
+      "category": "archive"
+    },
+    {
+      "name": "zip",
+      "version": "3.0",
+      "description": "Info-ZIP zip archive creation tool.",
+      "kind": "external",
+      "license": "Info-ZIP",
+      "commands": [
+        "zip"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "1c36a57ecb35eb1b398aa05173297ad6b163b4ec1f5d5919ba33cecc91f8cf52",
+          "urls": [
+            "https://github.com/nihil-admirari/infozip-win-builds/releases/download/2022-10-24-20-01/zip30-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "zip30-x64/zip.exe",
+              "to": "zip.exe"
+            }
+          ],
+          "size": 234341
+        }
+      },
+      "category": "archive"
+    },
+    {
+      "name": "bc",
+      "version": "7.0.3",
+      "description": "Arbitrary-precision calculator compatible with GNU bc and dc.",
+      "kind": "external",
+      "license": "BSD-2-Clause",
+      "commands": [
+        "bc",
+        "dc"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "da40bc89eb7ca2aa8728056505dda872a7bbbc232247c55c599f43ec05a519d2",
+          "urls": [
+            "https://github.com/gavinhoward/bc/releases/download/7.0.3/bc-7.0.3-windows.zip"
+          ],
+          "files": [
+            {
+              "from": "windows/bin/x64/Release/bc.exe",
+              "to": "bc.exe"
+            },
+            {
+              "from": "windows/bin/x64/Release/dc.exe",
+              "to": "dc.exe"
+            }
+          ],
+          "size": 4304763
+        }
+      },
+      "category": "data"
+    },
+    {
+      "name": "qpdf",
+      "version": "12.4.0",
+      "description": "Command-line tool for inspecting and transforming PDF files.",
+      "kind": "external",
+      "license": "Apache-2.0",
+      "commands": [
+        "qpdf"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "5bcb25353f7e6df92b5625dbcfe52a5c34a2a5fba2d1a8b98b8a6a0972c3ff72",
+          "urls": [
+            "https://github.com/qpdf/qpdf/releases/download/v12.4.0/qpdf-12.4.0-msvc64.zip"
+          ],
+          "files": [
+            {
+              "from": "qpdf-12.4.0-msvc64/bin/qpdf.exe",
+              "to": "qpdf.exe"
+            },
+            {
+              "from": "qpdf-12.4.0-msvc64/bin/qpdf30.dll",
+              "to": "qpdf30.dll"
+            },
+            {
+              "from": "qpdf-12.4.0-msvc64/bin/concrt140.dll",
+              "to": "concrt140.dll"
+            },
+            {
+              "from": "qpdf-12.4.0-msvc64/bin/msvcp140.dll",
+              "to": "msvcp140.dll"
+            },
+            {
+              "from": "qpdf-12.4.0-msvc64/bin/msvcp140_1.dll",
+              "to": "msvcp140_1.dll"
+            },
+            {
+              "from": "qpdf-12.4.0-msvc64/bin/msvcp140_2.dll",
+              "to": "msvcp140_2.dll"
+            },
+            {
+              "from": "qpdf-12.4.0-msvc64/bin/msvcp140_atomic_wait.dll",
+              "to": "msvcp140_atomic_wait.dll"
+            },
+            {
+              "from": "qpdf-12.4.0-msvc64/bin/msvcp140_codecvt_ids.dll",
+              "to": "msvcp140_codecvt_ids.dll"
+            },
+            {
+              "from": "qpdf-12.4.0-msvc64/bin/vcruntime140.dll",
+              "to": "vcruntime140.dll"
+            },
+            {
+              "from": "qpdf-12.4.0-msvc64/bin/vcruntime140_1.dll",
+              "to": "vcruntime140_1.dll"
+            }
+          ],
+          "size": 28160227
+        }
+      },
+      "category": "document"
+    },
+    {
+      "name": "fastfetch",
+      "version": "2.67.1",
+      "description": "Neofetch-style system information tool.",
+      "kind": "external",
+      "license": "MIT",
+      "commands": [
+        "fastfetch"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "19aeb34e4bb5b19f09236afbb6fb617241828cd94d967e7108c5eb3471cd26d8",
+          "urls": [
+            "https://github.com/fastfetch-cli/fastfetch/releases/download/2.67.1/fastfetch-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "fastfetch.exe",
+              "to": "fastfetch.exe"
+            }
+          ],
+          "size": 5282355
+        }
+      },
+      "category": "system"
+    },
+    {
+      "name": "cpufetch",
+      "version": "1.07",
+      "description": "Show CPU details in the terminal.",
+      "kind": "external",
+      "license": "MIT",
+      "commands": [
+        "cpufetch"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "4d2337ab8b938176599ed40ad17b8e0c5bf12cfda0cea08dc9ff5658a0c67574",
+          "urls": [
+            "https://github.com/Dr-Noob/cpufetch/releases/download/v1.07/cpufetch_x86-64_windows.exe"
+          ],
+          "files": [
+            {
+              "from": "cpufetch_x86-64_windows.exe",
+              "to": "cpufetch.exe"
+            }
+          ],
+          "size": 261095
+        }
+      },
+      "category": "system"
+    },
+    {
+      "name": "atuin",
+      "version": "18.19.0",
+      "description": " Magical shell history with sync, search and stats.",
+      "kind": "external",
+      "category": "shell",
+      "license": "MIT",
+      "commands": [
+        "atuin"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "905f4c08d05e018723341dabdcb2fd5bee705bb1e1b76d876a6cedeece9bb307",
+          "urls": [
+            "https://github.com/atuinsh/atuin/releases/download/v18.19.0/atuin-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "atuin.exe",
+              "to": "atuin.exe"
+            }
+          ],
+          "size": 11961967
+        }
+      }
+    },
+    {
+      "name": "btop",
+      "version": "1.0.5",
+      "description": "Resource monitor that shows usage and stats for processor, memory, disks, network and processes.",
+      "kind": "external",
+      "category": "system",
+      "license": "Apache-2.0",
+      "commands": [
+        "btop4win"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "8275899f02ddc82523f23356836a427c9bba996ca17ef24057a1020dbcd3e951",
+          "urls": [
+            "https://github.com/aristocratos/btop4win/releases/download/v1.0.5/btop4win-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "btop4win/btop4win.exe",
+              "to": "btop4win.exe"
+            }
+          ],
+          "size": 1040818
+        }
+      }
+    },
+    {
+      "name": "usql",
+      "version": "0.21.4",
+      "description": "Universal command-line interface for SQL databases.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "usql"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "9f5e9311ba98703af69b6d8e1d618a232a0e6ec902edc2316b04dd5a99d6b1f3",
+          "urls": [
+            "https://github.com/xo/usql/releases/download/v0.21.4/usql-0.21.4-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "usql.exe",
+              "to": "usql.exe"
+            }
+          ],
+          "size": 44946790
+        }
+      }
+    },
+    {
+      "name": "dbmate",
+      "version": "2.35.0",
+      "description": "Lightweight, framework-agnostic database migration tool.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "dbmate"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "51e1387015305614ca5b87ee0dbf30ce6f9b75ac058155cfaebb99a30ecc46b1",
+          "urls": [
+            "https://github.com/amacneil/dbmate/releases/download/v2.35.0/dbmate-windows-amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "dbmate-windows-amd64.exe",
+              "to": "dbmate.exe"
+            }
+          ],
+          "size": 34268672
+        }
+      }
+    },
+    {
+      "name": "vault",
+      "version": "2.0.4",
+      "description": "HashiCorp Vault secrets management and data encryption tool.",
+      "kind": "external",
+      "category": "security",
+      "license": "BSL-1.1",
+      "commands": [
+        "vault"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "5e6357e52f75657f9a51f2655d42811b8b129166402ecf2d2dc630ffcd3c8d8f",
+          "urls": [
+            "https://releases.hashicorp.com/vault/2.0.4/vault_2.0.4_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "vault.exe",
+              "to": "vault.exe"
+            }
+          ],
+          "size": 180439192
+        }
+      }
+    },
+    {
+      "name": "act",
+      "version": "0.2.89",
+      "description": "Run your GitHub Actions locally for fast feedback and debugging.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "act"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "0f8cf866ad7e32421a219fc551a0a0ea5d12ead464de12ebfeafd334a5973b50",
+          "urls": [
+            "https://github.com/nektos/act/releases/download/v0.2.89/act_Windows_x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "act.exe",
+              "to": "act.exe"
+            }
+          ],
+          "size": 8415005
+        }
+      }
+    },
+    {
+      "name": "kopia",
+      "version": "0.23.1",
+      "description": "Cross-platform backup and restore with encryption, deduplication and cloud storage support.",
+      "kind": "external",
+      "category": "backup",
+      "license": "Apache-2.0",
+      "commands": [
+        "kopia"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "f0369d9657dbe47a1b8b6ff4e308c5958a4813b405d4e32ae9d81b3f2b3d8251",
+          "urls": [
+            "https://github.com/kopia/kopia/releases/download/v0.23.1/kopia-0.23.1-windows-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "kopia-0.23.1-windows-x64/kopia.exe",
+              "to": "kopia.exe"
+            }
+          ],
+          "size": 16894596
+        }
+      }
+    },
+    {
+      "name": "iperf3",
+      "version": "3.21",
+      "description": "Network bandwidth measurement tool for TCP, UDP and SCTP.",
+      "kind": "external",
+      "category": "network",
+      "license": "BSD-3-Clause",
+      "commands": [
+        "iperf3"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "9b73b7e0e0326347b5f4ac4f6a1fc34fe60a5966e5fd172c7bfcd0e1cc93e709",
+          "urls": [
+            "https://github.com/ar51an/iperf3-win-builds/releases/download/3.21/iperf-3.21-win64.zip"
+          ],
+          "files": [
+            {
+              "from": "iperf3.exe",
+              "to": "iperf3.exe"
+            }
+          ],
+          "size": 1184513
+        }
+      }
+    },
+    {
+      "name": "masscan",
+      "version": "1.3.2",
+      "description": "TCP port scanner, transmits 10 million packets per second.",
+      "kind": "external",
+      "category": "network",
+      "license": "AGPL-3.0",
+      "commands": [
+        "masscan"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "0a4767eaad71ddc73f78b88fc9f09393d55f3361f8961765699462b94f7667c5",
+          "urls": [
+            "https://github.com/WalnutMusic740/Masscan-EXE-Files/raw/main/masscan.exe"
+          ],
+          "files": [
+            {
+              "from": "masscan.exe",
+              "to": "masscan.exe"
+            }
+          ],
+          "size": 2300957
         }
       }
     }
