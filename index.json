@@ -7556,7 +7556,7 @@
     {
       "name": "nushell",
       "version": "0.115.0",
-      "description": "Nushell: a new type of shell operating on structured data (tables and records).",
+      "description": "Nushell: a new type of shell operating on structured data (tables and records). Ships with core plugins.",
       "kind": "external",
       "license": "MIT",
       "commands": [
@@ -7571,8 +7571,44 @@
           ],
           "files": [
             {
-              "from": "nu-0.115.0-x86_64-pc-windows-msvc/",
-              "to": "./"
+              "from": "nu.exe",
+              "to": "nu.exe"
+            },
+            {
+              "from": "less.exe",
+              "to": "less.exe"
+            },
+            {
+              "from": "nu_plugin_custom_values.exe",
+              "to": "nu_plugin_custom_values.exe"
+            },
+            {
+              "from": "nu_plugin_example.exe",
+              "to": "nu_plugin_example.exe"
+            },
+            {
+              "from": "nu_plugin_formats.exe",
+              "to": "nu_plugin_formats.exe"
+            },
+            {
+              "from": "nu_plugin_gstat.exe",
+              "to": "nu_plugin_gstat.exe"
+            },
+            {
+              "from": "nu_plugin_inc.exe",
+              "to": "nu_plugin_inc.exe"
+            },
+            {
+              "from": "nu_plugin_polars.exe",
+              "to": "nu_plugin_polars.exe"
+            },
+            {
+              "from": "nu_plugin_query.exe",
+              "to": "nu_plugin_query.exe"
+            },
+            {
+              "from": "nu_plugin_stress_internals.exe",
+              "to": "nu_plugin_stress_internals.exe"
             }
           ],
           "layout": "shim",
