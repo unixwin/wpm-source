@@ -149,6 +149,22 @@ Example:
 Metadata-only packages are allowed as placeholders, but WPM should display them
 as `index-only` until URLs, SHA-256 hashes, and file mappings are present.
 
+## OpenSSL
+
+`openssl` is packaged as the single static `bin/openssl.exe` from the ServBay
+portable build, so it has no DLL dependencies. Like all Windows OpenSSL builds,
+its compiled-in `OPENSSLDIR` is an absolute path that will not exist after a
+WPM install, so commands that require a config file (notably `openssl req`)
+will fail until `OPENSSL_CONF` points at an existing file:
+
+```sh
+# in ~/.winuxshrc, or before running openssl req
+export OPENSSL_CONF="$HOME/openssl.cnf"   # any existing file, even empty, works
+```
+
+Key generation (`openssl genpkey`), certificate signing (`openssl x509 -req`),
+digests, and `s_client` with an explicit `-CAfile` work without a config.
+
 ## GNU and POSIX-Style Tools
 
 Prefer installable artifacts only when upstream publishes a Windows-native or
