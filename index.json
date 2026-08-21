@@ -186,7 +186,8 @@
               "to": "libreadline8.dll"
             }
           ],
-          "size": 7781989
+          "size": 7781989,
+          "layout": "shim"
         }
       }
     },
@@ -531,7 +532,8 @@
               "to": "zlibwapi.dll"
             }
           ],
-          "size": 2187227
+          "size": 2187227,
+          "layout": "shim"
         }
       }
     },
@@ -566,7 +568,8 @@
               "from": "curl-8.21.0_7-win64-mingw/bin/curl-ca-bundle.crt",
               "to": "curl-ca-bundle.crt"
             }
-          ]
+          ],
+          "layout": "shim"
         }
       }
     },
@@ -3757,7 +3760,8 @@
               "to": "ZoomIt64.exe"
             }
           ],
-          "size": 201674596
+          "size": 201674596,
+          "layout": "shim"
         }
       }
     },
@@ -3967,7 +3971,8 @@
               "to": "liblzma.dll"
             }
           ],
-          "size": 1090907
+          "size": 1090907,
+          "layout": "shim"
         }
       },
       "category": "archive"
@@ -4057,7 +4062,8 @@
               "to": "libbz2.dll"
             }
           ],
-          "size": 57970
+          "size": 57970,
+          "layout": "shim"
         }
       },
       "category": "archive"
@@ -4179,7 +4185,8 @@
               "to": "vcruntime140_1.dll"
             }
           ],
-          "size": 28160227
+          "size": 28160227,
+          "layout": "shim"
         }
       },
       "category": "document"
@@ -5504,6 +5511,222 @@
             }
           ],
           "size": 40060247
+        }
+      }
+    },
+    {
+      "name": "gping",
+      "version": "1.20.4",
+      "description": "Ping with a graph — visualize latency to multiple hosts in real-time.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "gping"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "e2211da5056092c13a5690a23c0e03feac7b4caf147e2400ebcad80ca82cabe3",
+          "urls": [
+            "https://github.com/orf/gping/releases/download/gping-v1.20.4/gping-Windows-msvc-x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "gping.exe",
+              "to": "gping.exe"
+            }
+          ],
+          "size": 636628
+        }
+      }
+    },
+    {
+      "name": "broot",
+      "version": "1.58.0",
+      "description": "Interactive file explorer with tree view, permissions, and git integration.",
+      "kind": "external",
+      "category": "filesystem",
+      "license": "MIT",
+      "commands": [
+        "broot"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "590068b6c3dba327b91bf6509d55fdf1bc67eccef6961ef2f47977c5e4be5507",
+          "urls": [
+            "https://github.com/Canop/broot/releases/download/v1.58.0/broot_1.58.0.zip"
+          ],
+          "files": [
+            {
+              "from": "x86_64-pc-windows-gnu/broot.exe",
+              "to": "broot.exe"
+            }
+          ],
+          "size": 58799509
+        }
+      }
+    },
+    {
+      "name": "osv-scanner",
+      "version": "2.5.1",
+      "description": "Vulnerability scanner using the OSV database for open source dependencies.",
+      "kind": "external",
+      "category": "security",
+      "license": "Apache-2.0",
+      "commands": [
+        "osv-scanner"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "25e42f5ef6711fd8c0fb45390972205891dd44c6bd02ac93f0f63e8e98d9bfb6",
+          "urls": [
+            "https://github.com/google/osv-scanner/releases/download/v2.5.1/osv-scanner_windows_amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "osv-scanner_windows_amd64.exe",
+              "to": "osv-scanner.exe"
+            }
+          ],
+          "size": 58970112
+        }
+      }
+    },
+    {
+      "name": "surrealdb",
+      "version": "3.2.4",
+      "description": "Multi-model database: graph, document, key-value, time-series in one engine.",
+      "kind": "external",
+      "category": "data",
+      "license": "BSL-1.1",
+      "commands": [
+        "surreal"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "ad200ea01c3cb99f84617c60d61caf40c2e13d72cc4ed08378387d2d74f8fbf4",
+          "urls": [
+            "https://github.com/surrealdb/surrealdb/releases/download/v3.2.4/surreal-v3.2.4.windows-amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "surreal-v3.2.4.windows-amd64.exe",
+              "to": "surreal.exe"
+            }
+          ],
+          "size": 114981376
+        }
+      }
+    },
+    {
+      "name": "meilisearch",
+      "version": "1.53.1",
+      "description": "Lightning-fast, hyper-relevant search engine for apps and websites.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "meilisearch"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "1c242ec430f222346c26eb0971bea5d70f748d5ed10cd7b1c40fb00df51aca86",
+          "urls": [
+            "https://github.com/meilisearch/meilisearch/releases/download/v1.53.1/meilisearch-windows-amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "meilisearch-windows-amd64.exe",
+              "to": "meilisearch.exe"
+            }
+          ],
+          "size": 128611840
+        }
+      }
+    },
+    {
+      "name": "gping",
+      "version": "1.20.4",
+      "description": "Ping with a graph — visualize latency to multiple hosts in real-time.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "gping"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "e2211da5056092c13a5690a23c0e03feac7b4caf147e2400ebcad80ca82cabe3",
+          "urls": [
+            "https://github.com/orf/gping/releases/download/gping-v1.20.4/gping-Windows-msvc-x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "gping.exe",
+              "to": "gping.exe"
+            }
+          ],
+          "size": 636628
+        }
+      }
+    },
+    {
+      "name": "sqlc",
+      "version": "1.31.1",
+      "description": "Generate type-safe Go code from SQL queries.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "sqlc"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "352711fa7dcb05dcdfefca0ad71b2c9a74fd090f8d7fc609419de4cbc725429f",
+          "urls": [
+            "https://downloads.sqlc.dev/sqlc_1.31.1_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "sqlc.exe",
+              "to": "sqlc.exe"
+            }
+          ],
+          "size": 15284588
+        }
+      }
+    },
+    {
+      "name": "minisign",
+      "version": "0.12",
+      "description": "Simple tool for signing files and verifying signatures.",
+      "kind": "external",
+      "category": "security",
+      "license": "MIT",
+      "commands": [
+        "minisign"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "37b600344e20c19314b2e82813db2bfdcc408b77b876f7727889dbd46d539479",
+          "urls": [
+            "https://github.com/jedisct1/minisign/releases/download/0.12/minisign-0.12-win64.zip"
+          ],
+          "files": [
+            {
+              "from": "minisign-win64/x86_64/minisign.exe",
+              "to": "minisign.exe"
+            }
+          ],
+          "size": 252505
         }
       }
     }
