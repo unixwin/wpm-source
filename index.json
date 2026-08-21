@@ -5648,6 +5648,114 @@
           "size": 252505
         }
       }
+    },
+    {
+      "name": "trufflehog",
+      "version": "3.97.0",
+      "description": "Find and verify leaked credentials in git repos, S3 buckets, and more.",
+      "kind": "external",
+      "category": "security",
+      "license": "AGPL-3.0",
+      "commands": [
+        "trufflehog"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "2a8208e6e5be8d6cd855322480eda4790a437f805dbd6538ad7495c27f40d4e5",
+          "urls": [
+            "https://github.com/trufflesecurity/trufflehog/releases/download/v3.97.0/trufflehog_3.97.0_windows_amd64.tar.gz"
+          ],
+          "files": [
+            {
+              "from": "trufflehog.exe",
+              "to": "trufflehog.exe"
+            }
+          ],
+          "size": 71055813
+        }
+      }
+    },
+    {
+      "name": "gron",
+      "version": "0.7.1",
+      "description": "Make JSON greppable — transform JSON into discrete assignments.",
+      "kind": "external",
+      "category": "text",
+      "license": "MIT",
+      "commands": [
+        "gron"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "5ed427a4a504d8e03a1770b71d4ad16a3764179e085b5ae84e51a57b299f300d",
+          "urls": [
+            "https://github.com/tomnomnom/gron/releases/download/v0.7.1/gron-windows-amd64-0.7.1.zip"
+          ],
+          "files": [
+            {
+              "from": "gron.exe",
+              "to": "gron.exe"
+            }
+          ],
+          "size": 3954441
+        }
+      }
+    },
+    {
+      "name": "peco",
+      "version": "0.6.0",
+      "description": "Interactive filtering tool — sift through text streams interactively.",
+      "kind": "external",
+      "category": "interactive",
+      "license": "MIT",
+      "commands": [
+        "peco"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "5bd9aa4bc02338a6ec8ab1ef212c7b2e54c23e2416254c7681f03e9fa6857863",
+          "urls": [
+            "https://github.com/peco/peco/releases/download/v0.6.0/peco_0.6.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "peco.exe",
+              "to": "peco.exe"
+            }
+          ],
+          "size": 2016471
+        }
+      }
+    },
+    {
+      "name": "tlrc",
+      "version": "1.8.1",
+      "description": "Official Rust client for tldr pages — simplified man pages.",
+      "kind": "external",
+      "category": "shell",
+      "license": "Apache-2.0",
+      "commands": [
+        "tldr"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "0fafa28d6503ec2a96efd71c5f1a57c8c547efd72706fd26fc53015415da7eb9",
+          "urls": [
+            "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.8.1/tealdeer-windows-x86_64-msvc.exe"
+          ],
+          "files": [
+            {
+              "from": "tealdeer-windows-x86_64-msvc.exe",
+              "to": "tldr.exe"
+            }
+          ],
+          "size": 3482112
+        }
+      }
     }
   ]
 }
