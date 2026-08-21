@@ -6819,7 +6819,33 @@
           "size": 25414659
         }
       }
+    },
+    {
+      "name": "wpm-gui",
+      "version": "0.1.0",
+      "description": "Graphical front-end for the WinuxCmd package manager.",
+      "kind": "external",
+      "category": "system",
+      "license": "MIT",
+      "commands": [
+        "wpm-gui"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "67c6cabec7e9eabbdb368985bdd8f9d1b9bbff45663b17376b574491f6fd49f4",
+          "urls": [
+            "https://github.com/unixwin/wpm-gui/releases/download/v0.1.0/wpm-gui-0.1.0-win-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "wpm-gui.exe",
+              "to": "wpm-gui.exe"
+            }
+          ],
+          "size": 2593850
+        }
+      }
     }
   ]
 }
-
