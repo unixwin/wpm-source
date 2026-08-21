@@ -2,7 +2,7 @@
   "schema": 1,
   "name": "official",
   "version": "official-2026.08.20",
-  "updated": "2026-08-20",
+  "updated": "2026-08-21",
   "sources": [
     {
       "name": "official-github-raw",
@@ -141,7 +141,7 @@
     {
       "name": "gawk",
       "version": "5.4.1",
-      "description": "GNU awk sidecar slot for users who need GNU awk compatibility; kept index-only until a reviewed Windows portable artifact with SHA-256 is published.",
+      "description": "GNU Awk with GMP/MPFR bignum support; 32-bit build runs on x64 via WOW64. Mirrored from ezwinports via unixwin/wpm-artifacts.",
       "kind": "external",
       "category": "text",
       "license": "GPL-3.0-or-later",
@@ -149,7 +149,46 @@
         "gawk",
         "awk"
       ],
-      "artifacts": {}
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "25373ae83ec539dbe8b4208e1b4c1afa891f902df1a19138ecda5451ccded4b6",
+          "urls": [
+            "https://github.com/unixwin/wpm-artifacts/releases/download/gawk-5.4.1/gawk-5.4.1-win-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "bin/gawk.exe",
+              "to": "gawk.exe"
+            },
+            {
+              "from": "bin/awk.exe",
+              "to": "awk.exe"
+            },
+            {
+              "from": "bin/libgmp-10.dll",
+              "to": "libgmp-10.dll"
+            },
+            {
+              "from": "bin/libmpfr-6.dll",
+              "to": "libmpfr-6.dll"
+            },
+            {
+              "from": "bin/libncurses6.dll",
+              "to": "libncurses6.dll"
+            },
+            {
+              "from": "bin/libgcc_s_dw2-1.dll",
+              "to": "libgcc_s_dw2-1.dll"
+            },
+            {
+              "from": "bin/libreadline8.dll",
+              "to": "libreadline8.dll"
+            }
+          ],
+          "size": 7781989
+        }
+      }
     },
     {
       "name": "grex",
@@ -4599,6 +4638,709 @@
           "size": 12487168
         }
       }
+    },
+    {
+      "name": "packer",
+      "version": "1.16.0",
+      "description": "Tool for building automated machine images across multiple platforms.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "BSL-1.1",
+      "commands": [
+        "packer"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "91a378d4e7f9c5363caa196e23fd78717da31d12fc6069c8bb892cdacceb2eb8",
+          "urls": [
+            "https://releases.hashicorp.com/packer/1.16.0/packer_1.16.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "packer.exe",
+              "to": "packer.exe"
+            }
+          ],
+          "size": 35192413
+        }
+      }
+    },
+    {
+      "name": "consul",
+      "version": "2.0.0",
+      "description": "Service networking platform for service discovery, configuration and segmentation.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "BSL-1.1",
+      "commands": [
+        "consul"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "1d4197dd2ada6173dfa7106924efecfd629102c81dfb9f8a3f3df5d6bf96bffb",
+          "urls": [
+            "https://releases.hashicorp.com/consul/2.0.0/consul_2.0.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "consul.exe",
+              "to": "consul.exe"
+            }
+          ],
+          "size": 69859761
+        }
+      }
+    },
+    {
+      "name": "nomad",
+      "version": "2.0.5",
+      "description": "Workload orchestrator for deploying and managing containers and non-containerized applications.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "BSL-1.1",
+      "commands": [
+        "nomad"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "0d5c08406c9001e0ee365e2b94fad897f082bf1cab29f754290e927e356bf98b",
+          "urls": [
+            "https://releases.hashicorp.com/nomad/2.0.5/nomad_2.0.5_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "nomad.exe",
+              "to": "nomad.exe"
+            }
+          ],
+          "size": 65760773
+        }
+      }
+    },
+    {
+      "name": "waypoint",
+      "version": "0.11.4",
+      "description": "Build, deploy, and release applications across any infrastructure.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "BSL-1.1",
+      "commands": [
+        "waypoint"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "1961ba24f7af5c971cf6099b1e3154b3f264f0cba3fdb7c7745b475f7e1f269c",
+          "urls": [
+            "https://releases.hashicorp.com/waypoint/0.11.4/waypoint_0.11.4_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "waypoint.exe",
+              "to": "waypoint.exe"
+            }
+          ],
+          "size": 84429083
+        }
+      }
+    },
+    {
+      "name": "loki",
+      "version": "3.7.6",
+      "description": "Log aggregation system designed for efficiently querying log data.",
+      "kind": "external",
+      "category": "monitoring",
+      "license": "AGPL-3.0",
+      "commands": [
+        "loki"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "3360aa5b48afe55f4a88734a139934377de05e6c15646e5c5ed32329806e4337",
+          "urls": [
+            "https://github.com/grafana/loki/releases/download/v3.7.6/loki-windows-amd64.exe.zip"
+          ],
+          "files": [
+            {
+              "from": "loki-windows-amd64.exe",
+              "to": "loki.exe"
+            }
+          ],
+          "size": 46959270
+        }
+      }
+    },
+    {
+      "name": "mimirtool",
+      "version": "3.2.0",
+      "description": "CLI tool for managing Grafana Mimir resources and recording rules.",
+      "kind": "external",
+      "category": "monitoring",
+      "license": "AGPL-3.0",
+      "commands": [
+        "mimirtool"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "2dcee6eba0dce17ce97842675af69d40f70de584f5c698ef71390340ad85651b",
+          "urls": [
+            "https://github.com/grafana/mimir/releases/download/mimir-3.2.0/mimirtool-windows-amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "mimirtool-windows-amd64.exe",
+              "to": "mimirtool.exe"
+            }
+          ],
+          "size": 88109568
+        }
+      }
+    },
+    {
+      "name": "alertmanager",
+      "version": "0.34.0",
+      "description": "Prometheus alerting pipeline for deduplication, grouping and routing alerts.",
+      "kind": "external",
+      "category": "monitoring",
+      "license": "Apache-2.0",
+      "commands": [
+        "alertmanager"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "0e4b832325d6d9b737b3255a242da7b11cb7a641d7f81f7e2aabe34b3207cd79",
+          "urls": [
+            "https://github.com/prometheus/alertmanager/releases/download/v0.34.0/alertmanager-0.34.0.windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "alertmanager-0.34.0.windows-amd64/alertmanager.exe",
+              "to": "alertmanager.exe"
+            }
+          ],
+          "size": 40121775
+        }
+      }
+    },
+    {
+      "name": "vector",
+      "version": "0.57.0",
+      "description": "High-performance observability data pipeline for logs, metrics and traces.",
+      "kind": "external",
+      "category": "monitoring",
+      "license": "MPL-2.0",
+      "commands": [
+        "vector"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "9aaf4dbc970a4579ca2868bcc98034b53a53da070c092753bb317b38ada13cf5",
+          "urls": [
+            "https://github.com/vectordotdev/vector/releases/download/v0.57.0/vector-0.57.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "bin/vector.exe",
+              "to": "vector.exe"
+            }
+          ],
+          "size": 48788162
+        }
+      }
+    },
+    {
+      "name": "fluent-bit",
+      "version": "5.1.0",
+      "description": "Fast log processor and forwarder for collecting and processing log data.",
+      "kind": "external",
+      "category": "monitoring",
+      "license": "Apache-2.0",
+      "commands": [
+        "fluent-bit"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "de614af5914aafc3e05ac361340207e130bfe2971d7970a99e8c2451edd672af",
+          "urls": [
+            "https://packages.fluentbit.io/windows/fluent-bit-5.1.0-win64.zip"
+          ],
+          "files": [
+            {
+              "from": "fluent-bit-5.1.0-win64/bin/fluent-bit.exe",
+              "to": "fluent-bit.exe"
+            }
+          ],
+          "size": 38870341
+        }
+      }
+    },
+    {
+      "name": "cloudflared",
+      "version": "2026.8.2",
+      "description": "Cloudflare Tunnel client for exposing local services to the internet.",
+      "kind": "external",
+      "category": "network",
+      "license": "Apache-2.0",
+      "commands": [
+        "cloudflared"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "c29eee2b121f5436a642eed69fd9767da7e7b8c510fa50aaa130337f931357b5",
+          "urls": [
+            "https://github.com/cloudflare/cloudflared/releases/download/2026.8.2/cloudflared-windows-amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "cloudflared-windows-amd64.exe",
+              "to": "cloudflared.exe"
+            }
+          ],
+          "size": 54893480
+        }
+      }
+    },
+    {
+      "name": "frp",
+      "version": "0.71.0",
+      "description": "Fast reverse proxy for exposing local servers behind NATs and firewalls.",
+      "kind": "external",
+      "category": "network",
+      "license": "Apache-2.0",
+      "commands": [
+        "frpc"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "9e5062e3e5cf07e67144a3a4acf175ef6a2486f3605dd6cf288bae34ab39819f",
+          "urls": [
+            "https://github.com/fatedier/frp/releases/download/v0.71.0/frp_0.71.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "frp_0.71.0_windows_amd64/frpc.exe",
+              "to": "frpc.exe"
+            }
+          ],
+          "size": 13933256
+        }
+      }
+    },
+    {
+      "name": "naabu",
+      "version": "2.6.1",
+      "description": "Fast port scanner written in Go for network reconnaissance.",
+      "kind": "external",
+      "category": "security",
+      "license": "MIT",
+      "commands": [
+        "naabu"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "4efaa341f36a0c6e676164f75e2d93d5a72f4090d690fd1bc293f5a4b79c202b",
+          "urls": [
+            "https://github.com/projectdiscovery/naabu/releases/download/v2.6.1/naabu_2.6.1_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "naabu.exe",
+              "to": "naabu.exe"
+            }
+          ],
+          "size": 12042383
+        }
+      }
+    },
+    {
+      "name": "httpx",
+      "version": "1.10.0",
+      "description": "Fast and multi-purpose HTTP toolkit for web application security testing.",
+      "kind": "external",
+      "category": "security",
+      "license": "MIT",
+      "commands": [
+        "httpx"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "5b157473d301a289e6c7c33e31130db019f9ea51e112cff509bc60eb9c2072ba",
+          "urls": [
+            "https://github.com/projectdiscovery/httpx/releases/download/v1.10.0/httpx_1.10.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "httpx.exe",
+              "to": "httpx.exe"
+            }
+          ],
+          "size": 18558049
+        }
+      }
+    },
+    {
+      "name": "subfinder",
+      "version": "2.15.0",
+      "description": "Fast passive subdomain enumeration tool for security assessments.",
+      "kind": "external",
+      "category": "security",
+      "license": "MIT",
+      "commands": [
+        "subfinder"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "37fca8541b4cb9e2a9b542a94defd671a9fd2f6003b2cc64c38d20c736b28be4",
+          "urls": [
+            "https://github.com/projectdiscovery/subfinder/releases/download/v2.15.0/subfinder_2.15.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "subfinder.exe",
+              "to": "subfinder.exe"
+            }
+          ],
+          "size": 10247003
+        }
+      }
+    },
+    {
+      "name": "nuclei",
+      "version": "3.11.1",
+      "description": "Fast vulnerability scanner based on customizable templates for security testing.",
+      "kind": "external",
+      "category": "security",
+      "license": "MIT",
+      "commands": [
+        "nuclei"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "bb6cb9ff8939b753f6fcab06fd30a15f5bc61d8382a597871334c007a85ff9d2",
+          "urls": [
+            "https://github.com/projectdiscovery/nuclei/releases/download/v3.11.1/nuclei_3.11.1_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "nuclei.exe",
+              "to": "nuclei.exe"
+            }
+          ],
+          "size": 46067128
+        }
+      }
+    },
+    {
+      "name": "katana",
+      "version": "1.7.0",
+      "description": "Next-generation crawling and spidering framework for web security.",
+      "kind": "external",
+      "category": "security",
+      "license": "MIT",
+      "commands": [
+        "katana"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "8d9632f95dfeae3bd6847971dbf6bef18f395056236fe7e43499d46b9789d278",
+          "urls": [
+            "https://github.com/projectdiscovery/katana/releases/download/v1.7.0/katana_1.7.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "katana.exe",
+              "to": "katana.exe"
+            }
+          ],
+          "size": 17005832
+        }
+      }
+    },
+    {
+      "name": "amass",
+      "version": "5.1.1",
+      "description": "In-depth attack surface mapping and asset discovery for security assessments.",
+      "kind": "external",
+      "category": "security",
+      "license": "Apache-2.0",
+      "commands": [
+        "amass"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "734aee6ce014c246e21f682bd49a42739e8c5feae32f6ec8a13fa2b8dc547b9f",
+          "urls": [
+            "https://github.com/owasp-amass/amass/releases/download/v5.1.1/amass_windows_amd64.tar.gz"
+          ],
+          "files": [
+            {
+              "from": "amass.exe",
+              "to": "amass.exe"
+            }
+          ],
+          "size": 17422251
+        }
+      }
+    },
+    {
+      "name": "bore",
+      "version": "0.6.0",
+      "description": "TCP tunnel server for exposing local ports to the internet.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "bore"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "01709c64fe2787cdc9a21d7030b0f08ad72dff0c36b7ecb72f4f667a55a34b4f",
+          "urls": [
+            "https://github.com/ekzhang/bore/releases/download/v0.6.0/bore-v0.6.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "bore.exe",
+              "to": "bore.exe"
+            }
+          ],
+          "size": 673531
+        }
+      }
+    },
+    {
+      "name": "step",
+      "version": "0.30.6",
+      "description": "Toolkit for building and operating secure infrastructure with certificate management.",
+      "kind": "external",
+      "category": "security",
+      "license": "Apache-2.0",
+      "commands": [
+        "step"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "330c5cc946bb041796c10a5469866133c6fefdda9461757a0d42470959eeefbf",
+          "urls": [
+            "https://github.com/smallstep/cli/releases/download/v0.30.6/step_windows_0.30.6_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "step_0.30.6/bin/step.exe",
+              "to": "step.exe"
+            }
+          ],
+          "size": 15039460
+        }
+      }
+    },
+    {
+      "name": "mkcert",
+      "version": "1.4.4",
+      "description": "Simple tool for making locally-trusted development certificates.",
+      "kind": "external",
+      "category": "security",
+      "license": "MIT",
+      "commands": [
+        "mkcert"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "d2660b50a9ed59eada480750561c96abc2ed4c9a38c6a24d93e30e0977631398",
+          "urls": [
+            "https://github.com/FiloSottile/mkcert/releases/download/v1.4.4/mkcert-v1.4.4-windows-amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "mkcert-v1.4.4-windows-amd64.exe",
+              "to": "mkcert.exe"
+            }
+          ],
+          "size": 4896256
+        }
+      }
+    },
+    {
+      "name": "lefthook",
+      "version": "2.1.10",
+      "description": "Fast Git hooks manager for teams with cross-platform support.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "lefthook"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "29ef0182974cf0cd156f7eeb4db6284ad96c58933ff67eb7bc1836f909f119a7",
+          "urls": [
+            "https://github.com/evilmartians/lefthook/releases/download/v2.1.10/lefthook_2.1.10_Windows_x86_64.exe"
+          ],
+          "files": [
+            {
+              "from": "lefthook_2.1.10_Windows_x86_64.exe",
+              "to": "lefthook.exe"
+            }
+          ],
+          "size": 15028736
+        }
+      }
+    },
+    {
+      "name": "mise",
+      "version": "2026.8.4",
+      "description": "Polyglot runtime version manager and task runner for development tools.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "mise"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "9ce8169533c129c05b8d0daf0325eb5d72fcaa1908cd49adff35a82e3f4f69e1",
+          "urls": [
+            "https://github.com/jdx/mise/releases/download/v2026.8.4/mise-v2026.8.4-windows-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "mise/bin/mise.exe",
+              "to": "mise.exe"
+            }
+          ],
+          "size": 43495042
+        }
+      }
+    },
+    {
+      "name": "fnm",
+      "version": "1.39.0",
+      "description": "Fast and simple Node.js version manager with directory-based switching.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "fnm"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "8183bed4348cb78fdfd8abb3d1247fbeab7b2082f941363929c61e747c001e10",
+          "urls": [
+            "https://github.com/Schniz/fnm/releases/download/v1.39.0/fnm-windows.zip"
+          ],
+          "files": [
+            {
+              "from": "fnm.exe",
+              "to": "fnm.exe"
+            }
+          ],
+          "size": 3420688
+        }
+      }
+    },
+    {
+      "name": "volta",
+      "version": "2.0.2",
+      "description": "JavaScript tool manager for managing package versions per-project.",
+      "kind": "external",
+      "category": "developer",
+      "license": "BSD-2-Clause",
+      "commands": [
+        "volta"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "d7678a485e2fc9b1a3f7e9da256d8b88a97d7e4c45e63701c4874f6c2a587e0f",
+          "urls": [
+            "https://github.com/volta-cli/volta/releases/download/v2.0.2/volta-2.0.2-windows.zip"
+          ],
+          "files": [
+            {
+              "from": "volta.exe",
+              "to": "volta.exe"
+            }
+          ],
+          "size": 6516652
+        }
+      }
+    },
+    {
+      "name": "imagemagick",
+      "version": "7.1.2-29",
+      "description": "Image processing toolkit for creating, editing and converting image formats.",
+      "kind": "external",
+      "category": "media",
+      "license": "Apache-2.0",
+      "commands": [
+        "magick"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "b68e312b21556ae8872704e37df3c69cbdc0ea7100366bf823e7e3a1b69405bc",
+          "urls": [
+            "https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-29/ImageMagick-7.1.2-29-portable-Q16-HDRI-x64.7z"
+          ],
+          "files": [
+            {
+              "from": "ImageMagick-7.1.2-29-portable-Q16-HDRI-x64/magick.exe",
+              "to": "magick.exe"
+            }
+          ],
+          "size": 11691010
+        }
+      }
+    },
+    {
+      "name": "plantuml",
+      "version": "1.2026.6",
+      "description": "Diagram creation tool using simple text description language for UML and other diagrams.",
+      "kind": "external",
+      "category": "document",
+      "license": "GPL-3.0",
+      "commands": [
+        "plantuml"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "a27961a865880a1a91db77fd196f317128732d668e6e20c4c20dc6f633b32e9f",
+          "urls": [
+            "https://github.com/plantuml/plantuml/releases/download/v1.2026.6/native-plantuml-windows-amd64-1.2026.6.zip"
+          ],
+          "files": [
+            {
+              "from": "plantuml.exe",
+              "to": "plantuml.exe"
+            }
+          ],
+          "size": 49581451
+        }
+      }
     }
   ]
 }
+
