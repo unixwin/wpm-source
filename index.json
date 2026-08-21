@@ -4491,6 +4491,114 @@
           "size": 18734592
         }
       }
+    },
+    {
+      "name": "toxiproxy",
+      "version": "2.12.0",
+      "description": "Network proxy for simulating network conditions in tests.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "toxiproxy-cli"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "e14d2bb4ec328c1022cab36030a6b145e58f242160b6a3c5f30173cbd75ef15f",
+          "urls": [
+            "https://github.com/Shopify/toxiproxy/releases/download/v2.12.0/toxiproxy-cli-windows-amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "toxiproxy-cli-windows-amd64.exe",
+              "to": "toxiproxy-cli.exe"
+            }
+          ],
+          "size": 10433536
+        }
+      }
+    },
+    {
+      "name": "mc",
+      "version": "2025.08.13",
+      "description": "MinIO client for S3-compatible cloud storage.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "AGPL-3.0",
+      "commands": [
+        "mc"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "c8db13ebeda31497f354c0e950809db0ae9b2a2a69b8afee68c128c37300c157",
+          "urls": [
+            "https://dl.min.io/client/mc/release/windows-amd64/mc.exe"
+          ],
+          "files": [
+            {
+              "from": "mc.exe",
+              "to": "mc.exe"
+            }
+          ],
+          "size": 31468032
+        }
+      }
+    },
+    {
+      "name": "dive",
+      "version": "0.13.1",
+      "description": "Docker image explorer for analyzing image layers and efficiency.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "MIT",
+      "commands": [
+        "dive"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "3e764ff28c7b89f4da679deac80483249fbbae3a1d512c103d54609eec09086a",
+          "urls": [
+            "https://github.com/wagoodman/dive/releases/download/v0.13.1/dive_0.13.1_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "dive.exe",
+              "to": "dive.exe"
+            }
+          ],
+          "size": 4130206
+        }
+      }
+    },
+    {
+      "name": "regctl",
+      "version": "0.11.5",
+      "description": "OCI container registry client for interacting with registries.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "regctl"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "9b83975d464e4ee5a9f899a3ead26072ed67e9a8ed0f582897bfad8141b45938",
+          "urls": [
+            "https://github.com/regclient/regclient/releases/download/v0.11.5/regctl-windows-amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "regctl-windows-amd64.exe",
+              "to": "regctl.exe"
+            }
+          ],
+          "size": 12487168
+        }
+      }
     }
   ]
 }
