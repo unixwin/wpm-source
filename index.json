@@ -6900,6 +6900,33 @@
           "size": 29335850
         }
       }
+    },
+    {
+      "name": "gofumpt",
+      "version": "0.11.0",
+      "description": "Stricter Go code formatter — superset of gofmt.",
+      "kind": "external",
+      "category": "developer",
+      "license": "BSD-3-Clause",
+      "commands": [
+        "gofumpt"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "e7ae4253344a600f1116e4b5c7d0d0fcc108abbbf383c3d786a530077b4d4622",
+          "urls": [
+            "https://github.com/mvdan/gofumpt/releases/download/v0.11.0/gofumpt_v0.11.0_windows_amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "gofumpt_v0.11.0_windows_amd64.exe",
+              "to": "gofumpt.exe"
+            }
+          ],
+          "size": 3407360
+        }
+      }
     }
   ]
 }
