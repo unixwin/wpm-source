@@ -7417,6 +7417,87 @@
           "size": 7524996
         }
       }
+    },
+    {
+      "name": "ugrep",
+      "version": "7.8.4",
+      "description": "Fast grep with Unicode, fuzzy search, and interactive TUI.",
+      "kind": "external",
+      "category": "text",
+      "license": "BSD-3-Clause",
+      "commands": [
+        "ugrep"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "e1d982675554faf8bc7f17654e79922e454505f078b722d0fd46bbc353aecf4f",
+          "urls": [
+            "https://github.com/Genivia/ugrep/releases/download/v7.8.4/ugrep-windows-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "ugrep.exe",
+              "to": "ugrep.exe"
+            }
+          ],
+          "size": 2080637
+        }
+      }
+    },
+    {
+      "name": "tabiew",
+      "version": "0.14.2",
+      "description": "Lightweight TSV/CSV viewer with keyboard navigation.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "tw"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "3780efdb8848de54bc9cb5b2f81865f414d873938d3ebb929602eff8aed28ea9",
+          "urls": [
+            "https://github.com/shshemi/tabiew/releases/download/v0.14.2/tw-x86_64-pc-windows-msvc.exe"
+          ],
+          "files": [
+            {
+              "from": "tw-x86_64-pc-windows-msvc.exe",
+              "to": "tw.exe"
+            }
+          ],
+          "size": 67956736
+        }
+      }
+    },
+    {
+      "name": "goawk",
+      "version": "1.31.0",
+      "description": "Go AWK implementation — cross-platform awk with JSON support.",
+      "kind": "external",
+      "category": "text",
+      "license": "MIT",
+      "commands": [
+        "goawk"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "8c59523cf56d47621a9b84124a9fc15f580048103195caacf4f8964dfe632e78",
+          "urls": [
+            "https://github.com/benhoyt/goawk/releases/download/v1.31.0/goawk_v1.31.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "goawk.exe",
+              "to": "goawk.exe"
+            }
+          ],
+          "size": 1557117
+        }
+      }
     }
   ]
 }
