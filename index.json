@@ -6738,6 +6738,87 @@
         }
       },
       "category": "toolchain"
+    },
+    {
+      "name": "crane",
+      "version": "0.21.9",
+      "description": "Tool for interacting with remote container registries — copy, inspect, mutate images.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "crane"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "2309f41ce9a31b6096fd590a57b00b0fd1d6dc41d315dc820795f64be070fe03",
+          "urls": [
+            "https://github.com/google/go-containerregistry/releases/download/v0.21.9/go-containerregistry_Windows_x86_64.tar.gz"
+          ],
+          "files": [
+            {
+              "from": "crane.exe",
+              "to": "crane.exe"
+            }
+          ],
+          "size": 17007999
+        }
+      }
+    },
+    {
+      "name": "kubeseal",
+      "version": "0.39.1",
+      "description": "Kubernetes Sealed Secrets CLI — encrypt secrets for safe storage in Git.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "kubeseal"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "8b9559c1baa589e9f0908ce15dc1085c76ff21c371ab32b286c67e23f72aed7e",
+          "urls": [
+            "https://github.com/bitnami/sealed-secrets/releases/download/v0.39.1/kubeseal-0.39.1-windows-amd64.tar.gz"
+          ],
+          "files": [
+            {
+              "from": "kubeseal.exe",
+              "to": "kubeseal.exe"
+            }
+          ],
+          "size": 23710954
+        }
+      }
+    },
+    {
+      "name": "flux",
+      "version": "2.9.4",
+      "description": "GitOps toolkit CLI for Kubernetes — FluxCD reconciliation engine.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "flux"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "524a148bdc77d6baa05fb22472e2ecf153f51c198ff299475a7245e4016b06c2",
+          "urls": [
+            "https://github.com/fluxcd/flux2/releases/download/v2.9.4/flux_2.9.4_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "flux.exe",
+              "to": "flux.exe"
+            }
+          ],
+          "size": 25414659
+        }
+      }
     }
   ]
 }
