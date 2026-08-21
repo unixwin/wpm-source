@@ -7825,6 +7825,60 @@
           "size": 3805097
         }
       }
+    },
+    {
+      "name": "feroxbuster",
+      "version": "2.13.1",
+      "description": "Fast, simple, recursive content discovery tool written in Rust.",
+      "kind": "external",
+      "category": "security",
+      "license": "MIT",
+      "commands": [
+        "feroxbuster"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "6255fc1998220833d22b221e5c740895ada2a5fbaf31587e799276c59da7dab2",
+          "urls": [
+            "https://github.com/epi052/feroxbuster/releases/latest/download/x86_64-windows-feroxbuster.exe.zip"
+          ],
+          "files": [
+            {
+              "from": "x86_64-windows-feroxbuster.exe",
+              "to": "feroxbuster.exe"
+            }
+          ],
+          "size": 2715829
+        }
+      }
+    },
+    {
+      "name": "terrascan",
+      "version": "1.19.9",
+      "description": "Static code analyzer for Infrastructure as Code — security and compliance scanning.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "terrascan"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "2585e0ae7121bfa28a471175ec3cabe810680fcbeb064eefab93a8c6c475b094",
+          "urls": [
+            "https://github.com/tenable/terrascan/releases/download/v1.19.9/terrascan_1.19.9_Windows_x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "terrascan.exe",
+              "to": "terrascan.exe"
+            }
+          ],
+          "size": 26063244
+        }
+      }
     }
   ]
 }
