@@ -6463,6 +6463,87 @@
           "size": 10554880
         }
       }
+    },
+    {
+      "name": "xan",
+      "version": "0.4.0",
+      "description": "CSV processing tool powered by Polars — SIMD-accelerated, parallel queries.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "xan"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "e7ad980fb033381f0ae8445330328e086f92443828f89b3e5a6777409b2ec3bd",
+          "urls": [
+            "https://github.com/medialab/xan/releases/latest/download/xan-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "xan.exe",
+              "to": "xan.exe"
+            }
+          ],
+          "size": 6473779
+        }
+      }
+    },
+    {
+      "name": "kubeconform",
+      "version": "0.8.0",
+      "description": "Fast Kubernetes manifest validator.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "MIT",
+      "commands": [
+        "kubeconform"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "e3f56102bcf4f50b034a567e2482a1c5330799983ddd655952310211aef73d93",
+          "urls": [
+            "https://github.com/yannh/kubeconform/releases/download/v0.8.0/kubeconform-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "kubeconform.exe",
+              "to": "kubeconform.exe"
+            }
+          ],
+          "size": 7615744
+        }
+      }
+    },
+    {
+      "name": "conftest",
+      "version": "0.69.0",
+      "description": "Test structured configuration data against Open Policy Agent policies.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "conftest"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "be95f90cd22d00e709a7ad37bdac357c103b4f81d92dc51ca75a60e5f3905cf5",
+          "urls": [
+            "https://github.com/open-policy-agent/conftest/releases/download/v0.69.0/conftest_0.69.0_Windows_x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "conftest.exe",
+              "to": "conftest.exe"
+            }
+          ],
+          "size": 22534905
+        }
+      }
     }
   ]
 }
