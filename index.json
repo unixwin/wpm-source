@@ -6846,6 +6846,60 @@
           "size": 2593850
         }
       }
+    },
+    {
+      "name": "hey",
+      "version": "0.1.4",
+      "description": "HTTP load generator — simple tool for benchmarking web servers.",
+      "kind": "external",
+      "category": "network",
+      "license": "Apache-2.0",
+      "commands": [
+        "hey"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "ee464ae7afb50895263e688efc1803e7d3d8b821c3c5aaeec9e68179821ad615",
+          "urls": [
+            "https://storage.googleapis.com/hey-releases/hey_windows_amd64"
+          ],
+          "files": [
+            {
+              "from": "hey_windows_amd64",
+              "to": "hey.exe"
+            }
+          ],
+          "size": 11931648
+        }
+      }
+    },
+    {
+      "name": "buf",
+      "version": "1.54.0",
+      "description": "Protobuf toolchain — lint, breaking change detection, format, and generate.",
+      "kind": "external",
+      "category": "developer",
+      "license": "Apache-2.0",
+      "commands": [
+        "buf"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "22c0b6d8e57e64c5d52328e04f0a40d892ef5b118b1900e3a1935b7cd58625c7",
+          "urls": [
+            "https://github.com/bufbuild/buf/releases/download/v1.54.0/buf-Windows-x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "buf/bin/buf.exe",
+              "to": "buf.exe"
+            }
+          ],
+          "size": 29335850
+        }
+      }
     }
   ]
 }
