@@ -5895,6 +5895,87 @@
           "size": 11024881
         }
       }
+    },
+    {
+      "name": "csvq",
+      "version": "1.18.1",
+      "description": "SQL for CSV/TSV files — query structured data with SQL.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "csvq"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "a63a5753aa9914abb34849b76d2075755ffde2ca194215b34c0799423a3b67a4",
+          "urls": [
+            "https://github.com/mithrandie/csvq/releases/download/v1.18.1/csvq-v1.18.1-windows-amd64.tar.gz"
+          ],
+          "files": [
+            {
+              "from": "csvq-v1.18.1-windows-amd64/csvq.exe",
+              "to": "csvq.exe"
+            }
+          ],
+          "size": 4296106
+        }
+      }
+    },
+    {
+      "name": "curlie",
+      "version": "1.8.2",
+      "description": "Frontend to curl with httpie-style syntax.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "curlie"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "c9c722de200518bdde66ac1211fc10633fc21448dea90cb1f16e4f485a47fb56",
+          "urls": [
+            "https://github.com/rs/curlie/releases/download/v1.8.2/curlie_1.8.2_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "curlie.exe",
+              "to": "curlie.exe"
+            }
+          ],
+          "size": 1180751
+        }
+      }
+    },
+    {
+      "name": "nali",
+      "version": "0.8.1",
+      "description": "Query IP geolocation — pipe traceroute/ping output to show locations.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "nali"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "a0b1e1c157431708446b9d92ebd4690ab793012a408dfa0b76e02644d50b65c2",
+          "urls": [
+            "https://github.com/zu1k/nali/releases/download/v0.8.1/nali-windows-amd64-v0.8.1.zip"
+          ],
+          "files": [
+            {
+              "from": "nali-windows-amd64.exe",
+              "to": "nali.exe"
+            }
+          ],
+          "size": 4458426
+        }
+      }
     }
   ]
 }
