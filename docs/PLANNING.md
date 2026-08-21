@@ -55,6 +55,16 @@ winuxcmd\
 - 已标记 shim:ncat / qpdf / gawk / curl / xz / bzip2 / sysinternals-suite。
 - 依赖 DLL 的包因此全部可入库:`make`(intl/iconv)、`socat` 等后续可加。
 
+### 迁移(存量用户)
+
+无需脚本,分三步自然完成:
+
+1. **升级 winuxcmd.exe**:新分发器向后兼容 —— 转发只对"非内置名且 opt 载荷存在"生效,老安装零影响。
+2. **索引自动更新**:layout 字段随 official index 下发;旧版 wpm 忽略未知字段仍按 flat 安装(优雅降级),新版 wpm 正确落 opt。
+3. **按需迁移单个包**:`wpm install --force <pkg>` 一步完成 —— 载荷进 `opt\<pkg>\`、创建自硬链接 shim、清理 usr\bin 中字节一致的旧 flat 残留(内容不一致的文件属于其他包,绝不误删)。
+
+兼容性说明:winuxsh 无需任何同步(shim 就是 usr\bin 普通文件);PATH 契约不变(opt 不进 PATH);`wpm links rebuild/remove` 只操作内置名单,不触碰包 shim。
+
 边界:
 - exe 只找自身目录 DLL → 天然满足;仅自身 PATH 解析的子进程场景无需处理。
 - 兄弟工具互调(如 `xz`→`xzdec`):兄弟命令同样生成 shim,依赖方通过 PATH 找到 shim,行为一致。
