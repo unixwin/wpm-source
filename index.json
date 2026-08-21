@@ -6301,6 +6301,87 @@
           "size": 792499
         }
       }
+    },
+    {
+      "name": "biome",
+      "version": "2.5.9",
+      "description": "Fast formatter and linter for JS, TS, JSON, CSS, and more.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "biome"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "f8474a0f9f457df176c10be3f0e82be890e8986ff2805d4a7f3c5a4cba5962ca",
+          "urls": [
+            "https://github.com/biomejs/biome/releases/download/@biomejs/biome@2.5.9/biome-win32-x64.exe"
+          ],
+          "files": [
+            {
+              "from": "biome-win32-x64.exe",
+              "to": "biome.exe"
+            }
+          ],
+          "size": 91166720
+        }
+      }
+    },
+    {
+      "name": "golangci-lint",
+      "version": "2.13.0",
+      "description": "Fast Go linters runner.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "golangci-lint"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "472631b96f042a596d0f11bf0b7e162545b39178f9b13f72ef6d12808f831518",
+          "urls": [
+            "https://github.com/golangci/golangci-lint/releases/download/v2.13.0/golangci-lint-2.13.0-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "golangci-lint-2.13.0-windows-amd64/golangci-lint.exe",
+              "to": "golangci-lint.exe"
+            }
+          ],
+          "size": 15815356
+        }
+      }
+    },
+    {
+      "name": "eget",
+      "version": "1.3.4",
+      "description": "Easily install prebuilt binaries from GitHub releases.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "eget"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "27ffb63d5e2e17a829653a4c65a9412fe45fae2be56478167e3b89aaa8ffe899",
+          "urls": [
+            "https://github.com/zyedidia/eget/releases/download/v1.3.4/eget-1.3.4-windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "eget-1.3.4-windows_amd64/eget.exe",
+              "to": "eget.exe"
+            }
+          ],
+          "size": 2872728
+        }
+      }
     }
   ]
 }
