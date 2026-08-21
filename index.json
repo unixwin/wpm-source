@@ -7960,6 +7960,60 @@
           "size": 10786868
         }
       }
+    },
+    {
+      "name": "notify",
+      "version": "1.0.7",
+      "description": "Send notifications to multiple platforms — Slack, Discord, Telegram, and more.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "notify"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "1480b43f2e6c961c68fc3cbdf69772c168ca70049e849925d854c2cb4d96a570",
+          "urls": [
+            "https://github.com/projectdiscovery/notify/releases/download/v1.0.7/notify_1.0.7_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "notify.exe",
+              "to": "notify.exe"
+            }
+          ],
+          "size": 6603713
+        }
+      }
+    },
+    {
+      "name": "proxify",
+      "version": "0.0.12",
+      "description": "Swiss army knife proxy for HTTP/HTTPS traffic — debugging and interception.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "proxify"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "6c74904cf599ffa3d01227ec6730ff3bb97ddb730cb02ba0d47d9c4727008495",
+          "urls": [
+            "https://github.com/projectdiscovery/proxify/releases/download/v0.0.12/proxify_0.0.12_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "proxify.exe",
+              "to": "proxify.exe"
+            }
+          ],
+          "size": 21564663
+        }
+      }
     }
   ]
 }
