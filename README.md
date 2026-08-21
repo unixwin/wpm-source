@@ -9,6 +9,21 @@ Repository metadata:
 - Public artifact: `index.json`
 - Optional release artifact: `wpm-index.json`
 
+## Bootstrap
+
+Install WinuxCmd (which bundles `wpm`) from winget:
+
+```powershell
+winget install caomengxuan666.WinuxCmd
+```
+
+Then update the package index and install tools:
+
+```powershell
+wpm index update
+wpm install ripgrep fd jq
+```
+
 ## Scope
 
 WPM sources focus on portable command-line tools that fit beside
