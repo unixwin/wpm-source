@@ -8,8 +8,10 @@ param(
   [ValidateSet("windows-x64", "windows-arm64")]
   [string]$Platform = "windows-x64",
   [Parameter(Mandatory = $true)]
-  [ValidateSet("exe", "zip")]
+  [ValidateSet("exe", "zip", "tar.gz", "tgz", "tar.xz")]
   [string]$Type,
+  [ValidateSet("flat", "shim")]
+  [string]$Layout,
   [Parameter(Mandatory = $true)]
   [string]$Url,
   [Parameter(Mandatory = $true)]
@@ -149,6 +151,7 @@ $artifact = [pscustomobject]@{
   urls   = [string[]]@($Url)
   files  = @()
 }
+if ($Layout) { Set-JsonProperty -Object $artifact -Name "layout" -Value $Layout }
 $fileMappings = @()
 if (-not $To) { $To = $From }
 $fileMappings += [pscustomobject]@{ from = $From; to = $To }

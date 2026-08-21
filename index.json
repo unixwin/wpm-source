@@ -5900,7 +5900,7 @@
     {
       "name": "curlie",
       "version": "1.8.2",
-      "description": "Frontend to curl with httpie-style syntax.",
+      "description": "The power of curl, the ease of use of httpie.",
       "kind": "external",
       "category": "network",
       "license": "MIT",
@@ -7035,6 +7035,173 @@
           "size": 38073028
         }
       }
+    },
+    {
+      "name": "go",
+      "version": "1.27.0",
+      "description": "Go programming language toolchain (compiler, linker, stdlib; relocatable GOROOT).",
+      "kind": "external",
+      "license": "BSD-3-Clause",
+      "commands": [
+        "go",
+        "gofmt"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "f0c0a0d33ba94f4d2c5dbc887334ce678b21813504ddb3aafcb06e60a5a667c4",
+          "urls": [
+            "https://go.dev/dl/go1.27.0.windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "go/",
+              "to": "./"
+            }
+          ],
+          "layout": "shim",
+          "size": 78924880
+        }
+      },
+      "category": "toolchain"
+    },
+    {
+      "name": "node",
+      "version": "26.7.0",
+      "description": "Node.js JavaScript runtime built on V8 (npm/npx available inside the package directory).",
+      "kind": "external",
+      "license": "MIT",
+      "commands": [
+        "node"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "d3bd72755141ed32bbcd841228ee81897c8a98d50dfa7dae2179399a0a7c90f8",
+          "urls": [
+            "https://nodejs.org/dist/v26.7.0/node-v26.7.0-win-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "node-v26.7.0-win-x64/",
+              "to": "./"
+            }
+          ],
+          "layout": "shim",
+          "size": 41182557
+        }
+      },
+      "category": "toolchain"
+    },
+    {
+      "name": "k6",
+      "version": "1.8.1",
+      "description": "Grafana k6 load testing tool for engineering teams.",
+      "kind": "external",
+      "license": "AGPL-3.0",
+      "commands": [
+        "k6"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "2a566358ec0fbd9afbf906904637e31dc5591c9574bf662772754fbe98a0a728",
+          "urls": [
+            "https://github.com/grafana/k6/releases/download/v1.8.1/k6-v1.8.1-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "k6-v1.8.1-windows-amd64/k6.exe",
+              "to": "k6.exe"
+            }
+          ],
+          "size": 33432027
+        }
+      },
+      "category": "developer"
+    },
+    {
+      "name": "ninja",
+      "version": "1.13.2",
+      "description": "Small build system with a focus on speed, designed for parallel builds.",
+      "kind": "external",
+      "license": "Apache-2.0",
+      "commands": [
+        "ninja"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "07fc8261b42b20e71d1720b39068c2e14ffcee6396b76fb7a795fb460b78dc65",
+          "urls": [
+            "https://github.com/ninja-build/ninja/releases/download/v1.13.2/ninja-win.zip"
+          ],
+          "files": [
+            {
+              "from": "ninja.exe",
+              "to": "ninja.exe"
+            }
+          ],
+          "size": 291570
+        }
+      },
+      "category": "developer"
+    },
+    {
+      "name": "step-cli",
+      "version": "0.30.6",
+      "description": "step CLI: zero-trust swiss army knife for certificates, JWTs, and PKI.",
+      "kind": "external",
+      "license": "Apache-2.0",
+      "commands": [
+        "step"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "330c5cc946bb041796c10a5469866133c6fefdda9461757a0d42470959eeefbf",
+          "urls": [
+            "https://github.com/smallstep/cli/releases/download/v0.30.6/step_windows_0.30.6_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "step_0.30.6/bin/step.exe",
+              "to": "step.exe"
+            }
+          ],
+          "size": 15039460
+        }
+      },
+      "category": "security"
+    },
+    {
+      "name": "winuxsh",
+      "version": "0.10.10",
+      "description": "Windows-native bash-compatible shell with plugin system. Ships a private winuxcmd copy under its own root; coexists with a system WinuxCmd install and updates independently.",
+      "kind": "external",
+      "license": "MIT",
+      "commands": [
+        "winuxsh"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "e8bcfe1946cd49bbaae79de75f9b67d6904b74d4bb05c7790dc785709e122c54",
+          "urls": [
+            "https://github.com/unixwin/winuxsh/releases/download/v0.10.10/winuxsh-v0.10.10-win-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "winuxsh-v0.10.10-win-x64/",
+              "to": "./"
+            }
+          ],
+          "layout": "shim",
+          "size": 6896884
+        }
+      },
+      "category": "shell"
     }
   ]
 }
+
