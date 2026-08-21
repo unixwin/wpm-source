@@ -6220,6 +6220,87 @@
           "size": 9908216
         }
       }
+    },
+    {
+      "name": "croc",
+      "version": "10.2.2",
+      "description": "Encrypted file transfer between computers.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "croc"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "97569bdd93adf19ccb5d6c2eb0912daa453f8f78d2f735fcbad34ee735296983",
+          "urls": [
+            "https://github.com/schollz/croc/releases/download/v10.2.2/croc_v10.2.2_Windows-64bit.zip"
+          ],
+          "files": [
+            {
+              "from": "croc.exe",
+              "to": "croc.exe"
+            }
+          ],
+          "size": 8578308
+        }
+      }
+    },
+    {
+      "name": "shellharden",
+      "version": "4.3.1",
+      "description": "Bash syntax hardener — makes scripts more robust.",
+      "kind": "external",
+      "category": "shell",
+      "license": "MIT",
+      "commands": [
+        "shellharden"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "420fba3aac23f1a9626ca8bccbc15ad79ab1a83c06ce10f8e35e506703e949c3",
+          "urls": [
+            "https://github.com/anordal/shellharden/releases/download/v4.3.1/shellharden-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "shellharden.exe",
+              "to": "shellharden.exe"
+            }
+          ],
+          "size": 97553
+        }
+      }
+    },
+    {
+      "name": "xsv",
+      "version": "0.13.0",
+      "description": "Fast CSV toolkit written in Rust.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "xsv"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "3e319c08456031a9683c19c998ac9f61756a2e456413db17c8e6819b17818a1a",
+          "urls": [
+            "https://github.com/BurntSushi/xsv/releases/download/0.13.0/xsv-0.13.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "xsv.exe",
+              "to": "xsv.exe"
+            }
+          ],
+          "size": 792499
+        }
+      }
     }
   ]
 }
