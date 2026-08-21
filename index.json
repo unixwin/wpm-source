@@ -7744,6 +7744,60 @@
         }
       },
       "category": "navigation"
+    },
+    {
+      "name": "git-cliff",
+      "version": "2.7.0",
+      "description": "Changelog generator — customizable commit changelog from Git history.",
+      "kind": "external",
+      "category": "developer",
+      "license": "GPL-3.0",
+      "commands": [
+        "git-cliff"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "3afecbfb8b2a1145f6321fa6fc6bf0fabb8dff5dd7fa1bfa46bafa9f7484f47c",
+          "urls": [
+            "https://github.com/orhun/git-cliff/releases/download/v2.7.0/git-cliff-2.7.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "git-cliff-2.7.0/git-cliff.exe",
+              "to": "git-cliff.exe"
+            }
+          ],
+          "size": 6597713
+        }
+      }
+    },
+    {
+      "name": "task",
+      "version": "3.44.0",
+      "description": "Task runner / simpler Make alternative — Taskfile.yml based.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "task"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "db39c209f677c8f1513bec1b22c0997131d56e252db0a2d57208414c96ad9056",
+          "urls": [
+            "https://github.com/go-task/task/releases/download/v3.44.0/task_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "task.exe",
+              "to": "task.exe"
+            }
+          ],
+          "size": 7029837
+        }
+      }
     }
   ]
 }
