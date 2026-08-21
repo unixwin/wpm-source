@@ -6382,6 +6382,87 @@
           "size": 2872728
         }
       }
+    },
+    {
+      "name": "sttr",
+      "version": "0.2.30",
+      "description": "50+ string transformations — base64, URL encode, hash, case, JSON/YAML, and more.",
+      "kind": "external",
+      "category": "text",
+      "license": "MIT",
+      "commands": [
+        "sttr"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "3f15bd8c7801fd2c5b10b86129e636bf1d39a1521229c285f01492c1145c21a1",
+          "urls": [
+            "https://github.com/abhimanyu003/sttr/releases/latest/download/sttr_Windows_x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "sttr.exe",
+              "to": "sttr.exe"
+            }
+          ],
+          "size": 3214009
+        }
+      }
+    },
+    {
+      "name": "typst",
+      "version": "0.15.1",
+      "description": "Modern typesetting compiler — scripts to PDF/PNG/SVG.",
+      "kind": "external",
+      "category": "document",
+      "license": "Apache-2.0",
+      "commands": [
+        "typst"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "19ce3551153c2fe7ee9fa2f95208310c8f4d3209fedb699e0333faf8913f6736",
+          "urls": [
+            "https://github.com/typst/typst/releases/latest/download/typst-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "typst-x86_64-pc-windows-msvc/typst.exe",
+              "to": "typst.exe"
+            }
+          ],
+          "size": 22463684
+        }
+      }
+    },
+    {
+      "name": "wuzz",
+      "version": "0.5.0",
+      "description": "Interactive HTTP inspector — TUI for inspecting HTTP requests.",
+      "kind": "external",
+      "category": "network",
+      "license": "GPL-3.0",
+      "commands": [
+        "wuzz"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "c23d9fa911eef513d7cdda239f3c79bed0a263d4c206250786aa8e00983691bd",
+          "urls": [
+            "https://github.com/asciimoo/wuzz/releases/download/v0.5.0/wuzz_windows_amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "wuzz_windows_amd64.exe",
+              "to": "wuzz.exe"
+            }
+          ],
+          "size": 10554880
+        }
+      }
     }
   ]
 }
