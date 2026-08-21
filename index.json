@@ -7282,6 +7282,87 @@
           "size": 8430616
         }
       }
+    },
+    {
+      "name": "rtk",
+      "version": "0.37.2",
+      "description": "CLI proxy reducing LLM token consumption 60-90% — context compression for AI coding.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "rtk"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "34cea9009a8099acdaf85147b971d95f65efabfa63fb3aea7d3e2b73e6f517c3",
+          "urls": [
+            "https://github.com/rtk-ai/rtk/releases/latest/download/rtk-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "rtk.exe",
+              "to": "rtk.exe"
+            }
+          ],
+          "size": 4041041
+        }
+      }
+    },
+    {
+      "name": "tflint",
+      "version": "0.64.0",
+      "description": "Terraform linter for catching errors and enforcing best practices.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "MIT",
+      "commands": [
+        "tflint"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "fb42fb859d844b156a8ea9d3363078c4d8b85ca78782e60876b08c9b8e59f303",
+          "urls": [
+            "https://github.com/terraform-linters/tflint/releases/download/v0.64.0/tflint_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "tflint.exe",
+              "to": "tflint.exe"
+            }
+          ],
+          "size": 17551140
+        }
+      }
+    },
+    {
+      "name": "velero",
+      "version": "1.18.2",
+      "description": "Kubernetes cluster backup, restore, and disaster recovery.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "velero"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "bf4312e6b7e56c6677892f6b802ca6e43541a11ef8b3c07af97a7bae42399282",
+          "urls": [
+            "https://github.com/velero-io/velero/releases/download/v1.18.2/velero-v1.18.2-windows-amd64.tar.gz"
+          ],
+          "files": [
+            {
+              "from": "velero.exe",
+              "to": "velero.exe"
+            }
+          ],
+          "size": 58556278
+        }
+      }
     }
   ]
 }
