@@ -6625,6 +6625,60 @@
           "size": 3954441
         }
       }
+    },
+    {
+      "name": "dog",
+      "version": "0.1.0",
+      "description": "Modern DNS client with DoH/DoT support and JSON output.",
+      "kind": "external",
+      "category": "network",
+      "license": "EUPL-1.2",
+      "commands": [
+        "dog"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "85e80ebd1560195fb9a2eb87c782d7a9e50d94ae76938ae4df852cecda7fcced",
+          "urls": [
+            "https://github.com/ogham/dog/releases/download/v0.1.0/dog-v0.1.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "bin/dog.exe",
+              "to": "dog.exe"
+            }
+          ],
+          "size": 245703
+        }
+      }
+    },
+    {
+      "name": "trippy",
+      "version": "0.13.0",
+      "description": "Network diagnostics tool with traceroute, DNS, and latency visualization.",
+      "kind": "external",
+      "category": "network",
+      "license": "Apache-2.0",
+      "commands": [
+        "trip"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "74a184434d96eec6c7f8e4b467147c40fa8841fa3722a3ddf51267208fcbbbe6",
+          "urls": [
+            "https://github.com/fujiapple852/trippy/releases/download/0.13.0/trippy-0.13.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "trippy-0.13.0-x86_64-pc-windows-msvc/trip.exe",
+              "to": "trip.exe"
+            }
+          ],
+          "size": 3125756
+        }
+      }
     }
   ]
 }
