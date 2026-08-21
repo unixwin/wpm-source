@@ -7201,6 +7201,87 @@
         }
       },
       "category": "shell"
+    },
+    {
+      "name": "jnv",
+      "version": "0.7.1",
+      "description": "Interactive JSON filter using jq expressions — TUI for exploring JSON.",
+      "kind": "external",
+      "category": "text",
+      "license": "MIT",
+      "commands": [
+        "jnv"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "f76a635add18586c9473329fb37d2dca831b80d8062dccb4683f69a3bb3de5e6",
+          "urls": [
+            "https://github.com/ynqa/jnv/releases/download/v0.7.1/jnv-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "jnv.exe",
+              "to": "jnv.exe"
+            }
+          ],
+          "size": 1652596
+        }
+      }
+    },
+    {
+      "name": "fq",
+      "version": "0.17.0",
+      "description": "jq for binary formats — query and process MP4, PNG, FLAC, pcap, and more.",
+      "kind": "external",
+      "category": "text",
+      "license": "MIT",
+      "commands": [
+        "fq"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "9a84c41a4c088d7df748c8b210afbb3b5307cf69c2605d86aead595c6785fd97",
+          "urls": [
+            "https://github.com/wader/fq/releases/download/v0.17.0/fq_0.17.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "fq.exe",
+              "to": "fq.exe"
+            }
+          ],
+          "size": 4785476
+        }
+      }
+    },
+    {
+      "name": "trdsql",
+      "version": "1.2.3",
+      "description": "Execute SQL queries on CSV, JSON, YAML, and TSV files.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "trdsql"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "03d6aa5a593511e8c0a75eb235a161aa8305f5ab2b1b1ac039ed800cab27d823",
+          "urls": [
+            "https://github.com/noborus/trdsql/releases/download/v1.2.3/trdsql_v1.2.3_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "trdsql_v1.2.3_windows_amd64/trdsql.exe",
+              "to": "trdsql.exe"
+            }
+          ],
+          "size": 8430616
+        }
+      }
     }
   ]
 }
