@@ -6166,6 +6166,60 @@
           "size": 750092
         }
       }
+    },
+    {
+      "name": "prqlc",
+      "version": "0.13.14",
+      "description": "PRQL compiler — pipelined SQL that's simpler and more powerful.",
+      "kind": "external",
+      "category": "data",
+      "license": "Apache-2.0",
+      "commands": [
+        "prqlc"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "fa8cb13b3871842c65de5f4101e7371b03191f0ddcb7a9d0c0e5feceff9b3f3c",
+          "urls": [
+            "https://github.com/PRQL/prql/releases/download/0.13.14/prqlc-0.13.14-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "prqlc.exe",
+              "to": "prqlc.exe"
+            }
+          ],
+          "size": 3998932
+        }
+      }
+    },
+    {
+      "name": "cue",
+      "version": "0.17.0",
+      "description": "Configuration language with validation and unification.",
+      "kind": "external",
+      "category": "data",
+      "license": "Apache-2.0",
+      "commands": [
+        "cue"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "5ee7c2a1ad13b8ed7521b164532e48c8bc1618b500ac3c5808cbbd47d4c9ccb8",
+          "urls": [
+            "https://github.com/cue-lang/cue/releases/download/v0.17.0/cue_v0.17.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "cue.exe",
+              "to": "cue.exe"
+            }
+          ],
+          "size": 9908216
+        }
+      }
     }
   ]
 }
