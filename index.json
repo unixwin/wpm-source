@@ -6876,8 +6876,8 @@
     },
     {
       "name": "buf",
-      "version": "1.54.0",
-      "description": "Protobuf toolchain — lint, breaking change detection, format, and generate.",
+      "version": "1.72.0",
+      "description": "Buf: Protobuf linting, breaking-change detection, and management toolchain.",
       "kind": "external",
       "category": "developer",
       "license": "Apache-2.0",
@@ -6886,18 +6886,18 @@
       ],
       "artifacts": {
         "windows-x64": {
-          "type": "zip",
-          "sha256": "22c0b6d8e57e64c5d52328e04f0a40d892ef5b118b1900e3a1935b7cd58625c7",
+          "type": "exe",
+          "sha256": "6e8f6d043e520bc81cae7b85d4cd6d93e57716a8a9842d5d18200191ee259cb5",
           "urls": [
-            "https://github.com/bufbuild/buf/releases/download/v1.54.0/buf-Windows-x86_64.zip"
+            "https://github.com/bufbuild/buf/releases/download/v1.72.0/buf-Windows-x86_64.exe"
           ],
           "files": [
             {
-              "from": "buf/bin/buf.exe",
+              "from": "buf-Windows-x86_64.exe",
               "to": "buf.exe"
             }
           ],
-          "size": 29335850
+          "size": 55367680
         }
       }
     },
@@ -8014,6 +8014,34 @@
           "size": 21564663
         }
       }
+    },
+    {
+      "name": "python",
+      "version": "3.14.7",
+      "description": "CPython 3.14 interpreter with pip (relocatable python-build-standalone distribution).",
+      "kind": "external",
+      "license": "PSF-2.0",
+      "commands": [
+        "python"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "tar.gz",
+          "sha256": "870e9199dff4aa993c852c0733f7d36c359d127a67947f08f0755765ecf4232c",
+          "urls": [
+            "https://github.com/astral-sh/python-build-standalone/releases/download/20260814/cpython-3.14.7%2B20260814-x86_64-pc-windows-msvc-install_only.tar.gz"
+          ],
+          "files": [
+            {
+              "from": "python/",
+              "to": "./"
+            }
+          ],
+          "layout": "shim",
+          "size": 49587410
+        }
+      },
+      "category": "toolchain"
     }
   ]
 }
