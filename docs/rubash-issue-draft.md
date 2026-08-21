@@ -1,80 +1,59 @@
-# [bug] winuxsh 参数预处理吞掉通配符与特殊字符,破坏传给原生程序/pwsh 的参数
+# [bug] winuxsh 参数预处理问题(0.17.1 复测版)
 
-在 winuxsh(winuxcmd 自带 shell)下通过 `pwsh -Command "..."` 或直接调用原生 exe 时,参数中的通配符和特殊字符会被替换成 `%RUBASH_*%` 占位符或被拦截,导致命令静默失败。以下均为本会话实际踩到的复现案例。
+> 2026-08-21 在更新后的 winuxsh(winuxcmd 0.17.1 自带)下逐条复测。
+> 原始 7 个问题:**4 个已修复、2 个确认为非 bug(撤回)、1 个仍未修复**,另发现 1 个新的转换问题。
 
-## 复现案例
+## 复测结论总览
 
-### 1. `*` 被替换为 `%RUBASH_STAR%`(即使位于引号内)
+| # | 原始问题 | 状态 | 证据 |
+|---|---|---|---|
+| 1 | 引号内 `*` → `%RUBASH_STAR%` | ✅ 已修复 | `echo "*.zip"` → `*.zip`;无匹配的裸 `*.ext` 也原样保留 |
+| 2 | `?` → `%RUBASH_QMARK%` | ✅ 已修复 | `http://x/y?ref=v1` 完好 |
+| 3 | 相邻带引号串被拼接(`"a=b","c=d","e=f"`) | ⚠️ 撤回,非 bug | 与原生 CreateProcess 行为**完全一致**(见下方基线) |
+| 4 | 数组参数多值被重绑到后续命名参数 | ⚠️ 撤回,非 bug | 同上;不再误报 `-Platform` 校验错误 |
+| 5 | 原生 exe 的 `--xxx` 长选项被拦截 | ✅ 已修复 | `wpm source list --json` 经管道正常输出 JSON |
+| 6 | `bash -n script.sh` 报 unknown argument | ❌ **仍未修复** | `winuxsh: unknown argument '-n' (not a script file)` |
+| 7 | `/` 开头参数被路径转换(`/CN=test`) | ✅ 已修复 | `openssl req -subj "/CN=test"` → `subject=CN=test` |
 
-```sh
-pwsh -NoProfile -Command "Copy-Item full\bin\* smoke -Force"
-# 报错: Cannot find path '...\full\bin\%RUBASH_STAR%' because it does not exist.
+### #3/#4 撤回依据(python 直接 CreateProcess 基线)
+
+```
+pwsh -File t.ps1 -Files "a=b","c=d","e=f"
+  → count=1, item: a=b,c=d,e=f        ← winuxsh 与原生结果一致
+pwsh -File t.ps1 -Files "a=b" "c=d" -Sha xxx
+  → count=1, item: a=b, sha=xxx       ← 原生同样丢弃 c=d,-File 模式本就不支持空格续参
 ```
 
-预期:引号内的 `*` 应原样传给 pwsh;即使做 glob 展开,也不应把字面 `%RUBASH_STAR%` 写进目标程序的参数。
+逗号在 Windows 命令行里不是 argv 分隔符,这是原生语义;原草稿预期有误。
 
-### 2. `?` 被替换为 `%RUBASH_QMARK%`(URL 被破坏)
+## 🆕 新发现:未加引号的 `\` 被改写为 `//`
 
-```sh
-gh api repos/nmap/nmap/contents/configure.ac?ref=v7.991
-# 实际请求: .../configure.ac%RUBASH_QMARK%ref=v7.991 → parse error / 404
+自编 argvdump(gcc 原生 exe)直调实测:
+
+```
+$ argvdump.exe C:\Windows\System32 'C:\Windows\System32' "C:\Windows\System32"
+1:[C://Windows//System32]     ← 未加引号:反斜杠全部变成双正斜杠
+2:[C:\Windows\System32]       ← 单引号:完好
+3:[C:\Windows\System32]      ← 双引号:完好
 ```
 
-### 3. 相邻带引号字符串被拼接成一个参数
+实际踩坑案例:
 
 ```sh
-script.ps1 -Files "a=b","c=d","e=f"
-# PowerShell 收到的是单个字符串: a=b,c=d,e=f(数组绑定失效)
+where.exe /R C:\Windows\System32 notepad.exe
+# ERROR: Invalid directory specified   ← 收到的是 C://Windows//System32(where 对目录校验严格)
+icacls <file> /grant "Administrators:(F)"
+# 巧合成功:Win32 API 容忍 C://Users//... 形式,但输出显示路径已被改写
+cmd //c "..."    # 双斜杠形式失效(cmd 收到字面 //c);单斜杠 cmd /c 正常
 ```
 
-bash/POSIX 行为:`"a","b"` 是三个 argv 片段拼接语义有歧义,但至少 `"a" "b"` 必须是两个独立参数。
+**建议**:与旧 #1/#2 同一修法——未加引号的 `\` 不做任何替换;若要做 POSIX 风格转换,只应作用于"看起来像 POSIX 绝对路径且目标程序是 MSYS 类工具"的场景,且失败时保留原样。
 
-### 4. 数组参数后的多个值被错误重绑
+**workaround**:给含 `\` 或以 `/` 开头的参数加引号即可。
 
-```sh
-pwsh -File update-package.ps1 -Files "a=b" "c=d" "e=f" -Sha256 xxx
-# 报错: Cannot validate argument on parameter 'Platform'. The argument "e=f" does not
-# belong to the set "windows-x64,windows-arm64"
-```
+## 仍未修复清单(按优先级)
 
-`-Files` 后的多个值未完整绑定给 `-Files`,部分值被路由给了后面的命名参数。
+1. 未加引号 `\` → `//` 改写(新,影响面最大:所有内嵌 Windows 路径的命令)
+2. `bash -n` 等 bash 自身 flag 不支持(原 #6)
 
-### 5. 原生 exe 的 `--` 长选项被 winuxsh 拦截
-
-```sh
-./ncat.exe --send-only 127.0.0.1 59999
-# winuxsh: unknown argument '--' (not a script file)
-```
-
-winuxsh 把传给子进程的 `--xxx` 当成了自己的参数校验。
-
-### 6. `bash -n` 等自身 flag 不支持
-
-```sh
-bash -n script.sh
-# winuxsh: unknown argument '-n' (not a script file)
-```
-
-无法做 shell 语法检查;同理其他 bash 自身 flag 也应透传。
-
-### 7. 以 `/` 开头的参数被路径转换
-
-```sh
-openssl req -new -subj "/CN=test" ...
-# /CN=test 被当作 POSIX 路径转换成 Windows 路径,导致 subject 解析失败
-```
-
-## 影响
-
-- 一切"shell 里嵌 pwsh 单行脚本"的自动化(如 CI 本地脚本、opencode/agent 工具调用)都会踩中;
-- 通配符替换发生在**引号内**,用户无法用常规 quoting 规避,只能绕开(`Get-ChildItem | Copy-Item`、`-f ref=` 等 workaround);
-- 与 MSYS2/Git Bash 的 MSYS_ARG_CONV_EXCL 问题类似,但 rubash 的替换是**无条件的**(连引号内都替换),更难规避。
-
-## 建议
-
-1. 引号内的 `*` `?` 不做任何替换(优先修复 1、2);
-2. `%RUBASH_*%` 替换只应在**未加引号**且确需 glob 展开时发生,且展开失败时应保留原样而不是注入占位符;
-3. 透传 `--` 开头参数给子进程;支持 bash 自身 flag(-n 等);
-4. 相邻引号串按 POSIX 规则处理("a""b" 拼接、"a" "b" 分立),数组多值参数不被重绑。
-
-环境:Windows Server,x64,winuxcmd 0.16.6 自带 winuxsh。
+环境:Windows Server 2022 x64,winuxcmd 0.17.1 自带 winuxsh;复测方法为 gcc 编译 argvdump.exe 直调 + python subprocess CreateProcess 双基线对照。
