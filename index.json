@@ -6927,6 +6927,114 @@
           "size": 3407360
         }
       }
+    },
+    {
+      "name": "lnav",
+      "version": "0.14.0",
+      "description": "Log file navigator — terminal UI for viewing and analyzing log files.",
+      "kind": "external",
+      "category": "monitoring",
+      "license": "BSD-2-Clause",
+      "commands": [
+        "lnav"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "62e35078b0ba6ff94cb38a3e31df0197b372a96e3e516a0bfc740061729be023",
+          "urls": [
+            "https://github.com/tstack/lnav/releases/download/v0.14.0/lnav-0.14.0-windows-x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "lnav-0.14.0/bin/lnav.exe",
+              "to": "lnav.exe"
+            }
+          ],
+          "size": 19590501
+        }
+      }
+    },
+    {
+      "name": "logdy",
+      "version": "0.17.1",
+      "description": "Real-time log viewer with web UI — tail logs with live filtering.",
+      "kind": "external",
+      "category": "monitoring",
+      "license": "MIT",
+      "commands": [
+        "logdy"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "13edbec7cb479b21bc20e7198de2711166247e1cf508f749f325e6d11ed73a0f",
+          "urls": [
+            "https://github.com/logdyhq/logdy-core/releases/download/v0.17.1/logdy_windows_amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "logdy_windows_amd64.exe",
+              "to": "logdy.exe"
+            }
+          ],
+          "size": 45358592
+        }
+      }
+    },
+    {
+      "name": "kail",
+      "version": "0.17.4",
+      "description": "Kubernetes log tailer — follow logs across pods and namespaces.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "MIT",
+      "commands": [
+        "kail"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "e8efa97a6adcfe0ecc472f910e72c82d408ab019d44bde89434fcb4dd6782d51",
+          "urls": [
+            "https://github.com/boz/kail/releases/download/v0.17.4/kail_v0.17.4_windows_amd64.tar.gz"
+          ],
+          "files": [
+            {
+              "from": "kail.exe",
+              "to": "kail.exe"
+            }
+          ],
+          "size": 11508573
+        }
+      }
+    },
+    {
+      "name": "logcli",
+      "version": "3.7.6",
+      "description": "Loki log query CLI — query Grafana Loki logs from the command line.",
+      "kind": "external",
+      "category": "monitoring",
+      "license": "AGPL-3.0",
+      "commands": [
+        "logcli"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "091fe541bf5922de4ff098bd9a1d06c0d185e9fef4c0c0390e5d5f261f29748d",
+          "urls": [
+            "https://github.com/grafana/loki/releases/download/v3.7.6/logcli-windows-amd64.exe.zip"
+          ],
+          "files": [
+            {
+              "from": "logcli-windows-amd64.exe",
+              "to": "logcli.exe"
+            }
+          ],
+          "size": 38073028
+        }
+      }
     }
   ]
 }
