@@ -8072,6 +8072,240 @@
         }
       },
       "category": "toolchain"
+    },
+    {
+      "name": "sqlite3",
+      "version": "3.53.4",
+      "description": "SQLite command-line tools: sqlite3 shell, sqldiff, sqlite3_analyzer, sqlite3_rsync.",
+      "kind": "external",
+      "license": "Public domain",
+      "commands": [
+        "sqlite3",
+        "sqldiff",
+        "sqlite3_analyzer",
+        "sqlite3_rsync"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "f46ee2475de4cbe287e6e5f7d43c838796b14e7379cd216bdbb28d391429f9fc",
+          "urls": [
+            "https://www.sqlite.org/2026/sqlite-tools-win-x64-3530400.zip"
+          ],
+          "files": [
+            {
+              "from": "sqlite3.exe",
+              "to": "sqlite3.exe"
+            },
+            {
+              "from": "sqldiff.exe",
+              "to": "sqldiff.exe"
+            },
+            {
+              "from": "sqlite3_analyzer.exe",
+              "to": "sqlite3_analyzer.exe"
+            },
+            {
+              "from": "sqlite3_rsync.exe",
+              "to": "sqlite3_rsync.exe"
+            }
+          ],
+          "size": 6557792
+        }
+      },
+      "category": "data"
+    },
+    {
+      "name": "neovim",
+      "version": "0.12.4",
+      "description": "Hyperextensible Vim-fork text editor.",
+      "kind": "external",
+      "license": "Apache-2.0",
+      "commands": [
+        "nvim"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "9fc3572829ffd13debb6e32555da2c8cc02555568260a9fc4cf1f65bbcca319c",
+          "urls": [
+            "https://github.com/neovim/neovim/releases/download/v0.12.4/nvim-win64.zip"
+          ],
+          "files": [
+            {
+              "from": "nvim-win64/",
+              "to": "./"
+            }
+          ],
+          "layout": "shim",
+          "size": 12617304
+        }
+      },
+      "category": "editor"
+    },
+    {
+      "name": "doctl",
+      "version": "1.167.0",
+      "description": "Official DigitalOcean command-line client.",
+      "kind": "external",
+      "license": "Apache-2.0",
+      "commands": [
+        "doctl"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "b82bc318ce518ab973d900942cc5474faac22e3801c583d52a2eb3d39e77abd4",
+          "urls": [
+            "https://github.com/digitalocean/doctl/releases/download/v1.167.0/doctl-1.167.0-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "doctl.exe",
+              "to": "doctl.exe"
+            }
+          ],
+          "size": 18757869
+        }
+      },
+      "category": "cloud"
+    },
+    {
+      "name": "openssh",
+      "version": "9.5.0.0p1",
+      "description": "OpenSSH client tools (ssh, scp, sftp, ssh-keygen) for Windows.",
+      "kind": "external",
+      "license": "BSD-3-Clause",
+      "commands": [
+        "ssh",
+        "scp",
+        "sftp",
+        "ssh-add",
+        "ssh-keygen",
+        "ssh-keyscan"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "bd48fe985d400402c278c485db20e6a82bc4c7f7d8e0ef5a81128f523096530c",
+          "urls": [
+            "https://github.com/PowerShell/Win32-OpenSSH/releases/download/v9.5.0.0p1-Beta/OpenSSH-Win64.zip"
+          ],
+          "files": [
+            {
+              "from": "OpenSSH-Win64/ssh.exe",
+              "to": "ssh.exe"
+            },
+            {
+              "from": "OpenSSH-Win64/scp.exe",
+              "to": "scp.exe"
+            },
+            {
+              "from": "OpenSSH-Win64/sftp.exe",
+              "to": "sftp.exe"
+            },
+            {
+              "from": "OpenSSH-Win64/ssh-add.exe",
+              "to": "ssh-add.exe"
+            },
+            {
+              "from": "OpenSSH-Win64/ssh-keygen.exe",
+              "to": "ssh-keygen.exe"
+            },
+            {
+              "from": "OpenSSH-Win64/ssh-keyscan.exe",
+              "to": "ssh-keyscan.exe"
+            },
+            {
+              "from": "OpenSSH-Win64/libcrypto.dll",
+              "to": "libcrypto.dll"
+            }
+          ],
+          "size": 4856219
+        }
+      },
+      "category": "network"
+    },
+    {
+      "name": "make",
+      "version": "4.4.1",
+      "description": "GNU Make (ezwinports MinGW build).",
+      "kind": "external",
+      "license": "GPL-3.0-or-later",
+      "commands": [
+        "make"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "fb66a02b530f7466f6222ce53c0b602c5288e601547a034e4156a512dd895ee7",
+          "urls": [
+            "https://downloads.sourceforge.net/project/ezwinports/make-4.4.1-without-guile-w32-bin.zip"
+          ],
+          "files": [
+            {
+              "from": "bin/make.exe",
+              "to": "make.exe"
+            }
+          ],
+          "size": 392579
+        }
+      },
+      "category": "developer"
+    },
+    {
+      "name": "bsdtar",
+      "version": "3.7.5",
+      "description": "Modern statically-linked bsdtar (libarchive) tar replacement.",
+      "kind": "external",
+      "license": "BSD-2-Clause",
+      "commands": [
+        "bsdtar"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "2650c428fbe37276d4ffa3386d55b69f06fb4611e25ff05db5f011c389c3e952",
+          "urls": [
+            "https://github.com/hermeticbuild/bsdtar-prebuilt/releases/download/v3.7.5-1/tar_windows_x86_64.exe"
+          ],
+          "files": [
+            {
+              "from": "tar_windows_x86_64.exe",
+              "to": "bsdtar.exe"
+            }
+          ],
+          "size": 669696
+        }
+      },
+      "category": "archive"
+    },
+    {
+      "name": "gzip",
+      "version": "1.3.12",
+      "description": "GNU gzip compression tool (GnuWin32 build).",
+      "kind": "external",
+      "license": "GPL-3.0-or-later",
+      "commands": [
+        "gzip"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "598bfc7de80c616dbbf8e53acbf8358c91c6d3a3e0ddec094c0e05c465d0661b",
+          "urls": [
+            "https://downloads.sourceforge.net/project/gnuwin32/gzip/1.3.12-1/gzip-1.3.12-1-bin.zip"
+          ],
+          "files": [
+            {
+              "from": "bin/gzip.exe",
+              "to": "gzip.exe"
+            }
+          ],
+          "size": 135350
+        }
+      },
+      "category": "archive"
     }
   ]
 }
