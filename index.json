@@ -6598,6 +6598,33 @@
           "size": 4205507
         }
       }
+    },
+    {
+      "name": "gron",
+      "version": "0.7.1",
+      "description": "Make JSON greppable — transform JSON to discrete assignments.",
+      "kind": "external",
+      "category": "text",
+      "license": "MIT",
+      "commands": [
+        "gron"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "5ed427a4a504d8e03a1770b71d4ad16a3764179e085b5ae84e51a57b299f300d",
+          "urls": [
+            "https://github.com/tomnomnom/gron/releases/latest/download/gron-windows-amd64-0.7.1.zip"
+          ],
+          "files": [
+            {
+              "from": "gron.exe",
+              "to": "gron.exe"
+            }
+          ],
+          "size": 3954441
+        }
+      }
     }
   ]
 }
