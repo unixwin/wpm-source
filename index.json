@@ -5760,10 +5760,10 @@
     },
     {
       "name": "hugo",
-      "version": "0.147.0",
-      "description": "Fast and modern static site generator.",
+      "version": "0.165.0",
+      "description": "The fastest framework for building websites, written in Go.",
       "kind": "external",
-      "category": "document",
+      "category": "developer",
       "license": "Apache-2.0",
       "commands": [
         "hugo"
@@ -5771,9 +5771,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "34f9174bc8ce09b9a6277709203c7092bbf335cd155d822788944939e44760e1",
+          "sha256": "bdd9cc7837a42389067b2d0df7858d5878ceddef21307c2dd27fa10885fbbcf9",
           "urls": [
-            "https://github.com/gohugoio/hugo/releases/download/v0.147.0/hugo_extended_0.147.0_windows-amd64.zip"
+            "https://github.com/gohugoio/hugo/releases/download/v0.165.0/hugo_0.165.0_windows-amd64.zip"
           ],
           "files": [
             {
@@ -5781,7 +5781,7 @@
               "to": "hugo.exe"
             }
           ],
-          "size": 19151046
+          "size": 21523673
         }
       }
     },
@@ -6223,8 +6223,8 @@
     },
     {
       "name": "croc",
-      "version": "10.2.2",
-      "description": "Encrypted file transfer between computers.",
+      "version": "11.2.4",
+      "description": "Easily and securely send files and folders between machines end-to-end encrypted.",
       "kind": "external",
       "category": "network",
       "license": "MIT",
@@ -6234,9 +6234,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "97569bdd93adf19ccb5d6c2eb0912daa453f8f78d2f735fcbad34ee735296983",
+          "sha256": "77f9a16d63c18e8c28166696126ef65f4a418d8167e4b5499739a8e2c0535cf8",
           "urls": [
-            "https://github.com/schollz/croc/releases/download/v10.2.2/croc_v10.2.2_Windows-64bit.zip"
+            "https://github.com/schollz/croc/releases/download/v11.2.4/croc_v11.2.4_Windows-64bit.zip"
           ],
           "files": [
             {
@@ -6244,7 +6244,7 @@
               "to": "croc.exe"
             }
           ],
-          "size": 8578308
+          "size": 3825046
         }
       }
     },
@@ -6331,28 +6331,28 @@
     },
     {
       "name": "golangci-lint",
-      "version": "2.13.0",
-      "description": "Fast Go linters runner.",
+      "version": "2.13.1",
+      "description": "Fast Go linter runner that aggregates dozens of Go analyzers.",
       "kind": "external",
       "category": "developer",
-      "license": "MIT",
+      "license": "GPL-3.0",
       "commands": [
         "golangci-lint"
       ],
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "472631b96f042a596d0f11bf0b7e162545b39178f9b13f72ef6d12808f831518",
+          "sha256": "cc119bdd57d2b35ce36fbc174b54949e1a1e45f2cadaf64372cc799cabaf88a9",
           "urls": [
-            "https://github.com/golangci/golangci-lint/releases/download/v2.13.0/golangci-lint-2.13.0-windows-amd64.zip"
+            "https://github.com/golangci/golangci-lint/releases/download/v2.13.1/golangci-lint-2.13.1-windows-amd64.zip"
           ],
           "files": [
             {
-              "from": "golangci-lint-2.13.0-windows-amd64/golangci-lint.exe",
+              "from": "golangci-lint-2.13.1-windows-amd64/golangci-lint.exe",
               "to": "golangci-lint.exe"
             }
           ],
-          "size": 15815356
+          "size": 15820411
         }
       }
     },
@@ -6413,7 +6413,7 @@
     {
       "name": "typst",
       "version": "0.15.1",
-      "description": "Modern typesetting compiler — scripts to PDF/PNG/SVG.",
+      "description": "Markup-based typesetting system powerful enough for academic papers and books.",
       "kind": "external",
       "category": "document",
       "license": "Apache-2.0",
@@ -6425,7 +6425,7 @@
           "type": "zip",
           "sha256": "19ce3551153c2fe7ee9fa2f95208310c8f4d3209fedb699e0333faf8913f6736",
           "urls": [
-            "https://github.com/typst/typst/releases/latest/download/typst-x86_64-pc-windows-msvc.zip"
+            "https://github.com/typst/typst/releases/download/v0.15.1/typst-x86_64-pc-windows-msvc.zip"
           ],
           "files": [
             {
@@ -7313,10 +7313,10 @@
     {
       "name": "tflint",
       "version": "0.64.0",
-      "description": "Terraform linter for catching errors and enforcing best practices.",
+      "description": "Terraform linter with plugin support for provider-specific rules.",
       "kind": "external",
-      "category": "cloud",
-      "license": "MIT",
+      "category": "developer",
+      "license": "MPL-2.0",
       "commands": [
         "tflint"
       ],
@@ -7498,6 +7498,216 @@
           "size": 1557117
         }
       }
+    },
+    {
+      "name": "terragrunt",
+      "version": "1.1.3",
+      "description": "Thin wrapper for Terraform/OpenTofu providing extra tools and DRY configurations.",
+      "kind": "external",
+      "license": "MIT",
+      "commands": [
+        "terragrunt"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "754687ad0874e4299e667c10af793208cf0347d64f376d4c21c9b1824cb8b022",
+          "urls": [
+            "https://github.com/gruntwork-io/terragrunt/releases/download/v1.1.3/terragrunt_windows_amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "terragrunt_windows_amd64.exe",
+              "to": "terragrunt.exe"
+            }
+          ],
+          "size": 91921000
+        }
+      },
+      "category": "developer"
+    },
+    {
+      "name": "caddy",
+      "version": "2.11.4",
+      "description": "Powerful, extensible web server with automatic HTTPS.",
+      "kind": "external",
+      "license": "Apache-2.0",
+      "commands": [
+        "caddy"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "1708333f79e274c7697285afe6d592ab39314e0b131e9ec6bea08ad27df62ebf",
+          "urls": [
+            "https://github.com/caddyserver/caddy/releases/download/v2.11.4/caddy_2.11.4_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "caddy.exe",
+              "to": "caddy.exe"
+            }
+          ],
+          "size": 17559418
+        }
+      },
+      "category": "network"
+    },
+    {
+      "name": "nushell",
+      "version": "0.115.0",
+      "description": "Nushell: a new type of shell operating on structured data (tables and records).",
+      "kind": "external",
+      "license": "MIT",
+      "commands": [
+        "nu"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "4f6a0bcbbc2975cf46f3ff93aecc7093c91fa59aca28020e4294906db13ace23",
+          "urls": [
+            "https://github.com/nushell/nushell/releases/download/0.115.0/nu-0.115.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "nu-0.115.0-x86_64-pc-windows-msvc/",
+              "to": "./"
+            }
+          ],
+          "layout": "shim",
+          "size": 59765605
+        }
+      },
+      "category": "shell"
+    },
+    {
+      "name": "zola",
+      "version": "0.23.4",
+      "description": "A fast static site generator in a single binary with built-in Sass and syntax highlighting.",
+      "kind": "external",
+      "license": "MIT",
+      "commands": [
+        "zola"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "dc839498e27b631f60fd5e1527935198b7f002eb09b8446a1e2913a8fa386925",
+          "urls": [
+            "https://github.com/getzola/zola/releases/download/v0.23.4/zola-v0.23.4-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "zola.exe",
+              "to": "zola.exe"
+            }
+          ],
+          "size": 15314311
+        }
+      },
+      "category": "developer"
+    },
+    {
+      "name": "etcd",
+      "version": "3.7.1",
+      "description": "Distributed reliable key-value store for the most critical data of a distributed system.",
+      "kind": "external",
+      "license": "Apache-2.0",
+      "commands": [
+        "etcd",
+        "etcdctl",
+        "etcdutl"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "228d600d103e0f48715687c768de8dcaeacb19eef2006261160a9a677e36cc59",
+          "urls": [
+            "https://github.com/etcd-io/etcd/releases/download/v3.7.1/etcd-v3.7.1-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "etcd-v3.7.1-windows-amd64/",
+              "to": "./"
+            }
+          ],
+          "layout": "shim",
+          "size": 24404364
+        }
+      },
+      "category": "data"
+    },
+    {
+      "name": "redis",
+      "version": "5.0.14.1",
+      "description": "In-memory data structure store with server, CLI and benchmark tools (Windows port of Redis 5). ",
+      "kind": "external",
+      "license": "BSD-3-Clause",
+      "commands": [
+        "redis-server",
+        "redis-cli"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "018ea18a35876383cbb5f4cd0258adfc87747cf9d619bce1cf73a2e36f720ccf",
+          "urls": [
+            "https://github.com/tporadowski/redis/releases/download/v5.0.14.1/Redis-x64-5.0.14.1.zip"
+          ],
+          "files": [
+            {
+              "from": "redis-server.exe",
+              "to": "redis-server.exe"
+            },
+            {
+              "from": "redis-cli.exe",
+              "to": "redis-cli.exe"
+            },
+            {
+              "from": "redis-benchmark.exe",
+              "to": "redis-benchmark.exe"
+            },
+            {
+              "from": "redis-check-aof.exe",
+              "to": "redis-check-aof.exe"
+            },
+            {
+              "from": "redis-check-rdb.exe",
+              "to": "redis-check-rdb.exe"
+            }
+          ],
+          "size": 12617669
+        }
+      },
+      "category": "data"
+    },
+    {
+      "name": "lf",
+      "version": "r42",
+      "description": "Terminal file manager inspired by ranger, written in Go.",
+      "kind": "external",
+      "license": "MIT",
+      "commands": [
+        "lf"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "13bb576b02373610dbcfb97e483272198a1b94cada66298a302954d87613465c",
+          "urls": [
+            "https://github.com/gokcehan/lf/releases/download/r42/lf-windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "lf.exe",
+              "to": "lf.exe"
+            }
+          ],
+          "size": 2408423
+        }
+      },
+      "category": "navigation"
     }
   ]
 }
