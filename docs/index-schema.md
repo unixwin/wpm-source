@@ -74,10 +74,13 @@
 
 `--json` 输出为纯 JSON(机器可读),不混入人类可读文本。
 
+**版本化**:每个 `--json` 载荷顶层带 `"schema": 1`(整数)。字段只增不改;语义不兼容时递增,前端应校验该字段。
+
 ### wpm list --json / wpm search <q> --json
 
 ```jsonc
 {
+  "schema": 1,           // 契约版本
   "all": false,          // 是否列出全部(含 index-only)
   "category": "",        // 按 category 过滤时的值
   "hidden": 2,           // 被隐藏(如 index-only)的包数量
@@ -103,11 +106,47 @@
   "artifact": {                // 摘要构件信息(非完整 Artifact)
     "arch": "windows-x64",
     "type": "zip",
+    "layout": "flat",          // flat(默认)| shim(shim 包载荷在 opt\<pkg>\)
     "file_count": 1,
     "url_count": 1,
     "sha256_present": true,
     "size": 69357              // 仅当索引提供了 size 时存在
   }
+}
+```
+
+### wpm installed --json
+
+```jsonc
+{
+  "schema": 1,
+  "matched": 12,         // 本 root 已安装的包数量
+  "packages": [ ... ]    // 摘要包列表,结构同上(installed 恒为 true)
+}
+```
+
+### wpm index status --json
+
+```jsonc
+{
+  "schema": 1,
+  "root": "C:\\winuxcmd",                     // WinuxCmd 根目录
+  "local_index": "C:\\winuxcmd\\.wpm\\...",   // 本地索引文件路径
+  "fallback": "builtin",                      // 索引缺失时的回退来源
+  "version": "official-2026.08.20",           // 当前索引版本
+  "updated": "2026-08-20",                    // 索引更新日期
+  "packages": 123                             // 索引内包数量
+}
+```
+
+### wpm links list --json
+
+```jsonc
+{
+  "schema": 1,
+  "bin": "C:\\winuxcmd\\usr\\bin",  // 命令入口目录(PATH 暴露点)
+  "count": 2,
+  "commands": [ "wpm", "winuxcmd" ] // 入口命令名(含 shim 转发器)
 }
 ```
 
@@ -117,6 +156,7 @@
 
 ```jsonc
 {
+  "schema": 1,
   // ...完整 Package 字段(name/version/description/kind/category/license/commands/artifacts)
   "wpm": {
     "name": "ripgrep",
@@ -140,11 +180,11 @@
 }
 ```
 
-## 3. 已知限制(供 TUI 前端参考)
+## 3. 已知限制(供 TUI / GUI 前端参考)
 
-- `wpm list --json` 与 `wpm search --json` 顶层返回 `matched`/`hidden` 计数 + `packages` 摘要列表;`wpm info --json` 返回完整包 + `wpm` 运行期状态。
-- `wpm installed`、`wpm index status`、`wpm links list` 目前**不支持** `--json`(需在 winuxcmd 仓库侧补输出支持)。
+- `wpm list --json`、`wpm search --json`、`wpm installed --json` 顶层返回 `schema`/`matched` 计数 + `packages` 摘要列表;`wpm info --json` 返回完整包 + `wpm` 运行期状态;`wpm index status --json` 与 `wpm links list --json` 覆盖索引与入口状态。
 - 摘要包里的 `artifact` 不含 `files`/`urls` 完整内容;需要下载细节时请用 `wpm info`。
+- 变更类子命令(`install`/`uninstall`/`update`)暂无 `--json`;前端应以退出码为准,进度文本仅作展示。
 
 ## 4. 校验与生成脚本
 
