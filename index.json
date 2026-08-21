@@ -4410,6 +4410,87 @@
           "size": 2300957
         }
       }
+    },
+    {
+      "name": "navi",
+      "version": "2.24.0",
+      "description": "Interactive cheatsheet tool for the command line.",
+      "kind": "external",
+      "category": "interactive",
+      "license": "Apache-2.0",
+      "commands": [
+        "navi"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "db5b4babe00b93de5636c07df3d8c149972373a69f131e686b0c565051651bb9",
+          "urls": [
+            "https://github.com/denisidoro/navi/releases/download/v2.24.0/navi-v2.24.0-x86_64-pc-windows-gnu.zip"
+          ],
+          "files": [
+            {
+              "from": "navi.exe",
+              "to": "navi.exe"
+            }
+          ],
+          "size": 2029860
+        }
+      }
+    },
+    {
+      "name": "mcfly",
+      "version": "0.9.4",
+      "description": "Shell history search with context awareness and fuzzy finding.",
+      "kind": "external",
+      "category": "shell",
+      "license": "MIT",
+      "commands": [
+        "mcfly"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "a390a094a8dfc324f4e474f8d8eb4eed956386170242adba3eadbe3a298f8193",
+          "urls": [
+            "https://github.com/cantino/mcfly/releases/download/v0.9.4/mcfly-v0.9.4-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "mcfly.exe",
+              "to": "mcfly.exe"
+            }
+          ],
+          "size": 2039332
+        }
+      }
+    },
+    {
+      "name": "fx",
+      "version": "39.2.0",
+      "description": "Terminal JSON viewer with interactive navigation and filtering.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "fx"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "00fbddd7bd67f747a51aecc0a5bafcc695a21dfae7b912684510722c8e2d6d22",
+          "urls": [
+            "https://github.com/antonmedv/fx/releases/download/39.2.0/fx_windows_amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "fx_windows_amd64.exe",
+              "to": "fx.exe"
+            }
+          ],
+          "size": 18734592
+        }
+      }
     }
   ]
 }
