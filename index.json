@@ -5434,33 +5434,6 @@
       }
     },
     {
-      "name": "uv",
-      "version": "0.12.5",
-      "description": "Extremely fast Python package installer and project manager, replacement for pip/venv/pipenv.",
-      "kind": "external",
-      "category": "developer",
-      "license": "MIT",
-      "commands": [
-        "uv"
-      ],
-      "artifacts": {
-        "windows-x64": {
-          "type": "zip",
-          "sha256": "4c4d49d8738847d9b71ba319e49a5688c93eac0fe6204b1df24e98528dddf39a",
-          "urls": [
-            "https://releases.astral.sh/github/uv/releases/download/0.12.5/uv-x86_64-pc-windows-msvc.zip"
-          ],
-          "files": [
-            {
-              "from": "uv.exe",
-              "to": "uv.exe"
-            }
-          ],
-          "size": 20329591
-        }
-      }
-    },
-    {
       "name": "direnv",
       "version": "2.37.1",
       "description": "Environment variable switcher that loads/unloads env vars based on the current directory.",
@@ -5484,33 +5457,6 @@
             }
           ],
           "size": 8418816
-        }
-      }
-    },
-    {
-      "name": "bun",
-      "version": "1.4.0",
-      "description": "Fast JavaScript runtime, bundler, transpiler and package manager all-in-one.",
-      "kind": "external",
-      "category": "developer",
-      "license": "MIT",
-      "commands": [
-        "bun"
-      ],
-      "artifacts": {
-        "windows-x64": {
-          "type": "zip",
-          "sha256": "e6f093d39da486b20262ca8cdd5ed6a9e8bc9c2f275b78e6d3a0c5b28cc95901",
-          "urls": [
-            "https://github.com/oven-sh/bun/releases/latest/download/bun-windows-x64.zip"
-          ],
-          "files": [
-            {
-              "from": "bun-windows-x64/bun.exe",
-              "to": "bun.exe"
-            }
-          ],
-          "size": 40060247
         }
       }
     },
@@ -5650,33 +5596,6 @@
       }
     },
     {
-      "name": "gping",
-      "version": "1.20.4",
-      "description": "Ping with a graph — visualize latency to multiple hosts in real-time.",
-      "kind": "external",
-      "category": "network",
-      "license": "MIT",
-      "commands": [
-        "gping"
-      ],
-      "artifacts": {
-        "windows-x64": {
-          "type": "zip",
-          "sha256": "e2211da5056092c13a5690a23c0e03feac7b4caf147e2400ebcad80ca82cabe3",
-          "urls": [
-            "https://github.com/orf/gping/releases/download/gping-v1.20.4/gping-Windows-msvc-x86_64.zip"
-          ],
-          "files": [
-            {
-              "from": "gping.exe",
-              "to": "gping.exe"
-            }
-          ],
-          "size": 636628
-        }
-      }
-    },
-    {
       "name": "sqlc",
       "version": "1.31.1",
       "description": "Generate type-safe Go code from SQL queries.",
@@ -5732,4 +5651,3 @@
     }
   ]
 }
-
