@@ -7798,6 +7798,33 @@
           "size": 7029837
         }
       }
+    },
+    {
+      "name": "skim",
+      "version": "5.6.5",
+      "description": "Fuzzy finder — fzf alternative written in Rust with fast performance.",
+      "kind": "external",
+      "category": "text",
+      "license": "MIT",
+      "commands": [
+        "sk"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "21388461dd73205bfc8cf55482d9c0ea99dcac0dde80e8933510996a935c0f50",
+          "urls": [
+            "https://github.com/skim-rs/skim/releases/download/v5.6.5/skim-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "sk.exe",
+              "to": "sk.exe"
+            }
+          ],
+          "size": 3805097
+        }
+      }
     }
   ]
 }
