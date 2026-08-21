@@ -5425,6 +5425,87 @@
           "size": 3481600
         }
       }
+    },
+    {
+      "name": "uv",
+      "version": "0.12.5",
+      "description": "Extremely fast Python package installer and project manager, replacement for pip/venv/pipenv.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "uv"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "4c4d49d8738847d9b71ba319e49a5688c93eac0fe6204b1df24e98528dddf39a",
+          "urls": [
+            "https://releases.astral.sh/github/uv/releases/download/0.12.5/uv-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "uv.exe",
+              "to": "uv.exe"
+            }
+          ],
+          "size": 20329591
+        }
+      }
+    },
+    {
+      "name": "direnv",
+      "version": "2.37.1",
+      "description": "Environment variable switcher that loads/unloads env vars based on the current directory.",
+      "kind": "external",
+      "category": "shell",
+      "license": "MIT",
+      "commands": [
+        "direnv"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "d96fc8b7cf020c2d4c1dbbc2ccec5fd1cab05b51c491f02c8527a7fa6c50a1cd",
+          "urls": [
+            "https://github.com/direnv/direnv/releases/download/v2.37.1/direnv.windows-amd64"
+          ],
+          "files": [
+            {
+              "from": "direnv.windows-amd64",
+              "to": "direnv.exe"
+            }
+          ],
+          "size": 8418816
+        }
+      }
+    },
+    {
+      "name": "bun",
+      "version": "1.4.0",
+      "description": "Fast JavaScript runtime, bundler, transpiler and package manager all-in-one.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "bun"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "e6f093d39da486b20262ca8cdd5ed6a9e8bc9c2f275b78e6d3a0c5b28cc95901",
+          "urls": [
+            "https://github.com/oven-sh/bun/releases/latest/download/bun-windows-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "bun-windows-x64/bun.exe",
+              "to": "bun.exe"
+            }
+          ],
+          "size": 40060247
+        }
+      }
     }
   ]
 }
