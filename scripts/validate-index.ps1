@@ -49,15 +49,10 @@ function Test-ArtifactReady {
   return $true
 }
 
+# Only ecosystem package managers that install other software stay banned.
+# Relocatable, sha256-pinned toolchains are admitted under the `toolchain`
+# category (see README "Toolchain tier").
 $outOfScopeCommands = @(
-  "python", "python3", "pip", "pip3", "uv",
-  "node", "nodejs", "npm", "npx", "pnpm", "yarn",
-  "bun", "deno",
-  "go", "gofmt", "golang",
-  "rust", "rustup", "cargo", "rustc",
-  "java", "javac", "jdk", "openjdk",
-  "dotnet",
-  "llvm", "clang", "clang++", "cl",
   "winget", "scoop", "choco", "chocolatey"
 )
 
@@ -76,7 +71,7 @@ function Test-OutOfScopePackage {
   }
 
   $category = (Get-OptionalStringProperty -Object $Package -Name "category").ToLowerInvariant()
-  return @("runtime", "sdk", "toolchain", "package-manager") -contains $category
+  return @("package-manager") -contains $category
 }
 
 $resolvedIndexPath = (Resolve-Path -LiteralPath $IndexPath).Path
@@ -107,7 +102,7 @@ foreach ($pkg in $packages) {
   $names[$name] = $true
 
   if (Test-OutOfScopePackage -Package $pkg) {
-    $errors.Add("$name is out of scope for WPM; use winget, Visual Studio, or the vendor installer for runtimes, SDKs, toolchains, and ecosystem package managers.")
+    $errors.Add("$name is out of scope for WPM; ecosystem package managers that install other software are not admitted.")
   }
 
   foreach ($field in @("description", "kind", "license")) {

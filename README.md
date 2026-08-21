@@ -11,8 +11,8 @@ Repository metadata:
 
 ## Scope
 
-WPM sources should stay focused on portable command-line tools that fit beside
-`winuxcmd.exe`.
+WPM sources focus on portable command-line tools that fit beside
+`winuxcmd.exe`, plus a curated tier of relocatable development toolchains.
 
 Good WPM packages:
 
@@ -21,19 +21,32 @@ Good WPM packages:
 - CLI tools that are useful in Unix-like shell workflows on Windows.
 - Packages with known license metadata and SHA-256 checksums.
 
+### Toolchain tier (`category: "toolchain"`)
+
+Language runtimes and SDKs are admitted when they satisfy ALL of:
+
+- Self-contained portable archive — no post-install downloader
+  (`rustup-init`-style bootstrappers are excluded).
+- Relocatable: runs from `opt\<pkg>\` via the shim layout without
+  machine-global setup.
+- Official release or CI-built mirror on `unixwin/wpm-artifacts`, pinned by
+  SHA-256.
+- License allows redistribution.
+
 Out of scope:
 
 - GUI applications.
-- MSI/MSIX/AppX installers.
-- Services, drivers, background agents, or tools that require global setup.
-- Language runtimes and SDKs that are better installed by winget, Visual Studio,
-  or the vendor installer.
-- Ecosystem package managers or runtime launchers such as Python, Node.js,
-  npm/pnpm/yarn, Bun, Deno, Go, Rust/rustup/cargo, Java/JDK, .NET SDK, LLVM, or
-  Visual Studio toolchains.
+- MSI/MSIX/AppX installers; services, drivers, background agents, or tools
+  that require global setup.
+- Non-relocatable environments (conda, vcpkg) and bootstrap downloaders
+  (rustup-init, nvm, sdkman).
+- MSVC / Windows SDK (not redistributable by us).
+- Ecosystem package managers that install other software (winget, scoop,
+  chocolatey).
 
-This scope is intentional: WPM is for portable shell-side command tools, not for
-owning a full developer runtime stack.
+The two-tier scope keeps WPM a reproducible, isolated, shell-side environment:
+single-exe tools install flat; toolchains live self-contained under `opt\`,
+enabling side-by-side versions without PATH conflicts.
 
 ## Source Layout
 

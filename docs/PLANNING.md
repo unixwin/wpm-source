@@ -77,11 +77,38 @@ winuxcmd\
 - **TUI:新仓库 `unixwin/wpm-tui`**(Rust + ratatui 或 Go + bubbletea):浏览/搜索/安装/卸载/更新,分类筛选、详情面板、links 管理。数据经 `wpm --json` 读取,变更经调用 `wpm` 执行。
 - **GUI:新仓库 `unixwin/wpm-gui`**(Rust + egui / Tauri,或本地 Web 面板):置于 TUI 之后,依赖 schema 与 TUI 成熟度。
 
+## 四、Toolchain 层与生态化评估(已决策,2026-08-21)
+
+将范围从"纯 shell 工具"扩展为两层:**shell 工具(flat)+ 可重定位工具链(shim)**。
+
+### 准入标准(toolchain 层,全部满足才收)
+1. 自包含可移植压缩包(**排除** rustup-init 式运行时下载器)
+2. 可重定位:在 `opt\<pkg>\` 内即可运行,无需机器级全局设置
+3. 官方 release 或 wpm-artifacts CI 构建,SHA-256 固定
+4. 许可证允许再分发
+
+**仍排除**:GUI、MSI/MSIX、服务/驱动、conda/vcpkg 等不可重定位环境、MSVC/Windows SDK(不可再分发)、winget/scoop/choco 类"装软件的软件"。
+
+### 为什么 shim 架构是关键
+工具链的历史痛点(DLL 地狱、PATH 污染、多版本冲突)恰好被 `opt\<pkg>\` 私享目录 + 自硬链接转发解决;sha256 钉死则给出 scoop/winget 都没有的**可复现安装**。
+
+### 首批试点(已入库)
+| 包 | 形态 | 说明 |
+|---|---|---|
+| uv 0.12.5 | 单静态 exe | Python 项目管理,替代 pip/venv 全家桶 |
+| deno 2.9.5 | 单静态 exe | TS/JS 运行时一体化 |
+| bun 1.4.0 | 单静态 exe | JS 运行时+打包+测试+包管理 |
+
+后续候选(按迁移成本):go(官方 zip 直接可用)、python(python-build-standalone)、node(官方 zip)、temurin-jdk(zip)、llvm+mingw-w64(NSIS 解包或 CI 构建,~1GB)。
+
+### 生态定位
+与 winget(包装安装器、无钉版)/scoop(弱校验、全局 shim)的差异点:**可复现 + 私享隔离 + unix 工具集一体 + 国内镜像友好**。多版本共存(`pkg@version`)作为二期。
+
 ## 里程碑
 
-- M1(本 issue 可执行部分):wpm-artifacts 落地(gawk 镜像 + ncat 编译)→ 填回两个 index-only 槽位;winuxcmd 落地 shim 布局;索引加 `layout` 字段;`make` 随 shim 一起入库。
-- M2:winuxcmd 补齐 `--json` 契约 → wpm-tui 首版。
-- M3:wpm-gui。
+- M1(已完成):wpm-artifacts 落地(gawk/ncat);shim 布局进 WinuxCmd 0.17.0;`layout` 字段与迁移逻辑;toolchain 层开闸(uv/deno/bun 试点)。
+- M2(进行中):winuxcmd `--json` 契约已齐;env-sync 插件已合并;下一步 wpm-tui 首版。
+- M3:wpm-gui;工具链多版本共存(`pkg@version`)。
 
 ## 涉及仓库一览
 

@@ -6600,33 +6600,6 @@
       }
     },
     {
-      "name": "gron",
-      "version": "0.7.1",
-      "description": "Make JSON greppable — transform JSON to discrete assignments.",
-      "kind": "external",
-      "category": "text",
-      "license": "MIT",
-      "commands": [
-        "gron"
-      ],
-      "artifacts": {
-        "windows-x64": {
-          "type": "zip",
-          "sha256": "5ed427a4a504d8e03a1770b71d4ad16a3764179e085b5ae84e51a57b299f300d",
-          "urls": [
-            "https://github.com/tomnomnom/gron/releases/latest/download/gron-windows-amd64-0.7.1.zip"
-          ],
-          "files": [
-            {
-              "from": "gron.exe",
-              "to": "gron.exe"
-            }
-          ],
-          "size": 3954441
-        }
-      }
-    },
-    {
       "name": "dog",
       "version": "0.1.0",
       "description": "Modern DNS client with DoH/DoT support and JSON output.",
@@ -6679,6 +6652,93 @@
           "size": 3125756
         }
       }
+    },
+    {
+      "name": "uv",
+      "version": "0.12.5",
+      "description": "Fast Python package and project manager (single static exe; replaces pip/pip-tools/virtualenv workflows).",
+      "kind": "external",
+      "license": "MIT OR Apache-2.0",
+      "commands": [
+        "uv",
+        "uvx"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "4c4d49d8738847d9b71ba319e49a5688c93eac0fe6204b1df24e98528dddf39a",
+          "urls": [
+            "https://github.com/astral-sh/uv/releases/download/0.12.5/uv-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "uv.exe",
+              "to": "uv.exe"
+            },
+            {
+              "from": "uvx.exe",
+              "to": "uvx.exe"
+            }
+          ],
+          "size": 20329591
+        }
+      },
+      "category": "toolchain"
+    },
+    {
+      "name": "deno",
+      "version": "2.9.5",
+      "description": "Deno JavaScript/TypeScript runtime with built-in toolchain (single static exe).",
+      "kind": "external",
+      "license": "MIT",
+      "commands": [
+        "deno"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "171efab55ac6b9881fd53ee4c20f8bf3bb1340ffc618483746909014db12216a",
+          "urls": [
+            "https://github.com/denoland/deno/releases/download/v2.9.5/deno-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "deno.exe",
+              "to": "deno.exe"
+            }
+          ],
+          "size": 42691248
+        }
+      },
+      "category": "toolchain"
+    },
+    {
+      "name": "bun",
+      "version": "1.4.0",
+      "description": "Bun JavaScript/TypeScript runtime, bundler, test runner and package manager (single static exe).",
+      "kind": "external",
+      "license": "MIT",
+      "commands": [
+        "bun"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "e6f093d39da486b20262ca8cdd5ed6a9e8bc9c2f275b78e6d3a0c5b28cc95901",
+          "urls": [
+            "https://github.com/oven-sh/bun/releases/download/bun-v1.4.0/bun-windows-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "bun-windows-x64/bun.exe",
+              "to": "bun.exe"
+            }
+          ],
+          "size": 40060247
+        }
+      },
+      "category": "toolchain"
     }
   ]
 }
+
