@@ -67,7 +67,7 @@
               "to": "winuxcmd.exe"
             }
           ],
-          "size": 2812564
+          "size": 2842372
         },
         "windows-arm64": {
           "type": "zip",
@@ -80,7 +80,8 @@
               "from": "winuxcmd.exe",
               "to": "winuxcmd.exe"
             }
-          ]
+          ],
+          "size": 2670472
         }
       }
     },
@@ -328,7 +329,7 @@
     },
     {
       "name": "yq",
-      "version": "4.53.3",
+      "version": "4.53.6",
       "description": "Command-line YAML, JSON, XML, CSV, TOML and properties processor.",
       "kind": "external",
       "category": "data",
@@ -339,17 +340,17 @@
       "artifacts": {
         "windows-x64": {
           "type": "exe",
-          "sha256": "e279bc506a452eeafcdf364f91a025455e402a8001169083caf01f4b64a544e2",
+          "sha256": "44806582e2f8c1c586d092fcdb9e78ed48c05e28edaee7371bd3140bafff5989",
           "urls": [
-            "https://github.com/mikefarah/yq/releases/download/v4.53.3/yq_windows_amd64.exe"
+            "https://github.com/mikefarah/yq/releases/download/v4.53.6/yq_windows_amd64.zip"
           ],
           "files": [
             {
-              "from": "yq.exe",
+              "from": "yq_windows_amd64.exe",
               "to": "yq.exe"
             }
           ],
-          "size": 14235136
+          "size": 5829127
         }
       }
     },
@@ -5785,33 +5786,6 @@
       }
     },
     {
-      "name": "deno",
-      "version": "2.9.5",
-      "description": "Modern JavaScript/TypeScript runtime with secure defaults.",
-      "kind": "external",
-      "category": "developer",
-      "license": "MIT",
-      "commands": [
-        "deno"
-      ],
-      "artifacts": {
-        "windows-x64": {
-          "type": "zip",
-          "sha256": "171efab55ac6b9881fd53ee4c20f8bf3bb1340ffc618483746909014db12216a",
-          "urls": [
-            "https://github.com/denoland/deno/releases/download/v2.9.5/deno-x86_64-pc-windows-msvc.zip"
-          ],
-          "files": [
-            {
-              "from": "deno.exe",
-              "to": "deno.exe"
-            }
-          ],
-          "size": 42691248
-        }
-      }
-    },
-    {
       "name": "easytier",
       "version": "2.6.4",
       "description": "Decentralized mesh VPN powered by WireGuard.",
@@ -6084,6 +6058,115 @@
           "size": 1512946
         }
       }
+    },
+    {
+      "name": "vegeta",
+      "version": "12.13.0",
+      "description": "HTTP load testing tool and library.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "vegeta"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "421362edb7c8e1b97db9faf43806d2a8850067afc97c2f1bf9bc5cdcdfc9c0b6",
+          "urls": [
+            "https://github.com/tsenart/vegeta/releases/download/v12.13.0/vegeta_12.13.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "vegeta.exe",
+              "to": "vegeta.exe"
+            }
+          ],
+          "size": 4463961
+        }
+      }
+    },
+    {
+      "name": "bombardier",
+      "version": "2.0.2",
+      "description": "Fast cross-platform HTTP benchmarking tool.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "bombardier"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "8a4559d5981b025523bb5144c4a8ae470b57049f7f27242227dfee71d2a17853",
+          "urls": [
+            "https://github.com/codesenberg/bombardier/releases/download/v2.0.2/bombardier-windows-amd64.exe"
+          ],
+          "files": [
+            {
+              "from": "bombardier-windows-amd64.exe",
+              "to": "bombardier.exe"
+            }
+          ],
+          "size": 10517504
+        }
+      }
+    },
+    {
+      "name": "goreleaser",
+      "version": "2.17.1",
+      "description": "Deliver Go binaries as fast and easily as possible.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "goreleaser"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "53314ce7cc16c3229f2d3b98a932c1618c427964eb2170a1efafbdfa862a556f",
+          "urls": [
+            "https://github.com/goreleaser/goreleaser/releases/download/v2.17.1/goreleaser_Windows_x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "goreleaser.exe",
+              "to": "goreleaser.exe"
+            }
+          ],
+          "size": 27389643
+        }
+      }
+    },
+    {
+      "name": "htmlq",
+      "version": "0.4.0",
+      "description": "Like jq but for HTML — query HTML with CSS selectors.",
+      "kind": "external",
+      "category": "text",
+      "license": "MIT",
+      "commands": [
+        "htmlq"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "58b9bb55279da2a58acd1465e0448cc9556e280f8208f60a5f669b2bd4617005",
+          "urls": [
+            "https://github.com/mgdm/htmlq/releases/download/v0.4.0/htmlq-x86_64-windows.zip"
+          ],
+          "files": [
+            {
+              "from": "htmlq.exe",
+              "to": "htmlq.exe"
+            }
+          ],
+          "size": 750092
+        }
+      }
     }
   ]
 }
+
