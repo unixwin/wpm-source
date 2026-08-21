@@ -5756,6 +5756,145 @@
           "size": 3482112
         }
       }
+    },
+    {
+      "name": "hugo",
+      "version": "0.147.0",
+      "description": "Fast and modern static site generator.",
+      "kind": "external",
+      "category": "document",
+      "license": "Apache-2.0",
+      "commands": [
+        "hugo"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "34f9174bc8ce09b9a6277709203c7092bbf335cd155d822788944939e44760e1",
+          "urls": [
+            "https://github.com/gohugoio/hugo/releases/download/v0.147.0/hugo_extended_0.147.0_windows-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "hugo.exe",
+              "to": "hugo.exe"
+            }
+          ],
+          "size": 19151046
+        }
+      }
+    },
+    {
+      "name": "deno",
+      "version": "2.9.5",
+      "description": "Modern JavaScript/TypeScript runtime with secure defaults.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "deno"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "171efab55ac6b9881fd53ee4c20f8bf3bb1340ffc618483746909014db12216a",
+          "urls": [
+            "https://github.com/denoland/deno/releases/download/v2.9.5/deno-x86_64-pc-windows-msvc.zip"
+          ],
+          "files": [
+            {
+              "from": "deno.exe",
+              "to": "deno.exe"
+            }
+          ],
+          "size": 42691248
+        }
+      }
+    },
+    {
+      "name": "easytier",
+      "version": "2.6.4",
+      "description": "Decentralized mesh VPN powered by WireGuard.",
+      "kind": "external",
+      "category": "network",
+      "license": "MIT",
+      "commands": [
+        "easytier-cli"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "27af91e270e554709b048bd32327fefd2dfce5062ae1e8701af7550c6f525f84",
+          "urls": [
+            "https://github.com/EasyTier/EasyTier/releases/download/v2.6.4/easytier-windows-x86_64-v2.6.4.zip"
+          ],
+          "files": [
+            {
+              "from": "easytier-windows-x86_64/easytier-cli.exe",
+              "to": "easytier-cli.exe"
+            },
+            {
+              "from": "easytier-windows-x86_64/easytier-core.exe",
+              "to": "easytier-core.exe"
+            }
+          ],
+          "size": 32657720
+        }
+      }
+    },
+    {
+      "name": "docker-compose",
+      "version": "5.5.0",
+      "description": "Define and run multi-container Docker applications.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "docker-compose"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "exe",
+          "sha256": "51e1e61195f3616896265487ed64551095f3bd27ac7fbd5758d3538c3bfa1b19",
+          "urls": [
+            "https://github.com/docker/compose/releases/download/v5.5.0/docker-compose-windows-x86_64.exe"
+          ],
+          "files": [
+            {
+              "from": "docker-compose-windows-x86_64.exe",
+              "to": "docker-compose.exe"
+            }
+          ],
+          "size": 50317312
+        }
+      }
+    },
+    {
+      "name": "nerdctl",
+      "version": "2.3.5",
+      "description": "Docker-compatible CLI for containerd.",
+      "kind": "external",
+      "category": "cloud",
+      "license": "Apache-2.0",
+      "commands": [
+        "nerdctl"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "eda2a08d8a5ea97443c73fed1a827fbc385d4f7847486721899cd7e2c2f9dc36",
+          "urls": [
+            "https://github.com/containerd/nerdctl/releases/download/v2.3.5/nerdctl-2.3.5-windows-amd64.tar.gz"
+          ],
+          "files": [
+            {
+              "from": "nerdctl.exe",
+              "to": "nerdctl.exe"
+            }
+          ],
+          "size": 11024881
+        }
+      }
     }
   ]
 }
