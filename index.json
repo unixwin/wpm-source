@@ -5976,6 +5976,114 @@
           "size": 4458426
         }
       }
+    },
+    {
+      "name": "csvtk",
+      "version": "0.37.0",
+      "description": "Practical and fast CSV toolkit written in Go.",
+      "kind": "external",
+      "category": "data",
+      "license": "MIT",
+      "commands": [
+        "csvtk"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "7b626f0d5bf1148c3944d6c032c6d02979dba305a87e319e5322d46f993cae0d",
+          "urls": [
+            "https://github.com/shenwei356/csvtk/releases/download/v0.37.0/csvtk_windows_amd64.exe.tar.gz"
+          ],
+          "files": [
+            {
+              "from": "csvtk.exe",
+              "to": "csvtk.exe"
+            }
+          ],
+          "size": 10279045
+        }
+      }
+    },
+    {
+      "name": "xmlstarlet",
+      "version": "1.7.0-rc1",
+      "description": "Command-line XML toolkit for querying/editing XML.",
+      "kind": "external",
+      "category": "text",
+      "license": "MIT",
+      "commands": [
+        "xml"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "e25522ebabf7fc0a5646ded819cb0b94a3ba53ed37794c134df62b205bcd689d",
+          "urls": [
+            "https://github.com/xmlstarlet/xmlstarlet/releases/download/1.7.0-rc1/xmlstarlet-1.7.0-rc1-windows-x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "xmlstarlet-1.7.0-rc1/xml.exe",
+              "to": "xml.exe"
+            }
+          ],
+          "size": 1504274
+        }
+      }
+    },
+    {
+      "name": "pup",
+      "version": "0.4.0",
+      "description": "Parsing HTML at the command line.",
+      "kind": "external",
+      "category": "text",
+      "license": "MIT",
+      "commands": [
+        "pup"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "6755cbd43e94eaf173689e93e914c7056a2249c2977e5b90024fb397f9b45ba4",
+          "urls": [
+            "https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "pup.exe",
+              "to": "pup.exe"
+            }
+          ],
+          "size": 1766760
+        }
+      }
+    },
+    {
+      "name": "jid",
+      "version": "1.1.3",
+      "description": "Interactive JSON filter — drill down JSON interactively.",
+      "kind": "external",
+      "category": "interactive",
+      "license": "MIT",
+      "commands": [
+        "jid"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "02153d3edae1ec7bfdcfb21de5904469fac75cbbac8f6199639d31b69c8aef3b",
+          "urls": [
+            "https://github.com/simeji/jid/releases/download/v1.1.3/jid_windows_amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "jid.exe",
+              "to": "jid.exe"
+            }
+          ],
+          "size": 1512946
+        }
+      }
     }
   ]
 }
