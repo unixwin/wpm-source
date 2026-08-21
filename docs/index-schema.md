@@ -58,11 +58,17 @@
   "files": [                      // 从压缩包到安装目录的文件映射
     { "from": "rg.exe", "to": "rg.exe" }
   ],
-  "size": 1789611                 // 构件字节数(可选,新增包均填充)
+  "size": 1789611,                // 构件字节数(可选,新增包均填充)
+  "layout": "shim"                // 可选:flat(默认)| shim
 }
 ```
 
 `files[].from` 是压缩包内相对路径,`files[].to` 是安装后的目标文件名(可省略路径)。多文件包(如 `sysinternals-suite` 含 151 个 exe、`qpdf` 含 qpdf.exe + VC 运行库 DLL)在此完整枚举。
+
+### layout 字段
+
+- `flat`(默认):所有映射文件直接装入 `usr\bin\`,适用于单 exe 包。
+- `shim`:载荷(exe + 私有 DLL)自包含安装到 `<root>\opt\<pkg>\`;`usr\bin\<cmd>.exe` 是 winuxcmd.exe 自身的硬链接,运行时由分发器转发到 `opt\<pkg>\<cmd>.exe`。DLL 与真 exe 同目录,天然解析、无跨包冲突;卸载即删目录。适用于带 DLL 或多文件的包(ncat/qpdf/gawk/curl/xz/bzip2/sysinternals-suite)。
 
 ## 2. wpm --json 输出契约
 
