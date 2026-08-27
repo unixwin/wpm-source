@@ -8306,6 +8306,58 @@
         }
       },
       "category": "archive"
+    },
+    {
+      "name": "curl",
+      "version": "8.12.1",
+      "description": "Command line data transfer utility.",
+      "kind": "external",
+      "license": "MIT",
+      "commands": [
+        "curl"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "",
+          "urls": [
+            "https://github.com/curl/curl/releases/download/curl-8_12_1/curl-8.12.1-win64-mingw.zip"
+          ],
+          "files": [
+            {
+              "from": "curl-8.12.1-win64-mingw/bin/curl.exe",
+              "to": "curl.exe"
+            }
+          ]
+        }
+      },
+      "category": "network"
+    },
+    {
+      "name": "wget",
+      "version": "2.2.0",
+      "description": "Network downloader.",
+      "kind": "external",
+      "license": "GPL-3.0-or-later",
+      "commands": [
+        "wget"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "",
+          "urls": [
+            "https://github.com/anthonyfok/wget-windows/releases/download/v2.2.0-hotfix.20240921/wget-2.2.0-win64.zip"
+          ],
+          "files": [
+            {
+              "from": "wget.exe",
+              "to": "wget.exe"
+            }
+          ]
+        }
+      },
+      "category": "network"
     }
   ]
 }
