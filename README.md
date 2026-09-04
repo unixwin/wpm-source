@@ -193,18 +193,18 @@ export OPENSSL_CONF="$HOME/openssl.cnf"   # any existing file, even empty, works
 Key generation (`openssl genpkey`), certificate signing (`openssl x509 -req`),
 digests, and `s_client` with an explicit `-CAfile` work without a config.
 
-The catalog currently keeps OpenSSL as an index-only entry until the exact
-static Windows artifact, checksum, and file mapping are revalidated. WPM must
-not present an unverified binary as installable.
+The catalog uses a verified static Windows OpenSSL Light bundle with its
+runtime files kept private under the WPM package payload. WPM records the
+artifact checksum and explicit file mapping before making it installable.
 
 ## Toolchain and developer packages
 
 - `git` uses the official MinGit archive and exposes only `git.exe`; its private
   payload remains under `opt/git/`.
 - `protobuf` exposes only `protoc.exe` from the official Windows archive.
-- `rust` is currently index-only. A complete relocatable MSVC bundle must be
-  published and verified before it becomes installable; `rustup` is intentionally
-  not bundled because it manages toolchains outside WPM.
+- `rust` uses a relocatable MSVC bundle assembled from the pinned official Rust
+  toolchain; `rustup` is intentionally not bundled because it manages
+  toolchains outside WPM.
 
 ## GNU and POSIX-Style Tools
 
