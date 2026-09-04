@@ -112,7 +112,7 @@
     {
       "name": "rust",
       "version": "1.98.1",
-      "description": "Rust MSVC toolchain metadata; a complete relocatable compiler bundle is pending publication on unixwin/wpm-artifacts.",
+      "description": "Relocatable Rust MSVC toolchain with cargo, rustfmt, and clippy.",
       "kind": "external",
       "category": "toolchain",
       "license": "MIT OR Apache-2.0",
@@ -123,7 +123,47 @@
         "rustfmt",
         "clippy-driver"
       ],
-      "artifacts": {}
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "37403fec6ea128e941453e37d5b158048fd7fe955552a84c68972db57ad5f8c9",
+          "urls": [
+            "https://github.com/unixwin/wpm-artifacts/releases/download/rust-1.98.1/rust-1.98.1-win-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "bin/",
+              "to": "bin/"
+            },
+            {
+              "from": "lib/",
+              "to": "lib/"
+            },
+            {
+              "from": "etc/",
+              "to": "etc/"
+            },
+            {
+              "from": "bin/rustc.exe",
+              "to": "rustc.exe"
+            },
+            {
+              "from": "bin/cargo.exe",
+              "to": "cargo.exe"
+            },
+            {
+              "from": "bin/rustfmt.exe",
+              "to": "rustfmt.exe"
+            },
+            {
+              "from": "bin/clippy-driver.exe",
+              "to": "clippy-driver.exe"
+            }
+          ],
+          "layout": "shim",
+          "size": 199611791
+        }
+      }
     },
     {
       "name": "winuxcmd",
@@ -8344,8 +8384,8 @@
     },
     {
       "name": "openssl",
-      "version": "3.x",
-      "description": "Portable static OpenSSL command-line utility; artifact publication is pending checksum and file mapping verification.",
+      "version": "4.0.2",
+      "description": "Portable Windows OpenSSL Light command-line utility with private runtime files.",
       "kind": "external",
       "category": "security",
       "license": "Apache-2.0",
@@ -8353,7 +8393,23 @@
       "commands": [
         "openssl"
       ],
-      "artifacts": {}
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "680d58facb2497437e4a747c5ae1d06892746ca28774393ea58377bd64562f20",
+          "urls": [
+            "https://github.com/unixwin/wpm-artifacts/releases/download/openssl-4.0.2/openssl-4.0.2-win-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "openssl/bin/",
+              "to": "./"
+            }
+          ],
+          "layout": "shim",
+          "size": 6895318
+        }
+      }
     }
   ]
 }
