@@ -62,8 +62,10 @@ function Test-OutOfScopePackage {
   $packageName = ([string]$Package.name).ToLowerInvariant()
   if ($outOfScopeCommands -contains $packageName) { return $true }
 
-  if (Test-ArrayLike $Package.commands) {
-    foreach ($command in @($Package.commands)) {
+  $packageCommands = @()
+  if ($Package.PSObject.Properties.Name -contains "commands") { $packageCommands = @($Package.commands) }
+  if ($packageCommands.Count -gt 0) {
+    foreach ($command in $packageCommands) {
       if ($outOfScopeCommands -contains ([string]$command).ToLowerInvariant()) {
         return $true
       }
@@ -110,8 +112,23 @@ foreach ($pkg in $packages) {
       $errors.Add("$name missing $field.")
     }
   }
-  if (-not (Test-ArrayLike $pkg.commands) -or @($pkg.commands).Count -eq 0) {
+  $packageCategory = (Get-OptionalStringProperty -Object $pkg -Name "category").ToLowerInvariant()
+  $commandList = @()
+  if ($pkg.PSObject.Properties.Name -contains "commands") { $commandList = @($pkg.commands) }
+  if ($packageCategory -ne "i18n" -and $commandList.Count -eq 0) {
     $errors.Add("$name missing commands.")
+  }
+
+  if ($pkg.PSObject.Properties.Name -contains "aliases") {
+    if (-not (Test-ArrayLike $pkg.aliases)) {
+      $errors.Add("$name aliases must be an array.")
+    } else {
+      foreach ($alias in @($pkg.aliases)) {
+        $aliasName = [string]$alias
+        if ($alias -isnot [string]) { $aliasName = [string]$alias.name }
+        if (-not $aliasName) { $errors.Add("$name contains an alias without a name.") }
+      }
+    }
   }
 
   $artifactProps = @()
@@ -137,6 +154,31 @@ foreach ($pkg in $packages) {
     $installable += 1
   } else {
     $indexOnly += 1
+  }
+}
+
+$commandOwners = @{}
+foreach ($pkg in $packages) {
+  $pkgName = [string]$pkg.name
+  if ($pkg.PSObject.Properties.Name -contains "commands") {
+    foreach ($command in @($pkg.commands)) {
+      $commandName = ([string]$command).ToLowerInvariant()
+      if (-not $commandName) { continue }
+      if ($commandOwners.ContainsKey($commandName) -and $commandOwners[$commandName] -ne $pkgName) {
+        $errors.Add("Command '$commandName' is provided by both '$($commandOwners[$commandName])' and '$pkgName'.")
+      } else { $commandOwners[$commandName] = $pkgName }
+    }
+  }
+  if ($pkg.PSObject.Properties.Name -contains "aliases") {
+    foreach ($alias in @($pkg.aliases)) {
+      $aliasName = [string]$alias
+      if ($alias -isnot [string]) { $aliasName = [string]$alias.name }
+      $aliasName = $aliasName.ToLowerInvariant()
+      if (-not $aliasName) { continue }
+      if ($commandOwners.ContainsKey($aliasName) -and $commandOwners[$aliasName] -ne $pkgName) {
+        $errors.Add("Alias '$aliasName' in '$pkgName' conflicts with '$($commandOwners[$aliasName])'.")
+      } else { $commandOwners[$aliasName] = $pkgName }
+    }
   }
 }
 
