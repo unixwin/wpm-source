@@ -45,6 +45,87 @@
   ],
   "packages": [
     {
+      "name": "git",
+      "version": "2.55.0.5",
+      "description": "Portable Git for Windows (MinGit); exposes only git.exe while retaining its private runtime payload.",
+      "kind": "external",
+      "category": "developer",
+      "license": "GPL-2.0-only WITH GCC-exception-2.0",
+      "homepage": "https://gitforwindows.org/",
+      "commands": [
+        "git"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "56d7b226b7693196cfc71fef26568f536c4a021ab6c37ff2db4287bed908e96e",
+          "urls": [
+            "https://github.com/git-for-windows/git/releases/download/v2.55.0.windows.5/MinGit-2.55.0.5-64-bit.zip"
+          ],
+          "files": [
+            {
+              "from": "mingw64/",
+              "to": "mingw64/"
+            },
+            {
+              "from": "cmd/",
+              "to": "cmd/"
+            },
+            {
+              "from": "mingw64/bin/git.exe",
+              "to": "git.exe"
+            }
+          ],
+          "layout": "shim",
+          "size": 38989688
+        }
+      }
+    },
+    {
+      "name": "protobuf",
+      "version": "36.1",
+      "description": "Protocol Buffers compiler for generating source and gRPC bindings from .proto schemas.",
+      "kind": "external",
+      "category": "developer",
+      "license": "BSD-3-Clause",
+      "homepage": "https://protobuf.dev/",
+      "commands": [
+        "protoc"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "390e515cb456e6a978553bdb57baf087b054885077fd6da7f7ff0160279c07d6",
+          "urls": [
+            "https://github.com/protocolbuffers/protobuf/releases/download/v36.1/protoc-36.1-win64.zip"
+          ],
+          "files": [
+            {
+              "from": "bin/protoc.exe",
+              "to": "protoc.exe"
+            }
+          ],
+          "size": 3560877
+        }
+      }
+    },
+    {
+      "name": "rust",
+      "version": "1.98.1",
+      "description": "Rust MSVC toolchain metadata; a complete relocatable compiler bundle is pending publication on unixwin/wpm-artifacts.",
+      "kind": "external",
+      "category": "toolchain",
+      "license": "MIT OR Apache-2.0",
+      "homepage": "https://www.rust-lang.org/",
+      "commands": [
+        "rustc",
+        "cargo",
+        "rustfmt",
+        "clippy-driver"
+      ],
+      "artifacts": {}
+    },
+    {
       "name": "winuxcmd",
       "version": "0.17.1",
       "description": "WinuxCmd core command set",
@@ -92,9 +173,6 @@
       "kind": "external",
       "category": "i18n",
       "license": "MIT",
-      "commands": [
-        "winuxcmd"
-      ],
       "artifacts": {
         "windows-x64": {
           "type": "zip",
@@ -147,8 +225,7 @@
       "category": "text",
       "license": "GPL-3.0-or-later",
       "commands": [
-        "gawk",
-        "awk"
+        "gawk"
       ],
       "artifacts": {
         "windows-x64": {
@@ -503,6 +580,12 @@
       "license": "Nmap",
       "commands": [
         "ncat"
+      ],
+      "aliases": [
+        {
+          "name": "nc",
+          "target": "ncat"
+        }
       ],
       "artifacts": {
         "windows-x64": {
@@ -4283,6 +4366,12 @@
       "commands": [
         "btop4win"
       ],
+      "aliases": [
+        {
+          "name": "btop",
+          "target": "btop4win"
+        }
+      ],
       "artifacts": {
         "windows-x64": {
           "type": "zip",
@@ -5732,33 +5821,6 @@
       }
     },
     {
-      "name": "tlrc",
-      "version": "1.8.1",
-      "description": "Official Rust client for tldr pages — simplified man pages.",
-      "kind": "external",
-      "category": "shell",
-      "license": "Apache-2.0",
-      "commands": [
-        "tldr"
-      ],
-      "artifacts": {
-        "windows-x64": {
-          "type": "exe",
-          "sha256": "0fafa28d6503ec2a96efd71c5f1a57c8c547efd72706fd26fc53015415da7eb9",
-          "urls": [
-            "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.8.1/tealdeer-windows-x86_64-msvc.exe"
-          ],
-          "files": [
-            {
-              "from": "tealdeer-windows-x86_64-msvc.exe",
-              "to": "tldr.exe"
-            }
-          ],
-          "size": 3482112
-        }
-      }
-    },
-    {
       "name": "hugo",
       "version": "0.165.0",
       "description": "The fastest framework for building websites, written in Go.",
@@ -7148,33 +7210,6 @@
       "category": "developer"
     },
     {
-      "name": "step-cli",
-      "version": "0.30.6",
-      "description": "step CLI: zero-trust swiss army knife for certificates, JWTs, and PKI.",
-      "kind": "external",
-      "license": "Apache-2.0",
-      "commands": [
-        "step"
-      ],
-      "artifacts": {
-        "windows-x64": {
-          "type": "zip",
-          "sha256": "330c5cc946bb041796c10a5469866133c6fefdda9461757a0d42470959eeefbf",
-          "urls": [
-            "https://github.com/smallstep/cli/releases/download/v0.30.6/step_windows_0.30.6_amd64.zip"
-          ],
-          "files": [
-            {
-              "from": "step_0.30.6/bin/step.exe",
-              "to": "step.exe"
-            }
-          ],
-          "size": 15039460
-        }
-      },
-      "category": "security"
-    },
-    {
       "name": "winuxsh",
       "version": "0.10.10",
       "description": "Windows-native bash-compatible shell with plugin system. Ships a private winuxcmd copy under its own root; coexists with a system WinuxCmd install and updates independently.",
@@ -8306,7 +8341,19 @@
         }
       },
       "category": "archive"
+    },
+    {
+      "name": "openssl",
+      "version": "3.x",
+      "description": "Portable static OpenSSL command-line utility; artifact publication is pending checksum and file mapping verification.",
+      "kind": "external",
+      "category": "security",
+      "license": "Apache-2.0",
+      "homepage": "https://www.openssl.org/",
+      "commands": [
+        "openssl"
+      ],
+      "artifacts": {}
     }
   ]
 }
-
