@@ -305,7 +305,8 @@
             }
           ],
           "size": 7781989,
-          "layout": "shim"
+          "layout": "shim",
+          "runtime": "msys"
         }
       }
     },
