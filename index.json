@@ -38,9 +38,11 @@
       "name": "official-cn",
       "region": "cn",
       "priority": 30,
-      "description": "Reserved China-friendly WPM index mirror.",
-      "homepage": "",
-      "index_urls": []
+      "description": "China mirror index served via gh.caomengxuan666.com; artifact URLs point at the nginx cache proxy, GitHub origins kept as fallback.",
+      "homepage": "https://gh.caomengxuan666.com/wpm/index.json",
+      "index_urls": [
+        "https://gh.caomengxuan666.com/wpm/index.json"
+      ]
     }
   ],
   "packages": [
