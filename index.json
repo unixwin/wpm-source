@@ -210,7 +210,7 @@
     },
     {
       "name": "winuxcmd-i18n-zh-cn",
-      "version": "0.6.8",
+      "version": "0.6.9",
       "description": "Optional Simplified Chinese help catalog for WinuxCmd.",
       "kind": "external",
       "category": "i18n",
@@ -218,9 +218,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "78ec0aedab46808851af38109d78adc075703d32bfa3521f43515b7781fe26a6",
+          "sha256": "622c18ae1e8b0fc826e54605cead824a6f1dbbec1f1fb35a0bc5703e224b638a",
           "urls": [
-            "https://github.com/unixwin/winuxcmd-i18n/releases/download/v0.6.8/winuxcmd-i18n-zh-cn.zip"
+            "https://github.com/unixwin/winuxcmd-i18n/releases/download/v0.6.9/winuxcmd-i18n-zh-cn.zip"
           ],
           "files": [
             {
@@ -228,7 +228,7 @@
               "to": ".wpm/i18n/zh-CN/catalog.json"
             }
           ],
-          "size": 83493
+          "size": 83626
         }
       }
     },
@@ -8387,3 +8387,4 @@
     }
   ]
 }
+
