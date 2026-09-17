@@ -234,28 +234,48 @@
     },
     {
       "name": "awk",
-      "version": "1.31.0",
-      "description": "POSIX AWK interpreter provided by GoAWK.",
+      "version": "5.4.1",
+      "description": "GNU Awk 5.4.1 (gawk) installed as a real awk.exe in usr/bin. Supports GNU extensions such as FPAT, IGNORECASE, FIELDWIDTHS and gensub. GoAWK remains available via the 'goawk' package.",
       "kind": "external",
       "category": "text",
-      "license": "MIT",
+      "license": "GPL-3.0-or-later",
       "commands": [
         "awk"
       ],
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "8c59523cf56d47621a9b84124a9fc15f580048103195caacf4f8964dfe632e78",
+          "sha256": "25373ae83ec539dbe8b4208e1b4c1afa891f902df1a19138ecda5451ccded4b6",
           "urls": [
-            "https://github.com/benhoyt/goawk/releases/download/v1.31.0/goawk_v1.31.0_windows_amd64.zip"
+            "https://github.com/unixwin/wpm-artifacts/releases/download/gawk-5.4.1/gawk-5.4.1-win-x64.zip"
           ],
           "files": [
             {
-              "from": "goawk.exe",
+              "from": "bin/awk.exe",
               "to": "awk.exe"
+            },
+            {
+              "from": "bin/libgmp-10.dll",
+              "to": "libgmp-10.dll"
+            },
+            {
+              "from": "bin/libmpfr-6.dll",
+              "to": "libmpfr-6.dll"
+            },
+            {
+              "from": "bin/libncurses6.dll",
+              "to": "libncurses6.dll"
+            },
+            {
+              "from": "bin/libgcc_s_dw2-1.dll",
+              "to": "libgcc_s_dw2-1.dll"
+            },
+            {
+              "from": "bin/libreadline8.dll",
+              "to": "libreadline8.dll"
             }
           ],
-          "size": 1557117
+          "size": 7781989
         }
       }
     },
