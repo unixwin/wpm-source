@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "name": "official",
-  "version": "official-2026.09.16",
-  "updated": "2026-09-16",
+  "version": "official-2026.09.17",
+  "updated": "2026-09-17",
   "sources": [
     {
       "name": "official-github-raw",
@@ -7250,34 +7250,6 @@
         }
       },
       "category": "developer"
-    },
-    {
-      "name": "winuxsh",
-      "version": "0.10.10",
-      "description": "Windows-native bash-compatible shell with plugin system. Ships a private winuxcmd copy under its own root; coexists with a system WinuxCmd install and updates independently.",
-      "kind": "external",
-      "license": "MIT",
-      "commands": [
-        "winuxsh"
-      ],
-      "artifacts": {
-        "windows-x64": {
-          "type": "zip",
-          "sha256": "e8bcfe1946cd49bbaae79de75f9b67d6904b74d4bb05c7790dc785709e122c54",
-          "urls": [
-            "https://github.com/unixwin/winuxsh/releases/download/v0.10.10/winuxsh-v0.10.10-win-x64.zip"
-          ],
-          "files": [
-            {
-              "from": "winuxsh-v0.10.10-win-x64/",
-              "to": "./"
-            }
-          ],
-          "layout": "shim",
-          "size": 6896884
-        }
-      },
-      "category": "shell"
     },
     {
       "name": "jnv",
