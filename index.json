@@ -203,7 +203,7 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "4c116d6b067e82fb0c07f36533def5b98ed2d777c7b5041fcc3ccb232cb33445",
+          "sha256": "d1f65fd2396d10822f8e649b6c571aa3e575da8db2671aee7eaed6ff84d0e491",
           "urls": [
             "https://github.com/unixwin/WinuxCmd/releases/download/v1.1.1/WinuxCmd-1.1.1-win-x64.zip"
           ],
@@ -217,7 +217,7 @@
         },
         "windows-arm64": {
           "type": "zip",
-          "sha256": "3a8d64f981ad4eb7f434c8cd6a3df0216a38f8a9a97ab496a795054d76c67ac2",
+          "sha256": "32117aaef76bd02f0f2979849ab720b10f33139cae19776db7578fd96fa7e6ff",
           "urls": [
             "https://github.com/unixwin/WinuxCmd/releases/download/v1.1.1/WinuxCmd-1.1.1-win-arm64.zip"
           ],
