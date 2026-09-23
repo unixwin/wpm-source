@@ -1523,7 +1523,7 @@
     },
     {
       "name": "bottom",
-      "version": "0.14.7",
+      "version": "0.14.9",
       "description": "Graphical terminal system monitor.",
       "kind": "external",
       "category": "system",
@@ -1534,9 +1534,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "e63a9b05983c467fa67ec82a29c0f2a38f911bf901c74416a7fe65c141d18db4",
+          "sha256": "01660721b0fdc72b191f2b27b78dc9a3087aeb7b3fad4a890c53870089d6b500",
           "urls": [
-            "https://github.com/ClementTsang/bottom/releases/download/0.14.7/bottom_x86_64-pc-windows-msvc.zip"
+            "https://github.com/ClementTsang/bottom/releases/download/0.14.9/bottom_x86_64-pc-windows-msvc.zip"
           ],
           "files": [
             {
@@ -1544,13 +1544,13 @@
               "to": "btm.exe"
             }
           ],
-          "size": 1916970
+          "size": 1926802
         },
         "windows-arm64": {
           "type": "zip",
-          "sha256": "5381b396408b0b27fad19c5dd0424c02e7f54a4eac798416178c6a3c25cc59db",
+          "sha256": "fabe9fc4850d12917150295900119eaa5455724658d1d709e013cacdc0390349",
           "urls": [
-            "https://github.com/ClementTsang/bottom/releases/download/0.14.7/bottom_aarch64-pc-windows-msvc.zip"
+            "https://github.com/ClementTsang/bottom/releases/download/0.14.9/bottom_aarch64-pc-windows-msvc.zip"
           ],
           "files": [
             {
@@ -1558,7 +1558,7 @@
               "to": "btm.exe"
             }
           ],
-          "size": 1711904
+          "size": 1720657
         }
       }
     },
