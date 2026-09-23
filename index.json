@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "name": "official",
-  "version": "official-2026.09.22",
-  "updated": "2026-09-22",
+  "version": "official-2026.09.23",
+  "updated": "2026-09-23",
   "sources": [
     {
       "name": "official-github-raw",
@@ -10092,6 +10092,366 @@
           ],
           "layout": "shim",
           "size": 6895318
+        }
+      }
+    },
+    {
+      "name": "aichat",
+      "version": "0.30.0",
+      "description": "All-in-one LLM CLI tool featuring Shell Assistant, Chat-REPL, RAG, AI tools & agents.",
+      "kind": "external",
+      "category": "ai",
+      "license": "Apache-2.0 OR MIT",
+      "commands": [
+        "aichat"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "89df8c4ccd6dad310ac713eb5d550494ae7fa14722cde346588fab38ff4afd8f",
+          "urls": [
+            "https://github.com/sigoden/aichat/releases/download/v0.30.0/aichat-v0.30.0-x86_64-pc-windows-msvc.zip"
+          ],
+          "size": 5252563,
+          "files": [
+            {
+              "from": "aichat.exe",
+              "to": "aichat.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "mods",
+      "version": "1.8.1",
+      "description": "AI on the command line — pipe things into LLMs.",
+      "kind": "external",
+      "category": "ai",
+      "license": "MIT",
+      "commands": [
+        "mods"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "ecad2f4d526bcb853b91136c2b40a123b0127edaca20945378986ceb6d89a52a",
+          "urls": [
+            "https://github.com/charmbracelet/mods/releases/download/v1.8.1/mods_1.8.1_Windows_x86_64.zip"
+          ],
+          "size": 10994921,
+          "files": [
+            {
+              "from": "mods.exe",
+              "to": "mods.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "yek",
+      "version": "0.25.5",
+      "description": "Serialize a repository into AI/LLM-friendly text, with token counting.",
+      "kind": "external",
+      "category": "ai",
+      "license": "MIT",
+      "commands": [
+        "yek"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "4d964df9c202f0f8e547b2d362bfb7d250c37c1936ad2858cc5a364cdd238823",
+          "urls": [
+            "https://github.com/mohsen1/yek/releases/download/v0.25.5/yek-x86_64-pc-windows-msvc.zip"
+          ],
+          "size": 5123467,
+          "files": [
+            {
+              "from": "yek.exe",
+              "to": "yek.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "vale",
+      "version": "3.22.0",
+      "description": "Syntax-aware linter for prose.",
+      "kind": "external",
+      "category": "document",
+      "license": "MIT",
+      "commands": [
+        "vale"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "7e55b39881f48ced8cf27406129c065a20247800e82e816a9e79d06c4b1a199e",
+          "urls": [
+            "https://github.com/vale-cli/vale/releases/download/v3.22.0/vale_3.22.0_Windows_64-bit.zip"
+          ],
+          "size": 12493409,
+          "files": [
+            {
+              "from": "vale.exe",
+              "to": "vale.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "kubectx",
+      "version": "0.11.0",
+      "description": "Faster way to switch between clusters and namespaces in kubectl.",
+      "kind": "external",
+      "category": "developer",
+      "license": "Apache-2.0",
+      "commands": [
+        "kubectx"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "a28fc2f0c69e715c34ea6d7520b9a17aa00cea642ff6fab0c64614d436d47a5d",
+          "urls": [
+            "https://github.com/ahmetb/kubectx/releases/download/v0.11.0/kubectx_v0.11.0_windows_x86_64.zip"
+          ],
+          "size": 5323678,
+          "files": [
+            {
+              "from": "kubectx.exe",
+              "to": "kubectx.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "glab",
+      "version": "1.22.0",
+      "description": "GitLab CLI.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "glab"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "1b07931cbd9547fdf33bc5c636a5e70bc01d7ef68768cff13f9655623ce411d8",
+          "urls": [
+            "https://github.com/profclems/glab/releases/download/v1.22.0/glab_1.22.0_Windows_x86_64.zip"
+          ],
+          "size": 6084979,
+          "files": [
+            {
+              "from": "bin/glab.exe",
+              "to": "glab.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "kustomize",
+      "version": "kustomize/v5.8.1",
+      "description": "Customization of kubernetes YAML configurations.",
+      "kind": "external",
+      "category": "developer",
+      "license": "Apache-2.0",
+      "commands": [
+        "kustomize"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "8ec7f5e815e526d4622c06df0a7793d8cfb6eb1c74f816b46166097fef8b26c6",
+          "urls": [
+            "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/v5.8.1/kustomize_v5.8.1_windows_amd64.zip"
+          ],
+          "size": 5314337,
+          "files": [
+            {
+              "from": "kustomize.exe",
+              "to": "kustomize.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "devproxy",
+      "version": "3.3.0",
+      "description": "Simulate API failures and behaviors; Microsoft's API dev proxy.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "commands": [
+        "devproxy"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "792f45bff729891cbc6a1e3f48d20130657dc565391f88a8310fbf558eadf740",
+          "urls": [
+            "https://github.com/dotnet/dev-proxy/releases/download/v3.3.0/dev-proxy-win-x64-v3.3.0.zip"
+          ],
+          "size": 56178913,
+          "files": [
+            {
+              "from": "devproxy-win-x64-v3.3.0/",
+              "to": "./"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "wezterm",
+      "version": "20240203-110809-5046fc22",
+      "description": "A GPU-accelerated cross-platform terminal emulator and multiplexer.",
+      "kind": "external",
+      "category": "terminal",
+      "license": "MIT",
+      "commands": [
+        "wezterm",
+        "wezterm-gui"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "57e5d03b585303d81e8b8e96d1230362852eb39aca92b3b29c7a42cfb82f9ac4",
+          "urls": [
+            "https://github.com/wezterm/wezterm/releases/download/20240203-110809-5046fc22/WezTerm-windows-20240203-110809-5046fc22.zip"
+          ],
+          "size": 66162319,
+          "files": [
+            {
+              "from": "wezterm.exe",
+              "to": "wezterm.exe"
+            },
+            {
+              "from": "wezterm-gui.exe",
+              "to": "wezterm-gui.exe"
+            },
+            {
+              "from": "wezterm-mux-server.exe",
+              "to": "wezterm-mux-server.exe"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "llama.cpp",
+      "version": "b11065",
+      "description": "Llama.cpp: LLM inference in C/C++ (llama-cli and llama-server, CPU build).",
+      "kind": "external",
+      "category": "ai",
+      "license": "MIT",
+      "commands": [
+        "llama-cli",
+        "llama-server"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "33f941a74b8db38e92690f5f151a770ef5a66481c07dabfe2e505b57e3546807",
+          "urls": [
+            "https://github.com/ggml-org/llama.cpp/releases/download/b11065/llama-b11065-bin-win-cpu-x64.zip"
+          ],
+          "size": 18466663,
+          "files": [
+            {
+              "from": "ggml-rpc-server.exe",
+              "to": "ggml-rpc-server.exe"
+            },
+            {
+              "from": "llama-batched-bench.exe",
+              "to": "llama-batched-bench.exe"
+            },
+            {
+              "from": "llama-bench.exe",
+              "to": "llama-bench.exe"
+            },
+            {
+              "from": "llama-cli.exe",
+              "to": "llama-cli.exe"
+            },
+            {
+              "from": "llama-completion.exe",
+              "to": "llama-completion.exe"
+            },
+            {
+              "from": "llama-fit-params.exe",
+              "to": "llama-fit-params.exe"
+            },
+            {
+              "from": "llama-gemma3-cli.exe",
+              "to": "llama-gemma3-cli.exe"
+            },
+            {
+              "from": "llama-gguf-split.exe",
+              "to": "llama-gguf-split.exe"
+            },
+            {
+              "from": "llama-imatrix.exe",
+              "to": "llama-imatrix.exe"
+            },
+            {
+              "from": "llama-llava-cli.exe",
+              "to": "llama-llava-cli.exe"
+            },
+            {
+              "from": "llama-minicpmv-cli.exe",
+              "to": "llama-minicpmv-cli.exe"
+            },
+            {
+              "from": "llama-mtmd-cli.exe",
+              "to": "llama-mtmd-cli.exe"
+            },
+            {
+              "from": "llama-mtmd-debug.exe",
+              "to": "llama-mtmd-debug.exe"
+            },
+            {
+              "from": "llama-perplexity.exe",
+              "to": "llama-perplexity.exe"
+            },
+            {
+              "from": "llama-quantize.exe",
+              "to": "llama-quantize.exe"
+            },
+            {
+              "from": "llama-qwen2vl-cli.exe",
+              "to": "llama-qwen2vl-cli.exe"
+            },
+            {
+              "from": "llama-results.exe",
+              "to": "llama-results.exe"
+            },
+            {
+              "from": "llama-server.exe",
+              "to": "llama-server.exe"
+            },
+            {
+              "from": "llama-tokenize.exe",
+              "to": "llama-tokenize.exe"
+            },
+            {
+              "from": "llama-tts.exe",
+              "to": "llama-tts.exe"
+            },
+            {
+              "from": "llama.exe",
+              "to": "llama.exe"
+            }
+          ]
         }
       }
     }
