@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "name": "official",
-  "version": "official-2026.09.21",
-  "updated": "2026-09-21",
+  "version": "official-2026.09.23",
+  "updated": "2026-09-23",
   "sources": [
     {
       "name": "official-github-raw",
@@ -192,7 +192,7 @@
     },
     {
       "name": "winuxcmd",
-      "version": "1.0.9",
+      "version": "1.1.2",
       "description": "WinuxCmd core command set",
       "kind": "external",
       "license": "MIT",
@@ -203,9 +203,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "73be5c76a3e184db03399e9e1cfe378925e3be91b58e365a2c44f20639993b76",
+          "sha256": "d5047c91b8e028d0f28c295d1c911108e559b241fef2b77b8b8c117c853d8308",
           "urls": [
-            "https://github.com/unixwin/WinuxCmd/releases/download/v1.0.9/WinuxCmd-1.0.9-win-x64.zip"
+            "https://github.com/unixwin/WinuxCmd/releases/download/v1.1.2/WinuxCmd-1.1.2-win-x64.zip"
           ],
           "files": [
             {
@@ -217,9 +217,9 @@
         },
         "windows-arm64": {
           "type": "zip",
-          "sha256": "72afb2cd6b953fc9e546692ddf506210c4f93eef09c9cb253be797bf74217242",
+          "sha256": "0f934f62109a0ab9056e510c059cbdec8e17086042b779c5afff095aafa0a51d",
           "urls": [
-            "https://github.com/unixwin/WinuxCmd/releases/download/v1.0.9/WinuxCmd-1.0.9-win-arm64.zip"
+            "https://github.com/unixwin/WinuxCmd/releases/download/v1.1.2/WinuxCmd-1.1.2-win-arm64.zip"
           ],
           "files": [
             {
@@ -233,7 +233,7 @@
     },
     {
       "name": "winuxcmd-i18n-zh-cn",
-      "version": "0.6.9",
+      "version": "0.6.14",
       "description": "Optional Simplified Chinese help catalog for WinuxCmd.",
       "kind": "external",
       "category": "i18n",
@@ -241,9 +241,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "622c18ae1e8b0fc826e54605cead824a6f1dbbec1f1fb35a0bc5703e224b638a",
+          "sha256": "3a394670ad05df49021cff22def849767e04c141337a9ac8ae5aaadbddac7e85",
           "urls": [
-            "https://github.com/unixwin/winuxcmd-i18n/releases/download/v0.6.9/winuxcmd-i18n-zh-cn.zip"
+            "https://github.com/unixwin/winuxcmd-i18n/releases/download/v0.6.14/winuxcmd-i18n-zh-cn.zip"
           ],
           "files": [
             {
@@ -251,7 +251,7 @@
               "to": ".wpm/i18n/zh-CN/catalog.json"
             }
           ],
-          "size": 83626
+          "size": 84026
         },
         "windows-arm64": {
           "type": "zip",
@@ -10177,33 +10177,6 @@
       }
     },
     {
-      "name": "btm",
-      "version": "0.14.9",
-      "description": "Cross-platform graphical process/system monitor.",
-      "kind": "external",
-      "category": "system",
-      "license": "MIT",
-      "commands": [
-        "btm"
-      ],
-      "artifacts": {
-        "windows-x64": {
-          "type": "zip",
-          "sha256": "01660721b0fdc72b191f2b27b78dc9a3087aeb7b3fad4a890c53870089d6b500",
-          "urls": [
-            "https://github.com/ClementTsang/bottom/releases/download/0.14.9/bottom_x86_64-pc-windows-msvc.zip"
-          ],
-          "size": 1926802,
-          "files": [
-            {
-              "from": "btm.exe",
-              "to": "btm.exe"
-            }
-          ]
-        }
-      }
-    },
-    {
       "name": "vale",
       "version": "3.22.0",
       "description": "Syntax-aware linter for prose.",
@@ -10225,33 +10198,6 @@
             {
               "from": "vale.exe",
               "to": "vale.exe"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "step-cli",
-      "version": "0.30.6",
-      "description": "A zero trust swiss army knife for working with X509, OAuth, JWT, OATH, TLS.",
-      "kind": "external",
-      "category": "security",
-      "license": "Apache-2.0",
-      "commands": [
-        "step"
-      ],
-      "artifacts": {
-        "windows-x64": {
-          "type": "zip",
-          "sha256": "b549b22568727729e273ffeb71735e1374bc575d9439b3b565b304ae2443fa31",
-          "urls": [
-            "https://github.com/smallstep/cli/releases/download/v0.30.6/step_windows_amd64.zip"
-          ],
-          "size": 15039544,
-          "files": [
-            {
-              "from": "step.exe",
-              "to": "step.exe"
             }
           ]
         }
@@ -10511,3 +10457,4 @@
     }
   ]
 }
+
