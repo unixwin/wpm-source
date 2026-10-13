@@ -108,7 +108,7 @@
     },
     {
       "name": "niugit",
-      "version": "2.55.0.3",
+      "version": "2.55.0.4",
       "description": "Native Windows git without MSYS (niu-git build); schannel-only TLS, no bundled shell/perl, hooks run via sh found on PATH; accepts POSIX-shaped path args (/d/...) via fallback conversion.",
       "kind": "external",
       "category": "developer",
@@ -120,9 +120,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "71db2476ce77d1242acc0c8ac0ab75dcd02680f616e0c094129da31a028ef309",
+          "sha256": "b37000979ab6be21435270ab8c0da8a229a945946454dd78840929503eab296f",
           "urls": [
-            "https://github.com/unixwin/niu-git/releases/download/v2.55.0.3/niu-git-2.55.0.windows.2-x64.zip"
+            "https://github.com/unixwin/niu-git/releases/download/v2.55.0.4/niu-git-2.55.0.windows.2-x64.zip"
           ],
           "files": [
             {
