@@ -10491,6 +10491,66 @@
           ]
         }
       }
+    },
+    {
+      "name": "niubash",
+      "version": "1.4.0",
+      "description": "Niubash 1.4.0 — bash-compatible shell for Windows; niu.exe with its bundled WinuxCmd tree, bash/sh shims, and assets, self-contained under opt/niubash/.",
+      "kind": "external",
+      "category": "developer",
+      "license": "MIT",
+      "homepage": "https://github.com/unixwin/niubash",
+      "commands": [
+        "niu"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "0e816da0c5e13d1df07c631bdd561cbcf03487eee432364b57afe1ba6fe2e5cf",
+          "urls": [
+            "https://github.com/unixwin/niubash/releases/download/v1.4.0/niubash-v1.4.0-win-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "niubash-v1.4.0-win-x64/niu.exe",
+              "to": "niu.exe"
+            },
+            {
+              "from": "niubash-v1.4.0-win-x64/winuxcmd/",
+              "to": "winuxcmd/"
+            },
+            {
+              "from": "niubash-v1.4.0-win-x64/assets/",
+              "to": "assets/"
+            }
+          ],
+          "size": 19684082,
+          "layout": "shim"
+        },
+        "windows-arm64": {
+          "type": "zip",
+          "sha256": "798ae5d7251ead82672c20853e22d5c505addb3b4ab321945772cb40b0bb8922",
+          "urls": [
+            "https://github.com/unixwin/niubash/releases/download/v1.4.0/niubash-v1.4.0-win-arm64.zip"
+          ],
+          "files": [
+            {
+              "from": "niubash-v1.4.0-win-arm64/niu.exe",
+              "to": "niu.exe"
+            },
+            {
+              "from": "niubash-v1.4.0-win-arm64/winuxcmd/",
+              "to": "winuxcmd/"
+            },
+            {
+              "from": "niubash-v1.4.0-win-arm64/assets/",
+              "to": "assets/"
+            }
+          ],
+          "size": 8118683,
+          "layout": "shim"
+        }
+      }
     }
   ]
 }
