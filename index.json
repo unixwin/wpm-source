@@ -108,8 +108,8 @@
     },
     {
       "name": "niugit",
-      "version": "2.55.0.5",
-      "description": "Native Windows git without MSYS (niu-git build); schannel-only TLS, no bundled shell/perl, hooks run via sh found on PATH; accepts POSIX-shaped path args (/d/...) via fallback conversion; static zlib/iconv, bare usr/bin/git.exe self-locates (flat layout, no shim).",
+      "version": "2.56.0.1",
+      "description": "Native Windows git without MSYS (niu-git build, git-for-windows 2.56.0.windows.2); schannel-only TLS, no bundled shell/perl, hooks run via sh found on PATH; static zlib/iconv, bare usr/bin/git.exe self-locates (flat layout); bundles git's own wincred credential helper and stamps git --version with .niugit.",
       "kind": "external",
       "category": "developer",
       "license": "GPL-2.0-only",
@@ -120,9 +120,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "dd85269514b07d873f3bde835483fc0b69d23e0d87d36c93e67b5b88aa379932",
+          "sha256": "334e084124952cc9ffb14b88f9395474de47568e60fafbb19aa6e330154d1d8c",
           "urls": [
-            "https://github.com/unixwin/niu-git/releases/download/v2.55.0.5/niu-git-2.55.0.windows.2-x64.zip"
+            "https://github.com/unixwin/niu-git/releases/download/v2.56.0.1/niu-git-2.56.0.windows.2-x64.zip"
           ],
           "files": [
             {
@@ -138,7 +138,30 @@
               "to": "git.exe"
             }
           ],
-          "size": 33147311,
+          "size": 34761967,
+          "layout": "flat"
+        },
+        "windows-arm64": {
+          "type": "zip",
+          "sha256": "f682eecf3c736ed0e59652faffc7adeef760fc91f4de9b22c1529199a0025262",
+          "urls": [
+            "https://github.com/unixwin/niu-git/releases/download/v2.56.0.1/niu-git-2.56.0.windows.2-arm64.zip"
+          ],
+          "files": [
+            {
+              "from": "mingw64/",
+              "to": "opt/niugit/mingw64/"
+            },
+            {
+              "from": "etc/",
+              "to": "opt/niugit/etc/"
+            },
+            {
+              "from": "mingw64/bin/git.exe",
+              "to": "git.exe"
+            }
+          ],
+          "size": 33901200,
           "layout": "flat"
         }
       }
