@@ -9945,8 +9945,8 @@
     },
     {
       "name": "openssh",
-      "version": "9.5.0.0p1",
-      "description": "OpenSSH client tools (ssh, scp, sftp, ssh-keygen) for Windows.",
+      "version": "9.5.0.0p1-unixwin1",
+      "description": "OpenSSH for Windows (Win32-OpenSSH 9.5.0.0p1). Repackaged revision unixwin1: layout shim, so the payload (ssh/scp/sftp/ssh-* and their libcrypto.dll) lands under opt/openssh and every command is a winuxcmd shim in usr/bin - no private DLL in a PATH directory.",
       "kind": "external",
       "license": "BSD-3-Clause",
       "commands": [
@@ -9994,7 +9994,8 @@
               "to": "libcrypto.dll"
             }
           ],
-          "size": 4856219
+          "size": 4856219,
+          "layout": "shim"
         },
         "windows-arm64": {
           "type": "zip",
