@@ -355,7 +355,7 @@
     },
     {
       "name": "gawk",
-      "version": "5.4.1",
+      "version": "5.4.1-unixwin1",
       "description": "GNU Awk with GMP/MPFR bignum support; 32-bit build runs on x64 via WOW64. Mirrored from ezwinports via unixwin/wpm-artifacts.",
       "kind": "external",
       "category": "text",
@@ -366,9 +366,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "25373ae83ec539dbe8b4208e1b4c1afa891f902df1a19138ecda5451ccded4b6",
+          "sha256": "afdce80fc4fac9d2d6886a9c3c75b9120bca84d2011a395b5b90909c74e24568",
           "urls": [
-            "https://github.com/unixwin/wpm-artifacts/releases/download/gawk-5.4.1/gawk-5.4.1-win-x64.zip"
+            "https://github.com/unixwin/wpm-artifacts/releases/download/gawk-5.4.1-unixwin1/gawk-5.4.1-unixwin1-win-x64.zip"
           ],
           "files": [
             {
@@ -388,19 +388,11 @@
               "to": "libmpfr-6.dll"
             },
             {
-              "from": "bin/libncurses6.dll",
-              "to": "libncurses6.dll"
-            },
-            {
-              "from": "bin/libgcc_s_dw2-1.dll",
-              "to": "libgcc_s_dw2-1.dll"
-            },
-            {
               "from": "bin/libreadline8.dll",
               "to": "libreadline8.dll"
             }
           ],
-          "size": 7781989,
+          "size": 4366656,
           "layout": "shim"
         }
       }
