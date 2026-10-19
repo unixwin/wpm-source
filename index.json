@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "name": "official",
-  "version": "official-2026.10.17",
-  "updated": "2026-10-17",
+  "version": "official-2026.10.19",
+  "updated": "2026-10-19",
   "sources": [
     {
       "name": "official-github-raw",
@@ -252,7 +252,7 @@
     },
     {
       "name": "winuxcmd",
-      "version": "1.1.14",
+      "version": "1.1.15",
       "description": "WinuxCmd core command set",
       "kind": "external",
       "license": "MIT",
@@ -263,31 +263,39 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "fb587371cc7d4e2f454e234b04767d5b399b6f80d59dffc76245ec437881e1f4",
+          "sha256": "c0c42b009d3b1bbe4bd6033a67664b8aff8bfe41b0a77a9200df6805037631d6",
           "urls": [
-            "https://github.com/unixwin/WinuxCmd/releases/download/v1.1.14/WinuxCmd-1.1.14-win-x64.zip"
+            "https://github.com/unixwin/WinuxCmd/releases/download/v1.1.15/WinuxCmd-1.1.15-win-x64.zip"
           ],
           "files": [
             {
               "from": "winuxcmd.exe",
               "to": "winuxcmd.exe"
+            },
+            {
+              "from": "winuxcmd-shim.exe",
+              "to": "winuxcmd-shim.exe"
             }
           ],
-          "size": 2842372
+          "size": 4114819
         },
         "windows-arm64": {
           "type": "zip",
-          "sha256": "986e7e4290fff6e3917823748b7478fdf294f054b1a5c19ff81262c73d1cef35",
+          "sha256": "2e458114ecf1a020c57ee3aa7b0f8ee8e716c7f994a775384536967e18e17623",
           "urls": [
-            "https://github.com/unixwin/WinuxCmd/releases/download/v1.1.14/WinuxCmd-1.1.14-win-arm64.zip"
+            "https://github.com/unixwin/WinuxCmd/releases/download/v1.1.15/WinuxCmd-1.1.15-win-arm64.zip"
           ],
           "files": [
             {
               "from": "winuxcmd.exe",
               "to": "winuxcmd.exe"
+            },
+            {
+              "from": "winuxcmd-shim.exe",
+              "to": "winuxcmd-shim.exe"
             }
           ],
-          "size": 2670472
+          "size": 3101823
         }
       }
     },
