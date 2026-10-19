@@ -386,8 +386,8 @@
     },
     {
       "name": "gawk",
-      "version": "5.4.1-unixwin1",
-      "description": "GNU Awk with GMP/MPFR bignum support; 32-bit build runs on x64 via WOW64. Mirrored from ezwinports via unixwin/wpm-artifacts.",
+      "version": "5.4.1-unixwin2",
+      "description": "GNU Awk with GMP/MPFR bignum support; 32-bit build runs on x64 via WOW64. Mirrored from ezwinports via unixwin/wpm-artifacts. unixwin2 restores libncurses6.dll + libgcc_s_dw2-1.dll — transitively imported (libmpfr-6 -> libgcc_s_dw2-1; libreadline8 -> libncurses6 + libgcc_s_dw2-1); unixwin1 dropped them and gawk died with 0xC0000135 on clean machines (wpm-artifacts#2, niubash release run 39233051251).",
       "kind": "external",
       "category": "text",
       "license": "GPL-3.0-or-later",
@@ -397,9 +397,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "afdce80fc4fac9d2d6886a9c3c75b9120bca84d2011a395b5b90909c74e24568",
+          "sha256": "25373ae83ec539dbe8b4208e1b4c1afa891f902df1a19138ecda5451ccded4b6",
           "urls": [
-            "https://github.com/unixwin/wpm-artifacts/releases/download/gawk-5.4.1-unixwin1/gawk-5.4.1-unixwin1-win-x64.zip"
+            "https://github.com/unixwin/wpm-artifacts/releases/download/gawk-5.4.1-unixwin2/gawk-5.4.1-unixwin2-win-x64.zip"
           ],
           "files": [
             {
@@ -421,9 +421,17 @@
             {
               "from": "bin/libreadline8.dll",
               "to": "libreadline8.dll"
+            },
+            {
+              "from": "bin/libncurses6.dll",
+              "to": "libncurses6.dll"
+            },
+            {
+              "from": "bin/libgcc_s_dw2-1.dll",
+              "to": "libgcc_s_dw2-1.dll"
             }
           ],
-          "size": 4366656,
+          "size": 7781989,
           "layout": "shim"
         }
       }
