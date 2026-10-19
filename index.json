@@ -10515,6 +10515,49 @@
           ]
         }
       }
+    },
+    {
+      "name": "codex",
+      "version": "0.1.0",
+      "kind": "external",
+      "category": "developer",
+      "license": "Apache-2.0",
+      "commands": [
+        "codex"
+      ],
+      "homepage": "https://github.com/unixwin/codex",
+      "description": "Codex CLI (unofficial niu build of OpenAI Codex) as a native Windows package: \bin/codex.exe keeps codex-resources/ beside itself, so the sandbox helpers resolve as they do in the npm platform package.",
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "layout": "shim",
+          "sha256": "e44c2cac7681f021f39fd9bbea5e44d6602508abd84ad8199929402407423f95",
+          "size": 128074227,
+          "urls": [
+            "https://github.com/unixwin/codex/releases/download/codex-v0.1.0/niu-codex-0.1.0-windows-x86_64.zip"
+          ],
+          "files": [
+            {
+              "from": "bin/codex.exe",
+              "to": "bin/codex.exe"
+            },
+            {
+              "from": "codex-resources",
+              "to": "codex-resources",
+              "kind": "dir"
+            },
+            {
+              "from": "codex-path",
+              "to": "codex-path",
+              "kind": "dir"
+            },
+            {
+              "from": "codex-package.json",
+              "to": "codex-package.json"
+            }
+          ]
+        }
+      }
     }
   ]
 }
