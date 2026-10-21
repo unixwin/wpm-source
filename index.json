@@ -10526,7 +10526,7 @@
     },
     {
       "name": "codex",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "kind": "external",
       "category": "developer",
       "license": "Apache-2.0",
@@ -10539,10 +10539,10 @@
         "windows-x64": {
           "type": "zip",
           "layout": "shim",
-          "sha256": "e44c2cac7681f021f39fd9bbea5e44d6602508abd84ad8199929402407423f95",
-          "size": 128074227,
+          "sha256": "87e29adc0b8a425db02b5ce724dcd9b72136e63730a298ac80f7272cc0b0770c",
+          "size": 128097107,
           "urls": [
-            "https://github.com/unixwin/codex/releases/download/codex-v0.1.0/niu-codex-0.1.0-windows-x86_64.zip"
+            "https://github.com/unixwin/codex/releases/download/codex-v0.1.1/niu-codex-0.1.1-windows-x86_64.zip"
           ],
           "files": [
             {
