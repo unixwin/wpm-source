@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "name": "official",
-  "version": "official-2026.10.21",
-  "updated": "2026-10-21",
+  "version": "official-2026.10.22",
+  "updated": "2026-10-22",
   "sources": [
     {
       "name": "official-github-raw",
@@ -252,7 +252,7 @@
     },
     {
       "name": "winuxcmd",
-      "version": "1.1.19",
+      "version": "1.1.20",
       "description": "WinuxCmd core command set",
       "kind": "external",
       "license": "MIT",
@@ -263,9 +263,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "624decb3bea3eb615e1c8aade7297429cbf208f36ff7ea6adb70499ba2c6a636",
+          "sha256": "790d1f6eef3a555fd2c043866d32c6edbf936a8a70d25e554b3383e67b36ad43",
           "urls": [
-            "https://github.com/unixwin/WinuxCmd/releases/download/v1.1.19/WinuxCmd-1.1.19-win-x64.zip"
+            "https://github.com/unixwin/WinuxCmd/releases/download/v1.1.20/WinuxCmd-1.1.20-win-x64.zip"
           ],
           "files": [
             {
@@ -277,13 +277,13 @@
               "to": "winuxcmd-shim.exe"
             }
           ],
-          "size": 4124309
+          "size": 4125909
         },
         "windows-arm64": {
           "type": "zip",
-          "sha256": "53b0341650d4162b85fecb9092e8ad8f4dd132cb7de33408ed77295788e2ad74",
+          "sha256": "205edb87a06b8b5b3c6fb731884d2b91b60fe406b9e7f3dbe625326489bb89df",
           "urls": [
-            "https://github.com/unixwin/WinuxCmd/releases/download/v1.1.19/WinuxCmd-1.1.19-win-arm64.zip"
+            "https://github.com/unixwin/WinuxCmd/releases/download/v1.1.20/WinuxCmd-1.1.20-win-arm64.zip"
           ],
           "files": [
             {
@@ -295,7 +295,7 @@
               "to": "winuxcmd-shim.exe"
             }
           ],
-          "size": 3108920
+          "size": 3110251
         }
       }
     },
