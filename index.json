@@ -108,8 +108,8 @@
     },
     {
       "name": "niugit",
-      "version": "2.56.0.1",
-      "description": "Native Windows git without MSYS (niu-git build, git-for-windows 2.56.0.windows.2); schannel-only TLS, no bundled shell/perl, hooks run via sh found on PATH; static zlib/iconv, bare usr/bin/git.exe self-locates (flat layout); bundles git's own wincred credential helper and stamps git --version with .niugit.",
+      "version": "2.56.0.2",
+      "description": "Native Windows git without MSYS (niu-git build, git-for-windows 2.56.0.windows.3); schannel-only TLS, no bundled shell/perl, hooks run via sh found on PATH; static zlib/iconv, bare usr/bin/git.exe self-locates (flat layout); bundles git's own wincred credential helper and stamps git --version with .niugit.",
       "kind": "external",
       "category": "developer",
       "license": "GPL-2.0-only",
@@ -120,9 +120,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "zip",
-          "sha256": "334e084124952cc9ffb14b88f9395474de47568e60fafbb19aa6e330154d1d8c",
+          "sha256": "fce603d3c9a3e8119a3df1c559322651e53185eecce4c90a8efe36844bd268dc",
           "urls": [
-            "https://github.com/unixwin/niu-git/releases/download/v2.56.0.1/niu-git-2.56.0.windows.2-x64.zip"
+            "https://github.com/unixwin/niu-git/releases/download/v2.56.0.2/niu-git-2.56.0.windows.3-x64.zip"
           ],
           "files": [
             {
@@ -138,14 +138,14 @@
               "to": "git.exe"
             }
           ],
-          "size": 34761967,
+          "size": 34772626,
           "layout": "flat"
         },
         "windows-arm64": {
           "type": "zip",
-          "sha256": "f682eecf3c736ed0e59652faffc7adeef760fc91f4de9b22c1529199a0025262",
+          "sha256": "e2fb43b0ec80e427e4e7268fd72ea54851ab3558090bddf107ffc8eebf11de5a",
           "urls": [
-            "https://github.com/unixwin/niu-git/releases/download/v2.56.0.1/niu-git-2.56.0.windows.2-arm64.zip"
+            "https://github.com/unixwin/niu-git/releases/download/v2.56.0.2/niu-git-2.56.0.windows.3-arm64.zip"
           ],
           "files": [
             {
@@ -161,7 +161,7 @@
               "to": "git.exe"
             }
           ],
-          "size": 33901200,
+          "size": 33911822,
           "layout": "flat"
         }
       }
