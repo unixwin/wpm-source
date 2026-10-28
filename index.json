@@ -48,63 +48,16 @@
   "packages": [
     {
       "name": "git",
-      "version": "2.55.0.5",
-      "description": "Portable Git for Windows (MinGit); exposes only git.exe while retaining its private runtime payload.",
+      "version": "2.56.0.1",
+      "alias_of": "niugit",
       "kind": "external",
       "category": "developer",
       "license": "GPL-2.0-only WITH GCC-exception-2.0",
-      "homepage": "https://gitforwindows.org/",
       "commands": [
         "git"
       ],
-      "artifacts": {
-        "windows-x64": {
-          "type": "zip",
-          "sha256": "56d7b226b7693196cfc71fef26568f536c4a021ab6c37ff2db4287bed908e96e",
-          "urls": [
-            "https://github.com/git-for-windows/git/releases/download/v2.55.0.windows.5/MinGit-2.55.0.5-64-bit.zip"
-          ],
-          "files": [
-            {
-              "from": "mingw64/",
-              "to": "mingw64/"
-            },
-            {
-              "from": "cmd/",
-              "to": "cmd/"
-            },
-            {
-              "from": "mingw64/bin/git.exe",
-              "to": "git.exe"
-            }
-          ],
-          "layout": "shim",
-          "size": 38989688
-        },
-        "windows-arm64": {
-          "type": "zip",
-          "sha256": "05843f9d6e60306c3ab886799e2c67200caab921571f10512df3493049179ddb",
-          "urls": [
-            "https://github.com/git-for-windows/git/releases/download/v2.55.0.windows.5/MinGit-2.55.0.5-arm64.zip"
-          ],
-          "files": [
-            {
-              "from": "mingw64/",
-              "to": "mingw64/"
-            },
-            {
-              "from": "cmd/",
-              "to": "cmd/"
-            },
-            {
-              "from": "mingw64/bin/git.exe",
-              "to": "git.exe"
-            }
-          ],
-          "size": 37650057,
-          "layout": "shim"
-        }
-      }
+      "description": "Alias for the `niugit` package: installing `git` installs the native Windows git this project ships (no second, upstream build).",
+      "homepage": "https://github.com/unixwin/niu-git"
     },
     {
       "name": "niugit",
