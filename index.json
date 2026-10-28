@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "name": "official",
-  "version": "official-2026.10.22",
-  "updated": "2026-10-22",
+  "version": "official-2026.10.28",
+  "updated": "2026-10-28",
   "sources": [
     {
       "name": "official-github-raw",
@@ -4694,6 +4694,66 @@
             }
           ],
           "size": 3962946
+        }
+      }
+    },
+    {
+      "name": "psmux",
+      "version": "3.4.0",
+      "description": "Tmux-compatible terminal multiplexer for Windows in Rust (ConPTY); exposes psmux, pmux and tmux commands.",
+      "kind": "external",
+      "category": "terminal",
+      "license": "MIT",
+      "homepage": "https://github.com/psmux/psmux",
+      "commands": [
+        "psmux",
+        "pmux",
+        "tmux"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "a66b6be7c13c6fa0dc3660a267b9e34eaa91a4eb7f07fbd55a0468018bd0f721",
+          "urls": [
+            "https://github.com/psmux/psmux/releases/download/v3.4.0/psmux-v3.4.0-windows-x64.zip"
+          ],
+          "files": [
+            {
+              "from": "psmux.exe",
+              "to": "psmux.exe"
+            },
+            {
+              "from": "pmux.exe",
+              "to": "pmux.exe"
+            },
+            {
+              "from": "tmux.exe",
+              "to": "tmux.exe"
+            }
+          ],
+          "size": 10003482
+        },
+        "windows-arm64": {
+          "type": "zip",
+          "sha256": "b123398e3b37408032bc268b4da6e7a6eab5b56461e0c3414914513a57a7a5cf",
+          "urls": [
+            "https://github.com/psmux/psmux/releases/download/v3.4.0/psmux-v3.4.0-windows-arm64.zip"
+          ],
+          "files": [
+            {
+              "from": "psmux.exe",
+              "to": "psmux.exe"
+            },
+            {
+              "from": "pmux.exe",
+              "to": "pmux.exe"
+            },
+            {
+              "from": "tmux.exe",
+              "to": "tmux.exe"
+            }
+          ],
+          "size": 9351086
         }
       }
     },
