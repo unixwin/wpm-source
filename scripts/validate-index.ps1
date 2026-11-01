@@ -21,6 +21,38 @@ function Get-OptionalStringProperty {
   return ""
 }
 
+function Test-MappingIsDirectory {
+  param([object]$Mapping)
+
+  # Mirrors wpm's mapping_is_directory (src/commands/wpm.cpp): an explicit
+  # "kind", or a trailing separator on either side of the mapping.
+  $kind = (Get-OptionalStringProperty -Object $Mapping -Name "kind").ToLowerInvariant()
+  if ($kind -eq "dir" -or $kind -eq "directory") { return $true }
+  $from = [string]$Mapping.from
+  if ($from -match "[\\/]$") { return $true }
+  if ($Mapping.PSObject.Properties.Name -contains "to") {
+    $to = [string]$Mapping.to
+    if ($to -match "[\\/]$") { return $true }
+  }
+  return $false
+}
+
+function Get-NormalizedRelPath {
+  # Lower-case, forward-slash, no trailing separator - the form every
+  # relative-position comparison below uses. wpm compares destinations
+  # case-insensitively (Win32 path names), so the validator must too.
+  param([string]$Path)
+  return $Path.replace('\', '/').ToLowerInvariant().TrimEnd('/')
+}
+
+function Test-RelPathInside {
+  param([string]$Child, [string]$Parent)
+  $childPath = Get-NormalizedRelPath -Path $Child
+  $parentPath = Get-NormalizedRelPath -Path $Parent
+  if ($parentPath -eq "") { return $true }
+  return $childPath -eq $parentPath -or $childPath.StartsWith($parentPath + "/")
+}
+
 function Test-ArtifactReady {
   param([object]$Artifact)
 
@@ -80,6 +112,7 @@ $resolvedIndexPath = (Resolve-Path -LiteralPath $IndexPath).Path
 $index = Get-Content -Raw -LiteralPath $resolvedIndexPath | ConvertFrom-Json
 
 $errors = New-Object System.Collections.Generic.List[string]
+$warnings = New-Object System.Collections.Generic.List[string]
 if (-not $index.schema) { $errors.Add("Missing top-level schema.") }
 if (-not $index.name) { $errors.Add("Missing top-level name.") }
 if (-not (Test-ArrayLike $index.packages)) { $errors.Add("Missing top-level packages array.") }
@@ -132,7 +165,7 @@ foreach ($pkg in $packages) {
   }
 
   $artifactProps = @()
-  if ($pkg.artifacts) {
+  if ($pkg.PSObject.Properties.Name -contains "artifacts") {
     $artifactProps = @($pkg.artifacts.PSObject.Properties)
   }
 
@@ -143,10 +176,76 @@ foreach ($pkg in $packages) {
 
   $readyArtifacts = 0
   foreach ($prop in $artifactProps) {
-    if (Test-ArtifactReady -Artifact $prop.Value) {
+    $artifact = $prop.Value
+    if (Test-ArtifactReady -Artifact $artifact) {
       $readyArtifacts += 1
     } else {
       $errors.Add("$name has incomplete artifact metadata for $($prop.Name).")
+    }
+
+    # Layout mapping checks (issue #72): the shim forwards <command> to a
+    # payload file, and that payload resolves its own DLLs and runtime paths
+    # relative to its installed location. The index entries below describe
+    # where each mapping lands, so this is where the shape is judgeable.
+    $layout = (Get-OptionalStringProperty -Object $artifact -Name "layout").ToLowerInvariant()
+    if ($layout -eq "") { $layout = "flat" }
+    $fileMaps = @()
+    $dirMaps = @()
+    if (Test-ArrayLike $artifact.files) {
+      foreach ($fileMapping in @($artifact.files)) {
+        if (Test-MappingIsDirectory -Mapping $fileMapping) { $dirMaps += $fileMapping }
+        else { $fileMaps += $fileMapping }
+      }
+    }
+
+    foreach ($fileMapping in $fileMaps) {
+      $mapFrom = Get-NormalizedRelPath -Path ([string]$fileMapping.from)
+      if ($fileMapping.PSObject.Properties.Name -contains "to" -and $fileMapping.to) {
+        $mapTo = Get-NormalizedRelPath -Path ([string]$fileMapping.to)
+      } else {
+        $mapTo = $mapFrom.Split("/")[-1]
+      }
+
+      # A file mapping hoisted to the package root while a directory mapping
+      # also materializes the tree the exe came from: the payload then runs
+      # detached from its sibling DLLs and RUNTIME_PREFIX tree. Whether that
+      # breaks depends on the payload (MinGit git.exe dies 0xC0000135, hoisted
+      # rustc.exe loses rustc_driver-*.dll, hoisted cargo.exe survives), so
+      # this stays a warning; the fix is mapping the artifact's own launcher
+      # or keeping the exe beside its tree (see docs/index-schema.md).
+      if ($layout -eq "shim" -and $dirMaps.Count -gt 0 -and (-not $mapTo.Contains("/"))) {
+        foreach ($dirMapping in $dirMaps) {
+          if (Test-RelPathInside -Child $mapFrom -Parent ([string]$dirMapping.from)) {
+            $warnings.Add("$name [$($prop.Name)] hoists payload '$($fileMapping.from)' to the package root ('$($fileMapping.to)') out of the tree mapped by '$($dirMapping.from)': RUNTIME_PREFIX/private-DLL payloads break from there (issue #72).")
+            break
+          }
+        }
+      }
+
+      # A file mapping that lands inside a directory-mapped tree cannot work
+      # in either order: file-first pre-creates the destination directory and
+      # the directory mapping then fails without --force, directory-first
+      # makes wpm unlink the payload it is about to re-link (materialize_file
+      # removes the target before hard-linking).
+      foreach ($dirMapping in $dirMaps) {
+        $dirTo = if ($dirMapping.PSObject.Properties.Name -contains "to") { [string]$dirMapping.to } else { [string]$dirMapping.from }
+        if ((Test-RelPathInside -Child $mapFrom -Parent ([string]$dirMapping.from)) -and
+            (Test-RelPathInside -Child $mapTo -Parent $dirTo)) {
+          $errors.Add("$name [$($prop.Name)] file mapping '$($fileMapping.from)' -> '$($fileMapping.to)' lands inside the directory mapping '$($dirMapping.from)' -> '$dirTo'; wpm fails the install or unlinks the materialized payload (self-collision).")
+        }
+      }
+    }
+
+    # Every shim command must have a declared payload: wpm resolves
+    # opt\<pkg>\<command>.exe either directly from a file mapping or from the
+    # top of a directory-mapped tree; with neither, the shim answers
+    # "no payload is registered for '<command>'". Only the fully undeclared
+    # case is judgeable from the index alone (whether a directory tree really
+    # holds the exe at its top needs the artifact), so the check stays narrow.
+    if ($layout -eq "shim" -and $fileMaps.Count -eq 0 -and $dirMaps.Count -eq 0) {
+      foreach ($commandName in $commandList) {
+        $warnings.Add("$name [$($prop.Name)]: shim command '$commandName' has no files mapping; no payload can be registered for it.")
+      }
     }
   }
 
@@ -160,13 +259,21 @@ foreach ($pkg in $packages) {
 $commandOwners = @{}
 foreach ($pkg in $packages) {
   $pkgName = [string]$pkg.name
+  # An alias entry (`alias_of`) intentionally shares the target package's
+  # commands; ownership belongs to the target so the shared name is not
+  # reported as a conflict.
+  $ownerName = $pkgName
+  if ($pkg.PSObject.Properties.Name -contains "alias_of") {
+    $ownerName = [string]$pkg.alias_of
+    if (-not $ownerName) { $ownerName = $pkgName }
+  }
   if ($pkg.PSObject.Properties.Name -contains "commands") {
     foreach ($command in @($pkg.commands)) {
       $commandName = ([string]$command).ToLowerInvariant()
       if (-not $commandName) { continue }
-      if ($commandOwners.ContainsKey($commandName) -and $commandOwners[$commandName] -ne $pkgName) {
+      if ($commandOwners.ContainsKey($commandName) -and $commandOwners[$commandName] -ne $ownerName) {
         $errors.Add("Command '$commandName' is provided by both '$($commandOwners[$commandName])' and '$pkgName'.")
-      } else { $commandOwners[$commandName] = $pkgName }
+      } else { $commandOwners[$commandName] = $ownerName }
     }
   }
   if ($pkg.PSObject.Properties.Name -contains "aliases") {
@@ -194,6 +301,10 @@ Write-Host "Issues: $($errors.Count)"
 
 foreach ($errorMessage in $errors) {
   Write-Host "ERROR: $errorMessage" -ForegroundColor Red
+}
+
+foreach ($warningMessage in $warnings) {
+  Write-Host "WARNING: $warningMessage" -ForegroundColor Yellow
 }
 
 if ($errors.Count -gt 0) {

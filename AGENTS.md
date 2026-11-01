@@ -32,6 +32,21 @@ no undo other than a follow-up PR.
 - Prefer `layout: shim` for anything with private DLLs or several commands: it
   keeps the payload (and its DLLs) out of `<root>/usr/bin`, which is a PATH
   neighbour. Reserve `flat` for the binary that must be the PATH entry itself.
+- A shim command's payload runs from where its files mapping puts it, and the
+  payload resolves its own DLLs and runtime paths (RUNTIME_PREFIX: exec-path,
+  templates, sysroot) relative to that spot. Never hoist an exe out of a
+  directory-mapped tree to the package root (`to: <name>.exe` on an exe the
+  artifact ships inside a tree) - detached from its siblings it dies
+  `0xC0000135` or degrades its prefix (issue #72: the old MinGit `git` entry;
+  the live `rust` entry's hoisted `rustc.exe` has the same disease). Map the
+  artifact's own relocation-capable entry instead (MinGit `cmd/git.exe` is an
+  upstream launcher; niu-git ships one in `scripts/entry/launch-git.c` when
+  upstream has none), keep the real exe beside its tree, map the tree
+  completely, and never let a file mapping land inside a directory-mapped
+  subtree (wpm fails the install or unlinks the payload). See
+  `docs/index-schema.md` §"shim 载荷解析与 runtime-tree 规则";
+  `scripts/validate-index.ps1` warns on the hoist shape and errors on the
+  self-collision.
 
 ## Flow
 
