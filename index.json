@@ -149,7 +149,7 @@
     },
     {
       "name": "rust",
-      "version": "1.98.1",
+      "version": "1.98.1-unixwin1",
       "description": "Relocatable Rust MSVC toolchain with cargo, rustfmt, and clippy.",
       "kind": "external",
       "category": "toolchain",
@@ -170,8 +170,52 @@
           ],
           "files": [
             {
-              "from": "bin/",
-              "to": "bin/"
+              "from": "bin/cargo-clippy.exe",
+              "to": "bin/cargo-clippy.exe"
+            },
+            {
+              "from": "bin/cargo-fmt.exe",
+              "to": "bin/cargo-fmt.exe"
+            },
+            {
+              "from": "bin/cargo.exe",
+              "to": "bin/cargo.exe"
+            },
+            {
+              "from": "bin/clippy-driver.exe",
+              "to": "bin/clippy-driver.exe"
+            },
+            {
+              "from": "bin/rust-gdb",
+              "to": "bin/rust-gdb"
+            },
+            {
+              "from": "bin/rust-gdbgui",
+              "to": "bin/rust-gdbgui"
+            },
+            {
+              "from": "bin/rust-lldb",
+              "to": "bin/rust-lldb"
+            },
+            {
+              "from": "bin/rust-windbg.cmd",
+              "to": "bin/rust-windbg.cmd"
+            },
+            {
+              "from": "bin/rustc.exe",
+              "to": "bin/rustc.exe"
+            },
+            {
+              "from": "bin/rustc_driver-573e106f78c6e3e0.dll",
+              "to": "bin/rustc_driver-573e106f78c6e3e0.dll"
+            },
+            {
+              "from": "bin/rustdoc.exe",
+              "to": "bin/rustdoc.exe"
+            },
+            {
+              "from": "bin/rustfmt.exe",
+              "to": "bin/rustfmt.exe"
             },
             {
               "from": "lib/",
@@ -180,22 +224,6 @@
             {
               "from": "etc/",
               "to": "etc/"
-            },
-            {
-              "from": "bin/rustc.exe",
-              "to": "rustc.exe"
-            },
-            {
-              "from": "bin/cargo.exe",
-              "to": "cargo.exe"
-            },
-            {
-              "from": "bin/rustfmt.exe",
-              "to": "rustfmt.exe"
-            },
-            {
-              "from": "bin/clippy-driver.exe",
-              "to": "clippy-driver.exe"
             }
           ],
           "layout": "shim",

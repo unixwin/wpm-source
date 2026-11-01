@@ -21,6 +21,43 @@ function Get-OptionalStringProperty {
   return ""
 }
 
+# Mirrors wpm's mapping_is_directory (WinuxCmd src/commands/wpm.cpp): an
+# explicit "kind", or a trailing separator on either side of the mapping.
+function Test-MappingIsDirectory {
+  param([object]$Mapping)
+
+  $kind = (Get-OptionalStringProperty -Object $Mapping -Name "kind").ToLowerInvariant()
+  if ($kind -eq "dir" -or $kind -eq "directory") { return $true }
+  $from = (Get-OptionalStringProperty -Object $Mapping -Name "from")
+  if ($from -match "[\\/]$") { return $true }
+  $to = (Get-OptionalStringProperty -Object $Mapping -Name "to")
+  if ($to -match "[\\/]$") { return $true }
+  return $false
+}
+
+# Lower-case, forward-slash, no trailing separator, "." collapsed - the form
+# every relative-position comparison below uses. wpm compares destinations
+# case-insensitively (Win32 path names), so the validator must too.
+function Get-NormalizedRelPath {
+  param([string]$Path)
+
+  $segments = @()
+  foreach ($segment in ($Path -split "[\\/]")) {
+    if ($segment -eq "" -or $segment -eq ".") { continue }
+    $segments += $segment
+  }
+  return (($segments -join "/").ToLowerInvariant())
+}
+
+function Test-RelPathInside {
+  param([string]$Child, [string]$Parent)
+
+  $childPath = Get-NormalizedRelPath -Path $Child
+  $parentPath = Get-NormalizedRelPath -Path $Parent
+  if ($parentPath -eq "") { return $true }
+  return $childPath -eq $parentPath -or $childPath.StartsWith($parentPath + "/")
+}
+
 function Test-ArtifactReady {
   param([object]$Artifact)
 
@@ -132,7 +169,7 @@ foreach ($pkg in $packages) {
   }
 
   $artifactProps = @()
-  if ($pkg.artifacts) {
+  if ($pkg.PSObject.Properties.Name -contains "artifacts" -and $pkg.artifacts) {
     $artifactProps = @($pkg.artifacts.PSObject.Properties)
   }
 
@@ -143,10 +180,81 @@ foreach ($pkg in $packages) {
 
   $readyArtifacts = 0
   foreach ($prop in $artifactProps) {
-    if (Test-ArtifactReady -Artifact $prop.Value) {
+    $artifact = $prop.Value
+    if (Test-ArtifactReady -Artifact $artifact) {
       $readyArtifacts += 1
     } else {
       $errors.Add("$name has incomplete artifact metadata for $($prop.Name).")
+    }
+
+    # Shim-layout mapping shape (payload runtime tree). A `layout: shim`
+    # payload runs from wherever its files mapping puts it under
+    # opt\<pkg>\, and it resolves its own DLLs and RUNTIME_PREFIX-style
+    # paths (exec-path, sysroot, templates) relative to that spot. wpm
+    # registers the payload at opt\<pkg>\<command>.exe when it exists and
+    # otherwise at the destination of the file mapping whose `to` filename
+    # equals <command>.exe (WinuxCmd wpm.cpp shim_payload_for), so the
+    # mappings alone decide where the shim forwards to. Judge the shape
+    # here, where it is still cheap to fix.
+    $layout = (Get-OptionalStringProperty -Object $artifact -Name "layout").ToLowerInvariant()
+    if ($layout -eq "") { $layout = "flat" }
+    if ($layout -ne "shim") { continue }
+
+    $directoryMaps = @()
+    $fileMaps = @()
+    if (Test-ArrayLike $artifact.files) {
+      foreach ($mapping in @($artifact.files)) {
+        if (Test-MappingIsDirectory -Mapping $mapping) { $directoryMaps += $mapping }
+        else { $fileMaps += $mapping }
+      }
+    }
+
+    foreach ($fileMapping in $fileMaps) {
+      $mapFrom = (Get-OptionalStringProperty -Object $fileMapping -Name "from")
+      if ($mapFrom -eq "") { continue }
+      $mapToRaw = (Get-OptionalStringProperty -Object $fileMapping -Name "to")
+      if ($mapToRaw -eq "") { $mapToRaw = ($mapFrom -split "[\\/]")[-1] }
+      $mapTo = Get-NormalizedRelPath -Path $mapToRaw
+
+      # Rule 1 - hoisting an exe out of a directory-mapped tree to the
+      # package root. wpm's payload resolution prefers the package-root
+      # copy, so the command runs detached from the sibling DLLs and
+      # runtime files that stay inside the tree: DLL-bound payloads die
+      # with STATUS_DLL_NOT_FOUND (0xC0000135) there, and statically
+      # linked ones only appear to work. Whether a given exe survives is a
+      # property of the exe the index cannot see, so the shape itself is
+      # rejected: keep the payload inside its runtime tree.
+      if ($mapTo -notmatch "/") {
+        foreach ($dirMapping in $directoryMaps) {
+          $dirFrom = (Get-OptionalStringProperty -Object $dirMapping -Name "from")
+          if ($dirFrom -eq "") { continue }
+          if (Test-RelPathInside -Child $mapFrom -Parent $dirFrom) {
+            $errors.Add("$name [$($prop.Name)] hoists '$mapFrom' out of the tree mapped by '$dirFrom' to the package root ('$mapToRaw'): the shim forwards to the root copy, which runs without its sibling DLLs and runtime files (STATUS_DLL_NOT_FOUND for DLL-bound payloads). Keep the payload inside its runtime tree.")
+            break
+          }
+        }
+      }
+
+      # Rule 2 - a file mapping whose destination lands inside a
+      # directory-mapped subtree. wpm installs the mappings in array
+      # order: the file mapping first pre-creates the destination and the
+      # directory mapping then refuses it (destination exists), while the
+      # directory mapping first makes the file mapping unlink the very
+      # file it is about to link (the materialized payload resolves as its
+      # own source). The overlap cannot install; map the file outside the
+      # directory-mapped subtree.
+      foreach ($dirMapping in $directoryMaps) {
+        $dirToRaw = (Get-OptionalStringProperty -Object $dirMapping -Name "to")
+        if ($dirToRaw -eq "") {
+          # wpm's mapping_default_to: an omitted `to` for a directory is the
+          # trimmed `from`'s final segment.
+          $dirToRaw = (((Get-OptionalStringProperty -Object $dirMapping -Name "from")).TrimEnd('\', '/') -split "[\\/]")[-1]
+        }
+        if (Test-RelPathInside -Child $mapTo -Parent $dirToRaw) {
+          $dirFrom = (Get-OptionalStringProperty -Object $dirMapping -Name "from")
+          $errors.Add("$name [$($prop.Name)] maps '$mapFrom' to '$mapToRaw' inside the destination of the directory mapping '$dirFrom' -> '$dirToRaw': the two mappings fight over the same destination and wpm fails the install in either order.")
+        }
+      }
     }
   }
 
@@ -160,6 +268,13 @@ foreach ($pkg in $packages) {
 $commandOwners = @{}
 foreach ($pkg in $packages) {
   $pkgName = [string]$pkg.name
+  # An alias entry (`alias_of`) installs its target package by design, so it
+  # necessarily repeats the target's command names; that sharing is the
+  # point of the alias, not a conflict (git -> niugit). Only real packages
+  # claim ownership here.
+  $isAliasEntry = ($pkg.PSObject.Properties.Name -contains "alias_of") -and
+    ((Get-OptionalStringProperty -Object $pkg -Name "alias_of") -ne "")
+  if ($isAliasEntry) { continue }
   if ($pkg.PSObject.Properties.Name -contains "commands") {
     foreach ($command in @($pkg.commands)) {
       $commandName = ([string]$command).ToLowerInvariant()
