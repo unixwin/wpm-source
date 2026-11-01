@@ -32,6 +32,17 @@ no undo other than a follow-up PR.
 - Prefer `layout: shim` for anything with private DLLs or several commands: it
   keeps the payload (and its DLLs) out of `<root>/usr/bin`, which is a PATH
   neighbour. Reserve `flat` for the binary that must be the PATH entry itself.
+- A shim command's payload runs from where its `files` mapping puts it, and it
+  resolves its own DLLs and RUNTIME_PREFIX-style paths (sysroot, exec-path)
+  relative to that spot. Never hoist an exe out of a directory-mapped tree to
+  the package root (`to: <name>.exe` on an exe the artifact ships inside a
+  tree) - the shim forwards to the detached root copy, which dies
+  `0xC0000135` when it needs its sibling DLLs. Keep the exe inside its
+  runtime tree (enumerate the tree's files, or map the whole tree so the exe
+  lands at the payload root), and never let a file mapping land inside a
+  directory-mapped subtree - wpm fails that install in either order.
+  `scripts/validate-index.ps1` rejects both shapes; see
+  `docs/index-schema.md` §"shim 载荷的 runtime-tree 规则".
 
 ## Flow
 

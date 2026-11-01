@@ -68,7 +68,32 @@
 ### layout 字段
 
 - `flat`(默认):所有映射文件直接装入 `usr\bin\`,适用于单 exe 包。
-- `shim`:载荷(exe + 私有 DLL)自包含安装到 `<root>\opt\<pkg>\`;`usr\bin\<cmd>.exe` 是 winuxcmd.exe 自身的硬链接,运行时由分发器转发到 `opt\<pkg>\<cmd>.exe`。DLL 与真 exe 同目录,天然解析、无跨包冲突;卸载即删目录。适用于带 DLL 或多文件的包(ncat/qpdf/gawk/curl/xz/bzip2/sysinternals-suite)。
+- `shim`:载荷(exe + 私有 DLL)自包含安装到 `<root>\opt\<pkg>\`;`usr\bin\<cmd>.exe` 是
+  `winuxcmd-shim.exe`(轻量转发器)的硬链接,运行时读 `.wpm\shims.map` 把命令转发到
+  `opt\<pkg>\` 下的载荷 exe 并透传退出码。DLL 与真 exe 同目录,天然解析、无跨包冲突;卸载即删目录。
+  适用于带 DLL 或多文件的包(ncat/qpdf/gawk/curl/xz/bzip2/sysinternals-suite)。
+
+### shim 载荷的 runtime-tree 规则
+
+载荷 exe 启动后,Windows 按 exe **自身所在目录**解析私有 DLL;RUNTIME_PREFIX 类构建
+(rustc 等)还按 exe 所在目录向上剥一层找 `lib\`(sysroot、自包含链接器)。因此
+**shim 转发到哪个位置,那个位置就必须是 exe 在其运行时树中的原位**:
+
+1. **载荷解析**。wpm 注册 `shims.map` 时优先取 `opt\<pkg>\<cmd>.exe`;该位置不存在时,
+   回退扫描 `files` 里**非目录**映射,取 `to` 文件名(不区分大小写)等于 `<cmd>.exe` 的
+   目的路径。整树目录映射到载荷根(`{"from":"python/","to":"./"}`,exe 落在载荷根本身)
+   与枚举式文件映射(`{"from":"bin/codex.exe","to":"bin/codex.exe"}`)都成立。
+2. **禁止把 exe 从映射树里吊到包根**(`{"from":"bin/x.exe","to":"x.exe"}` 配合
+   `{"from":"bin/",...}`):载荷解析优先命中包根副本,吊出的副本脱离同级 DLL 与运行时树,
+   动态链接载荷直接 `0xC0000135`(STATUS_DLL_NOT_FOUND),静态链接的只是看起来没事。
+   `validate-index.ps1` 对该形态报错。
+3. **文件映射不得落入目录映射的子树**(无论先后):文件映射在前会预创建目的,目录映射
+   随后要求 `--force`;目录映射在前则文件映射会先 unlink 再链接同一路径,安装失败。
+   `validate-index.ps1` 对此报错。需要 exe 留在树内时,把 `bin\` 内容逐文件枚举,
+   树的其余部分(lib\ 等)仍用目录映射。
+4. **整树平铺到载荷根前先核对几何**:若 exe 在原工具链里与 `lib\` 隔了一层 `bin\`
+   (rustc 按 `exe_dir\..\lib` 找 sysroot),把 `bin\` 平铺到载荷根会让 exe 与 `lib\`
+   同层,`--version` 能过、编译期 sysroot 失效。保持 `bin\` 原位(`to: "bin/"`)。
 
 ## 2. wpm --json 输出契约
 
