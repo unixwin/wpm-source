@@ -186,7 +186,7 @@ WPM install, so commands that require a config file (notably `openssl req`)
 will fail until `OPENSSL_CONF` points at an existing file:
 
 ```sh
-# in ~/.winuxshrc, or before running openssl req
+# in ~/.niubashrc, or before running openssl req
 export OPENSSL_CONF="$HOME/openssl.cnf"   # any existing file, even empty, works
 ```
 
@@ -199,8 +199,8 @@ artifact checksum and explicit file mapping before making it installable.
 
 ## Toolchain and developer packages
 
-- `git` uses the official MinGit archive and exposes only `git.exe`; its private
-  payload remains under `opt/git/`.
+- `git` is an alias for the `niugit` package (native MSVC git build);
+  installing `git` installs niugit.
 - `protobuf` exposes only `protoc.exe` from the official Windows archive.
 - `rust` uses a relocatable MSVC bundle assembled from the pinned official Rust
   toolchain; `rustup` is intentionally not bundled because it manages
