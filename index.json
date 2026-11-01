@@ -460,7 +460,7 @@
     {
       "name": "parallel",
       "version": "0.9.0",
-      "description": "Native parallel command runner for Winuxsh workflows, installed from rush as a practical parallel.exe provider; not a full GNU Parallel compatibility package.",
+      "description": "Native parallel command runner for niubash workflows, installed from rush as a practical parallel.exe provider; not a full GNU Parallel compatibility package.",
       "kind": "external",
       "category": "shell",
       "license": "MIT",
