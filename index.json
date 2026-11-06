@@ -564,7 +564,7 @@
       ],
       "artifacts": {
         "windows-x64": {
-          "type": "exe",
+          "type": "zip",
           "sha256": "44806582e2f8c1c586d092fcdb9e78ed48c05e28edaee7371bd3140bafff5989",
           "urls": [
             "https://github.com/mikefarah/yq/releases/download/v4.53.6/yq_windows_amd64.zip"
@@ -578,7 +578,7 @@
           "size": 5829127
         },
         "windows-arm64": {
-          "type": "exe",
+          "type": "zip",
           "sha256": "57cc55eb815c166102d899043c24acfde6e4e86567eb7f28fd95198d466e989c",
           "urls": [
             "https://github.com/mikefarah/yq/releases/download/v4.53.6/yq_windows_arm64.zip"
