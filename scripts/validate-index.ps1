@@ -115,7 +115,9 @@ foreach ($pkg in $packages) {
   $packageCategory = (Get-OptionalStringProperty -Object $pkg -Name "category").ToLowerInvariant()
   $commandList = @()
   if ($pkg.PSObject.Properties.Name -contains "commands") { $commandList = @($pkg.commands) }
-  if ($packageCategory -ne "i18n" -and $commandList.Count -eq 0) {
+  # bundle entries install nothing of their own - their members carry the
+  # commands - so like i18n they are exempt from the commands requirement.
+  if ($packageCategory -ne "i18n" -and $pkg.kind -ne "bundle" -and $commandList.Count -eq 0) {
     $errors.Add("$name missing commands.")
   }
 
@@ -132,8 +134,12 @@ foreach ($pkg in $packages) {
   }
 
   $artifactProps = @()
-  if ($pkg.artifacts) {
-    $artifactProps = @($pkg.artifacts.PSObject.Properties)
+  # alias (git) and bundle (build-base) entries carry no artifacts; strict
+  # mode raises on plain property access when the key is absent.
+  if ($pkg.PSObject.Properties.Name -contains "artifacts") {
+    if ($pkg.artifacts) {
+      $artifactProps = @($pkg.artifacts.PSObject.Properties)
+    }
   }
 
   if ($artifactProps.Count -eq 0) {
