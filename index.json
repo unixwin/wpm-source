@@ -2911,16 +2911,8 @@
           ],
           "files": [
             {
-              "from": "cmake.exe",
-              "to": "cmake.exe"
-            },
-            {
-              "from": "ctest.exe",
-              "to": "ctest.exe"
-            },
-            {
-              "from": "cpack.exe",
-              "to": "cpack.exe"
+              "from": "cmake-4.4.2-windows-x86_64/",
+              "to": "./"
             }
           ]
         },
@@ -2933,16 +2925,8 @@
           "size": 52560254,
           "files": [
             {
-              "from": "cmake.exe",
-              "to": "cmake.exe"
-            },
-            {
-              "from": "ctest.exe",
-              "to": "ctest.exe"
-            },
-            {
-              "from": "cpack.exe",
-              "to": "cpack.exe"
+              "from": "cmake-4.4.2-windows-arm64/",
+              "to": "./"
             }
           ]
         }
