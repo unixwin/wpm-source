@@ -2,7 +2,7 @@
   "schema": 1,
   "name": "official",
   "version": "official-2026.11.07",
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "sources": [
     {
       "name": "official-github-raw",
@@ -10599,6 +10599,97 @@
         "bsdtar"
       ],
       "artifacts": {}
+    },
+    {
+      "name": "pkg-config",
+      "version": "0.28",
+      "description": "GNU pkg-config 0.28 (ezwinports MinGW build, the same source as make). Flat layout like awk: pkg-config.exe lands in usr\\bin beside its glib/iconv/intl runtime DLLs. 32-bit build that runs on x64 via WOW64. 2012 upstream vintage - no newer pkg-config publishes a Windows zip (pkgconf ships MSI-only Windows releases, which WPM excludes). Reads .pc files from PKG_CONFIG_PATH.",
+      "kind": "external",
+      "category": "developer",
+      "license": "GPL-2.0-or-later",
+      "commands": [
+        "pkg-config"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "261929fc579dc94ea186047f5d3ac20e68cb1bf06433e4675949f7e75e220331",
+          "urls": [
+            "https://downloads.sourceforge.net/project/ezwinports/pkg-config-0.28-w32-bin.zip"
+          ],
+          "files": [
+            {
+              "from": "bin/pkg-config.exe",
+              "to": "pkg-config.exe"
+            },
+            {
+              "from": "bin/libglib-2.0-0.dll",
+              "to": "libglib-2.0-0.dll"
+            },
+            {
+              "from": "bin/libiconv-2.dll",
+              "to": "libiconv-2.dll"
+            },
+            {
+              "from": "bin/libintl-8.dll",
+              "to": "libintl-8.dll"
+            }
+          ],
+          "size": 1325773
+        }
+      }
+    },
+    {
+      "name": "m4",
+      "version": "1.4.14-1",
+      "description": "GNU M4 1.4.14 (GnuWin32). Index-only placeholder: GnuWin32 splits the runtime across two archives - m4.exe ships in m4-1.4.14-1-bin.zip but imports regex2.dll from the separate m4-1.4.14-1-dep.zip and dies with 0xC0000135 without it (measured), and a WPM artifact is one archive. Installable once unixwin/wpm-artifacts mirrors a combined zip pinned to the two upstream digests; no ezwinports port exists and MSYS2 publishes only .pkg.tar.zst.",
+      "kind": "external",
+      "category": "developer",
+      "license": "GPL-3.0-or-later",
+      "commands": [
+        "m4"
+      ]
+    },
+    {
+      "name": "autoconf",
+      "version": "2.65",
+      "description": "GNU Autoconf 2.65 (ezwinports MSYS port). Index-only placeholder: the payload is extension-less /bin/sh and Perl scripts with the MSYS root baked in (/usr/share/autoconf), needing sh, perl, m4 and awk on PATH, and WPM command links require real .exe payloads. Measured under Git Bash: the autoconf wrapper starts, but autom4te dies with 'Can't locate Autom4te/C4che.pm' and cannot drive a native m4. Promote via a unixwin/wpm-artifacts mirror that wraps the scripts in .exe launchers with a relocated datadir.",
+      "kind": "external",
+      "category": "developer",
+      "license": "GPL-3.0-or-later",
+      "commands": [
+        "autoconf",
+        "autoheader",
+        "autom4te",
+        "autoreconf",
+        "autoscan",
+        "autoupdate",
+        "ifnames"
+      ]
+    },
+    {
+      "name": "automake",
+      "version": "1.11.6",
+      "description": "GNU Automake 1.11.6 (ezwinports MSYS port). Index-only placeholder: Perl scripts bound to the MSYS root (/usr/share/automake-1.11 and /usr/share/aclocal-1.11 are baked into the scripts), needing sh, perl, autoconf and m4; the same .exe command-link limitation as autoconf applies. Promote together with an autoconf mirror.",
+      "kind": "external",
+      "category": "developer",
+      "license": "GPL-3.0-or-later",
+      "commands": [
+        "automake",
+        "aclocal"
+      ]
+    },
+    {
+      "name": "libtool",
+      "version": "1.5.26",
+      "description": "GNU libtool 1.5.26 (GnuWin32; the SourceForge 1.5.28 directory carries 1.5.26 files). Index-only placeholder: the only published Windows port ships bin/libtool and bin/libtoolize as plain POSIX shell scripts (no .exe payload for WPM command links), and no ezwinports port exists. Promote only as part of a working Windows autotools story.",
+      "kind": "external",
+      "category": "developer",
+      "license": "GPL-2.0-or-later",
+      "commands": [
+        "libtool",
+        "libtoolize"
+      ]
     }
   ]
 }
