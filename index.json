@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "name": "official",
-  "version": "official-2026.11.07",
-  "updated": "2026-11-07",
+  "version": "official-2026.11.08",
+  "updated": "2026-11-08",
   "sources": [
     {
       "name": "official-github-raw",
@@ -10053,7 +10053,7 @@
     },
     {
       "name": "bsdtar",
-      "version": "3.7.5",
+      "version": "3.8.1",
       "description": "Modern statically-linked bsdtar (libarchive) tar replacement.",
       "kind": "external",
       "license": "BSD-2-Clause",
@@ -10063,9 +10063,9 @@
       "artifacts": {
         "windows-x64": {
           "type": "exe",
-          "sha256": "2650c428fbe37276d4ffa3386d55b69f06fb4611e25ff05db5f011c389c3e952",
+          "sha256": "550fc86489a24c0774d3cafbe326c1da01f374521154e9f0b9b77332b48e8b46",
           "urls": [
-            "https://github.com/hermeticbuild/bsdtar-prebuilt/releases/download/v3.7.5-1/tar_windows_x86_64.exe"
+            "https://github.com/hermeticbuild/bsdtar-prebuilt/releases/download/v3.8.1-3/tar_windows_x86_64.exe"
           ],
           "files": [
             {
@@ -10073,7 +10073,21 @@
               "to": "bsdtar.exe"
             }
           ],
-          "size": 669696
+          "size": 1960448
+        },
+        "windows-arm64": {
+          "type": "exe",
+          "sha256": "8a8b94df9bca7ce3f1b47a5bdb507627e4a0dcb8e9d429a37fe37e5aa729208b",
+          "urls": [
+            "https://github.com/hermeticbuild/bsdtar-prebuilt/releases/download/v3.8.1-3/tar_windows_arm64.exe"
+          ],
+          "files": [
+            {
+              "from": "tar_windows_arm64.exe",
+              "to": "bsdtar.exe"
+            }
+          ],
+          "size": 1685504
         }
       },
       "category": "archive"
