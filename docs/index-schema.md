@@ -68,7 +68,31 @@
 ### layout 字段
 
 - `flat`(默认):所有映射文件直接装入 `usr\bin\`,适用于单 exe 包。
-- `shim`:载荷(exe + 私有 DLL)自包含安装到 `<root>\opt\<pkg>\`;`usr\bin\<cmd>.exe` 是 winuxcmd.exe 自身的硬链接,运行时由分发器转发到 `opt\<pkg>\<cmd>.exe`。DLL 与真 exe 同目录,天然解析、无跨包冲突;卸载即删目录。适用于带 DLL 或多文件的包(ncat/qpdf/gawk/curl/xz/bzip2/sysinternals-suite)。
+- `shim`:载荷(exe + 私有 DLL)自包含安装到 `<root>\opt\<pkg>\`;`usr\bin\<cmd>.exe` 是转发器 `winuxcmd-shim.exe` 的硬链接,载荷路径记录在 `<root>\.wpm\shims.map`(`<cmd>=opt\<pkg>\<相对路径>`)。DLL 与真 exe 同目录,天然解析、无跨包冲突;卸载即删目录。适用于带 DLL 或多文件的包(ncat/qpdf/gawk/curl/xz/bzip2/sysinternals-suite/mingw/cmake)。
+  注意:目录级映射 + `flat` 会让"唯一目标"变成安装根自身(根永远存在),安装因此被 `destinations exist but are not wpm-managed` 拦下——多文件树一律用 `shim`。
+
+### bundle(`kind: "bundle"` / `installs`)
+
+```jsonc
+{
+  "name": "build-base",
+  "version": "1.1.0",
+  "kind": "bundle",
+  "commands": [],
+  "installs": [ "mingw", "make", "cmake", "ninja", "bsdtar" ],
+  "artifacts": {}
+}
+```
+
+bundle 自身不安装任何文件(`artifacts` 为空、正常不写 `installs` 之外的字段),`wpm install <bundle>` 在下载前一次性展开 `installs`:去重保序、嵌套 bundle 带访问链防环(深度上限 4)、已安装成员跳过且不重下。`wpm info` 以 `Bundle of:` 行显示成员,`wpm installed` 只列出成员(不出现 bundle 名)。
+
+### aliases
+
+```jsonc
+{ "name": "bsdtar", "commands": [ "bsdtar" ], "aliases": [ "tar" ] }
+```
+
+`aliases` 里的每个名字是已安装可执行文件的额外硬链接(`usr\bin\tar.exe` → `usr\bin\bsdtar.exe`);元素可以是字符串,或 `{ "name": "tar", "target": "bsdtar" }`(缺省 target 取 `commands[0]`)。只适用于 `flat` 包:shim 包的入口是转发器,硬链接出去的别名在 `shims.map` 里没有对应载荷,运行即报 payload missing。另有整包别名 `alias_of`(`git` → `niugit`)。
 
 ## 2. wpm --json 输出契约
 
