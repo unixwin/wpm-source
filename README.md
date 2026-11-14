@@ -63,6 +63,48 @@ The two-tier scope keeps WPM a reproducible, isolated, shell-side environment:
 single-exe tools install flat; toolchains live self-contained under `opt\`,
 enabling side-by-side versions without PATH conflicts.
 
+### Bundles (`installs`)
+
+A bundle is an index entry with no artifacts of its own that names a group of
+real packages:
+
+```jsonc
+{
+  "name": "build-base",
+  "version": "1.1.0",
+  "kind": "bundle",
+  "commands": [],                       // the members carry the commands
+  "installs": [ "mingw", "make", "cmake", "ninja", "bsdtar" ]
+}
+```
+
+`wpm install <bundle>` expands the list once, before any download: repeats are
+collapsed (order-preserving), nested bundles recurse with a visiting chain and
+therefore cannot loop, and members that are already installed are skipped
+instead of re-downloaded. The bundle itself gets no receipt - it installs
+nothing - so `wpm installed` shows exactly the members.
+
+The rule a bundle has to keep is one name, one owner: `<root>\usr\bin` holds a
+single file per command, so a member whose command name is already taken (a
+WinuxCmd builtin link, or another package's entry) fails with "destination
+exists" instead of silently shadowing it, and PATH order cannot arbitrate
+between two claimants inside one root. `build-base` therefore adds only names
+WinuxCmd does not ship - the 25 names it contributes are disjoint from
+WinuxCmd's 172 default-edition entries.
+
+Members can also overlap *inside* one artifact (the WinLibs payload carries its
+own cmake, ctest, cpack, ninja, dos2unix, unix2dos and strings). Those files are
+payload-only: they never get a `commands` entry, so they stay under
+`opt\mingw\bin\` and are unreachable from PATH. Never add `opt\<pkg>\bin` to
+PATH to reach them - that would put a second `cmake`/`strings` in front of the
+real entry.
+
+Unlike a bundle, an **alias** entry installs something under another name:
+`git` is `alias_of: niugit`, and a package's `aliases` field links an extra
+name to an executable it already installs (`bsdtar` also provides `tar`). An
+alias is only safe for flat packages - a shim-layout command's entry is a
+forwarder, and a hardlink of it would have no `shims.map` payload of its own.
+
 ## Source Layout
 
 The minimum repository can be simple:

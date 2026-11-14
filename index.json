@@ -2891,8 +2891,8 @@
     },
     {
       "name": "cmake",
-      "version": "4.4.2",
-      "description": "Portable CMake build-system command-line tools without compilers or global setup.",
+      "version": "4.4.2-unixwin1",
+      "description": "Portable CMake build-system command-line tools without compilers or global setup. Layout is shim (as go/node/python/llvm/neovim already are): the tree lands in opt\\cmake\\ and cmake/ctest/cpack are usr\\bin forwarders, so the payload no longer drops bin\\ and share\\ into the installation root - a PATH directory that is not a private place. The old flat mapping also made every install fail with \"destinations exist but are not wpm-managed\" (its only destination was the root itself, which always exists); a flat install can be replaced once with `wpm install cmake --force`.",
       "kind": "external",
       "category": "developer",
       "license": "BSD-3-Clause",
@@ -2906,6 +2906,7 @@
           "type": "zip",
           "size": 54405968,
           "sha256": "e8139d85b3813bc38833142ae1940472e9a587e9b5d2718ac1804c60f4e57a64",
+          "layout": "shim",
           "urls": [
             "https://cmake.org/files/v4.4/cmake-4.4.2-windows-x86_64.zip"
           ],
@@ -2919,6 +2920,7 @@
         "windows-arm64": {
           "type": "zip",
           "sha256": "8502cf1c5b1984e439d13df154c3c28d080d706efd52db4de1bb3cc7022db521",
+          "layout": "shim",
           "urls": [
             "https://cmake.org/files/v4.4/cmake-4.4.2-windows-arm64.zip"
           ],
@@ -10054,11 +10056,14 @@
     {
       "name": "bsdtar",
       "version": "3.8.1",
-      "description": "Modern statically-linked bsdtar (libarchive) tar replacement.",
+      "description": "Modern statically-linked bsdtar (libarchive) tar replacement. Also installs the `tar` name as a hardlink of bsdtar.exe: WinuxCmd ships no tar (178 commands, no tar/bsdtar), so `tar` otherwise resolves to C:\\Windows\\System32\\tar.exe - the same libarchive tool but an OS-bound version. bsdtar reads/writes tar, gzip, bzip2, xz, zstd and zip archives, so `tar xf` covers the configure-time unpacking that unzip was needed for.",
       "kind": "external",
       "license": "BSD-2-Clause",
       "commands": [
         "bsdtar"
+      ],
+      "aliases": [
+        "tar"
       ],
       "artifacts": {
         "windows-x64": {
@@ -10599,15 +10604,16 @@
     },
     {
       "name": "build-base",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "kind": "bundle",
       "category": "toolchain",
       "license": "metadata-only",
       "homepage": "https://github.com/unixwin/wpm-source",
       "commands": [],
-      "description": "Meta-bundle: `wpm install build-base` = mingw (GCC/binutils/mingw32-make/gdb) + cmake + ninja + bsdtar - a complete configure && make toolchain without MSYS; already-installed members are skipped, not reinstalled.",
+      "description": "Meta-bundle (windows-x64): `wpm install build-base` = mingw (GCC/binutils/mingw32-make/gdb) + make + cmake + ninja + bsdtar - a complete configure && make toolchain without MSYS. GNU make is a member because WinLibs only ships mingw32-make, and a shim-layout command cannot be aliased (its usr\\bin entry is a forwarder, not the payload), so `make` from configure-generated Makefiles needs the real entry. Every name the bundle puts in usr\\bin is disjoint from WinuxCmd's 172 default-edition entries - nothing already on PATH is installed twice; members already present are skipped, not reinstalled. cmake/ninja/bsdtar also exist inside the WinLibs payload, but as payload-only files that never get an entry, so exactly one copy of each name is reachable from PATH.",
       "installs": [
         "mingw",
+        "make",
         "cmake",
         "ninja",
         "bsdtar"
