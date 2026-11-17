@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "name": "official",
-  "version": "official-2026.11.08",
-  "updated": "2026-11-08",
+  "version": "official-2026.11.17",
+  "updated": "2026-11-17",
   "sources": [
     {
       "name": "official-github-raw",
@@ -10704,6 +10704,50 @@
         "libtool",
         "libtoolize"
       ]
+    },
+    {
+      "name": "win-sshpass",
+      "version": "1.0.2",
+      "description": "Cross-platform sshpass implementation as a native Windows binary (chuccp/win-sshpass): non-interactive SSH with password, key or agent auth, remote command execution, SFTP/SCP-style transfer, port forwarding and a JSON output mode for automation; single self-contained exe, flat layout.",
+      "kind": "external",
+      "category": "network",
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/chuccp/win-sshpass",
+      "commands": [
+        "win-sshpass"
+      ],
+      "artifacts": {
+        "windows-x64": {
+          "type": "zip",
+          "sha256": "6f2220724fe2c210a24d49876bff0d980d89bba2a94b6dbcc5b9566f12eec316",
+          "urls": [
+            "https://github.com/chuccp/win-sshpass/releases/download/v1.0.2/win-sshpass-v1.0.2-amd64.zip"
+          ],
+          "files": [
+            {
+              "from": "win-sshpass.exe",
+              "to": "win-sshpass.exe"
+            }
+          ],
+          "size": 5183519,
+          "layout": "flat"
+        },
+        "windows-arm64": {
+          "type": "zip",
+          "sha256": "03fb8b6bd9dbe99e9cc14693e81a9cd976caa52ef57f3350666f5c936c277c90",
+          "urls": [
+            "https://github.com/chuccp/win-sshpass/releases/download/v1.0.2/win-sshpass-v1.0.2-arm64.zip"
+          ],
+          "files": [
+            {
+              "from": "win-sshpass.exe",
+              "to": "win-sshpass.exe"
+            }
+          ],
+          "size": 4644683,
+          "layout": "flat"
+        }
+      }
     }
   ]
 }
